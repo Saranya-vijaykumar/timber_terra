@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Designing the Open-Air Kitchen: Thermal Setbacks and Marine-316 Longevity — Timber &amp; Terra Architectural Journal</title>
+  <style>
+  @layer base {
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+    body {
+      overscroll-behavior: none;
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  /* Responsive Luxury Container System */
+  .max-w-7xl {
+    max-width: 1600px !important;
+    width: 100% !important;
+  }
+  @media (min-width: 1920px) {
+    .max-w-7xl {
+      max-width: 1720px !important;
+    }
+  }
+  @media (min-width: 2560px) {
+    .max-w-7xl {
+      max-width: 2160px !important;
+    }
+  }
+  
+  
+  /* ==========================================================================
+     PROPORTIONAL LUXURY TYPOGRAPHY SYSTEM (Enhanced Legibility & Subtle Boldness)
+     ========================================================================== */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Universal body and paragraph text subtle bold enhancement (400 -> 500) */
+  body, p, li, dd, dt, blockquote, figcaption, input, textarea, select {
+    font-weight: 500;
+  }
+
+  /* Core typography boosts preserving container layouts and alignments */
+  .text-label-sm {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    font-weight: 700 !important;
+  }
+  .text-label-md {
+    font-size: 13.5px !important;
+    line-height: 18px !important;
+    font-weight: 600 !important;
+  }
+  .text-label-lg {
+    font-size: 15.5px !important;
+    line-height: 22px !important;
+    font-weight: 650 !important;
+  }
+  .text-caption {
+    font-size: 13px !important;
+    line-height: 18px !important;
+    font-weight: 500 !important;
+  }
+  .text-body-sm {
+    font-size: 15px !important;
+    line-height: 24px !important;
+    font-weight: 500 !important;
+  }
+  .text-body-md {
+    font-size: 17.5px !important;
+    line-height: 27px !important;
+    font-weight: 500 !important;
+  }
+  .text-body-lg {
+    font-size: 19.5px !important;
+    line-height: 30px !important;
+    font-weight: 500 !important;
+  }
+  .text-title {
+    font-size: 20px !important;
+    line-height: 28px !important;
+    font-weight: 650 !important;
+  }
+  .text-headline-sm {
+    font-size: 22px !important;
+    line-height: 29px !important;
+    font-weight: 650 !important;
+  }
+  .text-headline-md {
+    font-size: 26px !important;
+    line-height: 34px !important;
+    font-weight: 700 !important;
+  }
+  .text-headline-lg {
+    font-size: 38px !important;
+    line-height: 46px !important;
+    font-weight: 750 !important;
+  }
+
+  /* Utility text scale refinement with subtle bold boost */
+  .text-xs {
+    font-size: 13px !important;
+    line-height: 18px !important;
+    font-weight: 500 !important;
+  }
+  .text-sm {
+    font-size: 15px !important;
+    line-height: 22px !important;
+    font-weight: 500 !important;
+  }
+  .text-base {
+    font-size: 17px !important;
+    line-height: 26px !important;
+    font-weight: 500 !important;
+  }
+  .text-lg {
+    font-size: 19.5px !important;
+    line-height: 28px !important;
+    font-weight: 500 !important;
+  }
+  .text-xl {
+    font-size: 22px !important;
+    line-height: 30px !important;
+    font-weight: 600 !important;
+  }
+
+  /* Font weight class refinement */
+  .font-normal {
+    font-weight: 500 !important;
+  }
+  .font-medium {
+    font-weight: 550 !important;
+  }
+  .font-semibold {
+    font-weight: 650 !important;
+  }
+  .font-bold {
+    font-weight: 750 !important;
+  }
+
+  /* Core typography boosts preserving container layouts and alignments */
+  .text-label-sm {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+  .text-label-md {
+    font-size: 13.5px !important;
+    line-height: 18px !important;
+  }
+  .text-label-lg {
+    font-size: 15.5px !important;
+    line-height: 22px !important;
+  }
+  .text-caption {
+    font-size: 13px !important;
+    line-height: 18px !important;
+  }
+  .text-body-sm {
+    font-size: 15px !important;
+    line-height: 24px !important;
+  }
+  .text-body-md {
+    font-size: 17.5px !important;
+    line-height: 27px !important;
+  }
+  .text-body-lg {
+    font-size: 19.5px !important;
+    line-height: 30px !important;
+  }
+  .text-title {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+  .text-headline-sm {
+    font-size: 22px !important;
+    line-height: 29px !important;
+  }
+  .text-headline-md {
+    font-size: 26px !important;
+    line-height: 34px !important;
+  }
+  .text-headline-lg {
+    font-size: 38px !important;
+    line-height: 46px !important;
+  }
+
+  /* Utility text scale refinement */
+  .text-xs {
+    font-size: 13px !important;
+    line-height: 18px !important;
+  }
+  .text-sm {
+    font-size: 15px !important;
+    line-height: 22px !important;
+  }
+  .text-base {
+    font-size: 17px !important;
+    line-height: 26px !important;
+  }
+  .text-lg {
+    font-size: 19.5px !important;
+    line-height: 28px !important;
+  }
+  .text-xl {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+
+
+  /* ==========================================================================
+     MOBILE VIEW PERFECTION & FLUID RESPONSIVENESS SYSTEM
+     ========================================================================== */
+  @media (max-width: 640px) {
+    /* Responsive Headings for Mobile Screens */
+    .text-display-lg {
+      font-size: 32px !important;
+      line-height: 40px !important;
+    }
+    .text-display-md {
+      font-size: 28px !important;
+      line-height: 36px !important;
+    }
+    .text-headline-lg {
+      font-size: 26px !important;
+      line-height: 34px !important;
+    }
+    .text-headline-md {
+      font-size: 22px !important;
+      line-height: 30px !important;
+    }
+
+    /* Container Spacing for Small Viewports */
+    .max-w-7xl {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    /* Touch Friendly Tap Targets */
+    button, a, input, select, textarea {
+      touch-action: manipulation;
+    }
+
+    /* Smooth Mobile Momentum Scrolling */
+    .overflow-x-auto {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+</style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+
+      fontSize: {
+        "xs": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+        "sm": ["15px", { "lineHeight": "22px", "fontWeight": "500" }],
+        "base": ["17px", { "lineHeight": "26px", "fontWeight": "500" }],
+        "lg": ["19.5px", { "lineHeight": "28px", "fontWeight": "500" }],
+        "xl": ["22px", { "lineHeight": "30px", "fontWeight": "600" }],
+        "2xl": ["26px", { "lineHeight": "34px", "fontWeight": "700" }],
+        "3xl": ["33px", { "lineHeight": "40px", "fontWeight": "700" }],
+        "4xl": ["40px", { "lineHeight": "48px", "fontWeight": "750" }],
+        "5xl": ["52px", { "lineHeight": "60px", "fontWeight": "750" }],
+        "display": ["58px", { "lineHeight": "66px", "letterSpacing": "-0.03em", "fontWeight": "750" }],
+        "display-lg": ["68px", { "lineHeight": "76px", "letterSpacing": "-0.03em", "fontWeight": "750" }],
+        "display-md": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.025em", "fontWeight": "650" }],
+        "display-mobile": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.02em", "fontWeight": "750" }],
+        "display-lg-mobile": ["42px", { "lineHeight": "50px", "letterSpacing": "-0.025em", "fontWeight": "750" }],
+        "display-md-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "650" }],
+        "headline-lg": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.02em", "fontWeight": "750" }],
+        "headline-md": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+        "headline-sm": ["22px", { "lineHeight": "29px", "letterSpacing": "-0.01em", "fontWeight": "650" }],
+        "headline-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "650" }],
+        "title": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "650" }],
+        "body-lg": ["19.5px", { "lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "500" }],
+        "body-md": ["17.5px", { "lineHeight": "27px", "letterSpacing": "0em", "fontWeight": "500" }],
+        "body-sm": ["15px", { "lineHeight": "23px", "letterSpacing": "0.005em", "fontWeight": "500" }],
+        "label-lg": ["15.5px", { "lineHeight": "22px", "letterSpacing": "0.05em", "fontWeight": "650" }],
+        "label-md": ["13.5px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+        "caption": ["13.5px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+      },
+        maxWidth: {
+          '7xl': '1600px',
+          '8xl': '1720px',
+          '9xl': '2160px',
+        },
+        colors: {
+          "surface": "#f6faf5",
+          "surface-bright": "#f6faf5",
+          "surface-dim": "#d7dbd6",
+          "surface-tint": "#416659",
+          "surface-variant": "#dfe4df",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#f0f5f0",
+          "surface-container": "#ebefea",
+          "surface-container-high": "#e5e9e4",
+          "surface-container-highest": "#dfe4df",
+          "on-surface": "#181d1a",
+          "on-surface-variant": "#414845",
+          "on-background": "#181d1a",
+          "background": "#f6faf5",
+          "inverse-surface": "#2d322e",
+          "inverse-on-surface": "#edf2ed",
+          "inverse-primary": "#a8cfc0",
+          "primary": "#00271d",
+          "primary-container": "#183d32",
+          "on-primary": "#ffffff",
+          "on-primary-container": "#81a899",
+          "primary-fixed": "#c3ebdb",
+          "primary-fixed-dim": "#a8cfc0",
+          "on-primary-fixed": "#002118",
+          "on-primary-fixed-variant": "#294d42",
+          "secondary": "#7a582f",
+          "secondary-container": "#fecf9d",
+          "on-secondary": "#ffffff",
+          "on-secondary-container": "#79562e",
+          "secondary-fixed": "#ffddba",
+          "secondary-fixed-dim": "#ecbe8e",
+          "on-secondary-fixed": "#2b1700",
+          "on-secondary-fixed-variant": "#5f401a",
+          "tertiary": "#1b231d",
+          "tertiary-container": "#313931",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-container": "#99a298",
+          "tertiary-fixed": "#dce5da",
+          "tertiary-fixed-dim": "#c0c9be",
+          "on-tertiary-fixed": "#151d17",
+          "on-tertiary-fixed-variant": "#404941",
+          "outline": "#717975",
+          "outline-variant": "#c1c8c4",
+          "error": "#ba1a1a",
+          "error-container": "#ffdad6",
+          "on-error": "#ffffff",
+          "on-error-container": "#93000a"
+        },
+        fontFamily: {
+          "display": ["Plus Jakarta Sans", "sans-serif"],
+          "display-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "display-md": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "body-lg": ["Manrope", "sans-serif"],
+          "body-md": ["Manrope", "sans-serif"],
+          "body-sm": ["Manrope", "sans-serif"],
+          "label-lg": ["Manrope", "sans-serif"],
+          "label-md": ["Manrope", "sans-serif"],
+          "label-sm": ["Manrope", "sans-serif"],
+          "caption": ["Manrope", "sans-serif"]
+        }
+      }
+    }
+  };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#183d32">
+  <script>
+    // Immediate Theme & Direction Initialization (Zero Flash)
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('timber-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+
+        var savedDir = localStorage.getItem('timber-direction') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+      } catch (e) {
+        console.error('Init script error:', e);
+      }
+    })();
+  </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-fixed">
+
+<!-- Unified Global Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-high/40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <!-- Top Utility Sub-Bar -->
+  <div class="bg-surface-container-low text-on-surface-variant hidden lg:block border-b border-surface-container-high/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-10 flex items-center justify-between font-label-md text-label-md tracking-wider uppercase text-xs sm:text-label-md">
+      <div class="flex items-center gap-2 truncate">
+        <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+        <span class="truncate">Cascade Ridge &amp; Greater Pacific Northwest</span>
+      </div>
+      <div class="flex items-center gap-3 xl:gap-6 2xl:gap-8 shrink-0 text-xs sm:text-label-md">
+        <a href="tel:18004928377" class="hover:text-primary transition-colors flex items-center gap-1.5 font-medium">
+          <span class="material-symbols-outlined text-[15px]">call</span>
+          +1 (800) 492-8377
+        </a>
+        <span class="hidden 2xl:inline whitespace-nowrap">Mon - Sat: 8:00 AM - 6:00 PM</span>
+        <span class="text-secondary font-semibold whitespace-nowrap">CCB #TL-89420 • Licensed &amp; Insured</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Navigation Bar -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-20 flex items-center justify-between gap-3 xl:gap-6">
+    <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 min-w-0 group focus:outline-none">
+      <img alt="Timber &amp; Terra Logo" class="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAro5dHwyl2QOWSvcHLu4N4FiWRftym8zIrDbRXizr8YE0AmVADuhA8p_jZef84KiAowWk6MCoZoLMKJ199qcCu17NzLI6wUGpDVvueZXote30E25kJSf1D9MA4Tx1BL4MSo-bZ5zEkHE6WK9RF9BKWz4u-MeR5mldCoTtwmBdyTjkVq-Rt_Q8UYx6BCQ8g3DxNtysD3QB-Tt7vTnMX_E9SdS8C2NYTP31Z0BhrK_mHR1KX1aKFxq9qrA"/>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-base sm:text-headline-sm tracking-tight text-primary font-bold leading-none">Timber &amp; Terra</span>
+        <span class="hidden md:block font-label-sm text-[10px] sm:text-label-sm text-secondary tracking-widest uppercase mt-0.5 sm:mt-1 truncate">Architectural Outdoor Living</span>
+      </div>
+    </a>
+
+    <nav class="hidden xl:flex items-center gap-0.5 2xl:gap-1 text-[13px] 2xl:text-label-lg font-label-lg whitespace-nowrap">
+      <!-- Home Dropdown -->
+      <div class="relative group/home">
+        <button class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 flex items-center gap-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all focus:outline-none" aria-expanded="false" aria-haspopup="true">
+          <span>Home</span>
+          <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover/home:rotate-180">expand_more</span>
+        </button>
+        <!-- Dropdown Menu -->
+        <div class="absolute top-full left-0 mt-1 w-72 bg-surface-container-lowest/95 backdrop-blur-xl border border-surface-container-high/60 shadow-xl rounded-xl p-2 opacity-0 translate-y-2 pointer-events-none group-hover/home:opacity-100 group-hover/home:translate-y-0 group-hover/home:pointer-events-auto transition-all duration-200 z-50">
+          <a href="index.html" class="flex flex-col gap-0.5 px-3.5 py-2.5 rounded-lg hover:bg-surface-container transition-colors group/item">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-on-surface group-hover/item:text-primary transition-colors text-[13px] 2xl:text-label-md">Home 1 — Craft Sanctuaries</span>
+              <span class="material-symbols-outlined text-[14px] text-secondary opacity-0 group-hover/item:opacity-100 transition-opacity">arrow_forward</span>
+            </div>
+            <span class="text-xs text-on-surface-variant leading-tight">Master timber decks &amp; bioclimatic pergolas</span>
+          </a>
+          <a href="home-2.html" class="flex flex-col gap-0.5 px-3.5 py-2.5 rounded-lg hover:bg-surface-container transition-colors group/item mt-1">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-on-surface group-hover/item:text-secondary transition-colors text-[13px] 2xl:text-label-md">Home 2 — Estate Pavilions</span>
+              <span class="material-symbols-outlined text-[14px] text-secondary opacity-0 group-hover/item:opacity-100 transition-opacity">arrow_forward</span>
+            </div>
+            <span class="text-xs text-on-surface-variant leading-tight">Luxury estate living &amp; cantilever architecture</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">About Us</a>
+      <a href="services.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">Services</a>
+      <a href="gallery.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">Projects Gallery</a>
+      <a href="pricing.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">Pricing Guide</a>
+      <a href="blog.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 font-semibold bg-primary-container text-on-primary-container rounded-lg shadow-sm transition-all">Blog Journal</a>
+      <a href="contact.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">Contact Us</a>
+    </nav>
+
+    <div class="flex items-center gap-2 sm:gap-3 2xl:gap-4 flex-shrink-0">
+      <button aria-label="Toggle color mode" class="theme-toggle-btn w-8 sm:w-9 h-8 sm:h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
+        <span class="material-symbols-outlined text-[18px]">contrast</span>
+      </button>
+      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn px-2 sm:px-2.5 h-8 sm:h-9 rounded-full bg-surface-container flex items-center justify-center gap-1 text-on-surface-variant hover:bg-surface-container-high transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider border border-surface-container-high/40" onclick="toggleDirection()" type="button">
+        <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+        <span class="dir-toggle-text font-bold">LTR</span>
+      </button>
+      <a href="contact.html" class="hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-5 py-2 2xl:py-2.5 bg-primary-container text-on-primary font-label-md 2xl:font-label-lg text-xs 2xl:text-label-lg rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary transition-all whitespace-nowrap shrink-0">
+        Get a Free Quote
+      </a>
+      <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-surface-container text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center transition-all duration-200 focus:outline-none border border-outline-variant/40 shadow-sm shrink-0" onclick="toggleMobileMenu()" type="button">
+        <span class="material-symbols-outlined text-[22px] sm:text-[24px]">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Collapsible Menu Drawer -->
+  <div class="hidden xl:hidden bg-surface-container-lowest max-h-[calc(100vh-5rem)] overflow-y-auto px-6 py-6 shadow-xl border-t border-outline-variant/30" id="mobile-menu">
+    <nav class="flex flex-col gap-2 font-body-md text-body-md">
+      <!-- Home Submenu Accordion -->
+      <div class="flex flex-col rounded-lg bg-surface-container-low/80 overflow-hidden border border-surface-container-high/40">
+        <button onclick="toggleMobileHomeSubmenu()" type="button" class="min-h-[44px] flex items-center justify-between px-4 py-2.5 font-semibold text-on-surface hover:bg-surface-container rounded-lg transition-all">
+          <span class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-secondary">home</span>
+            <span>Home Variations</span>
+          </span>
+          <span id="home-submenu-arrow" class="material-symbols-outlined text-[18px] transition-transform duration-200 ">expand_more</span>
+        </button>
+        <div id="home-mobile-submenu" class="flex flex-col pl-4 pr-3 pb-2 gap-1 hidden">
+          <a href="index.html" class="flex items-center justify-between py-2 px-3 rounded-lg text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all">
+            <div class="flex flex-col">
+              <span class="font-bold text-primary">Home 1 — Craft Sanctuaries</span>
+              <span class="text-[11px] text-on-surface-variant">Timber decks &amp; bioclimatic pergolas</span>
+            </div>
+            <span class="material-symbols-outlined text-[14px] text-secondary">arrow_forward</span>
+          </a>
+          <a href="home-2.html" class="flex items-center justify-between py-2 px-3 rounded-lg text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all">
+            <div class="flex flex-col">
+              <span class="font-bold text-secondary">Home 2 — Estate Pavilions</span>
+              <span class="text-[11px] text-on-surface-variant">Luxury estates &amp; cantilever architecture</span>
+            </div>
+            <span class="material-symbols-outlined text-[14px] text-secondary">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="min-h-[44px] flex items-center px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-lg">About Us</a>
+      <a href="services.html" class="min-h-[44px] flex items-center px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-lg">All Services</a>
+      <a href="gallery.html" class="min-h-[44px] flex items-center px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-lg">Projects Gallery</a>
+      <a href="pricing.html" class="min-h-[44px] flex items-center px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-lg">Pricing Guide</a>
+      <a href="blog.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold bg-primary-container text-on-primary-container rounded-lg">Blog Journal</a>
+      <a href="contact.html" class="min-h-[44px] flex items-center px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-lg">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main class="w-full pt-20 lg:pt-[120px] bg-surface min-h-[calc(100vh-120px)] overflow-x-hidden">
+  <div class="flex flex-col w-full">
+
+    <!-- Article Header & Breadcrumbs -->
+    <section class="relative w-full bg-surface-container-low py-12 lg:py-16 border-b border-surface-container-high/30">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-2 font-caption text-xs sm:text-caption text-on-surface-variant mb-6">
+          <a class="hover:text-primary transition-colors flex items-center gap-1" href="index.html">
+            <span class="material-symbols-outlined text-[14px]">home</span>
+            Home
+          </a>
+          <span>/</span>
+          <a class="hover:text-primary transition-colors" href="blog.html">Blog Journal</a>
+          <span>/</span>
+          <span class="text-secondary font-semibold">Outdoor Living</span>
+          <span>/</span>
+          <span class="text-primary font-medium truncate max-w-xs sm:max-w-md">open-air-kitchen</span>
+        </nav>
+
+        <!-- Category & Read Info -->
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="px-3 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-xs uppercase tracking-wider font-semibold">
+            Culinary Engineering • Joinery
+          </span>
+          <span class="text-on-surface-variant text-xs">•</span>
+          <span class="text-on-surface-variant font-caption text-xs flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">calendar_today</span>
+            August 11, 2025
+          </span>
+          <span class="text-on-surface-variant text-xs">•</span>
+          <span class="text-on-surface-variant font-caption text-xs flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">timer</span>
+            5 Min Read
+          </span>
+        </div>
+
+        <!-- Article Headline -->
+        <h1 class="font-display text-2xl sm:text-4xl lg:text-5xl text-primary font-bold tracking-tight mb-6 leading-tight max-w-5xl break-words">
+          Designing the Open-Air Kitchen: Thermal Setbacks and Marine-316 Longevity
+        </h1>
+
+        <!-- Executive Summary -->
+        <p class="font-body-lg text-base sm:text-lg text-on-surface-variant max-w-4xl leading-relaxed mb-8">
+          Preventing combustible framing hazards, calculating proper BTU exhaust under timber pavilions, and integrating solid stone waterfall islands.
+        </p>
+
+        <!-- Author Banner -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-surface-container-high/60">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-title shadow-sm shrink-0">
+              DK
+            </div>
+            <div>
+              <div class="font-label-lg text-base font-semibold text-primary">Julian & Chef Kim</div>
+              <div class="font-caption text-xs text-on-surface-variant">Culinary & Spatial Engineering Team • Timber &amp; Terra Research Team</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <button onclick="navigator.clipboard.writeText(window.location.href); alert('Article link copied to clipboard!');" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-sm text-xs hover:bg-surface-container-high transition-colors">
+              <span class="material-symbols-outlined text-[16px]">share</span>
+              Share Dispatch
+            </button>
+            <a href="blog.html" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-sm text-xs hover:bg-primary transition-colors">
+              <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+              All Dispatches
+            </a>
+          </div>
+
+      <div class="pt-3 border-t border-surface-container/60 mt-3 flex items-center justify-between gap-3">
+        <button onclick="toggleTheme()" type="button" class="flex-1 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
+          <span class="material-symbols-outlined text-[18px]">contrast</span>
+          <span class="theme-label-mobile">Theme</span>
+        </button>
+        <button onclick="toggleDirection()" type="button" class="flex-1 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
+          <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+          <span class="dir-label-mobile">LTR</span>
+        </button>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Body & Sidebar -->
+    <section class="w-full py-12 lg:py-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+          <!-- Left Column: Article Body (8 Cols) -->
+          <article class="lg:col-span-8 flex flex-col gap-10">
+
+            <!-- Featured Image Card -->
+            <div class="rounded-2xl overflow-hidden shadow-lg bg-surface-container-high relative">
+              <img src="https://lh3.googleusercontent.com/aida/AEtjO1WBlsVTmqtb2GgGJ-_rZF_4E8TtMBLfMw3XZOPNs2LpNXUW-vwGIY_v0T5i5_FtB_mDC_ZzDcLl_urUay1tDd1xGbA11UT2oHowgfQkAE0WJ6jXzITlOgK125Q7gKqaz2BsEb9wGX8iJb-m68UIicG-xaW-k78fP5hCetE-Abd7Hgof1HjjW2gEwM1Hm5nyUR8dVC-41hQQ_gT8LPuQ2wE1tEr_QoZD7O1NsgVN_pDsgBB-4h_KDCoyH2I" alt="Designing the Open-Air Kitchen: Thermal Setbacks and Marine-316 Longevity" class="w-full h-auto max-h-[520px] object-cover object-center"/>
+              <div class="p-4 bg-surface-container-lowest/95 border-t border-outline-variant/30 text-caption text-xs text-on-surface-variant flex items-center justify-between">
+                <span>Outdoor culinary pavilion with integrated cedar joists, marine 316 grill module, and quartzite countertops.</span>
+                <span class="font-semibold text-secondary">Verified Field Audit</span>
+              </div>
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-2xl bg-surface-container-low border border-surface-container-high">
+              
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider">Steel Grade</span>
+                  <span class="font-headline-sm text-base sm:text-lg text-primary font-bold mt-0.5">316 Marine Grade</span>
+                </div>
+              
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider">Hood CFM</span>
+                  <span class="font-headline-sm text-base sm:text-lg text-primary font-bold mt-0.5">1,200 CFM Dual Motor</span>
+                </div>
+              
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider">Thermal Clearance</span>
+                  <span class="font-headline-sm text-base sm:text-lg text-primary font-bold mt-0.5">Zero-Tolerance Insulated</span>
+                </div>
+              
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider">Gas Delivery</span>
+                  <span class="font-headline-sm text-base sm:text-lg text-primary font-bold mt-0.5">1" Dedicated Line</span>
+                </div>
+              
+            </div>
+
+            <!-- Detailed Sections -->
+            
+              <div class="space-y-4">
+                <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
+                  Combustion Safety: The Zero-Clearance Insulating Jacket
+                </h2>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
+                  A frequent flaw in amateur outdoor kitchen builds is installing high-BTU gas grills directly against combustible timber framing. Modern high-output sear burners can generate localized temperatures exceeding 900°F.
+
+Every Timber & Terra outdoor kitchen features stainless steel double-walled insulating jackets, non-combustible cementitious backer assemblies, and thermal expansion relief channels that protect surrounding cedar joinery and stone veneer from heat transfer.
+                </div>
+              </div>
+            
+              <div class="space-y-4">
+                <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
+                  Marine 316 vs. 304 Stainless Steel in Salt Fog Microclimates
+                </h2>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
+                  While standard 304 stainless steel is adequate for inland dry climates, coastal maritime air causes rapid tea-staining and pitting corrosion within months. We exclusively specify Marine 316 stainless steel containing 2–3% molybdenum for all burner boxes, access doors, and structural drawer glides.
+                </div>
+              </div>
+            
+
+            <!-- Author Bio Card -->
+            <div class="p-6 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-5 mt-6">
+              <div class="w-16 h-16 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-xl shrink-0">
+                DK
+              </div>
+              <div class="flex-1">
+                <span class="font-label-sm text-xs text-secondary uppercase font-semibold">About the Author</span>
+                <h3 class="font-headline-sm text-lg font-bold text-primary">Julian & Chef Kim</h3>
+                <p class="font-body-sm text-sm text-on-surface-variant mt-1 leading-relaxed">
+                  Collaborative partnership between master architectural timber builders and commercial kitchen designers crafting four-season outdoor culinary spaces.
+                </p>
+              </div>
+              <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-primary-container text-on-primary font-label-md text-xs font-semibold hover:bg-primary transition-colors shrink-0">
+                Consult With Author
+              </a>
+            </div>
+
+            <!-- Back to Blog Button -->
+            <div class="pt-6 border-t border-surface-container-high flex items-center justify-between">
+              <a href="blog.html" class="inline-flex items-center gap-2 text-primary font-label-md text-sm font-semibold hover:text-secondary transition-colors">
+                <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                Return to All Journal Dispatches
+              </a>
+              <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-secondary text-surface-bright font-label-md text-sm font-semibold hover:bg-secondary/90 transition-all shadow-md">
+                <span>Commission Your Project</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+
+          </article>
+
+          <!-- Right Column: Sticky Sidebar (4 Cols) -->
+          <aside class="lg:col-span-4 flex flex-col gap-8 sticky top-28">
+
+            <!-- Table of Contents Card -->
+            <div class="p-6 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-sm">
+              <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-bold block mb-3">Table of Contents</span>
+              <ul class="space-y-2.5 font-body-sm text-sm text-on-surface-variant">
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-secondary font-bold text-xs mt-0.5">01.</span>
+                    <span class="hover:text-primary transition-colors cursor-pointer">Combustion Safety: The Zero-Clearance Insulating Jacket</span>
+                  </li>
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-secondary font-bold text-xs mt-0.5">02.</span>
+                    <span class="hover:text-primary transition-colors cursor-pointer">Marine 316 vs. 304 Stainless Steel in Salt Fog Microclimates</span>
+                  </li>
+                
+              </ul>
+            </div>
+
+            <!-- Fast Consultation CTA Box -->
+            <div class="p-6 rounded-2xl bg-primary text-surface-bright shadow-lg flex flex-col gap-4">
+              <span class="font-label-sm text-xs text-secondary-fixed uppercase tracking-widest font-bold">Have a Similar Site?</span>
+              <h3 class="font-display text-xl font-bold leading-tight">Book a Site Feasibility &amp; LiDAR Scan</h3>
+              <p class="font-body-sm text-sm text-surface-container-high/90 leading-relaxed">
+                Our master builders evaluate slopes, soil composition, and municipal setbacks before any structural blueprints are stamped.
+              </p>
+              <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-secondary text-surface-bright font-label-md text-sm font-bold uppercase tracking-wider hover:bg-secondary/90 transition-colors shadow-md">
+                <span>Request Site Consultation</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="p-6 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-sm flex flex-col gap-4">
+              <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-bold">Related Field Studies</span>
+              <div class="flex flex-col divide-y divide-surface-container">
+                
+                  <a href="blog-hillside-cantilevers.html" class="py-3 flex flex-col gap-1 group">
+                    <span class="font-label-sm text-[10px] text-secondary uppercase">Structural Engineering</span>
+                    <h4 class="font-title text-sm font-semibold text-primary group-hover:text-secondary transition-colors line-clamp-2">
+                      Mastering the 35° Hillside: Structural Cantilevers, Helical Micro-Piles, and Soil Mechanics in Coastal Strata
+                    </h4>
+                    <span class="font-caption text-xs text-on-surface-variant">11 Min Read</span>
+                  </a>
+                
+                  <a href="blog-ipe-vs-cumaru.html" class="py-3 flex flex-col gap-1 group">
+                    <span class="font-label-sm text-[10px] text-secondary uppercase">Material Intelligence</span>
+                    <h4 class="font-title text-sm font-semibold text-primary group-hover:text-secondary transition-colors line-clamp-2">
+                      Ipe vs. Cumaru vs. Thermally Modified Ash: The 40-Year Life Cycle Analysis
+                    </h4>
+                    <span class="font-caption text-xs text-on-surface-variant">8 Min Read</span>
+                  </a>
+                
+              </div>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Unified Global Footer -->
+<footer class="bg-surface-container text-on-surface border-t border-surface-container-high/50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <img alt="Timber &amp; Terra Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAro5dHwyl2QOWSvcHLu4N4FiWRftym8zIrDbRXizr8YE0AmVADuhA8p_jZef84KiAowWk6MCoZoLMKJ199qcCu17NzLI6wUGpDVvueZXote30E25kJSf1D9MA4Tx1BL4MSo-bZ5zEkHE6WK9RF9BKWz4u-MeR5mldCoTtwmBdyTjkVq-Rt_Q8UYx6BCQ8g3DxNtysD3QB-Tt7vTnMX_E9SdS8C2NYTP31Z0BhrK_mHR1KX1aKFxq9qrA"/>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm tracking-tight text-primary font-bold">Timber &amp; Terra</span>
+            <span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Architectural Outdoor Living</span>
+          </div>
+        </a>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Pioneering generational outdoor living architecture. Master timber joinery, custom composite decks, and structural pergolas built for enduring harmony.
+        </p>
+        <div class="flex items-center gap-3 pt-2">
+          <a aria-label="Follow Timber &amp; Terra on Instagram" class="w-9 h-9 rounded-full bg-surface-container-high/70 text-on-surface flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm hover:scale-110" href="https://www.instagram.com" rel="noopener noreferrer" target="_blank" title="Instagram">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a aria-label="Follow Timber &amp; Terra on Pinterest" class="w-9 h-9 rounded-full bg-surface-container-high/70 text-on-surface flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm hover:scale-110" href="https://www.pinterest.com" rel="noopener noreferrer" target="_blank" title="Pinterest">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.332 1.357-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          </a>
+          <a aria-label="Follow Timber &amp; Terra on Facebook" class="w-9 h-9 rounded-full bg-surface-container-high/70 text-on-surface flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm hover:scale-110" href="https://www.facebook.com" rel="noopener noreferrer" target="_blank" title="Facebook">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a aria-label="Follow Timber &amp; Terra on LinkedIn" class="w-9 h-9 rounded-full bg-surface-container-high/70 text-on-surface flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm hover:scale-110" href="https://www.linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a aria-label="Subscribe to Timber &amp; Terra on YouTube" class="w-9 h-9 rounded-full bg-surface-container-high/70 text-on-surface flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm hover:scale-110" href="https://www.youtube.com" rel="noopener noreferrer" target="_blank" title="YouTube">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="font-headline-sm text-headline-sm text-primary mb-6 font-semibold">Navigation</div>
+        <nav class="flex flex-col gap-3 font-body-sm text-body-sm">
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About Timber &amp; Terra</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="services.html">Services &amp; Disciplines</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="gallery.html">Project Portfolio</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="pricing.html">Pricing Guide</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="blog.html">Journal &amp; Insights</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Schedule Consultation</a>
+        </nav>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="font-headline-sm text-headline-sm text-primary mb-6 font-semibold">Premium Services</div>
+        <nav class="flex flex-col gap-3 font-body-sm text-body-sm">
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="services.html#disciplines">Custom Timber Decks</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="services.html#composite-decking">Composite Systems</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="services.html#pergola-design-installation">Architectural Pergolas</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="services.html#estimator">Cost &amp; Investment Estimator</a>
+        </nav>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="font-headline-sm text-headline-sm text-primary mb-6 font-semibold">Studio &amp; Workshop</div>
+        <div class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-3 mb-6">
+          <p>4820 Timberland Way<br/>Cascade Ridge, OR 97201</p>
+          <p>Phone: <a href="tel:18004928377" class="hover:text-primary transition-colors">+1 (800) 492-8377</a><br/>Email: <a href="mailto:design@timberandterra.com" class="hover:text-primary transition-colors">design@timberandterra.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-surface-container-high/40">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant">
+      <div>© 2025–2026 Timber &amp; Terra. All Rights Reserved. Crafted for enduring living.</div>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-on-surface transition-colors" href="about.html">Privacy Policy</a>
+        <a class="hover:text-on-surface transition-colors" href="about.html">Terms of Service</a>
+        <a class="hover:text-on-surface transition-colors" href="about.html">Contractor License #TL-89420</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Floating Scroll Navigation Widget (Up & Down) -->
+<div id="floating-scroll-nav" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 flex flex-col gap-2.5 z-40">
+  <button id="btn-scroll-top" aria-label="Scroll to top" title="Scroll to top" class="w-11 h-11 rounded-full bg-surface-container-lowest/95 backdrop-blur text-primary shadow-[0_12px_28px_-6px_rgba(24,61,50,0.18)] border border-outline-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary hover:scale-110 active:scale-95 transition-all duration-200" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <span class="material-symbols-outlined text-[20px]">arrow_upward</span>
+  </button>
+  <button id="btn-scroll-down" aria-label="Scroll down" title="Scroll down" class="w-11 h-11 rounded-full bg-surface-container-lowest/95 backdrop-blur text-primary shadow-[0_12px_28px_-6px_rgba(24,61,50,0.18)] border border-outline-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary hover:scale-110 active:scale-95 transition-all duration-200" onclick="scrollPageDown()">
+    <span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+  </button>
+</div>
+
+<script>
+  function scrollPageDown() {
+    const scrollAmount = window.innerHeight * 0.85;
+    const remaining = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
+    if (remaining <= scrollAmount) {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+    } else {
+      window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+    }
+  }
+</script>
+
+<script>
+      function toggleMobileHomeSubmenu() {
+    const sub = document.getElementById('home-mobile-submenu');
+    const arrow = document.getElementById('home-submenu-arrow');
+    if (sub) {
+      sub.classList.toggle('hidden');
+      if (arrow) arrow.classList.toggle('rotate-180');
+    }
+  }
+
+  function toggleMobileMenu() {
+    const m = document.getElementById('mobile-menu');
+    if (m) m.classList.toggle('hidden');
+  }
+</script>
+
+  <!-- Theme & Direction Interactive Engine -->
+  <script>
+    function updateThemeUI() {
+      const isDark = document.documentElement.classList.contains('dark');
+      document.querySelectorAll('.theme-toggle-btn .material-symbols-outlined').forEach(icon => {
+        icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+      });
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.setAttribute('aria-label', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+        btn.setAttribute('title', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+      });
+      document.querySelectorAll('.theme-label-mobile').forEach(label => {
+        label.textContent = isDark ? 'Light' : 'Dark';
+      });
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      try {
+        localStorage.setItem('timber-theme', isDark ? 'dark' : 'light');
+      } catch (e) {}
+      updateThemeUI();
+    }
+
+    function updateDirUI() {
+      const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+      const isRtl = currentDir === 'rtl';
+      document.querySelectorAll('.dir-toggle-text').forEach(el => {
+        el.textContent = isRtl ? 'RTL' : 'LTR';
+      });
+      document.querySelectorAll('.dir-label-mobile').forEach(el => {
+        el.textContent = isRtl ? 'RTL' : 'LTR';
+      });
+      document.querySelectorAll('.dir-toggle-btn').forEach(btn => {
+        btn.setAttribute('aria-label', isRtl ? 'Switch to Left-to-Right layout' : 'Switch to Right-to-Left layout');
+        btn.setAttribute('title', isRtl ? 'Switch to Left-to-Right layout' : 'Switch to Right-to-Left layout');
+      });
+
+      // Directional arrow flipping
+      const directionalIcons = ['arrow_forward', 'chevron_right', 'arrow_back', 'chevron_left', 'trending_flat', 'east', 'west', 'arrow_right_alt'];
+      document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+        const text = icon.textContent.trim();
+        if (directionalIcons.includes(text)) {
+          icon.style.transform = isRtl ? 'scaleX(-1)' : '';
+          icon.style.display = 'inline-block';
+        }
+      });
+    }
+
+    function toggleDirection() {
+      const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+      const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+      document.documentElement.setAttribute('dir', newDir);
+      try {
+        localStorage.setItem('timber-direction', newDir);
+      } catch (e) {}
+      updateDirUI();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        updateThemeUI();
+        updateDirUI();
+      });
+    } else {
+      updateThemeUI();
+      updateDirUI();
+    }
+  </script>
+
+</body>
+</html>

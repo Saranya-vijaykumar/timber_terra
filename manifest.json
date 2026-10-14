@@ -1,0 +1,52 @@
+{
+  "name": "Timber & Terra — Architectural Deck Engineering & Outdoor Living",
+  "short_name": "Timber & Terra",
+  "description": "Architectural deck engineering and bespoke outdoor living sanctuaries built with sustainable craftsmanship.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#183d32",
+  "theme_color": "#183d32",
+  "orientation": "portrait-primary",
+  "categories": ["lifestyle", "business", "design"],
+  "icons": [
+    {
+      "src": "/assets/brand/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/brand/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/brand/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "url": "/services.html",
+      "description": "Explore architectural timber and deck engineering disciplines"
+    },
+    {
+      "name": "Project Gallery",
+      "url": "/project-gallery.html",
+      "description": "View luxury hillside and waterfront portfolio commissions"
+    },
+    {
+      "name": "Pricing Guide",
+      "url": "/pricing.html",
+      "description": "Interactive architectural investment and cost calculator"
+    },
+    {
+      "name": "Book Consultation",
+      "url": "/contact.html",
+      "description": "Schedule an on-site geotechnical and topographic consultation"
+    }
+  ]
+}
