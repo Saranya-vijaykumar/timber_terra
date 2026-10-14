@@ -504,6 +504,30 @@ tailwind.config = {
       <a href="contact.html" class="hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-5 py-2 2xl:py-2.5 bg-primary-container text-on-primary font-label-md 2xl:font-label-lg text-xs 2xl:text-label-lg rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary transition-all whitespace-nowrap shrink-0">
         Get a Free Quote
       </a>
+      <!-- Mobile Home Quick Switcher (Visible on Mobile & Tablet) -->
+      <div class="relative xl:hidden">
+        <button onclick="toggleMobileHomeDropdown(event)" type="button" class="px-2.5 py-1.5 flex items-center gap-1 font-bold text-xs rounded-lg bg-surface-container text-on-surface border border-outline-variant/30 shadow-sm focus:outline-none">
+          <span>Home</span>
+          <span class="material-symbols-outlined text-[15px]">expand_more</span>
+        </button>
+        <!-- Mobile Dropdown Popover -->
+        <div id="mobile-home-popover" class="hidden absolute top-full right-0 mt-2 w-64 bg-surface-container-lowest/98 backdrop-blur-xl border border-surface-container-high shadow-2xl rounded-xl p-2 z-50">
+          <a href="index.html" class="flex flex-col gap-0.5 p-2.5 rounded-lg hover:bg-surface-container text-on-surface transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold">Home 1 — Craft Sanctuaries</span>
+              
+            </div>
+            <span class="text-[11px] text-on-surface-variant font-normal">Master timber decks &amp; pergolas</span>
+          </a>
+          <a href="home-2.html" class="flex flex-col gap-0.5 p-2.5 rounded-lg hover:bg-surface-container text-on-surface transition-colors mt-1">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold">Home 2 — Estate Pavilions</span>
+              
+            </div>
+            <span class="text-[11px] text-on-surface-variant font-normal">Luxury estate living &amp; cantilevers</span>
+          </a>
+        </div>
+      </div>
       <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-surface-container text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center transition-all duration-200 focus:outline-none border border-outline-variant/40 shadow-sm shrink-0" onclick="toggleMobileMenu()" type="button">
         <span class="material-symbols-outlined text-[22px] sm:text-[24px]">menu</span>
       </button>
@@ -511,47 +535,34 @@ tailwind.config = {
   </div>
 
   <!-- Mobile Collapsible Menu Drawer -->
-  <div class="hidden xl:hidden bg-surface-container-lowest max-h-[calc(100vh-5rem)] overflow-y-auto px-6 py-6 shadow-xl border-t border-outline-variant/30" id="mobile-menu">
-    <nav class="flex flex-col gap-2 font-body-md text-body-md">
-      <!-- Home Submenu Accordion -->
-      <div class="flex flex-col rounded-lg bg-surface-container-low/80 overflow-hidden border border-surface-container-high/40">
-        <button onclick="toggleMobileHomeSubmenu()" type="button" class="min-h-[44px] flex items-center justify-between px-4 py-2.5 font-semibold text-on-surface hover:bg-surface-container rounded-lg transition-all">
-          <span class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-[18px] text-secondary">home</span>
-            <span>Home Variations</span>
-          </span>
-          <span id="home-submenu-arrow" class="material-symbols-outlined text-[18px] transition-transform duration-200 ">expand_more</span>
-        </button>
-        <div id="home-mobile-submenu" class="flex flex-col pl-4 pr-3 pb-2 gap-1 hidden">
-          <a href="index.html" class="flex items-center justify-between py-2 px-3 rounded-lg text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all">
-            <div class="flex flex-col">
-              <span class="font-bold text-primary">Home 1 — Craft Sanctuaries</span>
-              <span class="text-[11px] text-on-surface-variant">Timber decks &amp; bioclimatic pergolas</span>
-            </div>
-            <span class="material-symbols-outlined text-[14px] text-secondary">arrow_forward</span>
-          </a>
-          <a href="home-2.html" class="flex items-center justify-between py-2 px-3 rounded-lg text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all">
-            <div class="flex flex-col">
-              <span class="font-bold text-secondary">Home 2 — Estate Pavilions</span>
-              <span class="text-[11px] text-on-surface-variant">Luxury estates &amp; cantilever architecture</span>
-            </div>
-            <span class="material-symbols-outlined text-[14px] text-secondary">arrow_forward</span>
-          </a>
-        </div>
+  <div class="hidden xl:hidden bg-surface-container-lowest max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl border-t border-outline-variant/30" id="mobile-menu">
+    <nav class="flex flex-col gap-1.5 font-body-md text-body-md">
+      <!-- Direct Home 1 & Home 2 Segmented Switcher -->
+      <div class="grid grid-cols-2 gap-2 p-1.5 bg-surface-container-low rounded-xl border border-surface-container-high/60 mb-2">
+        <a href="index.html" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs uppercase tracking-wider text-center text-on-surface hover:bg-surface-container font-medium transition-all">
+          <span class="material-symbols-outlined text-[16px]">cottage</span>
+          <span>Home 1</span>
+        </a>
+        <a href="home-2.html" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs uppercase tracking-wider text-center text-on-surface hover:bg-surface-container font-medium transition-all">
+          <span class="material-symbols-outlined text-[16px]">domain</span>
+          <span>Home 2</span>
+        </a>
       </div>
-      <a href="about.html" class="min-h-[44px] flex items-center px-4 py-2.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">About Us</a>
-      
-      <a href="gallery.html" class="min-h-[44px] flex items-center px-4 py-2.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Projects Gallery</a>
-      <a href="pricing.html" class="min-h-[44px] flex items-center px-4 py-2.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Pricing Guide</a>
-      <a href="blog.html" class="min-h-[44px] flex items-center px-4 py-2.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Blog Journal</a>
-      <a href="contact.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold bg-primary-container text-on-primary-container rounded-lg transition-all">Contact Us</a>
+
+      <a href="about.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">About Us</a>
+      <a href="services.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Services</a>
+      <a href="gallery.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Projects Gallery</a>
+      <a href="pricing.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Pricing Guide</a>
+      <a href="blog.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Blog Journal</a>
+      <a href="contact.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-bold bg-primary-container text-on-primary-container rounded-lg transition-all">Contact Us</a>
+
       <div class="pt-4 border-t border-surface-container mt-2">
         <a href="contact.html" class="w-full inline-flex items-center justify-center px-5 py-3 bg-primary-container text-on-primary font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary transition-colors">
           Get a Free Quote
         </a>
       </div>
 
-      <div class="pt-3 border-t border-surface-container/60 mt-3 flex items-center justify-between gap-3">
+      <div class="pt-3 border-t border-surface-container/60 mt-2 flex items-center justify-between gap-3">
         <button onclick="toggleTheme()" type="button" class="flex-1 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
           <span class="material-symbols-outlined text-[18px]">contrast</span>
           <span class="theme-label-mobile">Theme</span>
@@ -1239,6 +1250,20 @@ tailwind.config = {
       if (arrow) arrow.classList.toggle('rotate-180');
     }
   }
+
+    function toggleMobileHomeDropdown(e) {
+    if (e) e.stopPropagation();
+    const pop = document.getElementById('mobile-home-popover');
+    if (pop) pop.classList.toggle('hidden');
+  }
+
+  // Close popover when clicking anywhere outside
+  document.addEventListener('click', (e) => {
+    const pop = document.getElementById('mobile-home-popover');
+    if (pop && !pop.classList.contains('hidden') && !e.target.closest('#mobile-home-popover') && !e.target.closest('[onclick*="toggleMobileHomeDropdown"]')) {
+      pop.classList.add('hidden');
+    }
+  });
 
   function toggleMobileMenu() {
     const m = document.getElementById('mobile-menu');
