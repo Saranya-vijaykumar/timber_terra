@@ -1,4 +1,4 @@
-﻿# Timber & Terra — Architectural Outdoor Living Website
+# Timber & Terra — Architectural Outdoor Living Website
 
 A modern, production-ready, multi-page website generated from Stitch Project `10444063813659724051` (**"Timber & Terra Outdoor Website"**) with integrated biophilic design tokens, Tailwind CSS styling, responsive desktop/tablet/mobile layouts, and interactive zero-dependency vanilla JavaScript features.
 
