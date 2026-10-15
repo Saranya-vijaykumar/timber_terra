@@ -1,4 +1,33 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/home-2",
+      "destination": "/home-2.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/gallery",
+      "destination": "/gallery.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/pricing.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    }
+  ]
 }
