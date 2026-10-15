@@ -431,8 +431,8 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-20 flex items-center justify-between gap-3 xl:gap-6">
     <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 min-w-0 group focus:outline-none">
       <img alt="Timber &amp; Terra Logo" class="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAro5dHwyl2QOWSvcHLu4N4FiWRftym8zIrDbRXizr8YE0AmVADuhA8p_jZef84KiAowWk6MCoZoLMKJ199qcCu17NzLI6wUGpDVvueZXote30E25kJSf1D9MA4Tx1BL4MSo-bZ5zEkHE6WK9RF9BKWz4u-MeR5mldCoTtwmBdyTjkVq-Rt_Q8UYx6BCQ8g3DxNtysD3QB-Tt7vTnMX_E9SdS8C2NYTP31Z0BhrK_mHR1KX1aKFxq9qrA"/>
-      <div class="flex flex-col">
-        <span class="font-headline-sm text-base sm:text-headline-sm tracking-tight text-primary font-bold leading-none">Timber &amp; Terra</span>
+      <div class="flex flex-col min-w-0">
+        <span class="font-headline-sm text-base sm:text-headline-sm tracking-tight text-primary font-bold leading-none truncate">Timber &amp; Terra</span>
         <span class="hidden md:block font-label-sm text-[10px] sm:text-label-sm text-secondary tracking-widest uppercase mt-0.5 sm:mt-1 truncate">Architectural Outdoor Living</span>
       </div>
     </a>
@@ -474,37 +474,13 @@
       <button aria-label="Toggle color mode" class="theme-toggle-btn w-8 sm:w-9 h-8 sm:h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
         <span class="material-symbols-outlined text-[18px]">contrast</span>
       </button>
-      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn px-2 sm:px-2.5 h-8 sm:h-9 rounded-full bg-surface-container flex items-center justify-center gap-1 text-on-surface-variant hover:bg-surface-container-high transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider border border-surface-container-high/40" onclick="toggleDirection()" type="button">
+      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 h-8 sm:h-9 rounded-full bg-surface-container items-center justify-center gap-1 text-on-surface-variant hover:bg-surface-container-high transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider border border-surface-container-high/40" onclick="toggleDirection()" type="button">
         <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
         <span class="dir-toggle-text font-bold">LTR</span>
       </button>
       <a href="contact.html" class="hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-5 py-2 2xl:py-2.5 bg-primary-container text-on-primary font-label-md 2xl:font-label-lg text-xs 2xl:text-label-lg rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary transition-all whitespace-nowrap shrink-0">
         Get a Free Quote
       </a>
-      <!-- Mobile Home Quick Switcher (Visible on Mobile & Tablet) -->
-      <div class="relative xl:hidden">
-        <button onclick="toggleMobileHomeDropdown(event)" type="button" class="px-2.5 py-1.5 flex items-center gap-1 font-bold text-xs rounded-lg bg-surface-container text-on-surface border border-outline-variant/30 shadow-sm focus:outline-none">
-          <span>Home</span>
-          <span class="material-symbols-outlined text-[15px]">expand_more</span>
-        </button>
-        <!-- Mobile Dropdown Popover -->
-        <div id="mobile-home-popover" class="hidden absolute top-full right-0 mt-2 w-64 bg-surface-container-lowest/98 backdrop-blur-xl border border-surface-container-high shadow-2xl rounded-xl p-2 z-50">
-          <a href="index.html" class="flex flex-col gap-0.5 p-2.5 rounded-lg hover:bg-surface-container text-on-surface transition-colors">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold">Home 1 — Craft Sanctuaries</span>
-              
-            </div>
-            <span class="text-[11px] text-on-surface-variant font-normal">Master timber decks &amp; pergolas</span>
-          </a>
-          <a href="home-2.html" class="flex flex-col gap-0.5 p-2.5 rounded-lg hover:bg-surface-container text-on-surface transition-colors mt-1">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold">Home 2 — Estate Pavilions</span>
-              
-            </div>
-            <span class="text-[11px] text-on-surface-variant font-normal">Luxury estate living &amp; cantilevers</span>
-          </a>
-        </div>
-      </div>
       <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-surface-container text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center transition-all duration-200 focus:outline-none border border-outline-variant/40 shadow-sm shrink-0" onclick="toggleMobileMenu()" type="button">
         <span class="material-symbols-outlined text-[22px] sm:text-[24px]">menu</span>
       </button>
