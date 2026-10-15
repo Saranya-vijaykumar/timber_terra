@@ -6,28 +6,45 @@
   <meta content="web_standard" name="shell-type"/>
   <title>Custom Architectural Deck Building — Timber &amp; Terra Architectural Outdoor Living</title>
   <style>
-  @layer base {
-    html, body {
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100%;
-      max-width: 100vw;
-      overflow-x: hidden;
-      box-sizing: border-box;
-    }
-    *, *::before, *::after {
-      box-sizing: inherit;
-    }
-    img, video {
-      max-width: 100%;
-      height: auto;
-    }
-    body {
-      overscroll-behavior: none;
-    }
+    /* ==========================================================================
+     TOUCH-PERFECT SCREEN SCROLLING & INVISIBLE SCROLLBAR SYSTEM
+     ========================================================================== */
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: touch !important;
   }
-  ::-webkit-scrollbar {
-    display: none;
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: visible;
+    box-sizing: border-box;
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Invisible Scrollbar - Clean screen touch scrolling without visible scrollbar bar */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
   }
   /* Responsive Luxury Container System */
   .max-w-7xl {
@@ -264,6 +281,159 @@
     .overflow-x-auto {
       -webkit-overflow-scrolling: touch;
     }
+  }
+
+
+  /* ==========================================================================
+     TIMBER & TERRA DUAL THEME ENGINE (LIGHT & DARK MODE)
+     ========================================================================== */
+  /* Smooth theme transition */
+  html, body, header, section, footer, div, nav, button, a, article, aside {
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease;
+  }
+
+  /* Architectural Dark Luxury Palette */
+  html.dark {
+    color-scheme: dark;
+  }
+  html.dark body {
+    background-color: #0c120f !important;
+    color: #e2eae5 !important;
+  }
+
+  /* Surfaces & Containers */
+  html.dark .bg-surface {
+    background-color: #0c120f !important;
+  }
+  html.dark .bg-surface\/95 {
+    background-color: rgba(12, 18, 15, 0.95) !important;
+  }
+  html.dark .bg-surface\/90 {
+    background-color: rgba(12, 18, 15, 0.90) !important;
+  }
+  html.dark .bg-surface\/10 {
+    background-color: rgba(226, 234, 229, 0.08) !important;
+  }
+  html.dark .bg-surface-bright\/90 {
+    background-color: rgba(18, 25, 21, 0.90) !important;
+  }
+  html.dark .bg-surface-bright\/95 {
+    background-color: rgba(18, 25, 21, 0.95) !important;
+  }
+  html.dark .bg-surface-container-lowest {
+    background-color: #080d0b !important;
+  }
+  html.dark .bg-surface-container-lowest\/80 {
+    background-color: rgba(8, 13, 11, 0.80) !important;
+  }
+  html.dark .bg-surface-container-lowest\/90 {
+    background-color: rgba(8, 13, 11, 0.90) !important;
+  }
+  html.dark .bg-surface-container-lowest\/95 {
+    background-color: rgba(8, 13, 11, 0.95) !important;
+  }
+  html.dark .bg-surface-container-low {
+    background-color: #111815 !important;
+  }
+  html.dark .bg-surface-container-low\/50 {
+    background-color: rgba(17, 24, 21, 0.50) !important;
+  }
+  html.dark .bg-surface-container-low\/60 {
+    background-color: rgba(17, 24, 21, 0.60) !important;
+  }
+  html.dark .bg-surface-container-low\/80 {
+    background-color: rgba(17, 24, 21, 0.80) !important;
+  }
+  html.dark .bg-surface-container {
+    background-color: #16201b !important;
+  }
+  html.dark .bg-surface-container\/60 {
+    background-color: rgba(22, 32, 27, 0.60) !important;
+  }
+  html.dark .bg-surface-container-high {
+    background-color: #1e2a24 !important;
+  }
+  html.dark .bg-surface-container-high\/30 {
+    background-color: rgba(30, 42, 36, 0.30) !important;
+  }
+  html.dark .bg-surface-container-high\/40 {
+    background-color: rgba(30, 42, 36, 0.40) !important;
+  }
+  html.dark .bg-surface-container-high\/70 {
+    background-color: rgba(30, 42, 36, 0.70) !important;
+  }
+  html.dark .bg-surface-container-highest {
+    background-color: #26352e !important;
+  }
+  html.dark .bg-surface-container-highest\/80 {
+    background-color: rgba(38, 53, 46, 0.80) !important;
+  }
+  html.dark .bg-surface-variant {
+    background-color: #1a2520 !important;
+  }
+
+  /* Typography in Dark Mode */
+  html.dark .text-on-surface {
+    color: #e2eae5 !important;
+  }
+  html.dark .text-on-surface-variant {
+    color: #9cb0a5 !important;
+  }
+  html.dark .text-primary {
+    color: #9dd4bf !important;
+  }
+  html.dark .hover\:text-primary:hover {
+    color: #bbf0dc !important;
+  }
+
+  /* Borders & Dividers in Dark Mode */
+  html.dark .border-surface-container,
+  html.dark .border-surface-container\/60,
+  html.dark .border-surface-container-high,
+  html.dark .border-surface-container-high\/40,
+  html.dark .border-surface-container-high\/60 {
+    border-color: rgba(255, 255, 255, 0.09) !important;
+  }
+  html.dark .border-outline-variant,
+  html.dark .border-outline-variant\/20,
+  html.dark .border-outline-variant\/40 {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  /* Navigation & Header Overrides */
+  html.dark header {
+    background-color: rgba(12, 18, 15, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  html.dark #mobile-menu {
+    background-color: #0c120f !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  /* Interactive States */
+  html.dark .hover\:bg-surface-container:hover {
+    background-color: #1e2a24 !important;
+  }
+  html.dark .hover\:bg-surface-container-high:hover {
+    background-color: #26352e !important;
+  }
+
+  /* Form Elements */
+  html.dark input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+  html.dark textarea,
+  html.dark select {
+    background-color: #16201b !important;
+    color: #e2eae5 !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+  }
+  html.dark input::placeholder,
+  html.dark textarea::placeholder {
+    color: #72857a !important;
+  }
+
+  /* Elevated Shadows */
+  html.dark .shadow-sm, html.dark .shadow-md, html.dark .shadow-lg, html.dark .shadow-xl, html.dark .shadow-2xl {
+    box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.65) !important;
   }
 
 </style>
