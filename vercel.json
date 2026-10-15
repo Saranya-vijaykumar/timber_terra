@@ -1,6 +1,11 @@
 {
-  "cleanUrls": false,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
     {
       "source": "/home-2",
       "destination": "/home-2.html"
@@ -28,6 +33,74 @@
     {
       "source": "/contact",
       "destination": "/contact.html"
+    },
+    {
+      "source": "/service-custom-deck-building",
+      "destination": "/service-custom-deck-building.html"
+    },
+    {
+      "source": "/service-timber-decking",
+      "destination": "/service-timber-decking.html"
+    },
+    {
+      "source": "/service-composite-decking",
+      "destination": "/service-composite-decking.html"
+    },
+    {
+      "source": "/service-pergola-design-installation",
+      "destination": "/service-pergola-design-installation.html"
+    },
+    {
+      "source": "/service-outdoor-living-spaces",
+      "destination": "/service-outdoor-living-spaces.html"
+    },
+    {
+      "source": "/service-deck-renovation-restoration",
+      "destination": "/service-deck-renovation-restoration.html"
+    },
+    {
+      "source": "/service-architectural-stairs-railings",
+      "destination": "/service-architectural-stairs-railings.html"
+    },
+    {
+      "source": "/service-deck-maintenance",
+      "destination": "/service-deck-maintenance.html"
+    },
+    {
+      "source": "/service-details",
+      "destination": "/service-details.html"
+    },
+    {
+      "source": "/blog-bioclimatic-pergola",
+      "destination": "/blog-bioclimatic-pergola.html"
+    },
+    {
+      "source": "/blog-coastal-wui-mandates",
+      "destination": "/blog-coastal-wui-mandates.html"
+    },
+    {
+      "source": "/blog-glass-balustrades",
+      "destination": "/blog-glass-balustrades.html"
+    },
+    {
+      "source": "/blog-hillside-cantilevers",
+      "destination": "/blog-hillside-cantilevers.html"
+    },
+    {
+      "source": "/blog-ipe-vs-cumaru",
+      "destination": "/blog-ipe-vs-cumaru.html"
+    },
+    {
+      "source": "/blog-lidar-scanning",
+      "destination": "/blog-lidar-scanning.html"
+    },
+    {
+      "source": "/blog-open-air-kitchen",
+      "destination": "/blog-open-air-kitchen.html"
+    },
+    {
+      "source": "/blog-details",
+      "destination": "/blog-details.html"
     }
   ]
 }
