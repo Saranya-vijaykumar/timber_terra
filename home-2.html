@@ -434,6 +434,135 @@
     box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.65) !important;
   }
 
+
+  /* Enhanced Touch Range Sliders & Interactive Controls */
+  input[type="range"] {
+    touch-action: pan-x !important;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background-color: #dce4dd;
+    border-radius: 9999px;
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #00271d;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    cursor: grab;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #00271d;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    cursor: grab;
+  }
+  html.dark input[type="range"] {
+    background-color: #26352e;
+  }
+  html.dark input[type="range"]::-webkit-slider-thumb {
+    background: #9dd4bf;
+    border: 3px solid #0c120f;
+  }
+  html.dark input[type="range"]::-moz-range-thumb {
+    background: #9dd4bf;
+    border: 3px solid #0c120f;
+  }
+
+
+  /* ==========================================================================
+     EXECUTIVE ARCHITECTURAL TYPOGRAPHY & BALANCED PROPORTIONS
+     ========================================================================== */
+  h1, h2, h3, .font-display-lg, .font-display-md, .font-headline-lg, .font-headline-md {
+    font-family: 'Cinzel', 'Plus Jakarta Sans', serif !important;
+    letter-spacing: -0.015em;
+  }
+  
+  /* Decreased, professional, balanced font sizes */
+  .font-display-lg, h1.font-display-lg {
+    font-size: 38px !important;
+    line-height: 46px !important;
+  }
+  @media (min-width: 768px) {
+    .font-display-lg, h1.font-display-lg {
+      font-size: 46px !important;
+      line-height: 54px !important;
+    }
+  }
+  @media (min-width: 1280px) {
+    .font-display-lg, h1.font-display-lg {
+      font-size: 52px !important;
+      line-height: 60px !important;
+    }
+  }
+
+  .font-display-md, h2.font-display-md {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  @media (min-width: 1024px) {
+    .font-display-md, h2.font-display-md {
+      font-size: 38px !important;
+      line-height: 46px !important;
+    }
+  }
+
+  .font-headline-lg, h2.font-headline-lg {
+    font-size: 26px !important;
+    line-height: 34px !important;
+  }
+  @media (min-width: 1024px) {
+    .font-headline-lg, h2.font-headline-lg {
+      font-size: 32px !important;
+      line-height: 40px !important;
+    }
+  }
+
+  .font-headline-md, h3.font-headline-md {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+  @media (min-width: 1024px) {
+    .font-headline-md, h3.font-headline-md {
+      font-size: 23px !important;
+      line-height: 30px !important;
+    }
+  }
+
+  .font-headline-sm, h4.font-headline-sm {
+    font-size: 18px !important;
+    line-height: 25px !important;
+  }
+
+  /* Body text readability and professional weight */
+  body, p, li, input, select, textarea {
+    font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif !important;
+    font-size: 15.5px !important;
+    line-height: 25px !important;
+    font-weight: 450 !important;
+  }
+
+  /* Executive Balanced Padding & Margins */
+  .max-w-7xl {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  @media (min-width: 1024px) {
+    .max-w-7xl {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+  }
+
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -568,6 +697,7 @@ tailwind.config = {
 </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Manrope:wght@400..700&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
@@ -629,10 +759,10 @@ tailwind.config = {
     </a>
 
     <!-- Desktop Navigation Links with Home Dropdown -->
-    <nav class="hidden xl:flex items-center gap-0.5 2xl:gap-1 text-[13px] 2xl:text-label-lg font-label-lg whitespace-nowrap">
+    <nav class="hidden xl:flex items-center gap-4 2xl:gap-7 text-[14.5px] 2xl:text-[15.5px] font-semibold tracking-normal whitespace-nowrap">
       <!-- Home Dropdown -->
       <div class="relative group/home">
-        <button class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 flex items-center gap-1 font-semibold bg-primary-container text-on-primary-container rounded-lg shadow-sm transition-all focus:outline-none" aria-expanded="false" aria-haspopup="true">
+        <button class="px-4 2xl:px-5 py-2.5 flex items-center gap-1.5 font-semibold bg-primary-container text-on-primary-container rounded-xl shadow-sm transition-all focus:outline-none" aria-expanded="false" aria-haspopup="true">
           <span>Home</span>
           <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover/home:rotate-180">expand_more</span>
         </button>
@@ -655,12 +785,12 @@ tailwind.config = {
         </div>
       </div>
 
-      <a href="about.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">About Us</a>
-      <a href="services.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">Services</a>
-      <a href="gallery.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">Projects Gallery</a>
-      <a href="pricing.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">Pricing Guide</a>
-      <a href="blog.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">Blog Journal</a>
-      <a href="contact.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all">Contact Us</a>
+      <a href="about.html" class="px-4 2xl:px-5 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-xl transition-all">About Us</a>
+      <a href="services.html" class="px-4 2xl:px-5 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-xl transition-all">Services</a>
+      <a href="gallery.html" class="px-4 2xl:px-5 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-xl transition-all">Projects Gallery</a>
+      <a href="pricing.html" class="px-4 2xl:px-5 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-xl transition-all">Pricing Guide</a>
+      <a href="blog.html" class="px-4 2xl:px-5 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-xl transition-all">Blog Journal</a>
+      <a href="contact.html" class="px-4 2xl:px-5 py-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-xl transition-all">Contact Us</a>
     </nav>
 
     <!-- Action Utilities (Theme, Direction, CTA, Mobile Menu) -->
@@ -709,7 +839,7 @@ tailwind.config = {
         </a>
       </div>
 
-      <div class="pt-3 border-t border-surface-container/60 mt-2 flex items-center justify-between gap-3">
+      <div class="pt-3.5 border-t border-surface-container/60 mt-3 grid grid-cols-2 gap-3">
         <button onclick="toggleTheme()" type="button" class="flex-1 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
           <span class="material-symbols-outlined text-[18px]">contrast</span>
           <span class="theme-label-mobile">Theme</span>
@@ -729,8 +859,8 @@ tailwind.config = {
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
       <img alt="Timber &amp; Terra Grand Estate Living Pavilion at twilight overlooking Pacific Northwest alpine valley" class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp1M-O90n3c4YdyOKEIOyAAOuwjCYVqLOjsQXTfw5rHKms-WKm0xvyYVUWevyHzqQhGszeXC6Q8sATpelqsS93kH0f8vAji3m_iXqXRoAsjg1Zewd9qgQDbhbHIhj8rinnDzNP5De1spI9MfRV6mV_iX30mtYtA7IYJPVN9hJ2UtviZBv9TnPopuDQd9IAsZBlBmrrWkAQgfI5qMl8Z9UDpRyuAc8fZ1SWrwjC-Kq63s8ZtUn2w6SyOw"/>
-      <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/45"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-primary/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/15"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
     </div>
 
     <!-- Hero Content -->
@@ -779,15 +909,6 @@ tailwind.config = {
             <span>Zero-Disruption Hillside Rigging</span>
           </div>
         </div>
-
-        <!-- Interactive Hero Scroll Down Indicator -->
-        <div class="mt-8 flex justify-center w-full">
-          <button onclick="scrollPageDown()" aria-label="Scroll down to explore" class="inline-flex flex-col items-center gap-1 text-on-primary/70 hover:text-on-primary transition-all group focus:outline-none">
-            <span class="font-label-sm text-[11px] uppercase tracking-widest text-secondary font-bold group-hover:tracking-wider transition-all">Scroll Down</span>
-            <span class="material-symbols-outlined text-[24px] animate-bounce text-secondary">keyboard_arrow_down</span>
-          </button>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -907,10 +1028,10 @@ tailwind.config = {
               <span id="calc-slope-label" class="font-bold text-secondary">Moderate Slope (20°)</span>
             </div>
             <input id="calc-slope" type="range" min="1" max="3" value="2" class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" oninput="updateCalculator()"/>
-            <div class="flex justify-between text-xs text-on-surface-variant mt-1">
-              <span>Gentle (0°–10°)</span>
-              <span>Moderate (20°)</span>
-              <span>Sheer Bluff (45°+)</span>
+            <div class="grid grid-cols-3 gap-2 mt-2">
+              <button type="button" onclick="document.getElementById('calc-slope').value=1; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">Gentle</button>
+              <button type="button" onclick="document.getElementById('calc-slope').value=2; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">Moderate</button>
+              <button type="button" onclick="document.getElementById('calc-slope').value=3; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">Bluff (45°+)</button>
             </div>
           </div>
 
@@ -921,10 +1042,10 @@ tailwind.config = {
               <span id="calc-area-label" class="font-bold text-secondary">1,600 sq. ft.</span>
             </div>
             <input id="calc-area" type="range" min="800" max="3500" step="100" value="1600" class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" oninput="updateCalculator()"/>
-            <div class="flex justify-between text-xs text-on-surface-variant mt-1">
-              <span>800 sq.ft.</span>
-              <span>2,000 sq.ft.</span>
-              <span>3,500+ sq.ft.</span>
+            <div class="grid grid-cols-3 gap-2 mt-2">
+              <button type="button" onclick="document.getElementById('calc-area').value=800; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">800 sq ft</button>
+              <button type="button" onclick="document.getElementById('calc-area').value=1600; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">1,600 sq ft</button>
+              <button type="button" onclick="document.getElementById('calc-area').value=2800; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">2,800+ sq ft</button>
             </div>
           </div>
 
@@ -1253,106 +1374,8 @@ tailwind.config = {
   </div>
 </footer>
 
-<!-- Floating Scroll Navigation Widget (Up & Down) -->
-<div id="floating-scroll-nav" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 flex flex-col gap-2.5 z-40">
-  <button id="btn-scroll-top" aria-label="Scroll to top" title="Scroll to top" class="w-11 h-11 rounded-full bg-surface-container-lowest/95 backdrop-blur text-primary shadow-[0_12px_28px_-6px_rgba(24,61,50,0.18)] border border-outline-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary hover:scale-110 active:scale-95 transition-all duration-200" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <span class="material-symbols-outlined text-[20px]">arrow_upward</span>
-  </button>
-  <button id="btn-scroll-down" aria-label="Scroll down" title="Scroll down" class="w-11 h-11 rounded-full bg-surface-container-lowest/95 backdrop-blur text-primary shadow-[0_12px_28px_-6px_rgba(24,61,50,0.18)] border border-outline-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary hover:scale-110 active:scale-95 transition-all duration-200" onclick="scrollPageDown()">
-    <span class="material-symbols-outlined text-[20px]">arrow_downward</span>
-  </button>
-</div>
-
 <!-- Scripts -->
-<script>
-  function scrollPageDown() {
-    const scrollAmount = window.innerHeight * 0.85;
-    const remaining = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
-    if (remaining <= scrollAmount) {
-      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
-    } else {
-      window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
-    }
-  }
 
-    function toggleMobileHomeDropdown(e) {
-    if (e) e.stopPropagation();
-    const pop = document.getElementById('mobile-home-popover');
-    if (pop) pop.classList.toggle('hidden');
-  }
-
-  // Close popover when clicking anywhere outside
-  document.addEventListener('click', (e) => {
-    const pop = document.getElementById('mobile-home-popover');
-    if (pop && !pop.classList.contains('hidden') && !e.target.closest('#mobile-home-popover') && !e.target.closest('[onclick*="toggleMobileHomeDropdown"]')) {
-      pop.classList.add('hidden');
-    }
-  });
-
-  function toggleMobileMenu() {
-    const m = document.getElementById('mobile-menu');
-    if (m) {
-      m.classList.toggle('hidden');
-    }
-  }
-
-  function toggleMobileHomeSubmenu() {
-    const sub = document.getElementById('home-mobile-submenu');
-    const arrow = document.getElementById('home-submenu-arrow');
-    if (sub) {
-      sub.classList.toggle('hidden');
-      if (arrow) arrow.classList.toggle('rotate-180');
-    }
-  }
-
-  // Interactive Calculator Logic
-  function updateCalculator() {
-    const slopeVal = parseInt(document.getElementById('calc-slope').value);
-    const areaVal = parseInt(document.getElementById('calc-area').value);
-    const matVal = document.getElementById('calc-material').value;
-
-    const slopeLabel = document.getElementById('calc-slope-label');
-    const areaLabel = document.getElementById('calc-area-label');
-    const priceDisplay = document.getElementById('calc-price');
-    const foundationDisplay = document.getElementById('calc-foundation');
-
-    areaLabel.textContent = areaVal.toLocaleString() + ' sq. ft.';
-
-    let slopeMultiplier = 1.0;
-    if (slopeVal === 1) {
-      slopeLabel.textContent = 'Gentle Grade (0°–10°)';
-      foundationDisplay.textContent = 'Poured Pier Foundations';
-      slopeMultiplier = 1.0;
-    } else if (slopeVal === 2) {
-      slopeLabel.textContent = 'Moderate Slope (20°)';
-      foundationDisplay.textContent = 'Torque Helical Micro-Piles';
-      slopeMultiplier = 1.25;
-    } else {
-      slopeLabel.textContent = 'Sheer Mountain Bluff (45°+)';
-      foundationDisplay.textContent = 'Deep Bedrock Glulam Bents';
-      slopeMultiplier = 1.6;
-    }
-
-    let matRate = 120; // per sq ft
-    if (matVal === 'ipe') matRate = 155;
-    else if (matVal === 'ash') matRate = 140;
-    else if (matVal === 'composite') matRate = 135;
-    else if (matVal === 'cedar') matRate = 115;
-
-    const baseCost = areaVal * matRate * slopeMultiplier;
-    const minCost = Math.round(baseCost * 0.9 / 5000) * 5000;
-    const maxCost = Math.round(baseCost * 1.15 / 5000) * 5000;
-
-    priceDisplay.textContent = '$' + minCost.toLocaleString() + ' – $' + maxCost.toLocaleString();
-  }
-
-  
-
-  // Run initial calculator update
-  document.addEventListener('DOMContentLoaded', () => {
-    updateCalculator();
-  });
-</script>
 
   <!-- Theme & Direction Interactive Engine -->
   <script>
