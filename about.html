@@ -435,89 +435,118 @@
 
 
   /* ==========================================================================
-     EXECUTIVE ARCHITECTURAL TYPOGRAPHY & BALANCED PROPORTIONS
+     PROFESSIONAL EXECUTIVE SPACING & PADDING SYSTEM (Timber & Terra)
      ========================================================================== */
   h1, h2, h3, .font-display-lg, .font-display-md, .font-headline-lg, .font-headline-md {
     font-family: 'Cinzel', 'Plus Jakarta Sans', serif !important;
     letter-spacing: -0.015em;
   }
-  
-  /* Decreased, professional, balanced font sizes */
-  .font-display-lg, h1.font-display-lg {
-    font-size: 38px !important;
-    line-height: 46px !important;
+
+  /* Balanced, professional decreased heading font sizes */
+  .font-display-lg, h1.font-display-lg, h1 {
+    font-size: 34px !important;
+    line-height: 42px !important;
   }
-  @media (min-width: 768px) {
-    .font-display-lg, h1.font-display-lg {
-      font-size: 46px !important;
-      line-height: 54px !important;
+  @media (min-width: 640px) {
+    .font-display-lg, h1.font-display-lg, h1 {
+      font-size: 42px !important;
+      line-height: 50px !important;
     }
   }
-  @media (min-width: 1280px) {
-    .font-display-lg, h1.font-display-lg {
-      font-size: 52px !important;
-      line-height: 60px !important;
+  @media (min-width: 1024px) {
+    .font-display-lg, h1.font-display-lg, h1 {
+      font-size: 48px !important;
+      line-height: 56px !important;
     }
   }
 
-  .font-display-md, h2.font-display-md {
-    font-size: 32px !important;
-    line-height: 40px !important;
+  .font-display-md, h2.font-display-md, h2 {
+    font-size: 28px !important;
+    line-height: 36px !important;
   }
   @media (min-width: 1024px) {
-    .font-display-md, h2.font-display-md {
-      font-size: 38px !important;
-      line-height: 46px !important;
+    .font-display-md, h2.font-display-md, h2 {
+      font-size: 34px !important;
+      line-height: 42px !important;
     }
   }
 
   .font-headline-lg, h2.font-headline-lg {
-    font-size: 26px !important;
-    line-height: 34px !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
   }
   @media (min-width: 1024px) {
     .font-headline-lg, h2.font-headline-lg {
-      font-size: 32px !important;
-      line-height: 40px !important;
+      font-size: 28px !important;
+      line-height: 36px !important;
     }
   }
 
-  .font-headline-md, h3.font-headline-md {
-    font-size: 20px !important;
-    line-height: 28px !important;
+  .font-headline-md, h3.font-headline-md, h3 {
+    font-size: 19px !important;
+    line-height: 27px !important;
   }
   @media (min-width: 1024px) {
-    .font-headline-md, h3.font-headline-md {
-      font-size: 23px !important;
-      line-height: 30px !important;
+    .font-headline-md, h3.font-headline-md, h3 {
+      font-size: 22px !important;
+      line-height: 29px !important;
     }
   }
 
-  .font-headline-sm, h4.font-headline-sm {
-    font-size: 18px !important;
-    line-height: 25px !important;
-  }
-
-  /* Body text readability and professional weight */
+  /* Body text readability and weight */
   body, p, li, input, select, textarea {
     font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif !important;
-    font-size: 15.5px !important;
+    font-size: 15px !important;
     line-height: 25px !important;
     font-weight: 450 !important;
   }
 
-  /* Executive Balanced Padding & Margins */
-  .max-w-7xl {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+  /* Slider Touch Optimization for Mobile */
+  input[type="range"] {
+    touch-action: pan-x !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Unified Executive Container Gutter & Padding */
+  .max-w-7xl, .max-w-6xl {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  @media (min-width: 640px) {
+    .max-w-7xl, .max-w-6xl {
+      padding-left: 1.75rem !important;
+      padding-right: 1.75rem !important;
+    }
   }
   @media (min-width: 1024px) {
-    .max-w-7xl {
-      padding-left: 2rem !important;
-      padding-right: 2rem !important;
+    .max-w-7xl, .max-w-6xl {
+      padding-left: 2.25rem !important;
+      padding-right: 2.25rem !important;
     }
   }
 
+  /* Harmonized Executive Section Vertical Cadence */
+  section.py-28, section.py-24, section.py-20, section.py-16 {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+  @media (min-width: 768px) {
+    section.py-28, section.py-24, section.py-20, section.py-16 {
+      padding-top: 5.25rem !important;
+      padding-bottom: 5.25rem !important;
+    }
+  }
+  @media (min-width: 1280px) {
+    section.py-28, section.py-24, section.py-20, section.py-16 {
+      padding-top: 6rem !important;
+      padding-bottom: 6rem !important;
+    }
+  }
+
+  /* Card and Panel Padding Standard */
+  .p-6, .p-8 {
+    border-radius: 1rem;
+  }
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -807,7 +836,7 @@ tailwind.config = {
   </div>
 </header><main class="w-full pt-20 lg:pt-[120px] bg-surface min-h-[calc(100vh-120px)] overflow-x-hidden"><div class="flex flex-col w-full">
 <!-- 1. Breadcrumb and Hero Banner -->
-<section class="relative w-full bg-surface-container-low py-16 lg:py-24 overflow-hidden border-b border-surface-container-high/30">
+<section class="relative w-full bg-surface-container-low py-14 sm:py-16 lg:py-20 overflow-hidden border-b border-surface-container-high/30">
 <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none"></div>
 <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
 <!-- Breadcrumbs -->
@@ -827,9 +856,9 @@ tailwind.config = {
 </div>
 </section>
 <!-- 2. Brand Story & Origins -->
-<section class="w-full bg-surface py-16 lg:py-24 lg:py-28">
+<section class="w-full bg-surface py-14 sm:py-16 lg:py-20">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
 <!-- Left Column: Visual Showcase -->
 <div class="lg:col-span-6 relative">
 <div class="relative overflow-hidden rounded-xl shadow-xl bg-surface-container-high aspect-[4/3] group">
@@ -880,7 +909,7 @@ tailwind.config = {
 </div>
 </section>
 <!-- 3. Mission & Core Values Grid -->
-<section class="w-full bg-surface-container-low py-16 lg:py-24 lg:py-28">
+<section class="w-full bg-surface-container-low py-14 sm:py-16 lg:py-20">
 <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
 <div class="max-w-3xl space-y-2">
 <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary font-semibold">Guiding Tenets</span>
@@ -954,9 +983,9 @@ tailwind.config = {
 </div>
 </section>
 <!-- 4. Craftsmanship & Workshop Standards -->
-<section class="w-full bg-surface py-16 lg:py-24 lg:py-28 overflow-hidden">
+<section class="w-full bg-surface py-14 sm:py-16 lg:py-20 overflow-hidden">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
 <!-- Text & Spec Breakdown -->
 <div class="lg:col-span-7 space-y-6 order-2 lg:order-1">
 <div class="flex items-center gap-2">
@@ -1025,13 +1054,13 @@ tailwind.config = {
 </div>
 </section>
 <!-- 5. Key Company Milestones / Statistics Row -->
-<section class="w-full bg-primary-container text-on-primary py-16 lg:py-24 lg:py-20">
+<section class="w-full bg-primary-container text-on-primary py-16 lg:py-20">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center lg:text-left"><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">18+</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">Years of Craft</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Refining high-tolerance outdoor architecture</p></div><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">450+</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">Sanctuaries Built</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Custom timber decks, pavilions &amp; outdoor kitchens</p></div><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">100%</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">FSC Hardwoods</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Verified legal and sustainably managed origin</p></div><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">25-Yr</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">Structural Warranty</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Comprehensive transferable framing assurance</p></div></div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 text-center lg:text-left"><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">18+</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">Years of Craft</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Refining high-tolerance outdoor architecture</p></div><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">450+</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">Sanctuaries Built</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Custom timber decks, pavilions &amp; outdoor kitchens</p></div><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">100%</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">FSC Hardwoods</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Verified legal and sustainably managed origin</p></div><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">25-Yr</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">Structural Warranty</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Comprehensive transferable framing assurance</p></div></div>
 </div>
 </section>
 <!-- 6. Leadership & Master Craftsmen -->
-<section class="w-full bg-surface-container-low py-16 lg:py-24 lg:py-28">
+<section class="w-full bg-surface-container-low py-14 sm:py-16 lg:py-20">
 <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div class="max-w-2xl space-y-2">
@@ -1108,10 +1137,10 @@ tailwind.config = {
 </div>
 </section>
 <!-- 7. Our Work Philosophy & Environmental Stewardship -->
-<section class="w-full bg-surface py-16 lg:py-24 lg:py-28">
+<section class="w-full bg-surface py-14 sm:py-16 lg:py-20">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="bg-surface-container rounded-2xl p-8 md:p-12 lg:p-16">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
 <div class="lg:col-span-5 space-y-6">
 <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary font-semibold">Ecological Stewardship</span>
 <h2 class="font-headline-lg text-headline-lg text-primary tracking-[-0.025em] font-semibold leading-tight">Honoring the Forest with Every Board We Lay</h2>
@@ -1179,7 +1208,7 @@ tailwind.config = {
 </div>
 </section>
 <!-- 8. Client Endorsement / Pull Quote Banner -->
-<section class="w-full bg-surface-container-lowest py-16 lg:py-24 lg:py-24 border-y border-surface-container">
+<section class="w-full bg-surface-container-lowest py-14 sm:py-16 lg:py-20 border-y border-surface-container">
 <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center space-y-6">
 <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface-container text-secondary mx-auto">
 <span class="material-symbols-outlined text-[28px]">format_quote</span>
@@ -1194,7 +1223,7 @@ tailwind.config = {
 </div>
 </section>
 <!-- 9. Comprehensive Consultation CTA Banner -->
-<section class="w-full bg-primary text-on-primary py-16 lg:py-24 lg:py-28 relative overflow-hidden">
+<section class="w-full bg-primary text-on-primary py-14 sm:py-16 lg:py-20 relative overflow-hidden">
 <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-primary-container/40 blur-3xl pointer-events-none"></div>
 <div class="absolute -left-24 -top-24 w-96 h-96 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
 <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">

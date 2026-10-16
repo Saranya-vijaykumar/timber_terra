@@ -436,89 +436,118 @@
 
 
   /* ==========================================================================
-     EXECUTIVE ARCHITECTURAL TYPOGRAPHY & BALANCED PROPORTIONS
+     PROFESSIONAL EXECUTIVE SPACING & PADDING SYSTEM (Timber & Terra)
      ========================================================================== */
   h1, h2, h3, .font-display-lg, .font-display-md, .font-headline-lg, .font-headline-md {
     font-family: 'Cinzel', 'Plus Jakarta Sans', serif !important;
     letter-spacing: -0.015em;
   }
-  
-  /* Decreased, professional, balanced font sizes */
-  .font-display-lg, h1.font-display-lg {
-    font-size: 38px !important;
-    line-height: 46px !important;
+
+  /* Balanced, professional decreased heading font sizes */
+  .font-display-lg, h1.font-display-lg, h1 {
+    font-size: 34px !important;
+    line-height: 42px !important;
   }
-  @media (min-width: 768px) {
-    .font-display-lg, h1.font-display-lg {
-      font-size: 46px !important;
-      line-height: 54px !important;
+  @media (min-width: 640px) {
+    .font-display-lg, h1.font-display-lg, h1 {
+      font-size: 42px !important;
+      line-height: 50px !important;
     }
   }
-  @media (min-width: 1280px) {
-    .font-display-lg, h1.font-display-lg {
-      font-size: 52px !important;
-      line-height: 60px !important;
+  @media (min-width: 1024px) {
+    .font-display-lg, h1.font-display-lg, h1 {
+      font-size: 48px !important;
+      line-height: 56px !important;
     }
   }
 
-  .font-display-md, h2.font-display-md {
-    font-size: 32px !important;
-    line-height: 40px !important;
+  .font-display-md, h2.font-display-md, h2 {
+    font-size: 28px !important;
+    line-height: 36px !important;
   }
   @media (min-width: 1024px) {
-    .font-display-md, h2.font-display-md {
-      font-size: 38px !important;
-      line-height: 46px !important;
+    .font-display-md, h2.font-display-md, h2 {
+      font-size: 34px !important;
+      line-height: 42px !important;
     }
   }
 
   .font-headline-lg, h2.font-headline-lg {
-    font-size: 26px !important;
-    line-height: 34px !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
   }
   @media (min-width: 1024px) {
     .font-headline-lg, h2.font-headline-lg {
-      font-size: 32px !important;
-      line-height: 40px !important;
+      font-size: 28px !important;
+      line-height: 36px !important;
     }
   }
 
-  .font-headline-md, h3.font-headline-md {
-    font-size: 20px !important;
-    line-height: 28px !important;
+  .font-headline-md, h3.font-headline-md, h3 {
+    font-size: 19px !important;
+    line-height: 27px !important;
   }
   @media (min-width: 1024px) {
-    .font-headline-md, h3.font-headline-md {
-      font-size: 23px !important;
-      line-height: 30px !important;
+    .font-headline-md, h3.font-headline-md, h3 {
+      font-size: 22px !important;
+      line-height: 29px !important;
     }
   }
 
-  .font-headline-sm, h4.font-headline-sm {
-    font-size: 18px !important;
-    line-height: 25px !important;
-  }
-
-  /* Body text readability and professional weight */
+  /* Body text readability and weight */
   body, p, li, input, select, textarea {
     font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif !important;
-    font-size: 15.5px !important;
+    font-size: 15px !important;
     line-height: 25px !important;
     font-weight: 450 !important;
   }
 
-  /* Executive Balanced Padding & Margins */
-  .max-w-7xl {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+  /* Slider Touch Optimization for Mobile */
+  input[type="range"] {
+    touch-action: pan-x !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Unified Executive Container Gutter & Padding */
+  .max-w-7xl, .max-w-6xl {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  @media (min-width: 640px) {
+    .max-w-7xl, .max-w-6xl {
+      padding-left: 1.75rem !important;
+      padding-right: 1.75rem !important;
+    }
   }
   @media (min-width: 1024px) {
-    .max-w-7xl {
-      padding-left: 2rem !important;
-      padding-right: 2rem !important;
+    .max-w-7xl, .max-w-6xl {
+      padding-left: 2.25rem !important;
+      padding-right: 2.25rem !important;
     }
   }
 
+  /* Harmonized Executive Section Vertical Cadence */
+  section.py-28, section.py-24, section.py-20, section.py-16 {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+  @media (min-width: 768px) {
+    section.py-28, section.py-24, section.py-20, section.py-16 {
+      padding-top: 5.25rem !important;
+      padding-bottom: 5.25rem !important;
+    }
+  }
+  @media (min-width: 1280px) {
+    section.py-28, section.py-24, section.py-20, section.py-16 {
+      padding-top: 6rem !important;
+      padding-bottom: 6rem !important;
+    }
+  }
+
+  /* Card and Panel Padding Standard */
+  .p-6, .p-8 {
+    border-radius: 1rem;
+  }
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -808,7 +837,7 @@ tailwind.config = {
   </div>
 </header><main class="w-full pt-20 lg:pt-[120px] bg-surface min-h-[calc(100vh-120px)] overflow-x-hidden"><div class="flex flex-col w-full">
 <!-- Top Banner / Editorial Header Section -->
-<section class="relative w-full bg-surface-container-low py-16 lg:py-24 overflow-hidden border-b border-surface-container-high/30">
+<section class="relative w-full bg-surface-container-low py-14 sm:py-16 lg:py-20 overflow-hidden border-b border-surface-container-high/30">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <!-- Breadcrumb Navigation -->
 <nav aria-label="Breadcrumb" class="flex items-center gap-2 mb-4">
@@ -853,7 +882,7 @@ tailwind.config = {
 </div>
 </section>
 <!-- Featured Article (Hero Showcase Card) -->
-<section class="w-full py-12 lg:py-16 lg:py-16 lg:py-24">
+<section class="w-full py-12 lg:py-16 lg:py-14 sm:py-16 lg:py-20">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="relative bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl group">
 <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
@@ -965,7 +994,7 @@ tailwind.config = {
 </div>
 </section>
 <!-- Curated Editorial Grid (6 Articles) -->
-<section class="w-full py-16 lg:py-24">
+<section class="w-full py-14 sm:py-16 lg:py-20">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-container">
 <!-- Card 1: Material Intelligence -->
@@ -1201,7 +1230,7 @@ tailwind.config = {
 </div>
 </section>
 <!-- Curated Dispatch Newsletter Box -->
-<section class="w-full py-12 lg:py-16 lg:py-16 lg:py-24 bg-surface">
+<section class="w-full py-12 lg:py-16 lg:py-14 sm:py-16 lg:py-20 bg-surface">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="bg-primary-container text-on-primary rounded-xl p-6 md:p-8 lg:p-12 relative overflow-hidden shadow-xl">
 <!-- Decorative subtle geometric wood grain / lines overlay -->
@@ -1243,7 +1272,7 @@ tailwind.config = {
 </div>
 </section>
 <!-- Technical Consultation Banner -->
-<section class="w-full py-16 lg:py-24 bg-surface-container-low">
+<section class="w-full py-14 sm:py-16 lg:py-20 bg-surface-container-low">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="flex flex-col lg:flex-row items-center justify-between gap-8 p-8 bg-surface-container-lowest rounded-xl shadow-sm">
 <div class="space-y-1 text-center lg:text-left">

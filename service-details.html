@@ -438,89 +438,118 @@
 
 
   /* ==========================================================================
-     EXECUTIVE ARCHITECTURAL TYPOGRAPHY & BALANCED PROPORTIONS
+     PROFESSIONAL EXECUTIVE SPACING & PADDING SYSTEM (Timber & Terra)
      ========================================================================== */
   h1, h2, h3, .font-display-lg, .font-display-md, .font-headline-lg, .font-headline-md {
     font-family: 'Cinzel', 'Plus Jakarta Sans', serif !important;
     letter-spacing: -0.015em;
   }
-  
-  /* Decreased, professional, balanced font sizes */
-  .font-display-lg, h1.font-display-lg {
-    font-size: 38px !important;
-    line-height: 46px !important;
+
+  /* Balanced, professional decreased heading font sizes */
+  .font-display-lg, h1.font-display-lg, h1 {
+    font-size: 34px !important;
+    line-height: 42px !important;
   }
-  @media (min-width: 768px) {
-    .font-display-lg, h1.font-display-lg {
-      font-size: 46px !important;
-      line-height: 54px !important;
+  @media (min-width: 640px) {
+    .font-display-lg, h1.font-display-lg, h1 {
+      font-size: 42px !important;
+      line-height: 50px !important;
     }
   }
-  @media (min-width: 1280px) {
-    .font-display-lg, h1.font-display-lg {
-      font-size: 52px !important;
-      line-height: 60px !important;
+  @media (min-width: 1024px) {
+    .font-display-lg, h1.font-display-lg, h1 {
+      font-size: 48px !important;
+      line-height: 56px !important;
     }
   }
 
-  .font-display-md, h2.font-display-md {
-    font-size: 32px !important;
-    line-height: 40px !important;
+  .font-display-md, h2.font-display-md, h2 {
+    font-size: 28px !important;
+    line-height: 36px !important;
   }
   @media (min-width: 1024px) {
-    .font-display-md, h2.font-display-md {
-      font-size: 38px !important;
-      line-height: 46px !important;
+    .font-display-md, h2.font-display-md, h2 {
+      font-size: 34px !important;
+      line-height: 42px !important;
     }
   }
 
   .font-headline-lg, h2.font-headline-lg {
-    font-size: 26px !important;
-    line-height: 34px !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
   }
   @media (min-width: 1024px) {
     .font-headline-lg, h2.font-headline-lg {
-      font-size: 32px !important;
-      line-height: 40px !important;
+      font-size: 28px !important;
+      line-height: 36px !important;
     }
   }
 
-  .font-headline-md, h3.font-headline-md {
-    font-size: 20px !important;
-    line-height: 28px !important;
+  .font-headline-md, h3.font-headline-md, h3 {
+    font-size: 19px !important;
+    line-height: 27px !important;
   }
   @media (min-width: 1024px) {
-    .font-headline-md, h3.font-headline-md {
-      font-size: 23px !important;
-      line-height: 30px !important;
+    .font-headline-md, h3.font-headline-md, h3 {
+      font-size: 22px !important;
+      line-height: 29px !important;
     }
   }
 
-  .font-headline-sm, h4.font-headline-sm {
-    font-size: 18px !important;
-    line-height: 25px !important;
-  }
-
-  /* Body text readability and professional weight */
+  /* Body text readability and weight */
   body, p, li, input, select, textarea {
     font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif !important;
-    font-size: 15.5px !important;
+    font-size: 15px !important;
     line-height: 25px !important;
     font-weight: 450 !important;
   }
 
-  /* Executive Balanced Padding & Margins */
-  .max-w-7xl {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+  /* Slider Touch Optimization for Mobile */
+  input[type="range"] {
+    touch-action: pan-x !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Unified Executive Container Gutter & Padding */
+  .max-w-7xl, .max-w-6xl {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  @media (min-width: 640px) {
+    .max-w-7xl, .max-w-6xl {
+      padding-left: 1.75rem !important;
+      padding-right: 1.75rem !important;
+    }
   }
   @media (min-width: 1024px) {
-    .max-w-7xl {
-      padding-left: 2rem !important;
-      padding-right: 2rem !important;
+    .max-w-7xl, .max-w-6xl {
+      padding-left: 2.25rem !important;
+      padding-right: 2.25rem !important;
     }
   }
 
+  /* Harmonized Executive Section Vertical Cadence */
+  section.py-28, section.py-24, section.py-20, section.py-16 {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+  @media (min-width: 768px) {
+    section.py-28, section.py-24, section.py-20, section.py-16 {
+      padding-top: 5.25rem !important;
+      padding-bottom: 5.25rem !important;
+    }
+  }
+  @media (min-width: 1280px) {
+    section.py-28, section.py-24, section.py-20, section.py-16 {
+      padding-top: 6rem !important;
+      padding-bottom: 6rem !important;
+    }
+  }
+
+  /* Card and Panel Padding Standard */
+  .p-6, .p-8 {
+    border-radius: 1rem;
+  }
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -853,23 +882,14 @@
           </a>
         </div>
 
-      <div class="pt-3 border-t border-surface-container/60 mt-3 flex items-center justify-between gap-3">
-        <button onclick="toggleTheme()" type="button" class="flex-1 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
-          <span class="material-symbols-outlined text-[18px]">contrast</span>
-          <span class="theme-label-mobile">Theme</span>
-        </button>
-        <button onclick="toggleDirection()" type="button" class="flex-1 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
-          <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
-          <span class="dir-label-mobile">LTR</span>
-        </button>
-      </div>
+      
       </div>
     </section>
 
     <!-- Main Content & Specifications -->
     <section class="w-full py-12 lg:py-20">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
           <!-- Left Column (8 cols): Photo, Highlights, Deep Dive -->
           <div class="lg:col-span-8 flex flex-col gap-10">
