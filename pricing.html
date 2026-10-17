@@ -490,13 +490,11 @@
   }
 
   /* ==========================================================================
-     UNIVERSAL BOX, FILTER PILL & BUTTON COLOR EFFECT SYSTEM
-     Guarantees distinct, tactile box styling with visible borders, depth,
-     rich backgrounds, and glowing active states in both Light Mode and Dark Mode.
+     UNIVERSAL BOX, FILTER PILL, HEADER UTILITIES & BUTTON EFFECT SYSTEM
+     Guarantees luminous, high-contrast visibility for all elements in both Light & Dark modes.
      ========================================================================== */
 
   /* --- LIGHT MODE BOX & BUTTON EFFECTS --- */
-  /* Inactive Filter Buttons, Tabs, Category Pills */
   .filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
   .service-filter-btn:not(.bg-primary):not(.active),
   #category-pills button:not(.bg-primary-container):not(.active),
@@ -507,10 +505,7 @@
   button[data-category]:not(.bg-primary):not(.bg-primary-container):not(.active),
   #btn-show-before:not(.bg-primary),
   #btn-show-after:not(.bg-primary),
-  button[onclick*="calc-slope"]:not(.active):not(.bg-primary),
-  .dir-toggle-btn,
-  button[onclick*="toggleDirection"],
-  button[onclick*="toggleTheme"] {
+  button[onclick*="calc-slope"]:not(.active):not(.bg-primary) {
     background-color: #FFFFFF !important;
     color: #24140A !important;
     border: 1.5px solid #CFBEAC !important;
@@ -519,7 +514,6 @@
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
-  /* Inactive Box Hover Effect (Light Mode) */
   .filter-btn:not(.active-filter):not(.bg-primary-container):hover,
   .service-filter-btn:not(.bg-primary):hover,
   #category-pills button:not(.bg-primary-container):hover,
@@ -530,10 +524,7 @@
   button[data-category]:not(.bg-primary):not(.bg-primary-container):hover,
   #btn-show-before:not(.bg-primary):hover,
   #btn-show-after:not(.bg-primary):hover,
-  button[onclick*="calc-slope"]:not(.active):not(.bg-primary):hover,
-  .dir-toggle-btn:hover,
-  button[onclick*="toggleDirection"]:hover,
-  button[onclick*="toggleTheme"]:hover {
+  button[onclick*="calc-slope"]:not(.active):not(.bg-primary):hover {
     background-color: #FAF5EF !important;
     border-color: #B85D19 !important;
     color: #B85D19 !important;
@@ -596,7 +587,6 @@
   }
 
   /* --- DARK MODE BOX & BUTTON EFFECTS (html.dark) --- */
-  /* Inactive Filter Buttons, Tabs, Category Pills in Dark Mode */
   html.dark .filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
   html.dark .service-filter-btn:not(.bg-primary):not(.active),
   html.dark #category-pills button:not(.bg-primary-container):not(.active),
@@ -607,10 +597,7 @@
   html.dark button[data-category]:not(.bg-primary):not(.bg-primary-container):not(.active),
   html.dark #btn-show-before:not(.bg-primary),
   html.dark #btn-show-after:not(.bg-primary),
-  html.dark button[onclick*="calc-slope"]:not(.active):not(.bg-primary),
-  html.dark .dir-toggle-btn,
-  html.dark button[onclick*="toggleDirection"],
-  html.dark button[onclick*="toggleTheme"] {
+  html.dark button[onclick*="calc-slope"]:not(.active):not(.bg-primary) {
     background-color: #24160E !important;
     color: #FAF5EF !important;
     border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
@@ -619,7 +606,6 @@
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
-  /* Inactive Box Hover Effect (Dark Mode) */
   html.dark .filter-btn:not(.active-filter):not(.bg-primary-container):hover,
   html.dark .service-filter-btn:not(.bg-primary):hover,
   html.dark #category-pills button:not(.bg-primary-container):hover,
@@ -630,10 +616,7 @@
   html.dark button[data-category]:not(.bg-primary):not(.bg-primary-container):hover,
   html.dark #btn-show-before:not(.bg-primary):hover,
   html.dark #btn-show-after:not(.bg-primary):hover,
-  html.dark button[onclick*="calc-slope"]:not(.active):not(.bg-primary):hover,
-  html.dark .dir-toggle-btn:hover,
-  html.dark button[onclick*="toggleDirection"]:hover,
-  html.dark button[onclick*="toggleTheme"]:hover {
+  html.dark button[onclick*="calc-slope"]:not(.active):not(.bg-primary):hover {
     background-color: #332014 !important;
     border-color: #F7BA7D !important;
     color: #FFFFFF !important;
@@ -694,6 +677,141 @@
     border-color: #FFFFFF !important;
     box-shadow: 0 6px 26px 0 rgba(212, 139, 78, 0.65) !important;
     transform: translateY(-1px);
+  }
+
+  /* ==========================================================================
+     HEADER ACTION UTILITIES: THEME TOGGLE, LTR/RTL PILL & HAMBURGER
+     Guarantees luminous, high-contrast visibility against all header backgrounds
+     in both Light Mode and Dark Mode.
+     ========================================================================== */
+
+  /* Header action utilities on dark headers (index.html permanent dark header & dark mode) */
+  header[class*="180F0A"] .theme-toggle-btn,
+  header.bg-\[\#180F0A\]\/95 .theme-toggle-btn,
+  html.dark header .theme-toggle-btn {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    color: #F7BA7D !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+  }
+  header[class*="180F0A"] .theme-toggle-btn span,
+  header.bg-\[\#180F0A\]\/95 .theme-toggle-btn span,
+  html.dark header .theme-toggle-btn span {
+    color: #F7BA7D !important;
+  }
+  header[class*="180F0A"] .theme-toggle-btn:hover,
+  header.bg-\[\#180F0A\]\/95 .theme-toggle-btn:hover,
+  html.dark header .theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    border-color: #F7BA7D !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 16px rgba(247, 186, 125, 0.4) !important;
+  }
+  header[class*="180F0A"] .theme-toggle-btn:hover span,
+  header.bg-\[\#180F0A\]\/95 .theme-toggle-btn:hover span,
+  html.dark header .theme-toggle-btn:hover span {
+    color: #FFFFFF !important;
+  }
+
+  /* Direction Toggle Button (LTR / RTL) on dark header & dark mode */
+  header[class*="180F0A"] .dir-toggle-btn,
+  header.bg-\[\#180F0A\]\/95 .dir-toggle-btn,
+  html.dark header .dir-toggle-btn {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+  }
+  header[class*="180F0A"] .dir-toggle-btn .dir-toggle-text,
+  header.bg-\[\#180F0A\]\/95 .dir-toggle-btn .dir-toggle-text,
+  html.dark header .dir-toggle-btn .dir-toggle-text {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  header[class*="180F0A"] .dir-toggle-btn .material-symbols-outlined,
+  header.bg-\[\#180F0A\]\/95 .dir-toggle-btn .material-symbols-outlined,
+  html.dark header .dir-toggle-btn .material-symbols-outlined {
+    color: #F7BA7D !important;
+  }
+  header[class*="180F0A"] .dir-toggle-btn:hover,
+  header.bg-\[\#180F0A\]\/95 .dir-toggle-btn:hover,
+  html.dark header .dir-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    border-color: #F7BA7D !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 16px rgba(247, 186, 125, 0.4) !important;
+  }
+
+  /* Hamburger Menu Button on dark header & dark mode */
+  header[class*="180F0A"] #hamburger-btn,
+  header.bg-\[\#180F0A\]\/95 #hamburger-btn,
+  html.dark header #hamburger-btn {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+  }
+  header[class*="180F0A"] #hamburger-btn span,
+  header.bg-\[\#180F0A\]\/95 #hamburger-btn span,
+  html.dark header #hamburger-btn span {
+    color: #FFFFFF !important;
+  }
+
+  /* Header action utilities on light surface headers (in Light Mode) */
+  html:not(.dark) header:not([class*="180F0A"]) .theme-toggle-btn {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid #CFBEAC !important;
+    color: #8F3E0B !important;
+    box-shadow: 0 2px 8px -1px rgba(36, 21, 14, 0.08) !important;
+  }
+  html:not(.dark) header:not([class*="180F0A"]) .theme-toggle-btn span {
+    color: #8F3E0B !important;
+  }
+  html:not(.dark) header:not([class*="180F0A"]) .theme-toggle-btn:hover {
+    background-color: #FAF5EF !important;
+    border-color: #B85D19 !important;
+    color: #B85D19 !important;
+  }
+  html:not(.dark) header:not([class*="180F0A"]) .dir-toggle-btn {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid #CFBEAC !important;
+    color: #24140A !important;
+    box-shadow: 0 2px 8px -1px rgba(36, 21, 14, 0.08) !important;
+  }
+  html:not(.dark) header:not([class*="180F0A"]) .dir-toggle-btn .dir-toggle-text {
+    color: #24140A !important;
+    font-weight: 700 !important;
+  }
+  html:not(.dark) header:not([class*="180F0A"]) .dir-toggle-btn .material-symbols-outlined {
+    color: #B85D19 !important;
+  }
+  html:not(.dark) header:not([class*="180F0A"]) .dir-toggle-btn:hover {
+    background-color: #FAF5EF !important;
+    border-color: #B85D19 !important;
+    color: #B85D19 !important;
+  }
+  html:not(.dark) header:not([class*="180F0A"]) #hamburger-btn {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid #CFBEAC !important;
+    color: #24140A !important;
+    box-shadow: 0 2px 8px -1px rgba(36, 21, 14, 0.08) !important;
+  }
+  html:not(.dark) header:not([class*="180F0A"]) #hamburger-btn span {
+    color: #24140A !important;
+  }
+
+  /* Universal Box, Card & Frame Borders */
+  .rounded-2xl.border,
+  .rounded-xl.border,
+  .rounded-3xl.border,
+  div[class*="border-surface-container"] {
+    border-color: #CFBEAC !important;
+  }
+  html.dark .rounded-2xl.border,
+  html.dark .rounded-xl.border,
+  html.dark .rounded-3xl.border,
+  html.dark div[class*="border-surface-container"] {
+    border-color: rgba(255, 255, 255, 0.2) !important;
   }
 
   /* General Box / Badge / Chip Outline Visibility */
