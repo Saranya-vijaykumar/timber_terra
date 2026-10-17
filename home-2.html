@@ -1583,7 +1583,7 @@ tailwind.config = {
 
     <!-- Interactive Calculator Card -->
     <div class="max-w-4xl mx-auto bg-surface-container-lowest rounded-2xl p-8 lg:p-12 shadow-xl border border-surface-container-high/60">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
         <!-- Controls Column -->
         <div class="flex flex-col gap-6">
           <!-- Slope Control -->
@@ -1626,12 +1626,33 @@ tailwind.config = {
           </div>
         </div>
 
-        <!-- Result Breakdown Column -->
+                <!-- Result Breakdown Column -->
         <div class="h-full p-6 sm:p-7 rounded-2xl bg-surface-container-low border-2 border-[#CFBEAC] dark:border-white/20 shadow-md flex flex-col justify-between gap-6">
           <div>
-            <span class="font-caption text-caption text-secondary uppercase font-bold tracking-wider">Estimated Investment Envelope</span>
-            <div id="calc-price" class="font-sans text-2xl sm:text-3xl lg:text-3xl xl:text-4xl text-primary font-black tracking-tight my-2.5 whitespace-nowrap overflow-hidden text-ellipsis">$195,000 – $245,000</div>
-            <p class="text-xs text-on-surface-variant">Includes complete structural engineering, soil torque anchoring, sub-framing, and premium finish craftsmanship.</p>
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-caption text-caption text-secondary uppercase font-bold tracking-wider">Estimated Investment Envelope</span>
+              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary border border-secondary/30">Turnkey</span>
+            </div>
+
+            <!-- Balanced Dual-Range Price Appraisal Box (Zero Wrapping & Symmetrical Alignment) -->
+            <div class="my-3.5 p-4 rounded-xl bg-surface-container border border-surface-container-high/70 shadow-inner">
+              <div class="flex items-center justify-between gap-2 sm:gap-4">
+                <div class="flex flex-col">
+                  <span class="text-[10px] sm:text-xs uppercase font-bold text-on-surface-variant tracking-wider">Base Estimate</span>
+                  <span id="calc-price-low" class="font-sans text-2xl sm:text-3xl font-black text-primary tracking-tight tabular-nums leading-none mt-1">$195,000</span>
+                </div>
+                <div class="text-secondary font-bold text-xl sm:text-2xl px-1 sm:px-2 select-none">–</div>
+                <div class="flex flex-col text-right">
+                  <span class="text-[10px] sm:text-xs uppercase font-bold text-on-surface-variant tracking-wider">Upper Range</span>
+                  <span id="calc-price-high" class="font-sans text-2xl sm:text-3xl font-black text-secondary tracking-tight tabular-nums leading-none mt-1">$245,000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Single-Line Full Price for screen readers and scripts -->
+            <div id="calc-price" class="hidden">$195,000 – $245,000</div>
+
+            <p class="text-xs text-on-surface-variant leading-relaxed">Includes complete structural engineering, soil torque anchoring, sub-framing, and premium finish craftsmanship.</p>
           </div>
 
           <div class="flex flex-col gap-2.5 pt-4 border-t border-surface-container-high/60 text-xs">
@@ -1991,6 +2012,31 @@ tailwind.config = {
     const high = Math.round((baseCost * 1.20) / 1000) * 1000;
 
     priceElem.textContent = "$" + low.toLocaleString() + " – $" + high.toLocaleString();
+    const priceLowElem = document.getElementById('calc-price-low');
+    const priceHighElem = document.getElementById('calc-price-high');
+    if (priceLowElem) priceLowElem.textContent = "$" + low.toLocaleString();
+    if (priceHighElem) priceHighElem.textContent = "$" + high.toLocaleString();
+
+    // Active state highlighting for slope buttons
+    const slopeBtns = document.querySelectorAll('[onclick*="calc-slope"]');
+    slopeBtns.forEach((btn, i) => {
+      if (i + 1 === slope) {
+        btn.classList.add('!bg-primary', '!text-white', '!border-[#8F3E0B]');
+      } else {
+        btn.classList.remove('!bg-primary', '!text-white', '!border-[#8F3E0B]');
+      }
+    });
+
+    // Active state highlighting for area buttons
+    const areaBtns = document.querySelectorAll('[onclick*="calc-area"]');
+    areaBtns.forEach(btn => {
+      const match = btn.getAttribute('onclick')?.match(/value=(\d+)/);
+      if (match && parseInt(match[1], 10) === area) {
+        btn.classList.add('!bg-primary', '!text-white', '!border-[#8F3E0B]');
+      } else {
+        btn.classList.remove('!bg-primary', '!text-white', '!border-[#8F3E0B]');
+      }
+    });
   }
 
     function updateThemeUI() {
@@ -2055,10 +2101,12 @@ tailwind.config = {
       document.addEventListener('DOMContentLoaded', () => {
         updateThemeUI();
         updateDirUI();
+        updateCalculator();
       });
     } else {
       updateThemeUI();
       updateDirUI();
+      updateCalculator();
     }
   </script>
 
