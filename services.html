@@ -1836,4 +1836,26 @@ tailwind.config = {
     }
   </script>
 
+
+<script>
+  // Global Image Error Recovery: Automatically fallback if any third-party CDN image fails
+  document.addEventListener('DOMContentLoaded', function() {
+    const defaultFallbacks = [
+      'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80'
+    ];
+    document.querySelectorAll('img').forEach((img, idx) => {
+      img.addEventListener('error', function() {
+        if (!this.dataset.hasFailed) {
+          this.dataset.hasFailed = 'true';
+          const fallback = defaultFallbacks[idx % defaultFallbacks.length];
+          console.warn('Image load failed for ' + this.src + ', replacing with fallback: ' + fallback);
+          this.src = fallback;
+        }
+      });
+    });
+  });
+</script>
+
 </body></html>
