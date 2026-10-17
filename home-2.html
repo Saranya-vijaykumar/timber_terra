@@ -281,9 +281,10 @@
 
 
   
+  
   /* ==========================================================================
-     AUTHENTIC ARCHITECTURAL THEME & HIGH-CONTRAST TYPOGRAPHY SYSTEM
-     (Plus Jakarta Sans for Headlines + Manrope for Body Copy — Crisp in Light & Dark)
+     AWWARDS-INSPIRED EDITORIAL TYPOGRAPHY SYSTEM
+     (Playfair Display Headings with Italic Accent + Plus Jakarta Sans Body Everywhere)
      ========================================================================== */
   html {
     -webkit-font-smoothing: antialiased;
@@ -324,57 +325,68 @@
     margin-right: auto !important;
   }
 
-  /* 2. Authentic Dual-Font Pairing: Plus Jakarta Sans (Headings) + Manrope (Body) */
-  body, p, li, dd, dt, input, textarea, select, label, button, .font-body-md, .font-body-sm, .font-body-lg {
-    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  /* 2. Unified Plus Jakarta Sans for Every Single Text Line */
+  body, p, li, dd, dt, input, textarea, select, label, button, nav, footer, a, span,
+  .font-body-md, .font-body-sm, .font-body-lg, .font-label-lg, .font-label-md, .font-label-sm, .font-caption {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
 
+  /* 3. Deep Dark Architectural Playfair Display for Headings */
   h1, h2, h3, h4, h5, h6,
   .font-display-lg, .font-display-md, .font-display,
   .font-headline-lg, .font-headline-md, .font-headline-sm, .font-title {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    letter-spacing: -0.02em !important;
+    font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.015em !important;
   }
 
-  /* 3. LIGHT THEME — High Contrast & Deep Clarity */
+  /* Italic Flourish in Headings (like in reference design: "A safe sanctuary to *slow down*...") */
+  h1 em, h1 i, h1 .italic,
+  h2 em, h2 i, h2 .italic,
+  h3 em, h3 i, h3 .italic {
+    font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+  }
+
+  /* 4. LIGHT THEME — High Contrast, Deep & Dark Typography */
   body, p, li, input, select, textarea {
     font-size: 15.5px;
     line-height: 26px;
     font-weight: 500;
   }
   .text-on-surface, body {
-    color: #181d1a;
+    color: #111815;
   }
   .text-on-surface-variant {
-    color: #2e3b34 !important; /* Richer, darker for effortless readability (contrast > 8:1) */
+    color: #26332c !important; /* Deep, clear contrast > 9:1 */
     font-weight: 500;
   }
-  .text-primary {
-    color: #00271d;
+  .text-primary, h1, h2, h3, h4 {
+    color: #08140f; /* Deep dark commanding headline color */
   }
 
-  /* 4. DARK THEME — Crystal Clear, High-Contrast Visibility */
+  /* 5. DARK THEME — Crystal Clear, High-Contrast Visibility */
   html.dark body,
   html.dark .text-on-surface {
     color: #f6faf7 !important;
     font-weight: 500;
   }
   html.dark .text-on-surface-variant {
-    color: #d1ded7 !important; /* Bright, crystal-clear readable sage-white (contrast > 10:1) */
+    color: #d1ded7 !important;
     font-weight: 500;
   }
   html.dark h1, html.dark h2, html.dark h3, html.dark h4,
   html.dark .font-display-lg, html.dark .font-display-md,
   html.dark .font-headline-lg, html.dark .font-headline-md, html.dark .font-headline-sm {
     color: #ffffff !important;
-    letter-spacing: -0.02em;
   }
   html.dark .text-primary {
-    color: #aae2cd !important; /* Luminous, radiant mint */
+    color: #aae2cd !important;
   }
   html.dark .text-secondary,
   html.dark .text-secondary-fixed {
-    color: #ffca8a !important; /* Radiant warm amber */
+    color: #ffca8a !important;
   }
   html.dark .text-surface-container-high\/80,
   html.dark .text-surface-container-high\/90,
@@ -555,7 +567,9 @@ tailwind.config = {
 </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png">
