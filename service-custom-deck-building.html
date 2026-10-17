@@ -491,6 +491,241 @@
     border-color: initial;
   }
 
+
+  /* ==========================================================================
+     ZERO-FADE UNIVERSAL HIGH-CONTRAST TYPOGRAPHY SYSTEM (LIGHT & DARK MODE)
+     Guarantees crystal-clear readability for every single line, letter, and font.
+     Eliminates any faded, low-opacity, or washed-out text across all 25 pages.
+     ========================================================================== */
+
+  /* Icon font preservation */
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined' !important;
+    font-weight: normal !important;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  }
+
+  /* --- LIGHT MODE ZERO-FADE TYPOGRAPHY --- */
+  body {
+    color: #1A0E08 !important; /* Deep Roasted Walnut Charcoal (15:1 contrast) */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings & Display Titles: Deepest Timber Espresso */
+  h1, h2, h3, h4, h5, h6,
+  .font-display-lg, .font-display-md, .font-display-sm,
+  .font-headline-lg, .font-headline-md, .font-headline-sm,
+  .text-headline-lg, .text-headline-md, .text-headline-sm,
+  .font-title-lg, .font-title-md, .font-title-sm,
+  .text-title-lg, .text-title-md, .text-title-sm,
+  .text-primary {
+    color: #120A05 !important; /* Maximum 18:1 contrast */
+    font-weight: 700 !important;
+  }
+
+  /* All Paragraphs, Lists & General Text */
+  p, li,
+  .text-on-surface,
+  .text-on-surface-variant,
+  .font-body-lg, .font-body-md, .font-body-sm, .font-body-xs,
+  .text-body-lg, .text-body-md, .text-body-sm, .text-body-xs {
+    color: #24140A !important; /* Deep Dark Walnut, never faded gray */
+    font-weight: 450;
+  }
+
+  /* Secondary & Variant Text: Crisp Umber */
+  span.text-on-surface-variant,
+  div.text-on-surface-variant,
+  p.text-on-surface-variant,
+  .text-outline,
+  .text-outline-variant {
+    color: #382013 !important; /* 10:1 contrast, crisp and razor sharp */
+    font-weight: 500 !important;
+  }
+
+  /* Small Labels, Badges, Category Chips, Stats, Dates, Captions */
+  .text-label-sm, .text-label-md, .text-label-lg,
+  .font-label-sm, .font-label-md, .font-label-lg,
+  .font-caption, .text-caption,
+  span.text-caption, div.text-caption {
+    color: #1F1008 !important;
+    font-weight: 600 !important;
+  }
+
+  /* Accent & Highlight Text: Rich Punchy Cognac Amber */
+  .text-secondary,
+  .text-secondary-fixed,
+  .text-primary-fixed {
+    color: #A85218 !important; /* Vibrant high-contrast amber */
+    font-weight: 600 !important;
+  }
+
+  /* Light Mode Links */
+  a:not([class*="bg-"]):not([class*="btn"]):hover {
+    color: #C87A38 !important;
+  }
+
+  /* Force 100% Opacity on all fractional text classes in Light Mode */
+  [class*="text-"][class*="/40"],
+  [class*="text-"][class*="/50"],
+  [class*="text-"][class*="/60"],
+  [class*="text-"][class*="/70"],
+  [class*="text-"][class*="/75"],
+  [class*="text-"][class*="/80"],
+  [class*="text-"][class*="/90"] {
+    opacity: 1 !important;
+    color: #24140A !important;
+  }
+
+  /* Standalone opacity utility overrides on text/spans */
+  span[class*="opacity-"],
+  p[class*="opacity-"],
+  div[class*="opacity-"]:not([class*="absolute"]):not([class*="fixed"]) {
+    opacity: 1 !important;
+    color: inherit;
+  }
+
+  /* Light Mode Form Inputs & Placeholders */
+  input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+  textarea, select {
+    color: #120A05 !important;
+    background-color: #FFFFFF !important;
+    border: 1.5px solid #CFBEAC !important;
+    font-weight: 500 !important;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #6E5545 !important; /* Crisp, easily readable placeholder */
+    opacity: 1 !important;
+  }
+
+  /* Light Mode Elements inside intentional dark CTA cards/banners */
+  .bg-primary, .bg-primary-container, .bg-secondary,
+  [class*="bg-primary"] button, [class*="bg-secondary"] button,
+  button.bg-primary, button.bg-secondary,
+  a.bg-primary, a.bg-secondary {
+    color: #FFFFFF !important;
+  }
+  .bg-primary p, .bg-primary-container p,
+  .bg-primary span:not(.material-symbols-outlined), .bg-primary-container span:not(.material-symbols-outlined) {
+    color: #FAF2EA !important;
+  }
+  .bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4,
+  .bg-primary-container h1, .bg-primary-container h2, .bg-primary-container h3, .bg-primary-container h4 {
+    color: #FFFFFF !important;
+  }
+
+  /* --- DARK MODE ZERO-FADE TYPOGRAPHY (html.dark) --- */
+  /* Global body & standard text: Luminous Warm Linen (17:1 contrast on #180F0A) */
+  html.dark body {
+    color: #FAF5EF !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Dark Mode Headings & Display Titles: Pure Brilliant White (21:1 contrast) */
+  html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6,
+  html.dark .font-display-lg, html.dark .font-display-md, html.dark .font-display-sm,
+  html.dark .font-headline-lg, html.dark .font-headline-md, html.dark .font-headline-sm,
+  html.dark .text-headline-lg, html.dark .text-headline-md, html.dark .text-headline-sm,
+  html.dark .font-title-lg, html.dark .font-title-md, html.dark .font-title-sm,
+  html.dark .text-title-lg, html.dark .text-title-md, html.dark .text-title-sm,
+  html.dark .text-primary {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+
+  /* Dark Mode Paragraphs, Lists & General Text */
+  html.dark p, html.dark li,
+  html.dark .text-on-surface,
+  html.dark .text-on-surface-variant,
+  html.dark .font-body-lg, html.dark .font-body-md, html.dark .font-body-sm, html.dark .font-body-xs,
+  html.dark .text-body-lg, html.dark .text-body-md, html.dark .text-body-sm, html.dark .text-body-xs {
+    color: #F2E8DC !important; /* Luminous Warm Sand, 14:1 contrast, never dark or faded */
+    font-weight: 450;
+  }
+
+  /* Dark Mode Secondary & Variant Text */
+  html.dark span.text-on-surface-variant,
+  html.dark div.text-on-surface-variant,
+  html.dark p.text-on-surface-variant,
+  html.dark .text-outline,
+  html.dark .text-outline-variant {
+    color: #E2D4C5 !important; /* High-contrast ivory linen, 11:1 contrast */
+    font-weight: 500 !important;
+  }
+
+  /* Dark Mode Small Labels, Badges, Category Chips, Stats, Dates, Captions */
+  html.dark .text-label-sm, html.dark .text-label-md, html.dark .text-label-lg,
+  html.dark .font-label-sm, html.dark .font-label-md, html.dark .font-label-lg,
+  html.dark .font-caption, html.dark .text-caption,
+  html.dark span.text-caption, html.dark div.text-caption {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+  }
+
+  /* Dark Mode Accent & Highlight Text: Radiant Luminous Amber */
+  html.dark .text-secondary,
+  html.dark .text-secondary-fixed,
+  html.dark .text-primary-fixed {
+    color: #F7BA7D !important; /* Brilliant glowing amber */
+    font-weight: 600 !important;
+  }
+
+  /* Dark Mode Links */
+  html.dark a:not([class*="bg-"]):not([class*="btn"]):hover {
+    color: #F7BA7D !important;
+  }
+
+  /* Dark Mode Fractional Opacity Utility Class Overrides */
+  html.dark [class*="text-"][class*="/40"],
+  html.dark [class*="text-"][class*="/50"],
+  html.dark [class*="text-"][class*="/60"],
+  html.dark [class*="text-"][class*="/70"],
+  html.dark [class*="text-"][class*="/75"],
+  html.dark [class*="text-"][class*="/80"],
+  html.dark [class*="text-"][class*="/90"],
+  html.dark [class*="text-surface-container-high"] {
+    opacity: 1 !important;
+    color: #F2E8DC !important;
+  }
+
+  /* Dark Mode Standalone Opacity Overrides */
+  html.dark span[class*="opacity-"],
+  html.dark p[class*="opacity-"],
+  html.dark div[class*="opacity-"]:not([class*="absolute"]):not([class*="fixed"]) {
+    opacity: 1 !important;
+    color: #E6D7C8 !important;
+  }
+
+  /* Dark Mode Form Inputs & Placeholders */
+  html.dark input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+  html.dark textarea,
+  html.dark select {
+    background-color: #24160E !important;
+    color: #FAF5EF !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+    font-weight: 500 !important;
+  }
+  html.dark input::placeholder,
+  html.dark textarea::placeholder {
+    color: #BFB0A0 !important; /* Luminous, highly visible placeholder */
+    opacity: 1 !important;
+  }
+
+  /* Dark Mode Buttons */
+  html.dark button.bg-secondary,
+  html.dark a.bg-secondary,
+  html.dark .bg-secondary {
+    color: #FFFFFF !important;
+  }
+
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
