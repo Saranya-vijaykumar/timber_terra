@@ -100,89 +100,110 @@
     color: #e2eae5 !important;
   }
 
-  /* Surfaces & Containers */
+      /* Surfaces & Containers in Scandinavian Dark Mode */
   html.dark .bg-surface {
-    background-color: #0c120f !important;
+    background-color: #0D1411 !important;
   }
   html.dark .bg-surface\/95 {
-    background-color: rgba(12, 18, 15, 0.95) !important;
+    background-color: rgba(13, 20, 17, 0.95) !important;
   }
   html.dark .bg-surface\/90 {
-    background-color: rgba(12, 18, 15, 0.90) !important;
+    background-color: rgba(13, 20, 17, 0.90) !important;
   }
   html.dark .bg-surface\/10 {
-    background-color: rgba(226, 234, 229, 0.08) !important;
+    background-color: rgba(245, 248, 246, 0.08) !important;
   }
   html.dark .bg-surface-bright\/90 {
-    background-color: rgba(18, 25, 21, 0.90) !important;
+    background-color: rgba(17, 26, 22, 0.90) !important;
   }
   html.dark .bg-surface-bright\/95 {
-    background-color: rgba(18, 25, 21, 0.95) !important;
+    background-color: rgba(17, 26, 22, 0.95) !important;
   }
   html.dark .bg-surface-container-lowest {
-    background-color: #080d0b !important;
+    background-color: #111A16 !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
   }
   html.dark .bg-surface-container-lowest\/80 {
-    background-color: rgba(8, 13, 11, 0.80) !important;
+    background-color: rgba(17, 26, 22, 0.80) !important;
   }
   html.dark .bg-surface-container-lowest\/90 {
-    background-color: rgba(8, 13, 11, 0.90) !important;
+    background-color: rgba(17, 26, 22, 0.90) !important;
   }
   html.dark .bg-surface-container-lowest\/95 {
-    background-color: rgba(8, 13, 11, 0.95) !important;
+    background-color: rgba(17, 26, 22, 0.95) !important;
   }
   html.dark .bg-surface-container-low {
-    background-color: #111815 !important;
+    background-color: #16211C !important;
   }
   html.dark .bg-surface-container-low\/50 {
-    background-color: rgba(17, 24, 21, 0.50) !important;
+    background-color: rgba(22, 33, 28, 0.50) !important;
   }
   html.dark .bg-surface-container-low\/60 {
-    background-color: rgba(17, 24, 21, 0.60) !important;
+    background-color: rgba(22, 33, 28, 0.60) !important;
   }
   html.dark .bg-surface-container-low\/80 {
-    background-color: rgba(17, 24, 21, 0.80) !important;
+    background-color: rgba(22, 33, 28, 0.80) !important;
   }
   html.dark .bg-surface-container {
-    background-color: #16201b !important;
+    background-color: #1B2A23 !important;
   }
   html.dark .bg-surface-container\/60 {
-    background-color: rgba(22, 32, 27, 0.60) !important;
+    background-color: rgba(27, 42, 35, 0.60) !important;
   }
   html.dark .bg-surface-container-high {
-    background-color: #1e2a24 !important;
+    background-color: #23362D !important;
   }
   html.dark .bg-surface-container-high\/30 {
-    background-color: rgba(30, 42, 36, 0.30) !important;
+    background-color: rgba(35, 54, 45, 0.30) !important;
   }
   html.dark .bg-surface-container-high\/40 {
-    background-color: rgba(30, 42, 36, 0.40) !important;
+    background-color: rgba(35, 54, 45, 0.40) !important;
   }
   html.dark .bg-surface-container-high\/70 {
-    background-color: rgba(30, 42, 36, 0.70) !important;
+    background-color: rgba(35, 54, 45, 0.70) !important;
   }
   html.dark .bg-surface-container-highest {
-    background-color: #26352e !important;
+    background-color: #2C4238 !important;
   }
   html.dark .bg-surface-container-highest\/80 {
-    background-color: rgba(38, 53, 46, 0.80) !important;
+    background-color: rgba(44, 66, 56, 0.80) !important;
   }
   html.dark .bg-surface-variant {
-    background-color: #1a2520 !important;
+    background-color: #1B2A23 !important;
   }
 
   /* Typography in Dark Mode */
+  html.dark body,
   html.dark .text-on-surface {
-    color: #e2eae5 !important;
+    color: #F5F8F6 !important;
+    font-weight: 500;
   }
   html.dark .text-on-surface-variant {
-    color: #9cb0a5 !important;
+    color: #CCD8D1 !important; /* Radiant readable sage-white in dark mode */
+    font-weight: 500;
+  }
+  html.dark h1, html.dark h2, html.dark h3, html.dark h4,
+  html.dark .font-display-lg, html.dark .font-display-md,
+  html.dark .font-headline-lg, html.dark .font-headline-md, html.dark .font-headline-sm {
+    color: #FFFFFF !important;
   }
   html.dark .text-primary {
-    color: #9dd4bf !important;
+    color: #B0E4D0 !important;
   }
   html.dark .hover\:text-primary:hover {
-    color: #bbf0dc !important;
+    color: #D2F5E7 !important;
+  }
+  html.dark .text-secondary,
+  html.dark .text-secondary-fixed {
+    color: #F2AF72 !important;
+  }
+  html.dark .text-surface-container-high\/80,
+  html.dark .text-surface-container-high\/90,
+  html.dark .text-surface-container-high {
+    color: #DBE7E1 !important;
+  }
+  html.dark .text-surface-bright {
+    color: #FFFFFF !important;
   }
 
   /* Borders & Dividers in Dark Mode */
@@ -201,33 +222,33 @@
 
   /* Navigation & Header Overrides */
   html.dark header {
-    background-color: rgba(12, 18, 15, 0.95) !important;
+    background-color: rgba(13, 20, 17, 0.95) !important;
     border-color: rgba(255, 255, 255, 0.08) !important;
   }
   html.dark #mobile-menu {
-    background-color: #0c120f !important;
+    background-color: #0D1411 !important;
     border-color: rgba(255, 255, 255, 0.08) !important;
   }
 
   /* Interactive States */
   html.dark .hover\:bg-surface-container:hover {
-    background-color: #1e2a24 !important;
+    background-color: #1B2A23 !important;
   }
   html.dark .hover\:bg-surface-container-high:hover {
-    background-color: #26352e !important;
+    background-color: #23362D !important;
   }
 
   /* Form Elements */
   html.dark input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
   html.dark textarea,
   html.dark select {
-    background-color: #16201b !important;
-    color: #e2eae5 !important;
+    background-color: #16211C !important;
+    color: #F5F8F6 !important;
     border-color: rgba(255, 255, 255, 0.15) !important;
   }
   html.dark input::placeholder,
   html.dark textarea::placeholder {
-    color: #72857a !important;
+    color: #8C9690 !important;
   }
 
   /* Elevated Shadows */
@@ -315,7 +336,7 @@
     color: #111815;
   }
   .text-on-surface-variant {
-    color: #26332c !important; /* Deep, clear contrast > 9:1 */
+    color: #334139 !important; /* Deep, clear contrast > 9:1 */
     font-weight: 500;
   }
   .text-primary, h1, h2, h3, h4 {
@@ -329,7 +350,7 @@
     font-weight: 500;
   }
   html.dark .text-on-surface-variant {
-    color: #d1ded7 !important;
+    color: #CCD8D1 !important; /* Radiant readable sage-white in dark mode */
     font-weight: 500;
   }
   html.dark h1, html.dark h2, html.dark h3, html.dark h4,
