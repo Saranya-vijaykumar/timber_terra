@@ -699,45 +699,74 @@ tailwind.config = {
     </nav>
   </div>
 </header><main class="w-full pt-16 lg:pt-[100px] bg-surface overflow-x-hidden"><div class="flex flex-col w-full">
-<!-- Hero Section -->
-<section class="relative w-full -mt-16 lg:-mt-[100px] overflow-hidden bg-primary">
-<div class="relative w-full min-h-[80vh] flex items-center">
-<!-- Background Image -->
-<div class="absolute inset-0 z-0">
-<img alt="Timber &amp; Terra architectural timber pergola living sanctuary with warm twilight lighting and artisan joinery" class="w-full h-full object-cover object-center scale-100 transition-transform duration-1000 ease-out" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2400&q=85"/>
-<div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-black/10"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15"></div>
-</div>
-<!-- Hero Content -->
-<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-24 sm:pt-28 pb-12 sm:pb-16 w-full">
-<div class="max-w-3xl flex flex-col items-start w-full">
-<!-- Trust Badge -->
-<div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface/10 backdrop-blur-md text-primary-fixed mb-6 sm:mb-8 shadow-sm max-w-full flex-wrap sm:flex-nowrap">
-<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-<span class="font-label-md text-xs sm:text-label-md uppercase tracking-wider text-surface-bright break-words">Crafted with care • Built to last • Licensed Master Builders</span>
-</div>
-<!-- Main Title -->
-<h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-display-lg text-surface-bright tracking-tight mb-4 sm:mb-6 leading-tight break-words max-w-full">
-            Transform Your Outdoors Into Something <span class="text-secondary-fixed italic font-normal">Extraordinary.</span>
-</h1>
-<!-- Subtitle -->
-<p class="font-body-lg text-base sm:text-body-lg text-surface-container-high/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed break-words">
-            Thoughtfully designed timber decks, precision-engineered pergolas, and monolithic outdoor living spaces crafted around the cadence of Pacific Northwest living.
-          </p>
-<!-- CTAs -->
-<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
-<a class="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-secondary text-surface-bright font-label-lg text-sm sm:text-label-lg uppercase tracking-wider hover:bg-secondary/90 transition-all shadow-xl shadow-primary/20 group w-full sm:w-auto whitespace-nowrap" href="contact.html">
-<span>Get a Free Quote</span>
-<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-<a class="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-surface/10 backdrop-blur-md text-surface-bright font-label-lg text-sm sm:text-label-lg uppercase tracking-wider hover:bg-surface/20 transition-all shadow-sm w-full sm:w-auto whitespace-nowrap" href="gallery.html">
-<span class="material-symbols-outlined text-[18px]">photo_library</span>
-<span>Explore Our Projects</span>
-</a>
-</div>
-</div>
-</div>
-</div>
+<!-- Hero Section (Architectural Showcase — 100% Crisp Image, Zero Transparent Overlays) -->
+<section class="relative w-full bg-surface py-10 lg:py-16 border-b border-outline-variant/30 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      
+      <!-- Left Column: Typography & CTAs (Solid, Maximum Contrast) -->
+      <div class="lg:col-span-6 flex flex-col items-start w-full">
+        <!-- Trust Badge (Solid High Contrast, No Transparent Effect) -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/60 text-primary text-xs uppercase tracking-wider font-bold mb-5 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+          <span>Crafted with Care • Built to Last • Licensed Master Builders</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-[48px] lg:leading-[56px] text-primary tracking-tight mb-5 font-bold">
+          Transform Your Outdoors Into Something <span class="text-secondary italic font-normal">Extraordinary.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="font-body-lg text-base sm:text-lg text-on-surface-variant mb-8 leading-relaxed max-w-xl">
+          Thoughtfully designed timber decks, precision-engineered pergolas, and monolithic outdoor living spaces crafted around the cadence of Pacific Northwest living.
+        </p>
+
+        <!-- Solid High-Contrast CTAs (No Transparent Glass Effect) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto mb-8">
+          <a class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-secondary hover:bg-secondary/90 text-white font-bold text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-secondary/20 transition-all group whitespace-nowrap" href="contact.html">
+            <span>Get a Free Quote</span>
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+          <a class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-primary hover:bg-primary-container text-white font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md transition-all whitespace-nowrap" href="gallery.html">
+            <span class="material-symbols-outlined text-[18px]">photo_library</span>
+            <span>Explore Our Projects</span>
+          </a>
+        </div>
+
+        <!-- Quick Proof Metrics -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-outline-variant/40 w-full">
+          <div>
+            <span class="block font-bold text-2xl text-primary font-display">24+</span>
+            <span class="text-xs text-on-surface-variant font-medium">Years Master Craft</span>
+          </div>
+          <div>
+            <span class="block font-bold text-2xl text-primary font-display">1,450+</span>
+            <span class="text-xs text-on-surface-variant font-medium">Delivered Projects</span>
+          </div>
+          <div>
+            <span class="block font-bold text-2xl text-primary font-display">25-Yr</span>
+            <span class="text-xs text-on-surface-variant font-medium">Warranty Deed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 100% Crisp, Pure, Full-Color Image with ZERO Overlay, ZERO Transparency -->
+      <div class="lg:col-span-6 w-full">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/50 group bg-surface-container-low aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3]">
+          <img alt="Timber &amp; Terra architectural timber pergola living sanctuary with warm twilight lighting, linear fire table, and artisan hardwood decking"
+               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDkUa4ilzyyEgY9gY_AWCO9_aIgeRQr0DW2jAufAZsXK5fDBbHOVif_DMiUekWhDlsGF-LT1RRnab9l_tiO-jEpUZO_-xH9Rb1tW6AThzSzlgyhTNWU2X9-LfZ0-pSY1iooJUEG7Ux1e8e4aOAWapJtLc5JmEgK5r9dSumq4RpafZFJYnYnpQGW96O55RU2UfOu49f1F1K1rtNLlGVbzi9gfuN9iO7pzixDhU_WDRKcOWf5QSfTPp2DA"/>
+          <!-- Solid Architectural Caption Badge (Solid background, no transparent gradient) -->
+          <div class="absolute bottom-4 left-4 bg-primary text-white px-3.5 py-2 rounded-xl text-xs font-semibold shadow-xl flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+            <span>Sentinel Ridge Pergola &amp; Terrace</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 <!-- Section 1: Trust Indicators & Key Metrics -->
 <section class="w-full bg-primary-container text-on-primary relative z-20 shadow-md">
