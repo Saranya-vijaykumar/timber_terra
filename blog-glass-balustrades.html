@@ -770,7 +770,7 @@
 
             <!-- Featured Image Card -->
             <div class="rounded-2xl overflow-hidden shadow-lg bg-surface-container-high relative">
-              <img src="https://lh3.googleusercontent.com/aida/AEtjO1XBcve9kWHxXqIcsV4lTl6gGAi_DmD3qcxqr27t5fovOwC2oWQ6WR-74s3vYHnZbScvWiXQz-U3f4kTZyonObBaQGUpKgTOXvg6OOjJsbifIvI5KM5XUeHRWAh87DVsiKaoyS1IUrDniHLjt84DSdoTpPzyIabHUPBWIxnBNIRUlEuGXCjqqiL6ld43-88kKebXfaXYsbPqgtGfRzDi_6cr6UhT6Iv02tBte9MGptS5mJaYvMyZn1EK5Gc" alt="Glass Balustrades vs. Tensioned Marine Cable: Wind Load and Acoustic Dynamics" class="w-full h-auto max-h-[520px] object-cover object-center"/>
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Glass Balustrades vs. Tensioned Marine Cable: Wind Load and Acoustic Dynamics" class="w-full h-auto max-h-[520px] object-cover object-center"/>
               <div class="p-4 bg-surface-container-lowest/95 border-t border-outline-variant/30 text-caption text-xs text-on-surface-variant flex items-center justify-between">
                 <span>Multilevel blufftop deck featuring structural frameless glass balustrades with continuous base shoe channel.</span>
                 <span class="font-semibold text-secondary">Verified Field Audit</span>
@@ -1103,6 +1103,29 @@ When 40+ mph coastal winds pass horizontally through tensioned horizontal cables
       updateDirUI();
     }
   </script>
+
+
+<script>
+  // Global Image Error Recovery: Automatically fallback if any third-party CDN image fails
+  document.addEventListener('DOMContentLoaded', function() {
+    const defaultFallbacks = [
+      'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80'
+    ];
+    document.querySelectorAll('img').forEach((img, idx) => {
+      img.addEventListener('error', function() {
+        if (!this.dataset.hasFailed) {
+          this.dataset.hasFailed = 'true';
+          const fallback = defaultFallbacks[idx % defaultFallbacks.length];
+          console.warn('Image load failed for ' + this.src + ', replacing with fallback: ' + fallback);
+          this.src = fallback;
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
