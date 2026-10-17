@@ -349,7 +349,7 @@
     font-weight: 500;
   }
   html.dark .text-on-surface-variant {
-    color: #CBE2D6 !important; /* Luminous readable sage-white in dark mode */
+    color: #F2E8DC !important; /* Luminous readable sage-white in dark mode */
     font-weight: 500;
   }
   html.dark h1, html.dark h2, html.dark h3, html.dark h4,
@@ -358,7 +358,7 @@
     color: #ffffff !important;
   }
   html.dark .text-primary {
-    color: #aae2cd !important;
+    color: #FFFFFF !important;
   }
   html.dark .text-secondary,
   html.dark .text-secondary-fixed {
@@ -367,7 +367,7 @@
   html.dark .text-surface-container-high\/80,
   html.dark .text-surface-container-high\/90,
   html.dark .text-surface-container-high {
-    color: #dbe7e1 !important;
+    color: #E2D4C5 !important;
   }
   html.dark .text-surface-bright {
     color: #ffffff !important;
@@ -375,17 +375,17 @@
 
   /* Dark mode card contrast & definition */
   html.dark .bg-surface-container-lowest {
-    background-color: #111a15 !important;
+    background-color: #20140D !important;
     border-color: rgba(255, 255, 255, 0.12) !important;
   }
   html.dark .bg-surface-container-low {
-    background-color: #14201a !important;
+    background-color: #261810 !important;
   }
   html.dark .bg-surface-container {
-    background-color: #182821 !important;
+    background-color: #2F1E15 !important;
   }
   html.dark .bg-surface-container-high {
-    background-color: #1f332a !important;
+    background-color: #3B261A !important;
   }
 
   /* Protect Material Symbols icons */
@@ -487,8 +487,169 @@
     border-color: initial;
   }
 
-
   /* ==========================================================================
+     UNIVERSAL BOX, FILTER PILL & BUTTON COLOR EFFECT SYSTEM
+     Guarantees distinct, tactile box styling with visible borders, depth,
+     rich backgrounds, and glowing active states in both Light Mode and Dark Mode.
+     ========================================================================== */
+
+  /* --- LIGHT MODE BOX & BUTTON EFFECTS --- */
+  /* Inactive Filter Buttons, Tabs, Category Pills */
+  .filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
+  .service-filter-btn:not(.bg-primary):not(.active),
+  #category-pills button:not(.bg-primary-container):not(.active),
+  button.filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
+  #filter-container button:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
+  #filter-buttons button:not(.bg-primary):not(.active),
+  button[data-filter]:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
+  button[data-category]:not(.bg-primary):not(.bg-primary-container):not(.active),
+  #btn-show-before:not(.bg-primary),
+  #btn-show-after:not(.bg-primary),
+  button[onclick*="calc-slope"]:not(.active):not(.bg-primary),
+  .dir-toggle-btn,
+  button[onclick*="toggleDirection"],
+  button[onclick*="toggleTheme"] {
+    background-color: #FFFFFF !important;
+    color: #24140A !important;
+    border: 1.5px solid #CFBEAC !important;
+    box-shadow: 0 2px 8px -1px rgba(36, 21, 14, 0.08) !important;
+    font-weight: 600 !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  /* Inactive Box Hover Effect (Light Mode) */
+  .filter-btn:not(.active-filter):not(.bg-primary-container):hover,
+  .service-filter-btn:not(.bg-primary):hover,
+  #category-pills button:not(.bg-primary-container):hover,
+  button.filter-btn:not(.active-filter):not(.bg-primary-container):hover,
+  #filter-container button:not(.active-filter):not(.bg-primary-container):hover,
+  #filter-buttons button:not(.bg-primary):hover,
+  button[data-filter]:not(.active-filter):not(.bg-primary-container):hover,
+  button[data-category]:not(.bg-primary):not(.bg-primary-container):hover,
+  #btn-show-before:not(.bg-primary):hover,
+  #btn-show-after:not(.bg-primary):hover,
+  button[onclick*="calc-slope"]:not(.active):not(.bg-primary):hover,
+  .dir-toggle-btn:hover,
+  button[onclick*="toggleDirection"]:hover,
+  button[onclick*="toggleTheme"]:hover {
+    background-color: #FAF5EF !important;
+    border-color: #B85D19 !important;
+    color: #B85D19 !important;
+    box-shadow: 0 4px 14px -2px rgba(184, 93, 25, 0.25) !important;
+    transform: translateY(-1px);
+  }
+
+  /* Active Filter Buttons & Selected Tabs (Light Mode) */
+  .filter-btn.active-filter,
+  .filter-btn.bg-primary-container,
+  .filter-btn.bg-primary,
+  .service-filter-btn.bg-primary,
+  .service-filter-btn.active,
+  #category-pills button.bg-primary-container,
+  #category-pills button.active,
+  #filter-container button.active-filter,
+  #filter-container button.bg-primary-container,
+  #filter-buttons button.bg-primary,
+  button.filter-btn.active-filter,
+  button.active-filter,
+  #btn-show-after.bg-primary,
+  #btn-show-before.bg-primary,
+  button[onclick*="calc-slope"].active,
+  button[onclick*="calc-slope"].bg-primary,
+  button[data-filter].active-filter,
+  button[data-filter].bg-primary-container,
+  button[data-category].bg-primary,
+  button[data-category].bg-primary-container {
+    background: linear-gradient(135deg, #C87A38 0%, #A85218 100%) !important;
+    color: #FFFFFF !important;
+    border: 1.5px solid #8F3E0B !important;
+    box-shadow: 0 4px 16px 0 rgba(184, 93, 25, 0.45) !important;
+    font-weight: 700 !important;
+    transform: translateY(-1px);
+  }
+
+  /* --- DARK MODE BOX & BUTTON EFFECTS (html.dark) --- */
+  /* Inactive Filter Buttons, Tabs, Category Pills in Dark Mode */
+  html.dark .filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
+  html.dark .service-filter-btn:not(.bg-primary):not(.active),
+  html.dark #category-pills button:not(.bg-primary-container):not(.active),
+  html.dark button.filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
+  html.dark #filter-container button:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
+  html.dark #filter-buttons button:not(.bg-primary):not(.active),
+  html.dark button[data-filter]:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
+  html.dark button[data-category]:not(.bg-primary):not(.bg-primary-container):not(.active),
+  html.dark #btn-show-before:not(.bg-primary),
+  html.dark #btn-show-after:not(.bg-primary),
+  html.dark button[onclick*="calc-slope"]:not(.active):not(.bg-primary),
+  html.dark .dir-toggle-btn,
+  html.dark button[onclick*="toggleDirection"],
+  html.dark button[onclick*="toggleTheme"] {
+    background-color: #24160E !important;
+    color: #FAF5EF !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+    font-weight: 600 !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  /* Inactive Box Hover Effect (Dark Mode) */
+  html.dark .filter-btn:not(.active-filter):not(.bg-primary-container):hover,
+  html.dark .service-filter-btn:not(.bg-primary):hover,
+  html.dark #category-pills button:not(.bg-primary-container):hover,
+  html.dark button.filter-btn:not(.active-filter):not(.bg-primary-container):hover,
+  html.dark #filter-container button:not(.active-filter):not(.bg-primary-container):hover,
+  html.dark #filter-buttons button:not(.bg-primary):hover,
+  html.dark button[data-filter]:not(.active-filter):not(.bg-primary-container):hover,
+  html.dark button[data-category]:not(.bg-primary):not(.bg-primary-container):hover,
+  html.dark #btn-show-before:not(.bg-primary):hover,
+  html.dark #btn-show-after:not(.bg-primary):hover,
+  html.dark button[onclick*="calc-slope"]:not(.active):not(.bg-primary):hover,
+  html.dark .dir-toggle-btn:hover,
+  html.dark button[onclick*="toggleDirection"]:hover,
+  html.dark button[onclick*="toggleTheme"]:hover {
+    background-color: #332014 !important;
+    border-color: #F7BA7D !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 16px rgba(245, 184, 128, 0.35) !important;
+    transform: translateY(-1px);
+  }
+
+  /* Active Filter Buttons & Selected Tabs (Dark Mode) */
+  html.dark .filter-btn.active-filter,
+  html.dark .filter-btn.bg-primary-container,
+  html.dark .filter-btn.bg-primary,
+  html.dark .service-filter-btn.bg-primary,
+  html.dark .service-filter-btn.active,
+  html.dark #category-pills button.bg-primary-container,
+  html.dark #category-pills button.active,
+  html.dark #filter-container button.active-filter,
+  html.dark #filter-container button.bg-primary-container,
+  html.dark #filter-buttons button.bg-primary,
+  html.dark button.filter-btn.active-filter,
+  html.dark button.active-filter,
+  html.dark #btn-show-after.bg-primary,
+  html.dark #btn-show-before.bg-primary,
+  html.dark button[onclick*="calc-slope"].active,
+  html.dark button[onclick*="calc-slope"].bg-primary,
+  html.dark button[data-filter].active-filter,
+  html.dark button[data-filter].bg-primary-container,
+  html.dark button[data-category].bg-primary,
+  html.dark button[data-category].bg-primary-container {
+    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
+    color: #FFFFFF !important;
+    border: 1.5px solid #F7BA7D !important;
+    box-shadow: 0 4px 22px 0 rgba(212, 139, 78, 0.55) !important;
+    font-weight: 700 !important;
+    transform: translateY(-1px);
+  }
+
+  /* General Box / Badge / Chip Outline Visibility */
+  span.rounded-full,
+  span.rounded-lg {
+    border-width: 1px;
+  }
+
+/* ==========================================================================
      ZERO-FADE UNIVERSAL HIGH-CONTRAST TYPOGRAPHY SYSTEM (LIGHT & DARK MODE)
      Guarantees crystal-clear readability for every single line, letter, and font.
      Eliminates any faded, low-opacity, or washed-out text across all 25 pages.
