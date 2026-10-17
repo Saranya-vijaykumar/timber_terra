@@ -412,6 +412,25 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+
+  /* High Contrast Typography Guarantee */
+  body, .text-on-surface {
+    color: #2C1C13 !important;
+    font-weight: 500;
+  }
+  .text-on-surface-variant {
+    color: #5E4738 !important;
+    font-weight: 500;
+  }
+  h1, h2, h3, h4, .text-primary, .font-display-lg, .font-display-md, .font-headline-lg, .font-headline-md {
+    color: #24150E !important;
+    font-weight: 700;
+  }
+  .text-secondary {
+    color: #A8541D !important;
+    font-weight: 600;
+  }
+  
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -422,54 +441,54 @@ tailwind.config = {
         '8xl': '1380px',
         '9xl': '1440px',
       },
-      colors: {
-        "surface": "#f6faf5",
-        "surface-bright": "#f6faf5",
-        "surface-dim": "#d7dbd6",
-        "surface-tint": "#416659",
-        "surface-variant": "#dfe4df",
-        "surface-container-lowest": "#ffffff",
-        "surface-container-low": "#f0f5f0",
-        "surface-container": "#ebefea",
-        "surface-container-high": "#e5e9e4",
-        "surface-container-highest": "#dfe4df",
-        "on-surface": "#181d1a",
-        "on-surface-variant": "#414845",
-        "on-background": "#181d1a",
-        "background": "#f6faf5",
-        "inverse-surface": "#2d322e",
-        "inverse-on-surface": "#edf2ed",
-        "inverse-primary": "#a8cfc0",
-        "primary": "#00271d",
-        "primary-container": "#183d32",
-        "on-primary": "#ffffff",
-        "on-primary-container": "#81a899",
-        "primary-fixed": "#c3ebdb",
-        "primary-fixed-dim": "#a8cfc0",
-        "on-primary-fixed": "#002118",
-        "on-primary-fixed-variant": "#294d42",
-        "secondary": "#7a582f",
-        "secondary-container": "#fecf9d",
-        "on-secondary": "#ffffff",
-        "on-secondary-container": "#79562e",
-        "secondary-fixed": "#ffddba",
-        "secondary-fixed-dim": "#ecbe8e",
-        "on-secondary-fixed": "#2b1700",
-        "on-secondary-fixed-variant": "#5f401a",
-        "tertiary": "#1b231d",
-        "tertiary-container": "#313931",
-        "on-tertiary": "#ffffff",
-        "on-tertiary-container": "#99a298",
-        "tertiary-fixed": "#dce5da",
-        "tertiary-fixed-dim": "#c0c9be",
-        "on-tertiary-fixed": "#151d17",
-        "on-tertiary-fixed-variant": "#404941",
-        "outline": "#717975",
-        "outline-variant": "#c1c8c4",
-        "error": "#ba1a1a",
-        "error-container": "#ffdad6",
-        "on-error": "#ffffff",
-        "on-error-container": "#93000a"
+      "colors": {
+        "surface": "#F6F2EC",
+        "surface-bright": "#FAF7F2",
+        "surface-dim": "#E8E0D4",
+        "surface-tint": "#24150E",
+        "surface-variant": "#EAE2D6",
+        "surface-container-lowest": "#FFFFFF",
+        "surface-container-low": "#EFE9DF",
+        "surface-container": "#E5DDD1",
+        "surface-container-high": "#DCD3C5",
+        "surface-container-highest": "#D0C5B5",
+        "on-surface": "#2C1C13",
+        "on-surface-variant": "#5E4738",
+        "on-background": "#2C1C13",
+        "background": "#F6F2EC",
+        "inverse-surface": "#24150E",
+        "inverse-on-surface": "#F6F2EC",
+        "inverse-primary": "#E5A976",
+        "primary": "#24150E",
+        "primary-container": "#3D2418",
+        "on-primary": "#FFFFFF",
+        "on-primary-container": "#F5D4B8",
+        "primary-fixed": "#F6E2D0",
+        "primary-fixed-dim": "#ECC8AA",
+        "on-primary-fixed": "#24150E",
+        "on-primary-fixed-variant": "#4E2F20",
+        "secondary": "#C87A38",
+        "secondary-container": "#F6E4D3",
+        "on-secondary": "#FFFFFF",
+        "on-secondary-container": "#5C300F",
+        "secondary-fixed": "#FDE6D2",
+        "secondary-fixed-dim": "#F5C7A1",
+        "on-secondary-fixed": "#2E1504",
+        "on-secondary-fixed-variant": "#7A3E16",
+        "tertiary": "#A8541D",
+        "tertiary-container": "#C26829",
+        "on-tertiary": "#FFFFFF",
+        "on-tertiary-container": "#FFE0CC",
+        "tertiary-fixed": "#FCDAC4",
+        "tertiary-fixed-dim": "#F4BFA0",
+        "on-tertiary-fixed": "#281205",
+        "on-tertiary-fixed-variant": "#6B3310",
+        "outline": "#8C7769",
+        "outline-variant": "#DDD4C8",
+        "error": "#BA1A1A",
+        "error-container": "#FFDAD6",
+        "on-error": "#FFFFFF",
+        "on-error-container": "#93000A"
       },
       borderRadius: {
         "DEFAULT": "0.125rem",
@@ -594,13 +613,13 @@ tailwind.config = {
   </div>
 
   <!-- Primary Navigation Bar (80px height) -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-[60px] flex items-center justify-between gap-2.5 xl:gap-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-[64px] flex items-center justify-between gap-2 lg:gap-3 xl:gap-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 min-w-0 group focus:outline-none">
-      <img alt="Timber &amp; Terra Logo" class="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAro5dHwyl2QOWSvcHLu4N4FiWRftym8zIrDbRXizr8YE0AmVADuhA8p_jZef84KiAowWk6MCoZoLMKJ199qcCu17NzLI6wUGpDVvueZXote30E25kJSf1D9MA4Tx1BL4MSo-bZ5zEkHE6WK9RF9BKWz4u-MeR5mldCoTtwmBdyTjkVq-Rt_Q8UYx6BCQ8g3DxNtysD3QB-Tt7vTnMX_E9SdS8C2NYTP31Z0BhrK_mHR1KX1aKFxq9qrA"/>
-      <div class="flex flex-col min-w-0">
-        <span class="font-headline-sm text-base sm:text-headline-sm tracking-tight text-primary font-bold leading-none truncate">Timber &amp; Terra</span>
-        <span class="hidden md:block font-label-sm text-[10px] sm:text-label-sm text-secondary tracking-widest uppercase mt-0.5 sm:mt-1 truncate">Architectural Outdoor Living</span>
+    <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 shrink-0 whitespace-nowrap group focus:outline-none">
+      <img alt="Timber &amp; Terra Logo" class="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAro5dHwyl2QOWSvcHLu4N4FiWRftym8zIrDbRXizr8YE0AmVADuhA8p_jZef84KiAowWk6MCoZoLMKJ199qcCu17NzLI6wUGpDVvueZXote30E25kJSf1D9MA4Tx1BL4MSo-bZ5zEkHE6WK9RF9BKWz4u-MeR5mldCoTtwmBdyTjkVq-Rt_Q8UYx6BCQ8g3DxNtysD3QB-Tt7vTnMX_E9SdS8C2NYTP31Z0BhrK_mHR1KX1aKFxq9qrA"/>
+      <div class="flex flex-col shrink-0 min-w-max">
+        <span class="font-serif text-lg sm:text-xl tracking-tight text-white font-bold leading-none whitespace-nowrap">Timber &amp; Terra</span>
+        <span class="hidden md:block text-[10px] sm:text-[11px] text-[#D48B4E] tracking-widest uppercase mt-1 font-semibold whitespace-nowrap">Architectural Timber &amp; Woodcraft</span>
       </div>
     </a>
 
@@ -634,10 +653,10 @@ tailwind.config = {
       
       <a href="services.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Services</a>
 
-      <a href="gallery.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Projects Gallery</a>
-      <a href="pricing.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Pricing Guide</a>
-      <a href="blog.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 font-semibold bg-primary-container text-on-primary-container rounded-lg shadow-sm transition-all">Blog Journal</a>
-      <a href="contact.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Contact Us</a>
+      <a href="gallery.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Projects</a>
+      <a href="pricing.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Pricing</a>
+      <a href="blog.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 font-semibold bg-primary-container text-on-primary-container rounded-lg shadow-sm transition-all">Blog</a>
+      <a href="contact.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Contact</a>
     </nav>
 
     <!-- Action Utilities (Theme, CTA, Mobile Menu Button) -->
@@ -675,10 +694,10 @@ tailwind.config = {
 
       <a href="about.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">About Us</a>
       <a href="services.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Services</a>
-      <a href="gallery.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Projects Gallery</a>
-      <a href="pricing.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Pricing Guide</a>
-      <a href="blog.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-bold bg-primary-container text-on-primary-container rounded-lg transition-all">Blog Journal</a>
-      <a href="contact.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Contact Us</a>
+      <a href="gallery.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Projects</a>
+      <a href="pricing.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Pricing</a>
+      <a href="blog.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-bold bg-primary-container text-on-primary-container rounded-lg transition-all">Blog</a>
+      <a href="contact.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Contact</a>
 
       <div class="pt-4 border-t border-surface-container mt-2">
         <a href="contact.html" class="w-full inline-flex items-center justify-center px-5 py-3 bg-primary-container text-on-primary font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary transition-colors">
@@ -1236,8 +1255,8 @@ tailwind.config = {
         <div class="font-headline-sm text-headline-sm text-primary mb-6 font-semibold">Quick Links</div>
         <nav class="flex flex-col gap-3 font-body-sm text-body-sm">
           <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About Us</a>
-          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="gallery.html">Projects Gallery</a>
-          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="pricing.html">Pricing Guide</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="gallery.html">Projects</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="pricing.html">Pricing</a>
           <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="blog.html">Journal &amp; Insights</a>
           <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Schedule Consultation</a>
         </nav>
