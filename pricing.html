@@ -432,6 +432,63 @@
     font-weight: 600;
   }
   
+
+  /* ==========================================================================
+     UNIVERSAL CRISP CARD BORDER SYSTEM (VISIBLE BOX BOUNDARIES)
+     ========================================================================== */
+  /* Light Mode Box Cards */
+  div.bg-surface-container-lowest,
+  div.bg-surface-container-low,
+  div.bg-surface-container,
+  div.bg-white,
+  article,
+  .card,
+  div[class*="rounded-xl"][class*="shadow"],
+  div[class*="rounded-2xl"][class*="shadow"],
+  div[class*="rounded-3xl"][class*="shadow"],
+  div.group.rounded-2xl,
+  div.group.rounded-xl {
+    border: 1.5px solid #CFBEAC !important; /* Visible warm timber card outline */
+    box-shadow: 0 4px 16px -2px rgba(36, 21, 14, 0.08) !important;
+  }
+
+  /* Hover Card Outline Enhancement */
+  div.group.rounded-2xl:hover,
+  div.group.rounded-xl:hover,
+  div[class*="rounded-xl"][class*="shadow"]:hover,
+  div[class*="rounded-2xl"][class*="shadow"]:hover {
+    border-color: #B85D19 !important; /* Rich amber cognac highlight on hover */
+    box-shadow: 0 10px 28px -4px rgba(36, 21, 14, 0.16) !important;
+  }
+
+  /* Dark Mode Box Cards */
+  html.dark div.bg-surface-container-lowest,
+  html.dark div.bg-surface-container-low,
+  html.dark div.bg-surface-container,
+  html.dark div.bg-white,
+  html.dark article,
+  html.dark .card,
+  html.dark div[class*="rounded-xl"][class*="shadow"],
+  html.dark div[class*="rounded-2xl"][class*="shadow"],
+  html.dark div[class*="rounded-3xl"][class*="shadow"],
+  html.dark div.group.rounded-2xl,
+  html.dark div.group.rounded-xl {
+    border: 1.5px solid rgba(255, 255, 255, 0.20) !important; /* Crisp luminous border in dark mode */
+    box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.65) !important;
+  }
+
+  html.dark div.group.rounded-2xl:hover,
+  html.dark div.group.rounded-xl:hover,
+  html.dark div[class*="rounded-xl"][class*="shadow"]:hover,
+  html.dark div[class*="rounded-2xl"][class*="shadow"]:hover {
+    border-color: #D48B4E !important; /* Luminous amber outline on hover */
+  }
+
+  /* Exclude headers, drawers, buttons, inputs from card borders */
+  header, #mobile-menu, #mobile-drawer, input, textarea, select, button, a {
+    border-color: initial;
+  }
+
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
