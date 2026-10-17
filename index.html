@@ -569,6 +569,31 @@
     transform: translateY(-1px);
   }
 
+  /* Primary CTA Buttons (Light Mode) */
+  a.bg-primary-container,
+  button.bg-primary-container,
+  a[class*="bg-[#B85D19]"],
+  button[class*="bg-[#B85D19]"] {
+    background-color: #B85D19 !important;
+    color: #FFFFFF !important;
+    border: 1.5px solid #8F3E0B !important;
+    box-shadow: 0 4px 14px -2px rgba(184, 93, 25, 0.35) !important;
+  }
+  a.bg-primary-container *,
+  button.bg-primary-container *,
+  a[class*="bg-[#B85D19]"] *,
+  button[class*="bg-[#B85D19]"] * {
+    color: #FFFFFF !important;
+  }
+  a.bg-primary-container:hover,
+  button.bg-primary-container:hover,
+  a[class*="bg-[#B85D19]"]:hover,
+  button[class*="bg-[#B85D19]"]:hover {
+    background-color: #A04E12 !important;
+    box-shadow: 0 6px 20px -2px rgba(184, 93, 25, 0.5) !important;
+    transform: translateY(-1px);
+  }
+
   /* --- DARK MODE BOX & BUTTON EFFECTS (html.dark) --- */
   /* Inactive Filter Buttons, Tabs, Category Pills in Dark Mode */
   html.dark .filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
@@ -641,6 +666,32 @@
     border: 1.5px solid #F7BA7D !important;
     box-shadow: 0 4px 22px 0 rgba(212, 139, 78, 0.55) !important;
     font-weight: 700 !important;
+    transform: translateY(-1px);
+  }
+
+  /* Primary CTA Buttons (Dark Mode) */
+  html.dark a.bg-primary-container,
+  html.dark button.bg-primary-container,
+  html.dark a[class*="bg-[#B85D19]"],
+  html.dark button[class*="bg-[#B85D19]"] {
+    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
+    color: #FFFFFF !important;
+    border: 1.5px solid #F7BA7D !important;
+    box-shadow: 0 4px 20px 0 rgba(212, 139, 78, 0.5) !important;
+  }
+  html.dark a.bg-primary-container *,
+  html.dark button.bg-primary-container *,
+  html.dark a[class*="bg-[#B85D19]"] *,
+  html.dark button[class*="bg-[#B85D19]"] * {
+    color: #FFFFFF !important;
+  }
+  html.dark a.bg-primary-container:hover,
+  html.dark button.bg-primary-container:hover,
+  html.dark a[class*="bg-[#B85D19]"]:hover,
+  html.dark button[class*="bg-[#B85D19]"]:hover {
+    background: linear-gradient(135deg, #E09553 0%, #C87A38 100%) !important;
+    border-color: #FFFFFF !important;
+    box-shadow: 0 6px 26px 0 rgba(212, 139, 78, 0.65) !important;
     transform: translateY(-1px);
   }
 
@@ -1726,9 +1777,9 @@ tailwind.config = {
         </p>
       </div>
       <div class="flex items-center gap-3">
-        <a href="gallery.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-container text-on-primary font-semibold text-sm hover:bg-primary transition-all shadow-sm">
-          <span>View 50+ Completed Estates</span>
-          <span class="material-symbols-outlined text-[18px]">east</span>
+        <a href="gallery.html" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#B85D19] hover:bg-[#9E460E] text-white font-bold text-sm tracking-wide transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 border border-[#8F3E0B]/30 group shrink-0">
+          <span class="text-white font-bold">View 50+ Completed Estates</span>
+          <span class="material-symbols-outlined text-[18px] text-white group-hover:translate-x-1.5 transition-transform duration-300">east</span>
         </a>
       </div>
     </div>
