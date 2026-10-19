@@ -282,7 +282,7 @@
   html:not(.dark) div.bg-surface-container-high,
   html:not(.dark) div.bg-surface-container-highest,
   html:not(.dark) div.bg-white,
-  html:not(.dark) article,
+  html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
@@ -295,7 +295,7 @@
   html:not(.dark) div.bg-surface-container-low:hover,
   html:not(.dark) div.bg-surface-container:hover,
   html:not(.dark) div.bg-white:hover,
-  html:not(.dark) article:hover,
+  html:not(.dark) article:not([class*="col-span"]):hover,
   html:not(.dark) .card:hover,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover,
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -520,7 +520,7 @@
   html.dark div.bg-surface-container-high,
   html.dark div.bg-surface-container-highest,
   html.dark div.bg-white,
-  html.dark article,
+  html.dark article:not([class*="col-span"]),
   html.dark .card,
   html.dark div[class*="rounded-2xl"][class*="shadow"],
   html.dark div[class*="rounded-3xl"][class*="shadow"],
@@ -534,7 +534,7 @@
   html.dark div.bg-surface-container-low:hover,
   html.dark div.bg-surface-container:hover,
   html.dark div.bg-white:hover,
-  html.dark article:hover,
+  html.dark article:not([class*="col-span"]):hover,
   html.dark .card:hover,
   html.dark div[class*="rounded-2xl"][class*="shadow"]:hover,
   html.dark div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -914,6 +914,19 @@
     color: #C2B3A3 !important;
     opacity: 1 !important;
   }
+
+  /* Article Layout Columns (Zero border, zero shadow, transparent) */
+  article[class*="col-span"],
+  article.lg\:col-span-8 {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  article[class*="col-span"]:hover,
+  article.lg\:col-span-8:hover {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -1236,31 +1249,29 @@
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   The Density Paradox: Hardness vs. Dimensional Movement
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  South American hardwoods like Ipe (Brazilian Walnut) and Cumaru (Brazilian Teak) have long stood as the gold standards for ultra-luxury outdoor decking. With Janka hardness ratings exceeding 3,300 lbs, both woods are dense enough to resist claw scratches, high-heel indentations, and termite infestation without chemical treatment.
-
-However, density comes with internal hydrostatic tension. In regions with dramatic seasonal humidity shifts—such as Portland and Seattle where wet winters yield to dry summer heat—Cumaru exhibits higher tangential shrinkage and occasional surface checking compared to the remarkably stable interlocking grain of genuine Ipe.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">South American hardwoods like Ipe (Brazilian Walnut) and Cumaru (Brazilian Teak) have long stood as the gold standards for ultra-luxury outdoor decking. With Janka hardness ratings exceeding 3,300 lbs, both woods are dense enough to resist claw scratches, high-heel indentations, and termite infestation without chemical treatment.</p>
+                <p class="leading-relaxed">However, density comes with internal hydrostatic tension. In regions with dramatic seasonal humidity shifts—such as Portland and Seattle where wet winters yield to dry summer heat—Cumaru exhibits higher tangential shrinkage and occasional surface checking compared to the remarkably stable interlocking grain of genuine Ipe.</p>
+              </div>
               </div>
             
               <div class="space-y-4">
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   Thermally Modified Ash: The Sustainable Domestic Challenger
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  Thermally modified American Ash has emerged as a formidable competitor. Through an oxygen-deprived steam kiln process reaching 215°C, the wood's hemicellulose (the sugars that wood-decay fungi feed on) is permanently converted.
-
-The resulting timber achieves a rich dark chocolate hue throughout, a 50% reduction in moisture absorption, and near-zero dimensional movement. While slightly softer than Ipe (Janka ~1,500), it stays noticeably cooler under intense direct sun and offers a substantially lower carbon shipping footprint.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">Thermally modified American Ash has emerged as a formidable competitor. Through an oxygen-deprived steam kiln process reaching 215°C, the wood's hemicellulose (the sugars that wood-decay fungi feed on) is permanently converted.</p>
+                <p class="leading-relaxed">The resulting timber achieves a rich dark chocolate hue throughout, a 50% reduction in moisture absorption, and near-zero dimensional movement. While slightly softer than Ipe (Janka ~1,500), it stays noticeably cooler under intense direct sun and offers a substantially lower carbon shipping footprint.</p>
+              </div>
               </div>
             
               <div class="space-y-4">
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   Long-Term Cost Analysis: 40-Year Horizon
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  Over four decades, upfront material costs are dwarfed by maintenance cycles. Genuine Ipe requires only bi-annual penofin natural oil washes to maintain its walnut brown luster, or it can be allowed to gracefully silver into an architectural driftwood patina with zero loss of structural integrity. Thermally modified ash follows a similar trajectory, whereas lower-grade composites often require surface replacement within 20 years due to thermal embrittlement.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">Over four decades, upfront material costs are dwarfed by maintenance cycles. Genuine Ipe requires only bi-annual penofin natural oil washes to maintain its walnut brown luster, or it can be allowed to gracefully silver into an architectural driftwood patina with zero loss of structural integrity. Thermally modified ash follows a similar trajectory, whereas lower-grade composites often require surface replacement within 20 years due to thermal embrittlement.</p>
+              </div>
               </div>
             
 

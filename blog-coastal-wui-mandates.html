@@ -282,7 +282,7 @@
   html:not(.dark) div.bg-surface-container-high,
   html:not(.dark) div.bg-surface-container-highest,
   html:not(.dark) div.bg-white,
-  html:not(.dark) article,
+  html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
@@ -295,7 +295,7 @@
   html:not(.dark) div.bg-surface-container-low:hover,
   html:not(.dark) div.bg-surface-container:hover,
   html:not(.dark) div.bg-white:hover,
-  html:not(.dark) article:hover,
+  html:not(.dark) article:not([class*="col-span"]):hover,
   html:not(.dark) .card:hover,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover,
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -520,7 +520,7 @@
   html.dark div.bg-surface-container-high,
   html.dark div.bg-surface-container-highest,
   html.dark div.bg-white,
-  html.dark article,
+  html.dark article:not([class*="col-span"]),
   html.dark .card,
   html.dark div[class*="rounded-2xl"][class*="shadow"],
   html.dark div[class*="rounded-3xl"][class*="shadow"],
@@ -534,7 +534,7 @@
   html.dark div.bg-surface-container-low:hover,
   html.dark div.bg-surface-container:hover,
   html.dark div.bg-white:hover,
-  html.dark article:hover,
+  html.dark article:not([class*="col-span"]):hover,
   html.dark .card:hover,
   html.dark div[class*="rounded-2xl"][class*="shadow"]:hover,
   html.dark div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -914,6 +914,19 @@
     color: #C2B3A3 !important;
     opacity: 1 !important;
   }
+
+  /* Article Layout Columns (Zero border, zero shadow, transparent) */
+  article[class*="col-span"],
+  article.lg\:col-span-8 {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  article[class*="col-span"]:hover,
+  article.lg\:col-span-8:hover {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -1236,20 +1249,19 @@
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   Understanding Wildland-Urban Interface (WUI) Chapter 7A
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  If your property borders open timberland, national forests, or coastal scrub canyons, strict building codes dictate the flammability of all attached exterior structures. Wildfire embers traveling miles ahead of an active front can lodge between deck boards or ignite unshielded wooden joists.
-
-To achieve Class A fire ratings while preserving natural hardwood aesthetics, we combine dense naturally flame-resistant hardwoods (such as genuine Ipe) with non-combustible cold-formed steel substructures and flame-barrier joist caps.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">If your property borders open timberland, national forests, or coastal scrub canyons, strict building codes dictate the flammability of all attached exterior structures. Wildfire embers traveling miles ahead of an active front can lodge between deck boards or ignite unshielded wooden joists.</p>
+                <p class="leading-relaxed">To achieve Class A fire ratings while preserving natural hardwood aesthetics, we combine dense naturally flame-resistant hardwoods (such as genuine Ipe) with non-combustible cold-formed steel substructures and flame-barrier joist caps.</p>
+              </div>
               </div>
             
               <div class="space-y-4">
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   Navigating Coastal Bluff Stability Geotechnical Audits
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  Coastal properties face overlapping jurisdictions: municipal planning boards, state coastal management commissions, and local watershed councils. Our team prepares stamped geologic hazard mitigation plans demonstrating zero net stormwater discharge over bluff faces, ensuring rapid, smooth approval without contentious public hearings.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">Coastal properties face overlapping jurisdictions: municipal planning boards, state coastal management commissions, and local watershed councils. Our team prepares stamped geologic hazard mitigation plans demonstrating zero net stormwater discharge over bluff faces, ensuring rapid, smooth approval without contentious public hearings.</p>
+              </div>
               </div>
             
 

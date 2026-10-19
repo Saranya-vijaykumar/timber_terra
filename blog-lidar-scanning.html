@@ -282,7 +282,7 @@
   html:not(.dark) div.bg-surface-container-high,
   html:not(.dark) div.bg-surface-container-highest,
   html:not(.dark) div.bg-white,
-  html:not(.dark) article,
+  html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
@@ -295,7 +295,7 @@
   html:not(.dark) div.bg-surface-container-low:hover,
   html:not(.dark) div.bg-surface-container:hover,
   html:not(.dark) div.bg-white:hover,
-  html:not(.dark) article:hover,
+  html:not(.dark) article:not([class*="col-span"]):hover,
   html:not(.dark) .card:hover,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover,
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -520,7 +520,7 @@
   html.dark div.bg-surface-container-high,
   html.dark div.bg-surface-container-highest,
   html.dark div.bg-white,
-  html.dark article,
+  html.dark article:not([class*="col-span"]),
   html.dark .card,
   html.dark div[class*="rounded-2xl"][class*="shadow"],
   html.dark div[class*="rounded-3xl"][class*="shadow"],
@@ -534,7 +534,7 @@
   html.dark div.bg-surface-container-low:hover,
   html.dark div.bg-surface-container:hover,
   html.dark div.bg-white:hover,
-  html.dark article:hover,
+  html.dark article:not([class*="col-span"]):hover,
   html.dark .card:hover,
   html.dark div[class*="rounded-2xl"][class*="shadow"]:hover,
   html.dark div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -914,6 +914,19 @@
     color: #C2B3A3 !important;
     opacity: 1 !important;
   }
+
+  /* Article Layout Columns (Zero border, zero shadow, transparent) */
+  article[class*="col-span"],
+  article.lg\:col-span-8 {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  article[class*="col-span"]:hover,
+  article.lg\:col-span-8:hover {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -1236,22 +1249,20 @@
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   The Hidden Risks of Traditional Tape and Optical Transit Surveys
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  In steep hillside and mature forested parcels, standard 2D property boundary surveys fail to capture micro-topography: rock outcroppings concealed under blackberry vines, root flares of protected heritage oaks, and subtle 6-inch grade depressions that dictate storm runoff paths.
-
-A single missed grade discrepancy can force a structural redesign after foundation excavation begins, delaying projects by weeks and adding thousands of dollars in emergency engineering change orders.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">In steep hillside and mature forested parcels, standard 2D property boundary surveys fail to capture micro-topography: rock outcroppings concealed under blackberry vines, root flares of protected heritage oaks, and subtle 6-inch grade depressions that dictate storm runoff paths.</p>
+                <p class="leading-relaxed">A single missed grade discrepancy can force a structural redesign after foundation excavation begins, delaying projects by weeks and adding thousands of dollars in emergency engineering change orders.</p>
+              </div>
               </div>
             
               <div class="space-y-4">
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   Millimeter Digital Twin Generation and BIM Clash Detection
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  Timber & Terra deploys terrestrial multi-spectrum LiDAR scanners on every property during discovery. Generating over 2 million georeferenced coordinates per second, we capture the exact geometry of existing house siding, foundation sills, window sill heights, and bedrock contours.
-
-This digital twin is loaded directly into structural BIM software, allowing our carpenters to pre-fabricate structural glulam framing in our climate-controlled workshop with millimeter fitment guarantee.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">Timber & Terra deploys terrestrial multi-spectrum LiDAR scanners on every property during discovery. Generating over 2 million georeferenced coordinates per second, we capture the exact geometry of existing house siding, foundation sills, window sill heights, and bedrock contours.</p>
+                <p class="leading-relaxed">This digital twin is loaded directly into structural BIM software, allowing our carpenters to pre-fabricate structural glulam framing in our climate-controlled workshop with millimeter fitment guarantee.</p>
+              </div>
               </div>
             
 

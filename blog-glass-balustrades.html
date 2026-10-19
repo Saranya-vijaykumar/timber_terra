@@ -282,7 +282,7 @@
   html:not(.dark) div.bg-surface-container-high,
   html:not(.dark) div.bg-surface-container-highest,
   html:not(.dark) div.bg-white,
-  html:not(.dark) article,
+  html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
@@ -295,7 +295,7 @@
   html:not(.dark) div.bg-surface-container-low:hover,
   html:not(.dark) div.bg-surface-container:hover,
   html:not(.dark) div.bg-white:hover,
-  html:not(.dark) article:hover,
+  html:not(.dark) article:not([class*="col-span"]):hover,
   html:not(.dark) .card:hover,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover,
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -520,7 +520,7 @@
   html.dark div.bg-surface-container-high,
   html.dark div.bg-surface-container-highest,
   html.dark div.bg-white,
-  html.dark article,
+  html.dark article:not([class*="col-span"]),
   html.dark .card,
   html.dark div[class*="rounded-2xl"][class*="shadow"],
   html.dark div[class*="rounded-3xl"][class*="shadow"],
@@ -534,7 +534,7 @@
   html.dark div.bg-surface-container-low:hover,
   html.dark div.bg-surface-container:hover,
   html.dark div.bg-white:hover,
-  html.dark article:hover,
+  html.dark article:not([class*="col-span"]):hover,
   html.dark .card:hover,
   html.dark div[class*="rounded-2xl"][class*="shadow"]:hover,
   html.dark div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -914,6 +914,19 @@
     color: #C2B3A3 !important;
     opacity: 1 !important;
   }
+
+  /* Article Layout Columns (Zero border, zero shadow, transparent) */
+  article[class*="col-span"],
+  article.lg\:col-span-8 {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  article[class*="col-span"]:hover,
+  article.lg\:col-span-8:hover {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -1236,20 +1249,19 @@
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   The Unforeseen Challenge of Blufftop Wind Whistling
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  Homeowners seeking unobstructed view preservation often debate between tensioned marine cable railing and frameless glass balustrades. A critical but overlooked factor is acoustic resonance.
-
-When 40+ mph coastal winds pass horizontally through tensioned horizontal cables spaced 3 inches apart, vortex shedding can generate an audible, persistent hum. In exposed wind corridors, frameless structural glass acts as a continuous aerodynamic wind deflection shield, eliminating wind noise while creating a sheltered outdoor thermal microclimate.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">Homeowners seeking unobstructed view preservation often debate between tensioned marine cable railing and frameless glass balustrades. A critical but overlooked factor is acoustic resonance.</p>
+                <p class="leading-relaxed">When 40+ mph coastal winds pass horizontally through tensioned horizontal cables spaced 3 inches apart, vortex shedding can generate an audible, persistent hum. In exposed wind corridors, frameless structural glass acts as a continuous aerodynamic wind deflection shield, eliminating wind noise while creating a sheltered outdoor thermal microclimate.</p>
+              </div>
               </div>
             
               <div class="space-y-4">
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   SentryGlas Ionoplast Interlayers vs. Standard PVB
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  For coastal guardrails, standard laminated glass with PVB interlayers is prone to edge delamination when exposed to moisture and salt fog. We utilize SentryGlas ionoplast interlayers, which are 100 times stiffer and 5 times tougher than traditional PVB. Even in the unlikely event of glass breakage, the panel remains upright and structurally sound, maintaining perimeter life-safety protection.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">For coastal guardrails, standard laminated glass with PVB interlayers is prone to edge delamination when exposed to moisture and salt fog. We utilize SentryGlas ionoplast interlayers, which are 100 times stiffer and 5 times tougher than traditional PVB. Even in the unlikely event of glass breakage, the panel remains upright and structurally sound, maintaining perimeter life-safety protection.</p>
+              </div>
               </div>
             
 

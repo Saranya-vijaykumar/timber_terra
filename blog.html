@@ -278,7 +278,7 @@
   html:not(.dark) div.bg-surface-container-high,
   html:not(.dark) div.bg-surface-container-highest,
   html:not(.dark) div.bg-white,
-  html:not(.dark) article,
+  html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
@@ -291,7 +291,7 @@
   html:not(.dark) div.bg-surface-container-low:hover,
   html:not(.dark) div.bg-surface-container:hover,
   html:not(.dark) div.bg-white:hover,
-  html:not(.dark) article:hover,
+  html:not(.dark) article:not([class*="col-span"]):hover,
   html:not(.dark) .card:hover,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover,
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -516,7 +516,7 @@
   html.dark div.bg-surface-container-high,
   html.dark div.bg-surface-container-highest,
   html.dark div.bg-white,
-  html.dark article,
+  html.dark article:not([class*="col-span"]),
   html.dark .card,
   html.dark div[class*="rounded-2xl"][class*="shadow"],
   html.dark div[class*="rounded-3xl"][class*="shadow"],
@@ -530,7 +530,7 @@
   html.dark div.bg-surface-container-low:hover,
   html.dark div.bg-surface-container:hover,
   html.dark div.bg-white:hover,
-  html.dark article:hover,
+  html.dark article:not([class*="col-span"]):hover,
   html.dark .card:hover,
   html.dark div[class*="rounded-2xl"][class*="shadow"]:hover,
   html.dark div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -909,6 +909,19 @@
   html.dark textarea::placeholder {
     color: #C2B3A3 !important;
     opacity: 1 !important;
+  }
+
+  /* Article Layout Columns (Zero border, zero shadow, transparent) */
+  article[class*="col-span"],
+  article.lg\:col-span-8 {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  article[class*="col-span"]:hover,
+  article.lg\:col-span-8:hover {
+    border-color: transparent !important;
+    box-shadow: none !important;
   }
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
@@ -1379,10 +1392,10 @@ tailwind.config = {
 <span>•</span>
 <span>Life Cycle Analysis</span>
 </div>
-<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug">
+<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug min-h-[56px] flex items-start">
 <a href="blog-ipe-vs-cumaru.html" class="hover:text-secondary transition-colors">Ipe vs. Cumaru vs. Thermally Modified Ash: The 40-Year Life Cycle Analysis</a>
 </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4 min-h-[64px]">
                 Comparing natural tannin leaching, solar heat dissipation, barefoot comfort, and rot resistance in marine and alpine microclimates.
               </p>
 </div>
@@ -1417,10 +1430,10 @@ tailwind.config = {
 <span>•</span>
 <span>Climate Engineering</span>
 </div>
-<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug">
+<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug min-h-[56px] flex items-start">
 <a href="blog-bioclimatic-pergola.html" class="hover:text-secondary transition-colors">The Bioclimatic Pergola: Engineering Natural Convection &amp; Rain Automation</a>
 </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4 min-h-[64px]">
                 How dual-walled extruded aluminum louvers and integrated weather sensors create a true four-season outdoor microclimate without visible wiring.
               </p>
 </div>
@@ -1455,10 +1468,10 @@ tailwind.config = {
 <span>•</span>
 <span>Geodetic Precision</span>
 </div>
-<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug">
+<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug min-h-[56px] flex items-start">
 <a href="blog-lidar-scanning.html" class="hover:text-secondary transition-colors">3D LiDAR Topographic Scanning: Eliminating Grading Errors Before Groundbreaking</a>
 </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4 min-h-[64px]">
                 Why millimeter-accurate point clouds of root structures and grade anomalies protect homeowner budgets from expensive mid-build change orders.
               </p>
 </div>
@@ -1493,10 +1506,10 @@ tailwind.config = {
 <span>•</span>
 <span>Fire Ignition Codes</span>
 </div>
-<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug">
+<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug min-h-[56px] flex items-start">
 <a href="blog-coastal-wui-mandates.html" class="hover:text-secondary transition-colors">Navigating Coastal Commission &amp; Wildland-Urban Interface (WUI) Mandates</a>
 </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4 min-h-[64px]">
                 A practical roadmap for California and Pacific Northwest parcel owners balancing strict Class A fire ignition requirements with natural hardwood aesthetics.
               </p>
 </div>
@@ -1531,10 +1544,10 @@ tailwind.config = {
 <span>•</span>
 <span>Culinary Engineering</span>
 </div>
-<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug">
+<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug min-h-[56px] flex items-start">
 <a href="blog-open-air-kitchen.html" class="hover:text-secondary transition-colors">Designing the Open-Air Kitchen: Thermal Setbacks and Marine-316 Longevity</a>
 </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4 min-h-[64px]">
                 Preventing combustible framing hazards, calculating proper BTU exhaust under timber pavilions, and integrating solid stone waterfall islands.
               </p>
 </div>
@@ -1569,10 +1582,10 @@ tailwind.config = {
 <span>•</span>
 <span>Aerodynamics &amp; Safety</span>
 </div>
-<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug">
+<h3 class="font-title text-title text-primary font-semibold hover:text-secondary transition-colors mb-2 leading-snug min-h-[56px] flex items-start">
 <a href="blog-glass-balustrades.html" class="hover:text-secondary transition-colors">Glass Balustrades vs. Tensioned Marine Cable: Wind Load and Acoustic Dynamics</a>
 </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-4 min-h-[64px]">
                 Acoustic wind vortex modeling, laminated SentryGlas structural integrity, and 120-mph blufftop gust testing.
               </p>
 </div>

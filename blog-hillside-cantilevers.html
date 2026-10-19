@@ -282,7 +282,7 @@
   html:not(.dark) div.bg-surface-container-high,
   html:not(.dark) div.bg-surface-container-highest,
   html:not(.dark) div.bg-white,
-  html:not(.dark) article,
+  html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
@@ -295,7 +295,7 @@
   html:not(.dark) div.bg-surface-container-low:hover,
   html:not(.dark) div.bg-surface-container:hover,
   html:not(.dark) div.bg-white:hover,
-  html:not(.dark) article:hover,
+  html:not(.dark) article:not([class*="col-span"]):hover,
   html:not(.dark) .card:hover,
   html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover,
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -520,7 +520,7 @@
   html.dark div.bg-surface-container-high,
   html.dark div.bg-surface-container-highest,
   html.dark div.bg-white,
-  html.dark article,
+  html.dark article:not([class*="col-span"]),
   html.dark .card,
   html.dark div[class*="rounded-2xl"][class*="shadow"],
   html.dark div[class*="rounded-3xl"][class*="shadow"],
@@ -534,7 +534,7 @@
   html.dark div.bg-surface-container-low:hover,
   html.dark div.bg-surface-container:hover,
   html.dark div.bg-white:hover,
-  html.dark article:hover,
+  html.dark article:not([class*="col-span"]):hover,
   html.dark .card:hover,
   html.dark div[class*="rounded-2xl"][class*="shadow"]:hover,
   html.dark div[class*="rounded-3xl"][class*="shadow"]:hover,
@@ -914,6 +914,19 @@
     color: #C2B3A3 !important;
     opacity: 1 !important;
   }
+
+  /* Article Layout Columns (Zero border, zero shadow, transparent) */
+  article[class*="col-span"],
+  article.lg\:col-span-8 {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  article[class*="col-span"]:hover,
+  article.lg\:col-span-8:hover {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -1236,45 +1249,42 @@
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   The Challenge of Steep Pacific Northwest Coastal Strata
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  Building on slopes exceeding 30 degrees presents a unique structural dilemma in the Pacific Northwest. Traditional poured concrete caissons require heavy excavator access, massive tree removal, and extensive soil disturbance that often destabilizes the native slope. On this blufftop estate overlooking the Oregon coastline, the topsoil layer consists of only 24 inches of weathered clay silt resting upon fractured marine shale.
-
-To preserve the ancient Douglas fir canopy and prevent slope slippage during atmospheric river rain events, our engineering team ruled out standard grade-beam concrete footings. Instead, we developed a foundation plan anchored entirely on high-tensile torque-driven helical micro-piles driven to refusal at bedrock.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">Building on slopes exceeding 30 degrees presents a unique structural dilemma in the Pacific Northwest. Traditional poured concrete caissons require heavy excavator access, massive tree removal, and extensive soil disturbance that often destabilizes the native slope. On this blufftop estate overlooking the Oregon coastline, the topsoil layer consists of only 24 inches of weathered clay silt resting upon fractured marine shale.</p>
+                <p class="leading-relaxed">To preserve the ancient Douglas fir canopy and prevent slope slippage during atmospheric river rain events, our engineering team ruled out standard grade-beam concrete footings. Instead, we developed a foundation plan anchored entirely on high-tensile torque-driven helical micro-piles driven to refusal at bedrock.</p>
+              </div>
               </div>
             
               <div class="space-y-4">
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   Torque-Correlated Helical Piles vs. Heavy Concrete Caissons
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  Helical piles feature high-strength steel shafts welded with engineered screw flights. By measuring continuous hydraulic installation torque via digital strain-gauge transducers, our builders calculate the exact ultimate soil bearing capacity in real-time at every single footing node.
-
-On this project, twelve 3.5-inch diameter schedule-80 galvanized steel helical piles were rotated down to depths ranging from 14 to 22 feet, achieving verified ultimate torque values exceeding 11,500 ft-lbs. This corresponds to an allowable axial load capacity of 42,000 lbs per pile—more than triple the dead and live load demands of the multi-tier structure.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">Helical piles feature high-strength steel shafts welded with engineered screw flights. By measuring continuous hydraulic installation torque via digital strain-gauge transducers, our builders calculate the exact ultimate soil bearing capacity in real-time at every single footing node.</p>
+                <p class="leading-relaxed">On this project, twelve 3.5-inch diameter schedule-80 galvanized steel helical piles were rotated down to depths ranging from 14 to 22 feet, achieving verified ultimate torque values exceeding 11,500 ft-lbs. This corresponds to an allowable axial load capacity of 42,000 lbs per pile—more than triple the dead and live load demands of the multi-tier structure.</p>
+              </div>
               </div>
             
               <div class="space-y-4">
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   Continuous Glulam Cantilevers & Moment Connections
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  Rather than adding intermediate downhill posts that would obstruct natural coastal views and disturb native fern undergrowth, our spatial plan utilizes 5-1/8" x 24" architectural-grade 24F-V4 Douglas Fir architectural glue-laminated (glulam) beams. These beams extend 12 feet past the primary foundation pile line in a pure moment-cantilever configuration.
-
-All structural timber connections utilize concealed 316-grade marine stainless steel knife plates secured with precision-milled structural dowels. This concealed connection geometry keeps metal components insulated from marine salt fog while providing clean, furniture-grade joinery lines.
-                </div>
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">Rather than adding intermediate downhill posts that would obstruct natural coastal views and disturb native fern undergrowth, our spatial plan utilizes 5-1/8" x 24" architectural-grade 24F-V4 Douglas Fir architectural glue-laminated (glulam) beams. These beams extend 12 feet past the primary foundation pile line in a pure moment-cantilever configuration.</p>
+                <p class="leading-relaxed">All structural timber connections utilize concealed 316-grade marine stainless steel knife plates secured with precision-milled structural dowels. This concealed connection geometry keeps metal components insulated from marine salt fog while providing clean, furniture-grade joinery lines.</p>
+              </div>
               </div>
             
               <div class="space-y-4">
                 <h2 class="font-display text-xl sm:text-2xl text-primary font-bold tracking-tight pb-2 border-b border-surface-container-high">
                   Key Engineering Takeaways for Property Owners
                 </h2>
-                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                  When considering a hillside or ravine deck construction, three critical principles ensure generational permanence:
+                <div class="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
+                <p class="leading-relaxed">When considering a hillside or ravine deck construction, three critical principles ensure generational permanence:
 1. Always demand continuous torque-monitoring documentation for any driven pile installation.
 2. Ensure timber overhangs account for dynamic deflection under maximum Pacific Northwest snow and wind gusts (L/360 minimum live load criteria).
-3. Specify 316-grade marine stainless fasteners and concealed knife plates to eliminate electrolytic corrosion in coastal salt fog zones.
-                </div>
+3. Specify 316-grade marine stainless fasteners and concealed knife plates to eliminate electrolytic corrosion in coastal salt fog zones.</p>
+              </div>
               </div>
             
 
