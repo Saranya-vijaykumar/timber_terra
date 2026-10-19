@@ -1473,34 +1473,51 @@ tailwind.config = {
 </div>
 </div>
 </div>
-<!-- Interactive Map Placeholder -->
+<!-- Interactive Studio & Regional Map -->
 <div class="flex flex-col gap-3">
 <div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Regional Coverage</span>
-<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
-<span class="w-2 h-2 rounded-full bg-surface-tint"></span> Active Service Boundary
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest font-semibold">Studio &amp; Regional Coverage</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-medium">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span> 4820 Timberland Way, OR 97201
             </span>
 </div>
-<div class="relative w-full h-56 rounded-xl overflow-hidden shadow-md bg-cover bg-center flex items-end p-4 group" data-location="Cascade Ridge, OR 97201" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXjde5rcCJ1dbl2b1uYX6i5OupgM1R1CLxx2l2WwWbwjWapzDiVFi9J5xF2q-az_YstTEpTtmD5pp2PesXo9-asrWgo5Y1yqCvXMklwjl77jZvXzkMXQBwBkgOnQQJMvSjuHgSz9aIWVZOMrk_xZwq2RzIM3f7yxsd8ERB92mIjHdJlnCiTw9tbObHa7L2WoPM5uIfxGe-0yj96Lx_EHB7H2z5HZziSFAfau5nw4HjI5TE8OI1KMOhJA')">
-<!-- Map Overlay UI -->
-<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] transition-all group-hover:bg-primary/10"></div>
-<div class="relative z-10 w-full p-3.5 rounded-lg bg-surface/90 backdrop-blur-md flex items-center justify-between">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-secondary text-[20px]">explore</span>
-<span class="font-label-md text-label-md text-on-surface">Primary Radius: 75 Miles</span>
-</div>
-<a class="font-label-sm text-label-sm text-primary hover:text-secondary font-semibold uppercase tracking-wider flex items-center gap-1" href="https://maps.google.com" rel="noopener" target="_blank">
-                Directions <span class="material-symbols-outlined text-[14px]">open_in_new</span>
-</a>
-</div>
+<div class="relative w-full h-72 sm:h-80 rounded-xl overflow-hidden shadow-md border border-surface-container-high/60 group">
+  <!-- Real Interactive Google Map Embed -->
+  <iframe 
+    src="https://maps.google.com/maps?q=4820+Timberland+Way,+Portland,+OR+97201&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+    class="w-full h-full border-0 absolute inset-0"
+    loading="lazy" 
+    title="Timber &amp; Terra Studio &amp; Workshop Map Location"
+    allowfullscreen>
+  </iframe>
+  
+  <!-- Map Overlay Floating Badge -->
+  <div class="absolute bottom-3 left-3 right-3 z-10 p-3 sm:p-3.5 rounded-xl bg-surface/95 dark:bg-[#1E120A]/95 backdrop-blur-md flex items-center justify-between shadow-lg border border-surface-container-high/60">
+    <div class="flex items-center gap-2.5 min-w-0">
+      <div class="w-8 h-8 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+        <span class="material-symbols-outlined text-[20px]">location_on</span>
+      </div>
+      <div class="flex flex-col min-w-0">
+        <span class="font-label-sm text-label-sm text-primary font-bold truncate">Timber &amp; Terra Studio</span>
+        <span class="font-caption text-caption text-on-surface-variant truncate">4820 Timberland Way, Cascade Ridge, OR 97201</span>
+      </div>
+    </div>
+    <a class="px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-xs font-semibold uppercase tracking-wider flex items-center gap-1 shadow-sm transition-colors shrink-0 ml-2" 
+       href="https://www.google.com/maps/dir/?api=1&amp;destination=4820+Timberland+Way,+Portland,+OR+97201" 
+       rel="noopener noreferrer" 
+       target="_blank">
+      <span>Directions</span>
+      <span class="material-symbols-outlined text-[14px]">directions</span>
+    </a>
+  </div>
 </div>
 <!-- Service Tags -->
 <div class="flex flex-wrap gap-2 pt-1">
-<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Portland Metro</span>
-<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Cascade Foothills</span>
-<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Columbia River Gorge</span>
-<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Willamette Valley</span>
-<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Lake Oswego</span>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">Portland Metro</span>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">Cascade Foothills</span>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">Columbia River Gorge</span>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">Willamette Valley</span>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">Lake Oswego</span>
 </div>
 </div>
 <!-- Trust Badges & Accreditations -->
