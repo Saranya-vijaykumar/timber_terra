@@ -846,7 +846,611 @@
     opacity: 1 !important;
   }
 
-  </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  
+  /* ==========================================================================
+     UNIFIED STICKY HEADER & DUAL-THEME CONTRAST
+     ========================================================================== */
+  header.sticky {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 50 !important;
+  }
+
+  /* Header Container */
+  html:not(.dark) header {
+    background-color: rgba(246, 242, 236, 0.96) !important;
+    border-bottom: 1px solid #CFBEAC !important;
+    box-shadow: 0 2px 10px rgba(36, 21, 14, 0.05) !important;
+  }
+  html.dark header {
+    background-color: rgba(24, 15, 10, 0.96) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  /* Top Utility Sub-Bar */
+  html:not(.dark) header .top-utility-bar {
+    background-color: #EFE9DF !important;
+    border-bottom: 1px solid #CFBEAC !important;
+    color: #24140A !important;
+  }
+  html:not(.dark) header .top-utility-bar a {
+    color: #24140A !important;
+  }
+  html:not(.dark) header .top-utility-bar a:hover {
+    color: #B85D19 !important;
+  }
+  html:not(.dark) header .top-utility-bar .utility-badge {
+    color: #8F3E0B !important;
+    font-weight: 700 !important;
+  }
+
+  html.dark header .top-utility-bar {
+    background-color: #140C07 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #D6C7B7 !important;
+  }
+  html.dark header .top-utility-bar a {
+    color: #EDE3D8 !important;
+  }
+  html.dark header .top-utility-bar a:hover {
+    color: #F7BA7D !important;
+  }
+  html.dark header .top-utility-bar .utility-badge {
+    color: #F7BA7D !important;
+    font-weight: 700 !important;
+  }
+
+  /* Brand Logo & Tagline */
+  html:not(.dark) header a.brand-logo span.font-serif {
+    color: #120A05 !important;
+  }
+  html.dark header a.brand-logo span.font-serif {
+    color: #FFFFFF !important;
+  }
+  html:not(.dark) header a.brand-logo .brand-tagline {
+    color: #8F3E0B !important;
+    font-weight: 700 !important;
+  }
+  html.dark header a.brand-logo .brand-tagline {
+    color: #F7BA7D !important;
+    font-weight: 700 !important;
+  }
+
+  /* Desktop Nav Links */
+  html:not(.dark) header nav a.nav-link-default,
+  html:not(.dark) header nav button.nav-link-default {
+    color: #24140A !important;
+    font-weight: 600 !important;
+  }
+  html:not(.dark) header nav a.nav-link-default:hover,
+  html:not(.dark) header nav button.nav-link-default:hover {
+    color: #B85D19 !important;
+    background-color: rgba(36, 21, 14, 0.06) !important;
+  }
+
+  html.dark header nav a.nav-link-default,
+  html.dark header nav button.nav-link-default {
+    color: #EDE3D8 !important;
+    font-weight: 600 !important;
+  }
+  html.dark header nav a.nav-link-default:hover,
+  html.dark header nav button.nav-link-default:hover {
+    color: #F7BA7D !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  /* Active Nav Link (Desktop & Mobile) */
+  html:not(.dark) header nav a.nav-link-active,
+  html:not(.dark) header nav button.nav-link-active,
+  html:not(.dark) #mobile-menu a.nav-link-active {
+    background-color: #24140A !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html.dark header nav a.nav-link-active,
+  html.dark header nav button.nav-link-active,
+  html.dark #mobile-menu a.nav-link-active {
+    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(184, 93, 25, 0.35) !important;
+  }
+
+  /* Dropdown Menu Popover */
+  html:not(.dark) header .nav-dropdown {
+    background-color: #FAF7F2 !important;
+    border: 1.5px solid #CFBEAC !important;
+    box-shadow: 0 10px 25px rgba(36, 21, 14, 0.12) !important;
+  }
+  html:not(.dark) header .nav-dropdown .nav-dropdown-title {
+    color: #120A05 !important;
+    font-weight: 700 !important;
+  }
+  html:not(.dark) header .nav-dropdown .nav-dropdown-desc {
+    color: #5C4533 !important;
+  }
+  html:not(.dark) header .nav-dropdown a:hover {
+    background-color: rgba(36, 21, 14, 0.06) !important;
+  }
+  html:not(.dark) header .nav-dropdown a.dropdown-item-active {
+    background-color: rgba(36, 21, 14, 0.08) !important;
+  }
+  html:not(.dark) header .nav-dropdown a.dropdown-item-active .nav-dropdown-title {
+    color: #B85D19 !important;
+  }
+
+  html.dark header .nav-dropdown {
+    background-color: #180F0A !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+  html.dark header .nav-dropdown .nav-dropdown-title {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html.dark header .nav-dropdown .nav-dropdown-desc {
+    color: #C4B5A5 !important;
+  }
+  html.dark header .nav-dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  html.dark header .nav-dropdown a.dropdown-item-active {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+  }
+  html.dark header .nav-dropdown a.dropdown-item-active .nav-dropdown-title {
+    color: #F7BA7D !important;
+  }
+
+  /* Header Quote CTA Button */
+  html:not(.dark) header .nav-quote-btn {
+    background-color: #8F3E0B !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(143, 62, 11, 0.25) !important;
+  }
+  html:not(.dark) header .nav-quote-btn:hover {
+    background-color: #B85D19 !important;
+  }
+  html.dark header .nav-quote-btn {
+    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 10px rgba(184, 93, 25, 0.4) !important;
+  }
+  html.dark header .nav-quote-btn:hover {
+    filter: brightness(1.1);
+  }
+
+  /* Header Utility Buttons */
+  html:not(.dark) header .theme-toggle-btn {
+    background-color: rgba(36, 21, 14, 0.07) !important;
+    border: 1.5px solid #CFBEAC !important;
+    color: #B85D19 !important;
+  }
+  html:not(.dark) header .theme-toggle-btn span {
+    color: #B85D19 !important;
+  }
+  html:not(.dark) header .theme-toggle-btn:hover {
+    background-color: rgba(184, 93, 25, 0.12) !important;
+    border-color: #B85D19 !important;
+  }
+
+  html.dark header .theme-toggle-btn {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    color: #F7BA7D !important;
+  }
+  html.dark header .theme-toggle-btn span {
+    color: #F7BA7D !important;
+  }
+  html.dark header .theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    border-color: #F7BA7D !important;
+    color: #FFFFFF !important;
+  }
+
+  html:not(.dark) header .dir-toggle-btn {
+    background-color: rgba(36, 21, 14, 0.07) !important;
+    border: 1.5px solid #CFBEAC !important;
+    color: #24140A !important;
+    font-weight: 700 !important;
+  }
+  html:not(.dark) header .dir-toggle-btn span,
+  html:not(.dark) header .dir-toggle-btn span.dir-toggle-text {
+    color: #24140A !important;
+  }
+  html:not(.dark) header .dir-toggle-btn .material-symbols-outlined {
+    color: #B85D19 !important;
+  }
+
+  html.dark header .dir-toggle-btn {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html.dark header .dir-toggle-btn span,
+  html.dark header .dir-toggle-btn span.dir-toggle-text {
+    color: #FFFFFF !important;
+  }
+  html.dark header .dir-toggle-btn .material-symbols-outlined {
+    color: #F7BA7D !important;
+  }
+
+  html:not(.dark) header #hamburger-btn {
+    background-color: rgba(36, 21, 14, 0.07) !important;
+    border: 1.5px solid #CFBEAC !important;
+    color: #24140A !important;
+  }
+  html:not(.dark) header #hamburger-btn span {
+    color: #24140A !important;
+  }
+  html.dark header #hamburger-btn {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    color: #FFFFFF !important;
+  }
+  html.dark header #hamburger-btn span {
+    color: #FFFFFF !important;
+  }
+
+  /* Mobile Drawer Menu */
+  html:not(.dark) #mobile-menu {
+    background-color: #FAF7F2 !important;
+    border-top: 1px solid #CFBEAC !important;
+  }
+  html:not(.dark) #mobile-menu a.nav-link-drawer,
+  html:not(.dark) #mobile-menu a:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn),
+  html:not(.dark) #mobile-menu button:not(.theme-toggle-btn):not(.dir-toggle-btn) {
+    color: #24140A !important;
+    font-weight: 600 !important;
+  }
+  html:not(.dark) #mobile-menu a.nav-link-drawer:hover,
+  html:not(.dark) #mobile-menu a:hover:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn) {
+    background-color: rgba(36, 21, 14, 0.06) !important;
+    color: #B85D19 !important;
+  }
+  html:not(.dark) #mobile-menu .mobile-switcher-box {
+    background-color: #EFE9DF !important;
+    border: 1px solid #CFBEAC !important;
+  }
+  html:not(.dark) #mobile-menu .mobile-home-btn {
+    color: #24140A !important;
+    font-weight: 600 !important;
+  }
+  html:not(.dark) #mobile-menu .mobile-home-btn.mobile-home-active {
+    background-color: #24140A !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+
+  html.dark #mobile-menu {
+    background-color: #180F0A !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  html.dark #mobile-menu a.nav-link-drawer,
+  html.dark #mobile-menu a:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn),
+  html.dark #mobile-menu button:not(.theme-toggle-btn):not(.dir-toggle-btn) {
+    color: #FAF5EF !important;
+    font-weight: 600 !important;
+  }
+  html.dark #mobile-menu a.nav-link-drawer:hover,
+  html.dark #mobile-menu a:hover:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn) {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #F7BA7D !important;
+  }
+  html.dark #mobile-menu .mobile-switcher-box {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  html.dark #mobile-menu .mobile-home-btn {
+    color: #EDE3D8 !important;
+    font-weight: 600 !important;
+  }
+  html.dark #mobile-menu .mobile-home-btn.mobile-home-active {
+    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+
+  /* Header Container */
+  html:not(.dark) header {
+    background-color: rgba(246, 242, 236, 0.96) !important;
+    border-bottom: 1px solid #CFBEAC !important;
+    box-shadow: 0 2px 10px rgba(36, 21, 14, 0.05) !important;
+  }
+  html.dark header {
+    background-color: rgba(24, 15, 10, 0.96) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  /* Top Utility Sub-Bar */
+  html:not(.dark) header .top-utility-bar {
+    background-color: #EFE9DF !important;
+    border-bottom: 1px solid #CFBEAC !important;
+    color: #24140A !important;
+  }
+  html:not(.dark) header .top-utility-bar a {
+    color: #24140A !important;
+  }
+  html:not(.dark) header .top-utility-bar a:hover {
+    color: #B85D19 !important;
+  }
+  html:not(.dark) header .top-utility-bar .utility-badge {
+    color: #8F3E0B !important;
+    font-weight: 700 !important;
+  }
+
+  html.dark header .top-utility-bar {
+    background-color: #140C07 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #D6C7B7 !important;
+  }
+  html.dark header .top-utility-bar a {
+    color: #EDE3D8 !important;
+  }
+  html.dark header .top-utility-bar a:hover {
+    color: #F7BA7D !important;
+  }
+  html.dark header .top-utility-bar .utility-badge {
+    color: #F7BA7D !important;
+    font-weight: 700 !important;
+  }
+
+  /* Brand Logo & Tagline */
+  html:not(.dark) header a.brand-logo span.font-serif {
+    color: #120A05 !important;
+  }
+  html.dark header a.brand-logo span.font-serif {
+    color: #FFFFFF !important;
+  }
+  html:not(.dark) header a.brand-logo .brand-tagline {
+    color: #8F3E0B !important;
+    font-weight: 700 !important;
+  }
+  html.dark header a.brand-logo .brand-tagline {
+    color: #F7BA7D !important;
+    font-weight: 700 !important;
+  }
+
+  /* Desktop Nav Links */
+  html:not(.dark) header nav a.nav-link-default,
+  html:not(.dark) header nav button.nav-link-default {
+    color: #24140A !important;
+    font-weight: 600 !important;
+  }
+  html:not(.dark) header nav a.nav-link-default:hover,
+  html:not(.dark) header nav button.nav-link-default:hover {
+    color: #B85D19 !important;
+    background-color: rgba(36, 21, 14, 0.06) !important;
+  }
+
+  html.dark header nav a.nav-link-default,
+  html.dark header nav button.nav-link-default {
+    color: #EDE3D8 !important;
+    font-weight: 600 !important;
+  }
+  html.dark header nav a.nav-link-default:hover,
+  html.dark header nav button.nav-link-default:hover {
+    color: #F7BA7D !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  /* Active Nav Link (Desktop & Mobile) */
+  html:not(.dark) header nav a.nav-link-active,
+  html:not(.dark) header nav button.nav-link-active,
+  html:not(.dark) #mobile-menu a.nav-link-active {
+    background-color: #24140A !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html.dark header nav a.nav-link-active,
+  html.dark header nav button.nav-link-active,
+  html.dark #mobile-menu a.nav-link-active {
+    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(184, 93, 25, 0.35) !important;
+  }
+
+  /* Dropdown Menu Popover */
+  html:not(.dark) header .nav-dropdown {
+    background-color: #FAF7F2 !important;
+    border: 1.5px solid #CFBEAC !important;
+    box-shadow: 0 10px 25px rgba(36, 21, 14, 0.12) !important;
+  }
+  html:not(.dark) header .nav-dropdown .nav-dropdown-title {
+    color: #120A05 !important;
+    font-weight: 700 !important;
+  }
+  html:not(.dark) header .nav-dropdown .nav-dropdown-desc {
+    color: #5C4533 !important;
+  }
+  html:not(.dark) header .nav-dropdown a:hover {
+    background-color: rgba(36, 21, 14, 0.06) !important;
+  }
+  html:not(.dark) header .nav-dropdown a.dropdown-item-active {
+    background-color: rgba(36, 21, 14, 0.08) !important;
+  }
+  html:not(.dark) header .nav-dropdown a.dropdown-item-active .nav-dropdown-title {
+    color: #B85D19 !important;
+  }
+
+  html.dark header .nav-dropdown {
+    background-color: #180F0A !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+  html.dark header .nav-dropdown .nav-dropdown-title {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html.dark header .nav-dropdown .nav-dropdown-desc {
+    color: #C4B5A5 !important;
+  }
+  html.dark header .nav-dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  html.dark header .nav-dropdown a.dropdown-item-active {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+  }
+  html.dark header .nav-dropdown a.dropdown-item-active .nav-dropdown-title {
+    color: #F7BA7D !important;
+  }
+
+  /* Header Quote CTA Button */
+  html:not(.dark) header .nav-quote-btn {
+    background-color: #8F3E0B !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(143, 62, 11, 0.25) !important;
+  }
+  html:not(.dark) header .nav-quote-btn:hover {
+    background-color: #B85D19 !important;
+  }
+  html.dark header .nav-quote-btn {
+    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 10px rgba(184, 93, 25, 0.4) !important;
+  }
+  html.dark header .nav-quote-btn:hover {
+    filter: brightness(1.1);
+  }
+
+  /* Header Utility Buttons */
+  html:not(.dark) header .theme-toggle-btn {
+    background-color: rgba(36, 21, 14, 0.07) !important;
+    border: 1.5px solid #CFBEAC !important;
+    color: #B85D19 !important;
+  }
+  html:not(.dark) header .theme-toggle-btn span {
+    color: #B85D19 !important;
+  }
+  html:not(.dark) header .theme-toggle-btn:hover {
+    background-color: rgba(184, 93, 25, 0.12) !important;
+    border-color: #B85D19 !important;
+  }
+
+  html.dark header .theme-toggle-btn {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    color: #F7BA7D !important;
+  }
+  html.dark header .theme-toggle-btn span {
+    color: #F7BA7D !important;
+  }
+  html.dark header .theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    border-color: #F7BA7D !important;
+    color: #FFFFFF !important;
+  }
+
+  html:not(.dark) header .dir-toggle-btn {
+    background-color: rgba(36, 21, 14, 0.07) !important;
+    border: 1.5px solid #CFBEAC !important;
+    color: #24140A !important;
+    font-weight: 700 !important;
+  }
+  html:not(.dark) header .dir-toggle-btn span,
+  html:not(.dark) header .dir-toggle-btn span.dir-toggle-text {
+    color: #24140A !important;
+  }
+  html:not(.dark) header .dir-toggle-btn .material-symbols-outlined {
+    color: #B85D19 !important;
+  }
+
+  html.dark header .dir-toggle-btn {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html.dark header .dir-toggle-btn span,
+  html.dark header .dir-toggle-btn span.dir-toggle-text {
+    color: #FFFFFF !important;
+  }
+  html.dark header .dir-toggle-btn .material-symbols-outlined {
+    color: #F7BA7D !important;
+  }
+
+  html:not(.dark) header #hamburger-btn {
+    background-color: rgba(36, 21, 14, 0.07) !important;
+    border: 1.5px solid #CFBEAC !important;
+    color: #24140A !important;
+  }
+  html:not(.dark) header #hamburger-btn span {
+    color: #24140A !important;
+  }
+  html.dark header #hamburger-btn {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    color: #FFFFFF !important;
+  }
+  html.dark header #hamburger-btn span {
+    color: #FFFFFF !important;
+  }
+
+  /* Mobile Drawer Menu */
+  html:not(.dark) #mobile-menu {
+    background-color: #FAF7F2 !important;
+    border-top: 1px solid #CFBEAC !important;
+  }
+  html:not(.dark) #mobile-menu a:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn),
+  html:not(.dark) #mobile-menu button:not(.theme-toggle-btn):not(.dir-toggle-btn) {
+    color: #24140A !important;
+    font-weight: 600 !important;
+  }
+  html:not(.dark) #mobile-menu a:hover:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn) {
+    background-color: rgba(36, 21, 14, 0.06) !important;
+    color: #B85D19 !important;
+  }
+  html:not(.dark) #mobile-menu .mobile-switcher-box {
+    background-color: #EFE9DF !important;
+    border: 1px solid #CFBEAC !important;
+  }
+  html:not(.dark) #mobile-menu .mobile-home-btn {
+    color: #24140A !important;
+    font-weight: 600 !important;
+  }
+  html:not(.dark) #mobile-menu .mobile-home-btn.mobile-home-active {
+    background-color: #24140A !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+
+  html.dark #mobile-menu {
+    background-color: #180F0A !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  html.dark #mobile-menu a:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn),
+  html.dark #mobile-menu button:not(.theme-toggle-btn):not(.dir-toggle-btn) {
+    color: #FAF5EF !important;
+    font-weight: 600 !important;
+  }
+  html.dark #mobile-menu a:hover:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn) {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #F7BA7D !important;
+  }
+  html.dark #mobile-menu .mobile-switcher-box {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  html.dark #mobile-menu .mobile-home-btn {
+    color: #EDE3D8 !important;
+    font-weight: 600 !important;
+  }
+  html.dark #mobile-menu .mobile-home-btn.mobile-home-active {
+    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
   theme: {
@@ -1010,33 +1614,33 @@ tailwind.config = {
   </script>
 
 </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary"><!-- Unified Global Header -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-high/40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<header class="sticky top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-high/40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
   <!-- Top Utility Sub-Bar (Desktop Only) -->
-  <div class="bg-surface-container-low text-on-surface-variant hidden lg:block border-b border-surface-container-high/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-8 flex items-center justify-between text-xs font-label-md text-label-md tracking-wider uppercase text-xs sm:text-label-md">
+  <div class="top-utility-bar bg-surface-container-low text-on-surface-variant hidden lg:block border-b border-surface-container-high/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-8 flex items-center justify-between text-xs font-label-md tracking-wider uppercase">
       <div class="flex items-center gap-2 truncate">
-        <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+        <span class="w-2 h-2 rounded-full bg-[#B85D19] shrink-0"></span>
         <span class="truncate">Cascade Ridge &amp; Greater Pacific Northwest</span>
       </div>
-      <div class="flex items-center gap-3 xl:gap-6 2xl:gap-8 shrink-0 text-xs sm:text-label-md">
+      <div class="flex items-center gap-3 xl:gap-6 2xl:gap-8 shrink-0 text-xs">
         <a href="tel:18004928377" class="hover:text-primary transition-colors flex items-center gap-1.5 font-medium">
           <span class="material-symbols-outlined text-[15px]">call</span>
           +1 (800) 492-8377
         </a>
         <span class="hidden 2xl:inline whitespace-nowrap">Mon - Sat: 8:00 AM - 6:00 PM</span>
-        <span class="text-secondary font-semibold whitespace-nowrap">CCB #TL-89420 • Licensed &amp; Insured</span>
+        <span class="utility-badge font-semibold whitespace-nowrap">CCB #TL-89420 • Licensed &amp; Insured</span>
       </div>
     </div>
   </div>
 
-  <!-- Primary Navigation Bar (80px height) -->
+  <!-- Primary Navigation Bar (64px height) -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-[64px] flex items-center justify-between gap-2 lg:gap-3 xl:gap-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 shrink-0 whitespace-nowrap group focus:outline-none">
+    <a href="index.html" class="brand-logo flex items-center gap-2.5 sm:gap-3 shrink-0 whitespace-nowrap group focus:outline-none">
       <img alt="Timber &amp; Terra Logo" class="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAro5dHwyl2QOWSvcHLu4N4FiWRftym8zIrDbRXizr8YE0AmVADuhA8p_jZef84KiAowWk6MCoZoLMKJ199qcCu17NzLI6wUGpDVvueZXote30E25kJSf1D9MA4Tx1BL4MSo-bZ5zEkHE6WK9RF9BKWz4u-MeR5mldCoTtwmBdyTjkVq-Rt_Q8UYx6BCQ8g3DxNtysD3QB-Tt7vTnMX_E9SdS8C2NYTP31Z0BhrK_mHR1KX1aKFxq9qrA"/>
       <div class="flex flex-col shrink-0 min-w-max">
         <span class="font-serif text-lg sm:text-xl tracking-tight text-on-surface dark:text-white font-bold leading-none whitespace-nowrap">Timber &amp; Terra</span>
-        <span class="hidden md:block text-[10px] sm:text-[11px] text-[#D48B4E] tracking-widest uppercase mt-1 font-semibold whitespace-nowrap">Architectural Timber &amp; Woodcraft</span>
+        <span class="brand-tagline hidden md:block text-[10px] sm:text-[11px] tracking-widest uppercase mt-1 whitespace-nowrap">Architectural Timber &amp; Woodcraft</span>
       </div>
     </a>
 
@@ -1044,97 +1648,96 @@ tailwind.config = {
     <nav class="hidden xl:flex items-center gap-1.5 2xl:gap-3 text-[14px] 2xl:text-[14.5px] font-semibold tracking-normal whitespace-nowrap">
       <!-- Home Dropdown -->
       <div class="relative group/home">
-        <button class="px-2.5 2xl:px-3 py-1.5 flex items-center gap-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/70 rounded-lg transition-all focus:outline-none" aria-expanded="false" aria-haspopup="true">
+        <button class="nav-link-default px-2.5 2xl:px-3 py-1.5 flex items-center gap-1 rounded-lg transition-all focus:outline-none" aria-expanded="false" aria-haspopup="true">
           <span>Home</span>
           <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover/home:rotate-180">expand_more</span>
         </button>
         <!-- Dropdown Menu -->
-        <div class="absolute top-full left-0 mt-1 w-72 bg-surface-container-lowest/95 backdrop-blur-xl border border-surface-container-high/60 shadow-xl rounded-xl p-2 opacity-0 translate-y-2 pointer-events-none group-hover/home:opacity-100 group-hover/home:translate-y-0 group-hover/home:pointer-events-auto transition-all duration-200 z-50">
-          <a href="index.html" class="flex flex-col gap-0.5 px-3.5 py-2.5 rounded-lg hover:bg-surface-container transition-colors group/item">
+        <div class="nav-dropdown absolute top-full left-0 mt-1 w-72 rounded-xl p-2 opacity-0 translate-y-2 pointer-events-none group-hover/home:opacity-100 group-hover/home:translate-y-0 group-hover/home:pointer-events-auto transition-all duration-200 z-50">
+          <a href="index.html" class="flex flex-col gap-0.5 px-3.5 py-2.5 rounded-lg transition-colors group/item ">
             <div class="flex items-center justify-between">
-              <span class="font-bold text-on-surface group-hover/item:text-primary transition-colors text-[13px] 2xl:text-label-md">Home 1 — Craft Sanctuaries</span>
-              <span class="material-symbols-outlined text-[14px] text-secondary opacity-0 group-hover/item:opacity-100 transition-opacity">arrow_forward</span>
+              <span class="nav-dropdown-title text-[13px] 2xl:text-label-md">Home 1 — Craft Sanctuaries</span>
+              <span class="material-symbols-outlined text-[14px] opacity-0 group-hover/item:opacity-100 text-[#B85D19] transition-opacity">arrow_forward</span>
             </div>
-            <span class="text-xs text-on-surface-variant leading-tight">Master timber decks &amp; bioclimatic pergolas</span>
+            <span class="nav-dropdown-desc text-xs leading-tight">Master timber decks &amp; bioclimatic pergolas</span>
           </a>
-          <a href="home-2.html" class="flex flex-col gap-0.5 px-3.5 py-2.5 rounded-lg hover:bg-surface-container transition-colors group/item mt-1">
+          <a href="home-2.html" class="flex flex-col gap-0.5 px-3.5 py-2.5 rounded-lg transition-colors group/item mt-1 ">
             <div class="flex items-center justify-between">
-              <span class="font-bold text-on-surface group-hover/item:text-secondary transition-colors text-[13px] 2xl:text-label-md">Home 2 — Estate Pavilions</span>
-              <span class="material-symbols-outlined text-[14px] text-secondary opacity-0 group-hover/item:opacity-100 transition-opacity">arrow_forward</span>
+              <span class="nav-dropdown-title text-[13px] 2xl:text-label-md">Home 2 — Estate Pavilions</span>
+              <span class="material-symbols-outlined text-[14px] opacity-0 group-hover/item:opacity-100 text-[#B85D19] transition-opacity">arrow_forward</span>
             </div>
-            <span class="text-xs text-on-surface-variant leading-tight">Luxury estate living &amp; cantilever architecture</span>
+            <span class="nav-dropdown-desc text-xs leading-tight">Luxury estate living &amp; cantilever architecture</span>
           </a>
         </div>
       </div>
-      <a href="about.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">About Us</a>
-      
-      <a href="services.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Services</a>
 
-      <a href="gallery.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Projects</a>
-      <a href="pricing.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Pricing</a>
-      <a href="blog.html" class="px-3 2xl:px-3.5 py-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container/70 rounded-lg transition-all">Blog</a>
-      <a href="contact.html" class="px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 font-semibold bg-primary-container text-on-primary-container rounded-lg shadow-sm transition-all">Contact</a>
+      <a href="about.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">About Us</a>
+      <a href="services.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Services</a>
+      <a href="gallery.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Projects</a>
+      <a href="pricing.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Pricing</a>
+      <a href="blog.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Blog</a>
+      <a href="contact.html" class="nav-link-active px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Contact</a>
     </nav>
 
-    <!-- Action Utilities (Theme, CTA, Mobile Menu Button) -->
-    <div class="flex items-center gap-2 sm:gap-3 2xl:gap-4 flex-shrink-0">
-      <button aria-label="Toggle color mode" class="theme-toggle-btn w-8 sm:w-9 h-8 sm:h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
+    <!-- Action Utilities (Theme, Direction, CTA, Mobile Hamburger) -->
+    <div class="flex items-center gap-2 sm:gap-3 2xl:gap-4 shrink-0">
+      <button aria-label="Toggle color mode" class="theme-toggle-btn w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
         <span class="material-symbols-outlined text-[18px]">contrast</span>
       </button>
-      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 h-8 sm:h-9 rounded-full bg-surface-container items-center justify-center gap-1 text-on-surface-variant hover:bg-surface-container-high transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider border border-surface-container-high/40" onclick="toggleDirection()" type="button">
+      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 h-8 sm:h-9 rounded-full items-center justify-center gap-1 transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider" onclick="toggleDirection()" type="button">
         <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
         <span class="dir-toggle-text font-bold">LTR</span>
       </button>
-      <a href="contact.html" class="hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-4 py-1.5 2xl:py-2 bg-primary-container text-on-primary font-label-md 2xl:font-label-lg text-xs 2xl:text-label-lg rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary transition-all whitespace-nowrap shrink-0">
+      <a href="contact.html" class="nav-quote-btn hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-4 py-1.5 2xl:py-2 text-xs 2xl:text-label-lg rounded-lg transition-all whitespace-nowrap shrink-0">
         Get a Free Quote
       </a>
-      <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-surface-container text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center transition-all duration-200 focus:outline-none border border-outline-variant/40 shadow-sm shrink-0" onclick="toggleMobileMenu()" type="button">
+      <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 focus:outline-none shrink-0" onclick="toggleMobileMenu()" type="button">
         <span class="material-symbols-outlined text-[22px] sm:text-[24px]">menu</span>
       </button>
     </div>
   </div>
 
   <!-- Mobile Collapsible Menu Drawer -->
-  <div class="hidden xl:hidden bg-surface-container-lowest max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl border-t border-outline-variant/30" id="mobile-menu">
+  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl" id="mobile-menu">
     <nav class="flex flex-col gap-1.5 font-body-md text-body-md">
       <!-- Direct Home 1 & Home 2 Segmented Switcher -->
-      <div class="grid grid-cols-2 gap-2 p-1.5 bg-surface-container-low rounded-xl border border-surface-container-high/60 mb-2">
-        <a href="index.html" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs uppercase tracking-wider text-center text-on-surface hover:bg-surface-container font-medium transition-all">
+      <div class="mobile-switcher-box grid grid-cols-2 gap-2 p-1.5 rounded-xl mb-2">
+        <a href="index.html" class="mobile-home-btn  flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs uppercase tracking-wider text-center transition-all">
           <span class="material-symbols-outlined text-[16px]">cottage</span>
           <span>Home 1</span>
         </a>
-        <a href="home-2.html" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs uppercase tracking-wider text-center text-on-surface hover:bg-surface-container font-medium transition-all">
+        <a href="home-2.html" class="mobile-home-btn  flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs uppercase tracking-wider text-center transition-all">
           <span class="material-symbols-outlined text-[16px]">domain</span>
           <span>Home 2</span>
         </a>
       </div>
 
-      <a href="about.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">About Us</a>
-      <a href="services.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Services</a>
-      <a href="gallery.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Projects</a>
-      <a href="pricing.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Pricing</a>
-      <a href="blog.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-all">Blog</a>
-      <a href="contact.html" class="min-h-[44px] flex items-center px-4 py-2.5 font-bold bg-primary-container text-on-primary-container rounded-lg transition-all">Contact</a>
+      <a href="about.html" class="nav-link-drawer min-h-[44px] flex items-center px-4 py-2.5 rounded-lg transition-all">About Us</a>
+      <a href="services.html" class="nav-link-drawer min-h-[44px] flex items-center px-4 py-2.5 rounded-lg transition-all">Services</a>
+      <a href="gallery.html" class="nav-link-drawer min-h-[44px] flex items-center px-4 py-2.5 rounded-lg transition-all">Projects</a>
+      <a href="pricing.html" class="nav-link-drawer min-h-[44px] flex items-center px-4 py-2.5 rounded-lg transition-all">Pricing</a>
+      <a href="blog.html" class="nav-link-drawer min-h-[44px] flex items-center px-4 py-2.5 rounded-lg transition-all">Blog</a>
+      <a href="contact.html" class="nav-link-active min-h-[44px] flex items-center px-4 py-2.5 rounded-lg transition-all">Contact</a>
 
       <div class="pt-4 border-t border-surface-container mt-2">
-        <a href="contact.html" class="w-full inline-flex items-center justify-center px-5 py-3 bg-primary-container text-on-primary font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary transition-colors">
+        <a href="contact.html" class="nav-quote-btn w-full inline-flex items-center justify-center px-5 py-3 text-label-lg rounded-xl shadow-md transition-colors">
           Get a Free Quote
         </a>
       </div>
 
       <div class="pt-3.5 border-t border-surface-container/60 mt-3 grid grid-cols-2 gap-3">
-        <button onclick="toggleTheme()" type="button" class="flex-1 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
+        <button onclick="toggleTheme()" type="button" class="theme-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
           <span class="material-symbols-outlined text-[18px]">contrast</span>
           <span class="theme-label-mobile">Theme</span>
         </button>
-        <button onclick="toggleDirection()" type="button" class="flex-1 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
+        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
           <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
           <span class="dir-label-mobile">LTR</span>
         </button>
       </div>
     </nav>
   </div>
-</header><main class="w-full pt-16 lg:pt-[100px] bg-surface min-h-[calc(100vh-120px)] overflow-x-hidden"><div class="flex flex-col w-full">
+</header><main class="w-full bg-surface min-h-[calc(100vh-120px)] overflow-x-hidden"><div class="flex flex-col w-full">
 <!-- Top Breadcrumb & Editorial Header Bay -->
 <section class="relative w-full bg-surface-container-low py-14 sm:py-16 lg:py-20">
 <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-6">
