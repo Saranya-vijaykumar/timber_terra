@@ -1433,8 +1433,8 @@
       </div>
 
       <!-- Col 2: Navigation & Discover (lg:col-span-2) -->
-      <div class="flex flex-col">
-        <div class="font-serif text-base sm:text-lg text-primary dark:text-white mb-4 sm:mb-5 font-bold">Discover</div>
+      <div class="flex flex-col lg:col-span-2">
+        <div class="font-serif text-base sm:text-lg text-primary dark:text-white h-8 sm:h-9 flex items-center mb-4 sm:mb-5 font-bold">Discover</div>
         <nav class="flex flex-col gap-2.5 font-body-sm text-sm">
           <a class="text-on-surface-variant hover:text-primary transition-colors py-0.5" href="index.html">Home (Sanctuaries)</a>
           <a class="text-on-surface-variant hover:text-primary transition-colors py-0.5" href="home-2.html">Home (Pavilions)</a>
@@ -1448,8 +1448,8 @@
       </div>
 
       <!-- Col 3: Architectural Disciplines (lg:col-span-3) -->
-      <div class="flex flex-col">
-        <div class="font-serif text-base sm:text-lg text-primary dark:text-white mb-4 sm:mb-5 font-bold">Disciplines</div>
+      <div class="flex flex-col lg:col-span-3">
+        <div class="font-serif text-base sm:text-lg text-primary dark:text-white h-8 sm:h-9 flex items-center mb-4 sm:mb-5 font-bold">Disciplines</div>
         <nav class="flex flex-col gap-2.5 font-body-sm text-sm">
           <a class="text-on-surface-variant hover:text-primary transition-colors py-0.5" href="service-timber-decking.html">Custom Timber Decks</a>
           <a class="text-on-surface-variant hover:text-primary transition-colors py-0.5" href="service-composite-decking.html">Composite Decking Systems</a>
@@ -1463,7 +1463,7 @@
 
       <!-- Col 4: Studio Workshop & Journal Signup (lg:col-span-3) -->
       <div class="flex flex-col sm:col-span-2 lg:col-span-3">
-        <div class="font-serif text-base sm:text-lg text-primary dark:text-white mb-4 sm:mb-5 font-bold">Studio &amp; Workshop</div>
+        <div class="font-serif text-base sm:text-lg text-primary dark:text-white h-8 sm:h-9 flex items-center mb-4 sm:mb-5 font-bold">Studio &amp; Workshop</div>
         <div class="font-body-sm text-sm text-on-surface-variant flex flex-col gap-2 mb-5">
           <p class="leading-snug">4820 Timberland Way<br/>Cascade Ridge, OR 97201</p>
           <p class="leading-snug">
@@ -1471,7 +1471,7 @@
             <span class="block">Email: <a href="mailto:design@timberandterra.com" class="hover:text-primary font-semibold transition-colors">design@timberandterra.com</a></span>
           </p>
         </div>
-        <form class="flex flex-col gap-2" onsubmit="handleNewsletter(event)">
+        <form class="flex flex-col gap-2 max-w-md" onsubmit="handleNewsletter(event)">
           <label class="font-label-md text-xs text-on-surface uppercase tracking-wider font-semibold">Architectural Journal Signup</label>
           <div class="flex items-center gap-2">
             <input required id="newsletter-email" class="flex-1 px-3.5 py-2.5 rounded-lg bg-surface-container-lowest text-sm text-on-surface border border-outline-variant/60 focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Your email address" type="email"/>
