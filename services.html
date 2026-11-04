@@ -923,6 +923,63 @@
     border-color: transparent !important;
     box-shadow: none !important;
   }
+
+  /* AUTHORITATIVE CONTRAST PROTECTION FOR BROWN BACKGROUNDS IN LIGHT MODE */
+  html:not(.dark) [class*="bg-primary"] p,
+  html:not(.dark) [class*="bg-primary-container"] p,
+  html:not(.dark) [class*="bg-[#140C07]"] p,
+  html:not(.dark) [class*="bg-[#180F0A]"] p,
+  html:not(.dark) [class*="bg-[#1C1008]"] p,
+  html:not(.dark) [class*="bg-[#120A06]"] p,
+  html:not(.dark) [class*="bg-[#24140A]"] p,
+  html:not(.dark) [class*="bg-[#24150E]"] p,
+  html:not(.dark) [class*="bg-[#3D1E0E]"] p,
+  html:not(.dark) [class*="bg-[#3D2418]"] p,
+  html:not(.dark) [class*="bg-[#4A2411]"] p,
+  html:not(.dark) [class*="bg-[#4E240E]"] p,
+  html:not(.dark) [class*="bg-[#6B3214]"] p,
+  html:not(.dark) [class*="bg-[#8F3E0B]"] p,
+  html:not(.dark) [class*="bg-primary"] li,
+  html:not(.dark) [class*="bg-primary-container"] li,
+  html:not(.dark) [class*="bg-[#140C07]"] li,
+  html:not(.dark) [class*="bg-[#180F0A]"] li,
+  html:not(.dark) [class*="bg-[#1C1008]"] li,
+  html:not(.dark) [class*="bg-[#3D2418]"] li,
+  html:not(.dark) [class*="bg-[#6B3214]"] li {
+    color: #FAF5EF !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+  }
+
+  html:not(.dark) [class*="bg-primary"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-primary-container"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-[#140C07]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#180F0A]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#1C1008]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#3D2418]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#6B3214]"] span:not(.material-symbols-outlined) {
+    color: #FAF5EF !important;
+  }
+
+  /* Section labels and uppercase tags inside brown/dark containers */
+  html:not(.dark) [class*="bg-primary"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary"] [class*="text-label"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-label"] {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+  }
+
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -1154,14 +1211,13 @@ tailwind.config = {
 
     <!-- Action Utilities (Theme, Direction, CTA, Mobile Hamburger) -->
     <div class="flex items-center gap-2 sm:gap-3 2xl:gap-4 shrink-0">
-      <button aria-label="Toggle color mode" class="theme-toggle-btn w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
+      <button aria-label="Toggle color mode" class="theme-toggle-btn hidden xl:flex w-9 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
         <span class="material-symbols-outlined text-[18px]">contrast</span>
       </button>
-      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 h-8 sm:h-9 rounded-full items-center justify-center gap-1 transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider" onclick="toggleDirection()" type="button">
-        <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden xl:flex px-3 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0 font-bold text-xs tracking-wider" onclick="toggleDirection()" type="button">
         <span class="dir-toggle-text font-bold">LTR</span>
       </button>
-      <a href="contact.html" class="nav-quote-btn hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-4 py-1.5 2xl:py-2 text-xs 2xl:text-label-lg rounded-lg transition-all whitespace-nowrap shrink-0">
+      <a href="contact.html" class="nav-quote-btn hidden xl:inline-flex items-center justify-center px-4 h-9 text-xs font-bold uppercase tracking-wider rounded-xl transition-all whitespace-nowrap shrink-0 shadow-sm">
         Get a Free Quote
       </a>
       <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 focus:outline-none shrink-0" onclick="toggleMobileMenu()" type="button">
@@ -1171,7 +1227,7 @@ tailwind.config = {
   </div>
 
   <!-- Mobile Collapsible Menu Drawer -->
-  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl" id="mobile-menu">
+  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl absolute top-full left-0 right-0 w-full bg-surface/98 backdrop-blur-2xl border-b border-surface-container-high/40 z-50" id="mobile-menu">
     <nav class="flex flex-col gap-1.5 font-body-md text-body-md">
       <!-- Direct Home 1 & Home 2 Segmented Switcher -->
       <div class="mobile-switcher-box grid grid-cols-2 gap-2 p-1.5 rounded-xl mb-2">
@@ -1203,8 +1259,7 @@ tailwind.config = {
           <span class="material-symbols-outlined text-[18px]">contrast</span>
           <span class="theme-label-mobile">Theme</span>
         </button>
-        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
-          <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold transition-colors">
           <span class="dir-label-mobile">LTR</span>
         </button>
       </div>
@@ -1212,48 +1267,55 @@ tailwind.config = {
   </div>
 </header><main class="w-full bg-surface min-h-[calc(100vh-120px)] overflow-x-hidden"><div class="flex flex-col w-full">
 <!-- Page Hero / Editorial Header -->
-<section class="relative bg-surface-container-low overflow-hidden py-14 sm:py-16 lg:py-20">
-<div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/10 pointer-events-none"></div>
-<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-<!-- Breadcrumb -->
-<nav class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-6">
-<a class="hover:text-primary transition-colors" href="index.html">Home</a>
-<span class="text-outline-variant">/</span>
-<span class="text-primary font-semibold">Services</span>
-</nav>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-<div class="lg:col-span-8">
-<span class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full text-secondary font-label-sm text-xs sm:text-label-sm uppercase tracking-widest mb-4 max-w-full flex-wrap sm:flex-nowrap break-words">
-<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-            Enduring Craftsmanship &amp; Architectural Precision
-          </span>
-<h1 class="font-display-lg text-2xl sm:text-4xl lg:text-display-lg text-primary tracking-tight max-w-4xl break-words">
-            Our Outdoor Living Services &amp; Architectural Solutions
-          </h1>
-</div>
-<div class="lg:col-span-4 flex flex-col gap-4">
-<p class="font-body-md text-body-md text-on-surface-variant">
-            From steep hillside timber engineering to luxury multi-level outdoor kitchens and bioclimatic pergolas, our master artisans craft seamless extensions of modern Northwest architecture.
-          </p>
-<div class="flex items-center gap-6 pt-2">
-<div>
-<span class="block font-headline-md text-headline-md text-primary font-bold">18+</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Years Experience</span>
-</div>
-<div class="w-px h-8 bg-surface-container-high"></div>
-<div>
-<span class="block font-headline-md text-headline-md text-primary font-bold">450+</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Custom Projects</span>
-</div>
-<div class="w-px h-8 bg-surface-container-high"></div>
-<div>
-<span class="block font-headline-md text-headline-md text-primary font-bold">50-Yr</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Material Warranty</span>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section class="relative w-full min-h-[400px] sm:min-h-[440px] lg:min-h-[480px] flex items-center overflow-hidden bg-primary text-white py-16 sm:py-20 lg:py-24 border-b border-surface-container-high/30">
+  <!-- Relevant Architectural Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDkUa4ilzyyEgY9gY_AWCO9_aIgeRQr0DW2jAufAZsXK5fDBbHOVif_DMiUekWhDlsGF-LT1RRnab9l_tiO-jEpUZO_-xH9Rb1tW6AThzSzlgyhTNWU2X9-LfZ0-pSY1iooJUEG7Ux1e8e4aOAWapJtLc5JmEgK5r9dSumq4RpafZFJYnYnpQGW96O55RU2UfOu49f1F1K1rtNLlGVbzi9gfuN9iO7pzixDhU_WDRKcOWf5QSfTPp2DA" 
+         alt="Architectural timber pergola and luxury terrace living sanctuary at twilight" 
+         class="w-full h-full object-cover object-center filter brightness-[0.68] contrast-[1.1] scale-105"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/35"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 font-label-md text-label-md text-[#E8DCD0] uppercase tracking-widest mb-6">
+      <a class="hover:text-[#F7BA7D] transition-colors" href="index.html">Home</a>
+      <span class="text-white/40">/</span>
+      <span class="text-[#F7BA7D] font-semibold">Services</span>
+    </nav>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+      <div class="lg:col-span-8">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-black/40 border border-white/20 backdrop-blur-md rounded-full text-[#F7BA7D] font-label-sm text-xs sm:text-label-sm uppercase tracking-widest mb-4 max-w-full flex-wrap sm:flex-nowrap break-words shadow-lg">
+          <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+          Enduring Craftsmanship &amp; Architectural Precision
+        </span>
+        <h1 class="font-display-lg text-2xl sm:text-4xl lg:text-display-lg text-white tracking-tight max-w-4xl break-words font-bold drop-shadow-md">
+          Our Outdoor Living Services &amp; Architectural Solutions
+        </h1>
+      </div>
+      <div class="lg:col-span-4 flex flex-col gap-4">
+        <p class="font-body-md text-body-md text-[#FAF5EF] leading-relaxed drop-shadow-sm font-normal">
+          From steep hillside timber engineering to luxury multi-level outdoor kitchens and bioclimatic pergolas, our master artisans craft seamless extensions of modern Northwest architecture.
+        </p>
+        <div class="flex items-center gap-6 pt-2">
+          <div>
+            <span class="block font-headline-md text-headline-md text-[#F7BA7D] font-bold">18+</span>
+            <span class="font-label-sm text-label-sm text-[#E8DCD0] uppercase">Years Experience</span>
+          </div>
+          <div class="w-px h-8 bg-white/20"></div>
+          <div>
+            <span class="block font-headline-md text-headline-md text-[#F7BA7D] font-bold">450+</span>
+            <span class="font-label-sm text-label-sm text-[#E8DCD0] uppercase">Custom Projects</span>
+          </div>
+          <div class="w-px h-8 bg-white/20"></div>
+          <div>
+            <span class="block font-headline-md text-headline-md text-[#F7BA7D] font-bold">50-Yr</span>
+            <span class="font-label-sm text-label-sm text-[#E8DCD0] uppercase">Material Warranty</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Interactive Filter / Spec Segment Selector -->
 <div id="disciplines"></div>
@@ -1773,33 +1835,33 @@ tailwind.config = {
 <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 <div class="lg:col-span-6 flex flex-col gap-6">
-<span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-widest w-fit">
+<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/20 !text-[#F7BA7D] border border-secondary/30 font-label-sm text-label-sm uppercase tracking-widest w-fit font-bold">
 <span class="material-symbols-outlined text-[16px]">calculate</span>
             Transparent Architectural Budgeting
           </span>
-<h2 class="font-display-md text-display-md-mobile lg:text-display-md tracking-tight">
+<h2 class="font-display-md text-display-md-mobile lg:text-display-md tracking-tight !text-white font-bold">
             Configure Your Outdoor Project Scope &amp; Immediate Estimates
           </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
+<p class="font-body-lg text-body-lg !text-[#FAF5EF] leading-relaxed font-normal">
             Every home, elevation, and terrain grade presents distinct variables. Use our interactive estimator to calculate anticipated investment brackets based on current Pacific Northwest timber indices and engineering specs.
           </p>
 <div class="flex flex-wrap items-center gap-6 pt-2">
 <div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center !text-[#F7BA7D]">
 <span class="material-symbols-outlined text-[20px]">architecture</span>
 </div>
 <div>
-<span class="block font-label-md text-label-md font-semibold text-white">3D Renderings</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Full CAD Visualization</span>
+<span class="block font-label-md text-label-md font-bold !text-white">3D Renderings</span>
+<span class="font-body-sm text-body-sm !text-[#FAF5EF]">Full CAD Visualization</span>
 </div>
 </div>
 <div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center !text-[#F7BA7D]">
 <span class="material-symbols-outlined text-[20px]">gavel</span>
 </div>
 <div>
-<span class="block font-label-md text-label-md font-semibold text-white">Full Permitting</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Municipal Code Clearance</span>
+<span class="block font-label-md text-label-md font-bold !text-white">Full Permitting</span>
+<span class="font-body-sm text-body-sm !text-[#FAF5EF]">Municipal Code Clearance</span>
 </div>
 </div>
 </div>

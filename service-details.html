@@ -927,6 +927,63 @@
     border-color: transparent !important;
     box-shadow: none !important;
   }
+
+  /* AUTHORITATIVE CONTRAST PROTECTION FOR BROWN BACKGROUNDS IN LIGHT MODE */
+  html:not(.dark) [class*="bg-primary"] p,
+  html:not(.dark) [class*="bg-primary-container"] p,
+  html:not(.dark) [class*="bg-[#140C07]"] p,
+  html:not(.dark) [class*="bg-[#180F0A]"] p,
+  html:not(.dark) [class*="bg-[#1C1008]"] p,
+  html:not(.dark) [class*="bg-[#120A06]"] p,
+  html:not(.dark) [class*="bg-[#24140A]"] p,
+  html:not(.dark) [class*="bg-[#24150E]"] p,
+  html:not(.dark) [class*="bg-[#3D1E0E]"] p,
+  html:not(.dark) [class*="bg-[#3D2418]"] p,
+  html:not(.dark) [class*="bg-[#4A2411]"] p,
+  html:not(.dark) [class*="bg-[#4E240E]"] p,
+  html:not(.dark) [class*="bg-[#6B3214]"] p,
+  html:not(.dark) [class*="bg-[#8F3E0B]"] p,
+  html:not(.dark) [class*="bg-primary"] li,
+  html:not(.dark) [class*="bg-primary-container"] li,
+  html:not(.dark) [class*="bg-[#140C07]"] li,
+  html:not(.dark) [class*="bg-[#180F0A]"] li,
+  html:not(.dark) [class*="bg-[#1C1008]"] li,
+  html:not(.dark) [class*="bg-[#3D2418]"] li,
+  html:not(.dark) [class*="bg-[#6B3214]"] li {
+    color: #FAF5EF !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+  }
+
+  html:not(.dark) [class*="bg-primary"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-primary-container"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-[#140C07]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#180F0A]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#1C1008]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#3D2418]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#6B3214]"] span:not(.material-symbols-outlined) {
+    color: #FAF5EF !important;
+  }
+
+  /* Section labels and uppercase tags inside brown/dark containers */
+  html:not(.dark) [class*="bg-primary"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary"] [class*="text-label"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-label"] {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+  }
+
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -1089,14 +1146,13 @@
 
     <!-- Action Utilities (Theme, Direction, CTA, Mobile Hamburger) -->
     <div class="flex items-center gap-2 sm:gap-3 2xl:gap-4 shrink-0">
-      <button aria-label="Toggle color mode" class="theme-toggle-btn w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
+      <button aria-label="Toggle color mode" class="theme-toggle-btn hidden xl:flex w-9 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
         <span class="material-symbols-outlined text-[18px]">contrast</span>
       </button>
-      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 h-8 sm:h-9 rounded-full items-center justify-center gap-1 transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider" onclick="toggleDirection()" type="button">
-        <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden xl:flex px-3 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0 font-bold text-xs tracking-wider" onclick="toggleDirection()" type="button">
         <span class="dir-toggle-text font-bold">LTR</span>
       </button>
-      <a href="contact.html" class="nav-quote-btn hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-4 py-1.5 2xl:py-2 text-xs 2xl:text-label-lg rounded-lg transition-all whitespace-nowrap shrink-0">
+      <a href="contact.html" class="nav-quote-btn hidden xl:inline-flex items-center justify-center px-4 h-9 text-xs font-bold uppercase tracking-wider rounded-xl transition-all whitespace-nowrap shrink-0 shadow-sm">
         Get a Free Quote
       </a>
       <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 focus:outline-none shrink-0" onclick="toggleMobileMenu()" type="button">
@@ -1106,7 +1162,7 @@
   </div>
 
   <!-- Mobile Collapsible Menu Drawer -->
-  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl" id="mobile-menu">
+  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl absolute top-full left-0 right-0 w-full bg-surface/98 backdrop-blur-2xl border-b border-surface-container-high/40 z-50" id="mobile-menu">
     <nav class="flex flex-col gap-1.5 font-body-md text-body-md">
       <!-- Direct Home 1 & Home 2 Segmented Switcher -->
       <div class="mobile-switcher-box grid grid-cols-2 gap-2 p-1.5 rounded-xl mb-2">
@@ -1138,8 +1194,7 @@
           <span class="material-symbols-outlined text-[18px]">contrast</span>
           <span class="theme-label-mobile">Theme</span>
         </button>
-        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
-          <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold transition-colors">
           <span class="dir-label-mobile">LTR</span>
         </button>
       </div>

@@ -922,6 +922,63 @@
     border-color: transparent !important;
     box-shadow: none !important;
   }
+
+  /* AUTHORITATIVE CONTRAST PROTECTION FOR BROWN BACKGROUNDS IN LIGHT MODE */
+  html:not(.dark) [class*="bg-primary"] p,
+  html:not(.dark) [class*="bg-primary-container"] p,
+  html:not(.dark) [class*="bg-[#140C07]"] p,
+  html:not(.dark) [class*="bg-[#180F0A]"] p,
+  html:not(.dark) [class*="bg-[#1C1008]"] p,
+  html:not(.dark) [class*="bg-[#120A06]"] p,
+  html:not(.dark) [class*="bg-[#24140A]"] p,
+  html:not(.dark) [class*="bg-[#24150E]"] p,
+  html:not(.dark) [class*="bg-[#3D1E0E]"] p,
+  html:not(.dark) [class*="bg-[#3D2418]"] p,
+  html:not(.dark) [class*="bg-[#4A2411]"] p,
+  html:not(.dark) [class*="bg-[#4E240E]"] p,
+  html:not(.dark) [class*="bg-[#6B3214]"] p,
+  html:not(.dark) [class*="bg-[#8F3E0B]"] p,
+  html:not(.dark) [class*="bg-primary"] li,
+  html:not(.dark) [class*="bg-primary-container"] li,
+  html:not(.dark) [class*="bg-[#140C07]"] li,
+  html:not(.dark) [class*="bg-[#180F0A]"] li,
+  html:not(.dark) [class*="bg-[#1C1008]"] li,
+  html:not(.dark) [class*="bg-[#3D2418]"] li,
+  html:not(.dark) [class*="bg-[#6B3214]"] li {
+    color: #FAF5EF !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+  }
+
+  html:not(.dark) [class*="bg-primary"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-primary-container"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-[#140C07]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#180F0A]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#1C1008]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#3D2418]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#6B3214]"] span:not(.material-symbols-outlined) {
+    color: #FAF5EF !important;
+  }
+
+  /* Section labels and uppercase tags inside brown/dark containers */
+  html:not(.dark) [class*="bg-primary"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary"] [class*="text-label"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-label"] {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+  }
+
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -1153,14 +1210,13 @@ tailwind.config = {
 
     <!-- Action Utilities (Theme, Direction, CTA, Mobile Hamburger) -->
     <div class="flex items-center gap-2 sm:gap-3 2xl:gap-4 shrink-0">
-      <button aria-label="Toggle color mode" class="theme-toggle-btn w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
+      <button aria-label="Toggle color mode" class="theme-toggle-btn hidden xl:flex w-9 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
         <span class="material-symbols-outlined text-[18px]">contrast</span>
       </button>
-      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 h-8 sm:h-9 rounded-full items-center justify-center gap-1 transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider" onclick="toggleDirection()" type="button">
-        <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden xl:flex px-3 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0 font-bold text-xs tracking-wider" onclick="toggleDirection()" type="button">
         <span class="dir-toggle-text font-bold">LTR</span>
       </button>
-      <a href="contact.html" class="nav-quote-btn hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-4 py-1.5 2xl:py-2 text-xs 2xl:text-label-lg rounded-lg transition-all whitespace-nowrap shrink-0">
+      <a href="contact.html" class="nav-quote-btn hidden xl:inline-flex items-center justify-center px-4 h-9 text-xs font-bold uppercase tracking-wider rounded-xl transition-all whitespace-nowrap shrink-0 shadow-sm">
         Get a Free Quote
       </a>
       <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 focus:outline-none shrink-0" onclick="toggleMobileMenu()" type="button">
@@ -1170,7 +1226,7 @@ tailwind.config = {
   </div>
 
   <!-- Mobile Collapsible Menu Drawer -->
-  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl" id="mobile-menu">
+  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl absolute top-full left-0 right-0 w-full bg-surface/98 backdrop-blur-2xl border-b border-surface-container-high/40 z-50" id="mobile-menu">
     <nav class="flex flex-col gap-1.5 font-body-md text-body-md">
       <!-- Direct Home 1 & Home 2 Segmented Switcher -->
       <div class="mobile-switcher-box grid grid-cols-2 gap-2 p-1.5 rounded-xl mb-2">
@@ -1202,8 +1258,7 @@ tailwind.config = {
           <span class="material-symbols-outlined text-[18px]">contrast</span>
           <span class="theme-label-mobile">Theme</span>
         </button>
-        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
-          <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold transition-colors">
           <span class="dir-label-mobile">LTR</span>
         </button>
       </div>
@@ -1211,24 +1266,40 @@ tailwind.config = {
   </div>
 </header><main class="w-full bg-surface min-h-[calc(100vh-120px)] overflow-x-hidden"><div class="flex flex-col w-full">
 <!-- 1. Breadcrumb and Hero Banner -->
-<section class="relative w-full bg-surface-container-low py-14 sm:py-16 lg:py-20 overflow-hidden border-b border-surface-container-high/30">
-<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none"></div>
-<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-<!-- Breadcrumbs -->
-<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-on-surface-variant font-caption text-caption uppercase tracking-wider mb-6">
-<a class="hover:text-primary transition-colors flex items-center gap-1" href="index.html">
-<span class="material-symbols-outlined text-[16px]">home</span>
-<span class="">Home</span>
-</a>
-<span class="text-outline-variant">/</span>
-<span class="text-primary font-semibold">About Us</span>
-</nav>
-<div class="max-w-4xl space-y-6">
-<div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-surface-container-highest/80 border border-outline-variant/40 text-primary rounded font-label-sm text-xs sm:text-label-sm uppercase tracking-[0.18em] font-semibold max-w-full flex-wrap sm:flex-nowrap break-words"><span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span><span class="">Structural Heritage &amp; Precision</span></div>
-<h1 class="font-display text-3xl sm:text-4xl lg:text-display text-primary tracking-[-0.035em] font-semibold leading-[1.08] break-words">Crafting Architectural Sanctuaries Between Home &amp; Nature.</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed font-normal tracking-[-0.005em]">Founded on the belief that outdoor spaces should be engineered with the structural rigor of bespoke architecture and the timeless warmth of hand-selected timber.</p>
-</div>
-</div>
+<section class="relative w-full min-h-[400px] sm:min-h-[440px] lg:min-h-[480px] flex items-center overflow-hidden bg-primary text-white py-14 sm:py-16 lg:py-20 border-b border-surface-container-high/30">
+  <!-- Relevant Architectural Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9O_g6dLW2Uvy6RbDakUMxmflXiUilQhn_DHcyvcv4AlFAq4g23ebGOk5tC9aKBGqVJuXbHwiDc-ZYWRLkIVJ95FLlu2J3xnwqtoSS_pjnuIMWN-RZmhDfyMwgTiOYa4qwD2XiDBvMg0va2ZQ4FHUtbccp8ldKNi3t4yOMRR2XscogpdWeKGktXDjMTUw6WErS15dkS3MZDYa4iUyVR7GErz-dJGc0iT93ch-b-lNfN3gp0rHfMHYW" 
+         alt="Master craftsman hand-chiseling architectural timber connection inside studio workshop" 
+         class="w-full h-full object-cover object-center filter brightness-[0.62] contrast-[1.1] scale-105"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/35"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[#E8DCD0] font-caption text-caption uppercase tracking-wider mb-6">
+      <a class="hover:text-[#F7BA7D] transition-colors flex items-center gap-1" href="index.html">
+        <span class="material-symbols-outlined text-[16px]">home</span>
+        <span class="">Home</span>
+      </a>
+      <span class="text-white/40">/</span>
+      <span class="text-[#F7BA7D] font-semibold">About Us</span>
+    </nav>
+
+    <div class="max-w-4xl space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 border border-white/20 backdrop-blur-md text-[#F7BA7D] font-label-sm text-xs sm:text-label-sm uppercase tracking-[0.18em] font-semibold max-w-full flex-wrap sm:flex-nowrap break-words shadow-lg font-bold">
+        <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+        <span class="">Structural Heritage &amp; Precision</span>
+      </div>
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-display text-white tracking-[-0.035em] font-bold leading-[1.08] break-words drop-shadow-md">
+        Crafting Architectural Sanctuaries Between Home &amp; Nature.
+      </h1>
+      <p class="font-body-lg text-body-lg text-[#FAF5EF] max-w-2xl leading-relaxed font-normal tracking-[-0.005em] drop-shadow-sm">
+        Founded on the belief that outdoor spaces should be engineered with the structural rigor of bespoke architecture and the timeless warmth of hand-selected timber.
+      </p>
+    </div>
+  </div>
 </section>
 <!-- 2. Brand Story & Origins -->
 <section class="w-full bg-surface py-14 sm:py-16 lg:py-20">
@@ -1419,9 +1490,9 @@ tailwind.config = {
 <div class="relative rounded-xl overflow-hidden shadow-xl bg-surface-container-high aspect-[3/4] group">
 <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="A master craftsman wearing a weathered leather work apron carving a precise structural mortise and tenon joint into a heavy reclaimed hardwood timber beam using a traditional mallet and chisel, wood shavings curling in rich golden natural lighting inside a woodworking studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9O_g6dLW2Uvy6RbDakUMxmflXiUilQhn_DHcyvcv4AlFAq4g23ebGOk5tC9aKBGqVJuXbHwiDc-ZYWRLkIVJ95FLlu2J3xnwqtoSS_pjnuIMWN-RZmhDfyMwgTiOYa4qwD2XiDBvMg0va2ZQ4FHUtbccp8ldKNi3t4yOMRR2XscogpdWeKGktXDjMTUw6WErS15dkS3MZDYa4iUyVR7GErz-dJGc0iT93ch-b-lNfN3gp0rHfMHYW">
 <div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
-<div class="absolute bottom-6 left-6 right-6 text-on-primary">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary font-semibold">Joinery &amp; Science</span>
-<p class="font-headline-sm text-headline-sm font-semibold mt-1">Hand-Chiseled Timber Connections</p>
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/15">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] !text-[#F7BA7D] font-bold block">Joinery &amp; Science</span>
+<p class="font-headline-sm text-headline-sm font-semibold mt-1 !text-white drop-shadow-md">Hand-Chiseled Timber Connections</p>
 </div>
 </div>
 </div>
@@ -1429,9 +1500,30 @@ tailwind.config = {
 </div>
 </section>
 <!-- 5. Key Company Milestones / Statistics Row -->
-<section class="w-full bg-primary-container text-on-primary py-16 lg:py-20">
+<section class="w-full bg-primary-container py-16 lg:py-20 border-y border-surface-container-high/30">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 text-center lg:text-left"><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">18+</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">Years of Craft</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Refining high-tolerance outdoor architecture</p></div><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">450+</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">Sanctuaries Built</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Custom timber decks, pavilions &amp; outdoor kitchens</p></div><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">100%</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">FSC Hardwoods</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Verified legal and sustainably managed origin</p></div><div class="space-y-2"><div class="font-display text-display text-secondary-fixed font-bold tracking-[-0.04em] leading-none">25-Yr</div><h4 class="font-title text-title text-on-primary font-semibold tracking-tight">Structural Warranty</h4><p class="font-body-sm text-body-sm text-on-primary-container tracking-wide">Comprehensive transferable framing assurance</p></div></div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 text-center lg:text-left">
+  <div class="space-y-2">
+    <div class="font-display text-display !text-[#F7BA7D] font-bold tracking-[-0.04em] leading-none">18+</div>
+    <h4 class="font-title text-title !text-white font-bold tracking-tight">Years of Craft</h4>
+    <p class="font-body-sm text-body-sm !text-[#FAF5EF] tracking-wide font-normal">Refining high-tolerance outdoor architecture</p>
+  </div>
+  <div class="space-y-2">
+    <div class="font-display text-display !text-[#F7BA7D] font-bold tracking-[-0.04em] leading-none">450+</div>
+    <h4 class="font-title text-title !text-white font-bold tracking-tight">Sanctuaries Built</h4>
+    <p class="font-body-sm text-body-sm !text-[#FAF5EF] tracking-wide font-normal">Custom timber decks, pavilions &amp; outdoor kitchens</p>
+  </div>
+  <div class="space-y-2">
+    <div class="font-display text-display !text-[#F7BA7D] font-bold tracking-[-0.04em] leading-none">100%</div>
+    <h4 class="font-title text-title !text-white font-bold tracking-tight">FSC Hardwoods</h4>
+    <p class="font-body-sm text-body-sm !text-[#FAF5EF] tracking-wide font-normal">Verified legal and sustainably managed origin</p>
+  </div>
+  <div class="space-y-2">
+    <div class="font-display text-display !text-[#F7BA7D] font-bold tracking-[-0.04em] leading-none">25-Yr</div>
+    <h4 class="font-title text-title !text-white font-bold tracking-tight">Structural Warranty</h4>
+    <p class="font-body-sm text-body-sm !text-[#FAF5EF] tracking-wide font-normal">Comprehensive transferable framing assurance</p>
+  </div>
+</div>
 </div>
 </section>
 <!-- 6. Leadership & Master Craftsmen -->
@@ -1598,34 +1690,34 @@ tailwind.config = {
 </div>
 </section>
 <!-- 9. Comprehensive Consultation CTA Banner -->
-<section class="w-full bg-primary text-on-primary py-14 sm:py-16 lg:py-20 relative overflow-hidden">
+<section class="w-full bg-primary text-white py-14 sm:py-16 lg:py-20 relative overflow-hidden border-t border-surface-container-high/30">
 <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-primary-container/40 blur-3xl pointer-events-none"></div>
 <div class="absolute -left-24 -top-24 w-96 h-96 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
 <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
 <div class="max-w-3xl mx-auto text-center space-y-6">
-<span class="inline-block px-3 py-1 bg-surface-container-lowest/10 text-secondary-fixed rounded font-label-sm text-label-sm uppercase tracking-[0.2em] font-semibold">Initiate Your Commission</span>
-<h2 class="font-headline-lg lg:font-display text-headline-lg lg:text-display text-on-primary tracking-[-0.03em] font-semibold leading-tight">Ready to Build Your Outdoor Masterpiece?</h2>
-<p class="font-body-lg text-body-lg text-on-primary-container max-w-xl mx-auto leading-relaxed">
+<span class="inline-block px-3.5 py-1.5 bg-black/40 border border-secondary/30 !text-[#F7BA7D] rounded-full font-label-sm text-label-sm uppercase tracking-[0.2em] font-bold shadow-lg">Initiate Your Commission</span>
+<h2 class="font-headline-lg lg:font-display text-headline-lg lg:text-display !text-white tracking-[-0.03em] font-bold leading-tight drop-shadow-md">Ready to Build Your Outdoor Masterpiece?</h2>
+<p class="font-body-lg text-body-lg !text-[#FAF5EF] max-w-xl mx-auto leading-relaxed font-normal drop-shadow-sm">
           Schedule a complimentary on-site architectural evaluation with our senior carpenters. We review slope grades, interior sightlines, and timber palettes.
         </p>
 <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-<a class="w-full sm:w-auto inline-flex items-center justify-center bg-secondary hover:bg-secondary/90 text-on-secondary px-8 py-3.5 rounded font-label-lg text-label-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5" href="contact.html">
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-secondary hover:bg-secondary/90 text-on-secondary px-8 py-3.5 rounded-xl font-label-lg text-label-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-bold" href="contact.html">
 <span class="">Book Design Consultation</span>
 <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
 </a>
-<a class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-outline-variant hover:bg-surface-container-lowest/10 text-on-primary px-8 py-3.5 rounded font-label-lg text-label-lg transition-all duration-200" href="tel:5558462377">
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-white/30 hover:bg-white/10 !text-white px-8 py-3.5 rounded-xl font-label-lg text-label-lg transition-all duration-200 font-semibold" href="tel:5558462377">
 <span class="material-symbols-outlined mr-2 text-[20px]">call</span>
 <span class="">Call Our Studio (555) 846-2377</span>
 </a>
 </div>
-<div class="pt-6 flex flex-wrap items-center justify-center gap-4 text-on-primary-container font-caption text-caption">
+<div class="pt-6 flex flex-wrap items-center justify-center gap-4 !text-white/85 font-caption text-caption">
 <div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[16px] text-secondary-fixed">calendar_today</span>
+<span class="material-symbols-outlined text-[16px] !text-[#F7BA7D]">calendar_today</span>
 <span class="">Current project queue: Booking for Q3/Q4</span>
 </div>
-<span class="hidden sm:inline">•</span>
+<span class="hidden sm:inline text-white/40">•</span>
 <div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[16px] text-secondary-fixed">pin_drop</span>
+<span class="material-symbols-outlined text-[16px] !text-[#F7BA7D]">pin_drop</span>
 <span class="">Serving Greater Metro &amp; Coastal Regions</span>
 </div>
 </div>

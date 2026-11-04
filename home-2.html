@@ -923,6 +923,63 @@
     border-color: transparent !important;
     box-shadow: none !important;
   }
+
+  /* AUTHORITATIVE CONTRAST PROTECTION FOR BROWN BACKGROUNDS IN LIGHT MODE */
+  html:not(.dark) [class*="bg-primary"] p,
+  html:not(.dark) [class*="bg-primary-container"] p,
+  html:not(.dark) [class*="bg-[#140C07]"] p,
+  html:not(.dark) [class*="bg-[#180F0A]"] p,
+  html:not(.dark) [class*="bg-[#1C1008]"] p,
+  html:not(.dark) [class*="bg-[#120A06]"] p,
+  html:not(.dark) [class*="bg-[#24140A]"] p,
+  html:not(.dark) [class*="bg-[#24150E]"] p,
+  html:not(.dark) [class*="bg-[#3D1E0E]"] p,
+  html:not(.dark) [class*="bg-[#3D2418]"] p,
+  html:not(.dark) [class*="bg-[#4A2411]"] p,
+  html:not(.dark) [class*="bg-[#4E240E]"] p,
+  html:not(.dark) [class*="bg-[#6B3214]"] p,
+  html:not(.dark) [class*="bg-[#8F3E0B]"] p,
+  html:not(.dark) [class*="bg-primary"] li,
+  html:not(.dark) [class*="bg-primary-container"] li,
+  html:not(.dark) [class*="bg-[#140C07]"] li,
+  html:not(.dark) [class*="bg-[#180F0A]"] li,
+  html:not(.dark) [class*="bg-[#1C1008]"] li,
+  html:not(.dark) [class*="bg-[#3D2418]"] li,
+  html:not(.dark) [class*="bg-[#6B3214]"] li {
+    color: #FAF5EF !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+  }
+
+  html:not(.dark) [class*="bg-primary"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-primary-container"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-[#140C07]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#180F0A]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#1C1008]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#3D2418]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#6B3214]"] span:not(.material-symbols-outlined) {
+    color: #FAF5EF !important;
+  }
+
+  /* Section labels and uppercase tags inside brown/dark containers */
+  html:not(.dark) [class*="bg-primary"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary"] [class*="text-label"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-label"] {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+  }
+
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -1175,14 +1232,13 @@ tailwind.config = {
 
     <!-- Action Utilities (Theme, Direction, CTA, Mobile Hamburger) -->
     <div class="flex items-center gap-2 sm:gap-3 2xl:gap-4 shrink-0">
-      <button aria-label="Toggle color mode" class="theme-toggle-btn w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
+      <button aria-label="Toggle color mode" class="theme-toggle-btn hidden xl:flex w-9 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
         <span class="material-symbols-outlined text-[18px]">contrast</span>
       </button>
-      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 h-8 sm:h-9 rounded-full items-center justify-center gap-1 transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider" onclick="toggleDirection()" type="button">
-        <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden xl:flex px-3 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0 font-bold text-xs tracking-wider" onclick="toggleDirection()" type="button">
         <span class="dir-toggle-text font-bold">LTR</span>
       </button>
-      <a href="contact.html" class="nav-quote-btn hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-4 py-1.5 2xl:py-2 text-xs 2xl:text-label-lg rounded-lg transition-all whitespace-nowrap shrink-0">
+      <a href="contact.html" class="nav-quote-btn hidden xl:inline-flex items-center justify-center px-4 h-9 text-xs font-bold uppercase tracking-wider rounded-xl transition-all whitespace-nowrap shrink-0 shadow-sm">
         Get a Free Quote
       </a>
       <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 focus:outline-none shrink-0" onclick="toggleMobileMenu()" type="button">
@@ -1192,7 +1248,7 @@ tailwind.config = {
   </div>
 
   <!-- Mobile Collapsible Menu Drawer -->
-  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl" id="mobile-menu">
+  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl absolute top-full left-0 right-0 w-full bg-surface/98 backdrop-blur-2xl border-b border-surface-container-high/40 z-50" id="mobile-menu">
     <nav class="flex flex-col gap-1.5 font-body-md text-body-md">
       <!-- Direct Home 1 & Home 2 Segmented Switcher -->
       <div class="mobile-switcher-box grid grid-cols-2 gap-2 p-1.5 rounded-xl mb-2">
@@ -1224,8 +1280,7 @@ tailwind.config = {
           <span class="material-symbols-outlined text-[18px]">contrast</span>
           <span class="theme-label-mobile">Theme</span>
         </button>
-        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
-          <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold transition-colors">
           <span class="dir-label-mobile">LTR</span>
         </button>
       </div>
@@ -1409,9 +1464,9 @@ tailwind.config = {
             </div>
             <input id="calc-slope" type="range" min="1" max="3" value="2" class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" oninput="updateCalculator()"/>
             <div class="grid grid-cols-3 gap-2 mt-2">
-              <button type="button" onclick="document.getElementById('calc-slope').value=1; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">Gentle</button>
-              <button type="button" onclick="document.getElementById('calc-slope').value=2; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">Moderate</button>
-              <button type="button" onclick="document.getElementById('calc-slope').value=3; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">Bluff (45°+)</button>
+              <button type="button" onclick="document.getElementById('calc-slope').value=1; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-bold text-primary hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] transition-all cursor-pointer border border-surface-container-high/60 active:scale-95 text-center shadow-xs">Gentle</button>
+              <button type="button" onclick="document.getElementById('calc-slope').value=2; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-bold text-primary hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] transition-all cursor-pointer border border-surface-container-high/60 active:scale-95 text-center shadow-xs">Moderate</button>
+              <button type="button" onclick="document.getElementById('calc-slope').value=3; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-bold text-primary hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] transition-all cursor-pointer border border-surface-container-high/60 active:scale-95 text-center shadow-xs">Bluff (45°+)</button>
             </div>
           </div>
 
@@ -1423,9 +1478,9 @@ tailwind.config = {
             </div>
             <input id="calc-area" type="range" min="800" max="3500" step="100" value="1600" class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" oninput="updateCalculator()"/>
             <div class="grid grid-cols-3 gap-2 mt-2">
-              <button type="button" onclick="document.getElementById('calc-area').value=800; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">800 sq ft</button>
-              <button type="button" onclick="document.getElementById('calc-area').value=1600; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">1,600 sq ft</button>
-              <button type="button" onclick="document.getElementById('calc-area').value=2800; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-semibold text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer border border-surface-container-high/60 active:scale-95 text-center">2,800+ sq ft</button>
+              <button type="button" onclick="document.getElementById('calc-area').value=800; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-bold text-primary hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] transition-all cursor-pointer border border-surface-container-high/60 active:scale-95 text-center shadow-xs">800 sq ft</button>
+              <button type="button" onclick="document.getElementById('calc-area').value=1600; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-bold text-primary hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] transition-all cursor-pointer border border-surface-container-high/60 active:scale-95 text-center shadow-xs">1,600 sq ft</button>
+              <button type="button" onclick="document.getElementById('calc-area').value=2800; updateCalculator();" class="py-1.5 px-2 rounded-lg bg-surface-container text-xs font-bold text-primary hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] transition-all cursor-pointer border border-surface-container-high/60 active:scale-95 text-center shadow-xs">2,800+ sq ft</button>
             </div>
           </div>
 
@@ -1450,16 +1505,15 @@ tailwind.config = {
             </div>
 
             <!-- Balanced Dual-Range Price Appraisal Box (Zero Wrapping & Symmetrical Alignment) -->
-            <div class="my-3.5 p-4 rounded-xl bg-surface-container border border-surface-container-high/70 shadow-inner">
-              <div class="flex items-center justify-between gap-2 sm:gap-4">
+            <div class="my-3.5 p-3.5 sm:p-4 rounded-xl bg-surface-container border border-surface-container-high/70 shadow-inner">
+              <div class="grid grid-cols-2 gap-2 sm:gap-3 items-center">
                 <div class="flex flex-col">
-                  <span class="text-[10px] sm:text-xs uppercase font-bold text-on-surface-variant tracking-wider">Base Estimate</span>
-                  <span id="calc-price-low" class="font-sans text-2xl sm:text-3xl font-black text-primary tracking-tight tabular-nums leading-none mt-1">$195,000</span>
+                  <span class="text-[10px] sm:text-xs uppercase font-bold text-on-surface-variant tracking-wider truncate">Base Estimate</span>
+                  <span id="calc-price-low" class="font-sans text-lg sm:text-xl md:text-2xl xl:text-3xl font-black text-primary tracking-tight tabular-nums leading-none mt-1 truncate">$195,000</span>
                 </div>
-                <div class="text-secondary font-bold text-xl sm:text-2xl px-1 sm:px-2 select-none">–</div>
-                <div class="flex flex-col text-right">
-                  <span class="text-[10px] sm:text-xs uppercase font-bold text-on-surface-variant tracking-wider">Upper Range</span>
-                  <span id="calc-price-high" class="font-sans text-2xl sm:text-3xl font-black text-secondary tracking-tight tabular-nums leading-none mt-1">$245,000</span>
+                <div class="flex flex-col text-right border-l border-surface-container-high/80 pl-2 sm:pl-3">
+                  <span class="text-[10px] sm:text-xs uppercase font-bold text-on-surface-variant tracking-wider truncate">Upper Range</span>
+                  <span id="calc-price-high" class="font-sans text-lg sm:text-xl md:text-2xl xl:text-3xl font-black text-secondary tracking-tight tabular-nums leading-none mt-1 truncate">$245,000</span>
                 </div>
               </div>
             </div>
@@ -1506,7 +1560,7 @@ tailwind.config = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Pillar 1 -->
       <div class="h-full p-6 sm:p-7 rounded-2xl bg-surface-container-lowest border border-surface-container-high/40 shadow-sm flex flex-col gap-4">
-        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+        <div class="w-12 h-12 rounded-xl bg-[#8F3E0B]/15 text-[#8F3E0B] dark:bg-primary/40 dark:text-[#F7BA7D] flex items-center justify-center shadow-sm">
           <span class="material-symbols-outlined text-[26px]">foundation</span>
         </div>
         <h3 class="font-headline-sm text-xl text-primary font-bold">Torque Micro-Pile Bedrock Anchors</h3>
@@ -1515,7 +1569,7 @@ tailwind.config = {
 
       <!-- Pillar 2 -->
       <div class="h-full p-6 sm:p-7 rounded-2xl bg-surface-container-lowest border border-surface-container-high/40 shadow-sm flex flex-col gap-4">
-        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+        <div class="w-12 h-12 rounded-xl bg-[#8F3E0B]/15 text-[#8F3E0B] dark:bg-primary/40 dark:text-[#F7BA7D] flex items-center justify-center shadow-sm">
           <span class="material-symbols-outlined text-[26px]">handyman</span>
         </div>
         <h3 class="font-headline-sm text-xl text-primary font-bold">Mortise &amp; Tenon Timber Joinery</h3>
@@ -1524,7 +1578,7 @@ tailwind.config = {
 
       <!-- Pillar 3 -->
       <div class="h-full p-6 sm:p-7 rounded-2xl bg-surface-container-lowest border border-surface-container-high/40 shadow-sm flex flex-col gap-4">
-        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+        <div class="w-12 h-12 rounded-xl bg-[#8F3E0B]/15 text-[#8F3E0B] dark:bg-primary/40 dark:text-[#F7BA7D] flex items-center justify-center shadow-sm">
           <span class="material-symbols-outlined text-[26px]">water_drop</span>
         </div>
         <h3 class="font-headline-sm text-xl text-primary font-bold">Concealed Siphonic Drainage</h3>
@@ -1533,7 +1587,7 @@ tailwind.config = {
 
       <!-- Pillar 4 -->
       <div class="h-full p-6 sm:p-7 rounded-2xl bg-surface-container-lowest border border-surface-container-high/40 shadow-sm flex flex-col gap-4">
-        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+        <div class="w-12 h-12 rounded-xl bg-[#8F3E0B]/15 text-[#8F3E0B] dark:bg-primary/40 dark:text-[#F7BA7D] flex items-center justify-center shadow-sm">
           <span class="material-symbols-outlined text-[26px]">shield</span>
         </div>
         <h3 class="font-headline-sm text-xl text-primary font-bold">316-Grade Marine Stainless</h3>
@@ -1542,7 +1596,7 @@ tailwind.config = {
 
       <!-- Pillar 5 -->
       <div class="h-full p-6 sm:p-7 rounded-2xl bg-surface-container-lowest border border-surface-container-high/40 shadow-sm flex flex-col gap-4">
-        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+        <div class="w-12 h-12 rounded-xl bg-[#8F3E0B]/15 text-[#8F3E0B] dark:bg-primary/40 dark:text-[#F7BA7D] flex items-center justify-center shadow-sm">
           <span class="material-symbols-outlined text-[26px]">air</span>
         </div>
         <h3 class="font-headline-sm text-xl text-primary font-bold">PE-Stamped Seismic Connections</h3>
@@ -1550,13 +1604,16 @@ tailwind.config = {
       </div>
 
       <!-- Pillar 6 (Guild Guarantee) -->
-      <div class="h-full p-6 sm:p-7 rounded-2xl bg-primary text-on-primary shadow-lg flex flex-col justify-between gap-4">
+      <div class="h-full p-6 sm:p-7 rounded-2xl bg-primary text-on-primary shadow-xl border border-white/10 flex flex-col justify-between gap-4">
         <div>
-          <span class="font-label-sm text-xs uppercase tracking-widest text-secondary font-bold block mb-1">Guild Guarantee</span>
-          <h3 class="font-headline-sm text-xl font-bold mb-2">50-Year Structural Covenant</h3>
-          <p class="text-sm text-surface-container-high/90 leading-relaxed">We back our structural substructures with a generational covenant covering sub-grade anchors, glulam beams, and moment frame integrity.</p>
+          <div class="w-12 h-12 rounded-xl bg-secondary/25 text-[#F7BA7D] flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[26px]">verified</span>
+          </div>
+          <span class="font-label-sm text-xs uppercase tracking-widest !text-[#F7BA7D] font-bold block mb-1">Guild Guarantee</span>
+          <h3 class="font-headline-sm text-xl font-bold mb-2 !text-white">50-Year Structural Covenant</h3>
+          <p class="text-sm !text-[#FAF5EF] leading-relaxed font-normal">We back our structural substructures with a generational covenant covering sub-grade anchors, glulam beams, and moment frame integrity.</p>
         </div>
-        <a href="contact.html" class="inline-flex items-center gap-2 text-secondary hover:text-white font-bold text-sm transition-colors">
+        <a href="contact.html" class="inline-flex items-center gap-2 !text-[#F7BA7D] hover:!text-white font-bold text-sm transition-colors">
           <span>Read Warranty Charter</span>
           <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
         </a>
@@ -1645,9 +1702,9 @@ tailwind.config = {
 <section class="w-full py-20 bg-primary text-on-primary">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
     <div class="max-w-3xl mx-auto">
-      <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-3">Private Commission Feasibility</span>
-      <h2 class="font-headline-lg text-3xl lg:text-headline-lg font-bold mb-6">Commission Your Generational Living Sanctuary</h2>
-      <p class="font-body-lg text-body-lg text-surface-container-high/90 mb-10 leading-relaxed">
+      <span class="font-label-sm text-label-sm uppercase tracking-widest !text-[#F7BA7D] font-bold block mb-3">Private Commission Feasibility</span>
+      <h2 class="font-headline-lg text-3xl lg:text-headline-lg font-bold mb-6 !text-white">Commission Your Generational Living Sanctuary</h2>
+      <p class="font-body-lg text-body-lg !text-[#FAF5EF] mb-10 leading-relaxed font-normal">
         Our principal structural architects conduct on-site 3D LiDAR topography scans and geotechnical feasibility appraisals for qualified estate owners.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -923,6 +923,63 @@
     border-color: transparent !important;
     box-shadow: none !important;
   }
+
+  /* AUTHORITATIVE CONTRAST PROTECTION FOR BROWN BACKGROUNDS IN LIGHT MODE */
+  html:not(.dark) [class*="bg-primary"] p,
+  html:not(.dark) [class*="bg-primary-container"] p,
+  html:not(.dark) [class*="bg-[#140C07]"] p,
+  html:not(.dark) [class*="bg-[#180F0A]"] p,
+  html:not(.dark) [class*="bg-[#1C1008]"] p,
+  html:not(.dark) [class*="bg-[#120A06]"] p,
+  html:not(.dark) [class*="bg-[#24140A]"] p,
+  html:not(.dark) [class*="bg-[#24150E]"] p,
+  html:not(.dark) [class*="bg-[#3D1E0E]"] p,
+  html:not(.dark) [class*="bg-[#3D2418]"] p,
+  html:not(.dark) [class*="bg-[#4A2411]"] p,
+  html:not(.dark) [class*="bg-[#4E240E]"] p,
+  html:not(.dark) [class*="bg-[#6B3214]"] p,
+  html:not(.dark) [class*="bg-[#8F3E0B]"] p,
+  html:not(.dark) [class*="bg-primary"] li,
+  html:not(.dark) [class*="bg-primary-container"] li,
+  html:not(.dark) [class*="bg-[#140C07]"] li,
+  html:not(.dark) [class*="bg-[#180F0A]"] li,
+  html:not(.dark) [class*="bg-[#1C1008]"] li,
+  html:not(.dark) [class*="bg-[#3D2418]"] li,
+  html:not(.dark) [class*="bg-[#6B3214]"] li {
+    color: #FAF5EF !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+  }
+
+  html:not(.dark) [class*="bg-primary"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-primary-container"] span:not(.material-symbols-outlined):not([class*="text-[#8F3E0B]"]),
+  html:not(.dark) [class*="bg-[#140C07]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#180F0A]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#1C1008]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#3D2418]"] span:not(.material-symbols-outlined),
+  html:not(.dark) [class*="bg-[#6B3214]"] span:not(.material-symbols-outlined) {
+    color: #FAF5EF !important;
+  }
+
+  /* Section labels and uppercase tags inside brown/dark containers */
+  html:not(.dark) [class*="bg-primary"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary"] [class*="text-label"],
+  html:not(.dark) [class*="bg-primary-container"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#140C07]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#180F0A]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#1C1008]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#3D2418]"] [class*="text-label"],
+  html:not(.dark) [class*="bg-[#6B3214]"] [class*="text-label"] {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+  }
+
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -1154,14 +1211,13 @@ tailwind.config = {
 
     <!-- Action Utilities (Theme, Direction, CTA, Mobile Hamburger) -->
     <div class="flex items-center gap-2 sm:gap-3 2xl:gap-4 shrink-0">
-      <button aria-label="Toggle color mode" class="theme-toggle-btn w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
+      <button aria-label="Toggle color mode" class="theme-toggle-btn hidden xl:flex w-9 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0" onclick="toggleTheme()" type="button">
         <span class="material-symbols-outlined text-[18px]">contrast</span>
       </button>
-      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 h-8 sm:h-9 rounded-full items-center justify-center gap-1 transition-colors focus:outline-none shrink-0 font-medium text-xs tracking-wider" onclick="toggleDirection()" type="button">
-        <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+      <button aria-label="Toggle text direction (LTR/RTL)" title="Switch RTL / LTR layout" class="dir-toggle-btn hidden xl:flex px-3 h-9 rounded-xl items-center justify-center transition-colors focus:outline-none shrink-0 font-bold text-xs tracking-wider" onclick="toggleDirection()" type="button">
         <span class="dir-toggle-text font-bold">LTR</span>
       </button>
-      <a href="contact.html" class="nav-quote-btn hidden sm:inline-flex items-center justify-center px-3.5 2xl:px-4 py-1.5 2xl:py-2 text-xs 2xl:text-label-lg rounded-lg transition-all whitespace-nowrap shrink-0">
+      <a href="contact.html" class="nav-quote-btn hidden xl:inline-flex items-center justify-center px-4 h-9 text-xs font-bold uppercase tracking-wider rounded-xl transition-all whitespace-nowrap shrink-0 shadow-sm">
         Get a Free Quote
       </a>
       <button aria-label="Toggle mobile menu" id="hamburger-btn" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-200 focus:outline-none shrink-0" onclick="toggleMobileMenu()" type="button">
@@ -1171,7 +1227,7 @@ tailwind.config = {
   </div>
 
   <!-- Mobile Collapsible Menu Drawer -->
-  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl" id="mobile-menu">
+  <div class="hidden xl:hidden max-h-[calc(100vh-5rem)] overflow-y-auto px-5 py-5 shadow-2xl absolute top-full left-0 right-0 w-full bg-surface/98 backdrop-blur-2xl border-b border-surface-container-high/40 z-50" id="mobile-menu">
     <nav class="flex flex-col gap-1.5 font-body-md text-body-md">
       <!-- Direct Home 1 & Home 2 Segmented Switcher -->
       <div class="mobile-switcher-box grid grid-cols-2 gap-2 p-1.5 rounded-xl mb-2">
@@ -1203,8 +1259,7 @@ tailwind.config = {
           <span class="material-symbols-outlined text-[18px]">contrast</span>
           <span class="theme-label-mobile">Theme</span>
         </button>
-        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-semibold transition-colors">
-          <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+        <button onclick="toggleDirection()" type="button" class="dir-toggle-btn flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold transition-colors">
           <span class="dir-label-mobile">LTR</span>
         </button>
       </div>
@@ -1226,22 +1281,22 @@ tailwind.config = {
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
-    <div class="max-w-3xl">
+    <div class="max-w-3xl p-6 sm:p-8 lg:p-10 rounded-2xl bg-black/45 backdrop-blur-md border border-white/15 shadow-2xl">
       <!-- Trust Pill -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B85D19]/25 border border-[#D48B4E]/40 text-[#F5C7A1] text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md shadow-lg">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B85D19]/35 border border-[#D48B4E]/50 text-[#F5C7A1] text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md shadow-lg">
         <span class="w-2 h-2 rounded-full bg-[#D48B4E] animate-pulse"></span>
         <span>Master Timber Joinery • Licensed Builders</span>
       </div>
 
       <!-- Reference Style 3-Line Two-Tone Headline -->
-      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[70px] lg:leading-[1.12] text-white tracking-tight font-bold mb-6 drop-shadow-md">
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[70px] lg:leading-[1.12] text-white tracking-tight font-bold mb-6 drop-shadow-lg">
         Expert <br/>
-        <span class="text-[#D48B4E] italic font-serif">Timber Craftsmanship</span> <br/>
+        <span class="text-[#F7BA7D] italic font-serif">Timber Craftsmanship</span> <br/>
         Solutions
       </h1>
 
       <!-- Subtitle -->
-      <p class="font-sans text-base sm:text-lg lg:text-xl text-[#E8DCD0] mb-9 leading-relaxed font-normal max-w-2xl drop-shadow-sm">
+      <p class="font-sans text-base sm:text-lg lg:text-xl text-white/95 mb-9 leading-relaxed font-medium max-w-2xl drop-shadow-md">
         Custom woodwork solutions crafted to perfection for your home and space. Precision mortise-and-tenon pergolas, cantilevered terraces, and architectural pavilions built for generations.
       </p>
 
@@ -1251,7 +1306,7 @@ tailwind.config = {
           <span>Get Free Quote</span>
           <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
         </a>
-        <a href="#services-grid" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm sm:text-base border border-white/25 transition-all backdrop-blur-md">
+        <a href="#services-grid" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-sm sm:text-base border border-white/30 transition-all backdrop-blur-md">
           <span class="material-symbols-outlined text-[18px]">design_services</span>
           <span>Our Services</span>
         </a>
@@ -1465,7 +1520,7 @@ tailwind.config = {
         <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4">
           Expert Architectural Solutions for Your Home
         </h2>
-        <p class="text-sm sm:text-base text-[#D0C0B0] leading-relaxed">
+        <p class="text-sm sm:text-base !text-[#FAF5EF] leading-relaxed font-normal">
           Engineered for enduring strength, sustainable provenance, and generational outdoor luxury. Every beam is precision-milled and guaranteed for 25 years.
         </p>
       </div>
@@ -1548,14 +1603,14 @@ tailwind.config = {
 </div>
 </div>
 <!-- Decorative Offset Card with 100% Solid Contrast -->
-<div class="hidden sm:block absolute -top-6 -right-6 z-30 bg-[#180F0A] text-white p-5 rounded-2xl shadow-2xl border-2 border-[#D48B4E] max-w-xs">
+<div class="block sm:absolute -top-6 -right-6 z-30 bg-[#180F0A] !text-white p-5 rounded-2xl shadow-2xl border-2 border-[#D48B4E] max-w-xs mb-4 sm:mb-0">
   <div class="flex items-center gap-2.5 mb-2">
-    <div class="w-8 h-8 rounded-lg bg-[#D48B4E]/25 flex items-center justify-center text-[#D48B4E]">
+    <div class="w-8 h-8 rounded-lg bg-[#D48B4E]/30 flex items-center justify-center text-[#F7BA7D]">
       <span class="material-symbols-outlined text-[20px]">verified_user</span>
     </div>
-    <span class="font-serif text-sm font-bold uppercase tracking-wider text-[#FFFFFF]">Zero-Settlement</span>
+    <span class="font-serif text-sm font-bold uppercase tracking-wider !text-white">Zero-Settlement</span>
   </div>
-  <p class="text-xs sm:text-[13px] text-[#F5EBE1] font-medium leading-relaxed">
+  <p class="text-xs sm:text-[13px] !text-[#FAF5EF] font-medium leading-relaxed">
     Helical steel foundation piles anchored directly into bedrock for lifelong seismic resilience.
   </p>
 </div>
@@ -1754,8 +1809,8 @@ tailwind.config = {
      ========================================================================== -->
 <section class="w-full bg-surface py-20 lg:py-24 relative border-t border-outline-variant/30">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
-      <div class="max-w-2xl">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-6">
+      <div class="max-w-3xl">
         <span class="font-label-md text-xs sm:text-label-md uppercase tracking-widest text-secondary font-bold block mb-2">Master Joinery &amp; Spatial Disciplines</span>
         <h2 class="font-display-md text-2xl sm:text-3xl lg:text-4xl text-primary font-bold tracking-tight">
           Engineered for Timeless Elegance &amp; Generational Endurance
@@ -1765,7 +1820,7 @@ tailwind.config = {
         </p>
       </div>
       <div class="flex items-center gap-3">
-        <a href="gallery.html" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#B85D19] hover:bg-[#9E460E] text-white font-bold text-sm tracking-wide transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 border border-[#8F3E0B]/30 group shrink-0">
+        <a href="gallery.html" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#B85D19] hover:bg-[#9E460E] text-white font-bold text-sm tracking-wide transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 border border-[#8F3E0B]/30 group shrink-0 w-full sm:w-auto justify-center">
           <span class="text-white font-bold">View 50+ Completed Estates</span>
           <span class="material-symbols-outlined text-[18px] text-white group-hover:translate-x-1.5 transition-transform duration-300">east</span>
         </a>
