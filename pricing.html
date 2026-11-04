@@ -993,6 +993,45 @@
     color: #120A05 !important;
   }
 
+
+  /* Enhanced Fixed Badges & Avatars Contrast Engine */
+  html:not(.dark) .bg-secondary-fixed,
+  html:not(.dark) .bg-secondary-container {
+    background-color: #F7EBE1 !important;
+    color: #8F3E0B !important;
+  }
+  html:not(.dark) .text-on-secondary-fixed,
+  html:not(.dark) .text-on-secondary-fixed-variant {
+    color: #7A3308 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .bg-secondary-fixed,
+  html.dark .bg-secondary-container {
+    background-color: rgba(184, 93, 25, 0.25) !important;
+    color: #F7BA7D !important;
+    border: 1px solid rgba(247, 186, 125, 0.35) !important;
+  }
+  html.dark .text-on-secondary-fixed,
+  html.dark .text-on-secondary-fixed-variant {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+  }
+  html:not(.dark) .text-on-primary-fixed {
+    color: #1F1008 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .text-on-primary-fixed {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html:not(.dark) .text-on-tertiary-fixed {
+    color: #281205 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .text-on-tertiary-fixed {
+    color: #F7BA7D !important;
+    font-weight: 700 !important;
+  }
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -1748,7 +1787,7 @@ tailwind.config = {
 </div>
 </div>
 <!-- Action Button -->
-<a class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-lg bg-secondary text-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed font-label-lg text-label-lg transition-colors font-bold shadow-md" href="#">
+<a class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-lg bg-secondary text-surface hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] dark:hover:!text-white font-label-lg text-label-lg transition-colors font-bold shadow-md" href="#">
 <span class="">Send This Estimate to Engineering</span>
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </a>
@@ -2190,7 +2229,7 @@ tailwind.config = {
           </p>
 </div>
 <div class="lg:col-span-4 flex flex-col gap-4">
-<a class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-lg bg-secondary text-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed font-label-lg text-label-lg transition-colors font-bold shadow-lg" href="#">
+<a class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-lg bg-secondary text-surface hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] dark:hover:!text-white font-label-lg text-label-lg transition-colors font-bold shadow-lg" href="#">
 <span class="">Book On-Site Appraisal</span>
 <span class="material-symbols-outlined text-[20px]">calendar_today</span>
 </a>

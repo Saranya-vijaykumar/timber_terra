@@ -984,6 +984,45 @@
     font-weight: 750 !important;
   }
 
+
+  /* Enhanced Fixed Badges & Avatars Contrast Engine */
+  html:not(.dark) .bg-secondary-fixed,
+  html:not(.dark) .bg-secondary-container {
+    background-color: #F7EBE1 !important;
+    color: #8F3E0B !important;
+  }
+  html:not(.dark) .text-on-secondary-fixed,
+  html:not(.dark) .text-on-secondary-fixed-variant {
+    color: #7A3308 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .bg-secondary-fixed,
+  html.dark .bg-secondary-container {
+    background-color: rgba(184, 93, 25, 0.25) !important;
+    color: #F7BA7D !important;
+    border: 1px solid rgba(247, 186, 125, 0.35) !important;
+  }
+  html.dark .text-on-secondary-fixed,
+  html.dark .text-on-secondary-fixed-variant {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+  }
+  html:not(.dark) .text-on-primary-fixed {
+    color: #1F1008 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .text-on-primary-fixed {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html:not(.dark) .text-on-tertiary-fixed {
+    color: #281205 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .text-on-tertiary-fixed {
+    color: #F7BA7D !important;
+    font-weight: 700 !important;
+  }
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -1203,10 +1242,10 @@
         </nav>
 
         <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <span class="px-3 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-xs uppercase tracking-wider font-semibold">
+          <span class="px-3.5 py-1.5 rounded-full bg-[#8F3E0B]/10 text-[#8F3E0B] border border-[#8F3E0B]/25 dark:bg-secondary/20 dark:text-[#F7BA7D] dark:border-secondary/35 font-label-sm text-xs uppercase tracking-wider font-bold shadow-sm">
             Tier 04 • Louvered & Timber Pavilions
           </span>
-          <span class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-sm font-bold shadow-sm">
+          <span class="px-3.5 py-1.5 rounded-full bg-[#8F3E0B] text-white dark:bg-primary-container dark:text-[#F7BA7D] font-label-md text-sm font-bold shadow-sm border border-black/10 dark:border-white/10">
             From $9,500
           </span>
         </div>
@@ -1378,7 +1417,7 @@
 
             <!-- Consultation Callout Box -->
             <div class="p-6 rounded-2xl bg-surface-container-low border border-surface-container-high shadow-sm flex flex-col gap-4">
-              <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-bold">
+              <div class="w-10 h-10 rounded-full bg-[#8F3E0B] text-white dark:bg-[#B85D19] dark:text-white flex items-center justify-center font-bold shadow-md">
                 <span class="material-symbols-outlined text-[20px]">handshake</span>
               </div>
               <h3 class="font-headline-sm text-base font-bold text-primary">Request an On-Site Spatial Assessment</h3>

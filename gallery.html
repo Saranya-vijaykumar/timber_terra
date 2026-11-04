@@ -980,6 +980,45 @@
     font-weight: 750 !important;
   }
 
+
+  /* Enhanced Fixed Badges & Avatars Contrast Engine */
+  html:not(.dark) .bg-secondary-fixed,
+  html:not(.dark) .bg-secondary-container {
+    background-color: #F7EBE1 !important;
+    color: #8F3E0B !important;
+  }
+  html:not(.dark) .text-on-secondary-fixed,
+  html:not(.dark) .text-on-secondary-fixed-variant {
+    color: #7A3308 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .bg-secondary-fixed,
+  html.dark .bg-secondary-container {
+    background-color: rgba(184, 93, 25, 0.25) !important;
+    color: #F7BA7D !important;
+    border: 1px solid rgba(247, 186, 125, 0.35) !important;
+  }
+  html.dark .text-on-secondary-fixed,
+  html.dark .text-on-secondary-fixed-variant {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+  }
+  html:not(.dark) .text-on-primary-fixed {
+    color: #1F1008 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .text-on-primary-fixed {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html:not(.dark) .text-on-tertiary-fixed {
+    color: #281205 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .text-on-tertiary-fixed {
+    color: #F7BA7D !important;
+    font-weight: 700 !important;
+  }
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
@@ -1513,7 +1552,7 @@ tailwind.config = {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Covered timber pavilion with built-in wood-fired pizza oven, slate tile kitchen island, and dining area looking over Pacific Northwest city skyline during twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1NjXPPGM9gXkywvwb9tIF0FGCF0t92x1bgjYLJxAMOGHxlB0wGKzaWPJssovS0Yw3RN4RBO6sYPWRgigVmhWxKlTyN-LvI_WqSBBkOxxUXdKwa0Hs4A3CWYtunDwa3A92gBhcCHU1zRP5Ps1fyL--IYr0IXUerkrTojLSg3a5RrDGwsjLv0nHMwhdeFSDliXjXskXzq-fC4xQspwH8xr2F5YVilclkZQRJ_7RvREHfTeke86XGLkT9w"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider">Kitchen &amp; Pavilion</span>
+<span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[#F7BA7D] font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-md">Kitchen &amp; Pavilion</span>
 <span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">location_on</span> Portland, OR
               </span>

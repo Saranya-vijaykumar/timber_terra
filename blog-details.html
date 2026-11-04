@@ -984,6 +984,45 @@
     font-weight: 750 !important;
   }
 
+
+  /* Enhanced Fixed Badges & Avatars Contrast Engine */
+  html:not(.dark) .bg-secondary-fixed,
+  html:not(.dark) .bg-secondary-container {
+    background-color: #F7EBE1 !important;
+    color: #8F3E0B !important;
+  }
+  html:not(.dark) .text-on-secondary-fixed,
+  html:not(.dark) .text-on-secondary-fixed-variant {
+    color: #7A3308 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .bg-secondary-fixed,
+  html.dark .bg-secondary-container {
+    background-color: rgba(184, 93, 25, 0.25) !important;
+    color: #F7BA7D !important;
+    border: 1px solid rgba(247, 186, 125, 0.35) !important;
+  }
+  html.dark .text-on-secondary-fixed,
+  html.dark .text-on-secondary-fixed-variant {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+  }
+  html:not(.dark) .text-on-primary-fixed {
+    color: #1F1008 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .text-on-primary-fixed {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  html:not(.dark) .text-on-tertiary-fixed {
+    color: #281205 !important;
+    font-weight: 700 !important;
+  }
+  html.dark .text-on-tertiary-fixed {
+    color: #F7BA7D !important;
+    font-weight: 700 !important;
+  }
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -1229,7 +1268,7 @@
 
         <!-- Category & Read Info -->
         <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="px-3 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-xs uppercase tracking-wider font-semibold">
+          <span class="px-3.5 py-1.5 rounded-full bg-[#8F3E0B]/10 text-[#8F3E0B] border border-[#8F3E0B]/25 dark:bg-secondary/20 dark:text-[#F7BA7D] dark:border-secondary/35 font-label-sm text-xs uppercase tracking-wider font-bold shadow-sm">
             Case Study • Geotechnical
           </span>
           <span class="text-on-surface-variant text-xs">•</span>
