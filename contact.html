@@ -1702,15 +1702,15 @@ tailwind.config = {
 </div>
 <!-- Submit Button & Live State -->
 <div class="pt-4">
-<button class="w-full py-4 px-8 rounded-xl bg-primary text-on-primary !text-white font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-3 hover:bg-primary-container transition-all shadow-[0_10px_25px_-5px_rgba(24,61,50,0.2)] group" id="submit-button" type="submit">
-<span id="button-text">Submit Consultation Request</span>
+<button class="w-full h-14 px-8 rounded-xl bg-primary text-on-primary !text-white font-label-lg text-label-lg uppercase tracking-wider inline-flex items-center justify-center gap-3 hover:bg-primary-container transition-all shadow-[0_10px_25px_-5px_rgba(24,61,50,0.2)] group" id="submit-button" type="submit">
+<span id="button-text" class="inline-flex items-center leading-none tracking-wider font-bold">Submit Consultation Request</span>
 <span class="hidden" id="button-spinner">
 <svg class="animate-spin h-5 w-5 text-on-primary" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
 <path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
 </svg>
 </span>
-<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1" id="button-icon">arrow_forward</span>
+<span class="material-symbols-outlined text-[20px] inline-flex items-center justify-center leading-none translate-y-[1.5px] transition-transform group-hover:translate-x-1 select-none" id="button-icon">arrow_forward</span>
 </button>
 </div>
 </form>
