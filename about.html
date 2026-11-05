@@ -374,8 +374,7 @@
   html:not(.dark) section:not(.photographic-hero) [class*="text-on-primary"] *:not(input):not(textarea):not(select),
   html:not(.dark) section:not(.photographic-hero) [class*="text-inverse-on-surface"],
   html:not(.dark) section:not(.photographic-hero) [class*="text-on-primary-container"],
-  html:not(.dark) section:not(.photographic-hero) [class*="!text-white"],
-  html:not(.dark) section:not(.photographic-hero) .text-white,
+    html:not(.dark) section:not(.photographic-hero) .text-white,
   html:not(.dark) section:not(.photographic-hero) [class*="text-white"],
   html:not(.dark) section:not(.photographic-hero) [class*="text-[#FAF5EF]"],
   html:not(.dark) section:not(.photographic-hero) [class*="text-[#FFFFFF]"],
@@ -383,6 +382,85 @@
   html:not(.dark) section:not(.photographic-hero) span:not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp) {
     color: #000000 !important;
     text-shadow: none !important;
+  }
+
+  
+  /* Photo Overlay Category & Discipline Badges in Light & Dark Mode: Crisp White Text on Terracotta/Dark Chip */
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-primary"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-secondary"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-surface-tint"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8F3E0B]"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#B85D19]"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#7A3A16]"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-black"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="!text-white"],
+  html:not(.dark) section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]),
+  html:not(.dark) section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) {
+    background-color: #8A2B03 !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    font-weight: 750 !important;
+    text-shadow: none !important;
+  }
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-primary"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-secondary"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-surface-tint"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8F3E0B]"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#B85D19]"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#7A3A16]"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-black"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="!text-white"] *,
+  html:not(.dark) section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) *,
+  html:not(.dark) section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) * {
+    color: #FFFFFF !important;
+  }
+
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-primary"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-secondary"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-surface-tint"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8F3E0B]"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#B85D19]"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#7A3A16]"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-black"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="!text-white"],
+  html.dark section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]),
+  html.dark section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) {
+    background-color: #B85D19 !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    font-weight: 750 !important;
+  }
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-primary"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-secondary"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-surface-tint"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8F3E0B]"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#B85D19]"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#7A3A16]"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-black"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="!text-white"] *,
+  html.dark section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) *,
+  html.dark section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) * {
+    color: #FFFFFF !important;
+  }
+
+  /* Master Portfolios Counter Panel in Hero */
+  html:not(.dark) #counter-current {
+    color: #000000 !important;
+  }
+  html:not(.dark) #counter-current + span {
+    color: #24150E !important;
+    font-weight: 750 !important;
+  }
+  html.dark #counter-current {
+    color: #FFFFFF !important;
+  }
+  html.dark #counter-current + span {
+    color: #FAF5EF !important;
+    font-weight: 750 !important;
   }
 
   /* ==========================================================================

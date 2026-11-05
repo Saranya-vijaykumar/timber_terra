@@ -375,8 +375,7 @@
   html:not(.dark) section:not(.photographic-hero) [class*="text-on-primary"] *:not(input):not(textarea):not(select),
   html:not(.dark) section:not(.photographic-hero) [class*="text-inverse-on-surface"],
   html:not(.dark) section:not(.photographic-hero) [class*="text-on-primary-container"],
-  html:not(.dark) section:not(.photographic-hero) [class*="!text-white"],
-  html:not(.dark) section:not(.photographic-hero) .text-white,
+    html:not(.dark) section:not(.photographic-hero) .text-white,
   html:not(.dark) section:not(.photographic-hero) [class*="text-white"],
   html:not(.dark) section:not(.photographic-hero) [class*="text-[#FAF5EF]"],
   html:not(.dark) section:not(.photographic-hero) [class*="text-[#FFFFFF]"],
@@ -384,6 +383,85 @@
   html:not(.dark) section:not(.photographic-hero) span:not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp) {
     color: #000000 !important;
     text-shadow: none !important;
+  }
+
+  
+  /* Photo Overlay Category & Discipline Badges in Light & Dark Mode: Crisp White Text on Terracotta/Dark Chip */
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-primary"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-secondary"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-surface-tint"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8F3E0B]"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#B85D19]"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#7A3A16]"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-black"],
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="!text-white"],
+  html:not(.dark) section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]),
+  html:not(.dark) section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) {
+    background-color: #8A2B03 !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    font-weight: 750 !important;
+    text-shadow: none !important;
+  }
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-primary"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-secondary"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-surface-tint"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8F3E0B]"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#B85D19]"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#7A3A16]"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-black"] *,
+  html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="!text-white"] *,
+  html:not(.dark) section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) *,
+  html:not(.dark) section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) * {
+    color: #FFFFFF !important;
+  }
+
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-primary"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-secondary"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-surface-tint"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8F3E0B]"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#B85D19]"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#7A3A16]"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-black"],
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="!text-white"],
+  html.dark section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]),
+  html.dark section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) {
+    background-color: #B85D19 !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    font-weight: 750 !important;
+  }
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-primary"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-secondary"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-surface-tint"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8F3E0B]"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#B85D19]"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#7A3A16]"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-black"] *,
+  html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="!text-white"] *,
+  html.dark section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) *,
+  html.dark section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) * {
+    color: #FFFFFF !important;
+  }
+
+  /* Master Portfolios Counter Panel in Hero */
+  html:not(.dark) #counter-current {
+    color: #000000 !important;
+  }
+  html:not(.dark) #counter-current + span {
+    color: #24150E !important;
+    font-weight: 750 !important;
+  }
+  html.dark #counter-current {
+    color: #FFFFFF !important;
+  }
+  html.dark #counter-current + span {
+    color: #FAF5EF !important;
+    font-weight: 750 !important;
   }
 
   /* ==========================================================================
@@ -1679,16 +1757,16 @@ tailwind.config = {
         </p>
       </div>
       <!-- Metric Counter Panel -->
-      <div class="lg:col-span-4 flex flex-col bg-black/45 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-xl gap-2 text-white">
+      <div class="lg:col-span-4 flex flex-col bg-white dark:bg-black/60 backdrop-blur-md border border-surface-container-high/60 dark:border-white/20 p-6 rounded-2xl shadow-xl gap-2 text-[#24150E] dark:text-white">
         <div class="flex items-center justify-between">
-          <span class="font-label-md text-label-md uppercase tracking-wider text-[#E8DCD0]">Master Portfolios</span>
+          <span class="font-label-md text-label-md uppercase tracking-wider text-[#24150E] dark:text-[#E8DCD0] font-bold">Master Portfolios</span>
           <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
         </div>
         <div class="flex items-baseline gap-2">
-          <span class="font-headline-lg text-headline-lg text-white font-bold" id="counter-current">9</span>
-          <span class="font-body-md text-body-md text-[#FAF5EF]">/ 9 Curated Environments</span>
+          <span class="font-headline-lg text-headline-lg !text-[#000000] dark:!text-white font-bold" id="counter-current">9</span>
+          <span class="font-body-md text-body-md !text-[#24150E] dark:!text-[#FAF5EF] font-bold">/ 9 Curated Environments</span>
         </div>
-        <p class="font-body-sm text-body-sm text-[#E8DCD0]">Pacific Northwest coastal, mountain &amp; valley terrain installations.</p>
+        <p class="font-body-sm text-body-sm text-[#5E4738] dark:text-[#E8DCD0]">Pacific Northwest coastal, mountain &amp; valley terrain installations.</p>
       </div>
     </div>
   </div>
@@ -1731,7 +1809,7 @@ tailwind.config = {
 <img alt="Okanagan Louvered Pergola Sanctuary with illuminated slatted ceiling, outdoor modular lounge, and linear fire feature at dusk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDkUa4ilzyyEgY9gY_AWCO9_aIgeRQr0DW2jAufAZsXK5fDBbHOVif_DMiUekWhDlsGF-LT1RRnab9l_tiO-jEpUZO_-xH9Rb1tW6AThzSzlgyhTNWU2X9-LfZ0-pSY1iooJUEG7Ux1e8e4aOAWapJtLc5JmEgK5r9dSumq4RpafZFJYnYnpQGW96O55RU2UfOu49f1F1K1rtNLlGVbzi9gfuN9iO7pzixDhU_WDRKcOWf5QSfTPp2DA"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary !text-white font-label-sm text-label-sm uppercase tracking-wider">Pergola &amp; Pavilion</span>
+<span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Pergola &amp; Pavilion</span>
 <span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">location_on</span> Hood River, OR
               </span>
@@ -1763,7 +1841,7 @@ tailwind.config = {
 <img alt="Highland Ridge Composite &amp; Stone Kitchen with multi-level composite decking, outdoor kitchen bar, and forest canopy backdrop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmTC20aywszTvWIWu9HhwttEbEpAoRUuerkdQx8dICyGAipWNmYvq6VOc5gR9GJyzOyhgMajL67FWN5ALBo2NPTkQH1qEn4ERPs42c1vAroi71RzaUfcox5HblFdR65CTHiisuzlW1DjX3QsYKR4SS-4J5ORsPAMpCX0uIKii0gy8ptswkchLzzHSLoPTjm0-XiiWV9MOvGcMcDjH8QqWzbUvtPQLD5VkZW9QFKopIoDC1Ngxj1XkAsA"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider">Composite Deck</span>
+<span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Composite Deck</span>
 <span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">location_on</span> Bend, OR
               </span>
@@ -1795,7 +1873,7 @@ tailwind.config = {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cantilevered western red cedar deck dramatically projecting over a deep pine ravine in the Pacific Northwest with frameless tempered glass balustrades and rich warm timber tones under gentle daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADbtkCp0eMQHWMOAmCo2TsZF35qdZPwdtmfFsgk7G1vK6VpJhZu7bdzMxCRL1swXGxFX7BYIxru0lsoy1dQ_MaPGjDh0ZrPzdOxRgGh0qHOJGcmgdmhPi4nso4z55PrsK5zdC5xh_qXMx6JEXe2vWkNHxMxCNXm0C3fYzFSN4IvoS0LefSQmwihsGSYRTvsyKZ_tWxSG6T8lMAemmK9zPgeHzYVpLw5K7WxiI05Pc_Bo41_XXoQHrAbQ"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full bg-primary text-on-primary !text-white font-label-sm text-label-sm uppercase tracking-wider">Timber Deck</span>
+<span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Timber Deck</span>
 <span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">location_on</span> Snoqualmie, WA
               </span>
@@ -1827,7 +1905,7 @@ tailwind.config = {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Multi-level modern timber lakefront deck with integrated recessed hot tub, floating staircase descending to private boat dock, surrounded by lush coastal Pacific Northwest evergreen trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqajiPoTqSyFf0BXr37Rg7QHO9YIYvIm3ksBfQJnll9l_JI92FYEFsfC4-B7JvY5umzcHSOh4jL52TwHBBSTozV0wW3ECFoI_keQaa6qovY8RUzEByAYBzKuFopiFskbYbPzEYD-TI17TZ-QqYUki35x18IuXyQ968Oc8q424nLk0W5N4njSYHxPSHKAINA1EHe8Pa4S67xsnRGPNV7xc33e-540bp52sckgAfT46ACdVjkbHUF2CD2Q"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full bg-surface-tint text-on-primary font-label-sm text-label-sm uppercase tracking-wider">Timber &amp; Marine</span>
+<span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Timber &amp; Marine</span>
 <span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">location_on</span> Lake Oswego, OR
               </span>
@@ -1859,7 +1937,7 @@ tailwind.config = {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Architectural minimalist steel pergola with heavy Douglas Fir timber cross beams over smooth warm concrete patio and lush modern Japanese courtyard garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAojenmCYZyd3pMLjwk4GxOEYQl-ewlE50HCQwW3MuSMnNywtPkrwDULm5PR16hjsJwh85yUmdV8hE-iJBnxHZ8JvsL_on8G4johX0Nr2Pf8PEUUrZ8vy3IYf8-IlcJa7XD3q58PpxS0glQ8A5fXlgdglAHEOepbsZa5vYo0VGeKEj7JX2qR6I5QGx8CmzAMO_XitlhXz3p3lRZNwTBs5xUtwb_eU0P1LO_I24SFAa25cKnMoYJl80OzQ"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary !text-white font-label-sm text-label-sm uppercase tracking-wider">Pergola &amp; Pavilion</span>
+<span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Pergola &amp; Pavilion</span>
 <span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">location_on</span> Mercer Island, WA
               </span>
@@ -1892,7 +1970,7 @@ tailwind.config = {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Covered timber pavilion with built-in wood-fired pizza oven, slate tile kitchen island, and dining area looking over Pacific Northwest city skyline during twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1NjXPPGM9gXkywvwb9tIF0FGCF0t92x1bgjYLJxAMOGHxlB0wGKzaWPJssovS0Yw3RN4RBO6sYPWRgigVmhWxKlTyN-LvI_WqSBBkOxxUXdKwa0Hs4A3CWYtunDwa3A92gBhcCHU1zRP5Ps1fyL--IYr0IXUerkrTojLSg3a5RrDGwsjLv0nHMwhdeFSDliXjXskXzq-fC4xQspwH8xr2F5YVilclkZQRJ_7RvREHfTeke86XGLkT9w"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[#F7BA7D] font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-md">Kitchen &amp; Pavilion</span>
+<span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Kitchen &amp; Pavilion</span>
 <span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">location_on</span> Portland, OR
               </span>
@@ -1925,7 +2003,7 @@ tailwind.config = {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Expansive thermally treated dark ash wood deck cantilevered over snow-covered evergreen pine trees with integrated warm bronze floor lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLx7zs7S_c-vFhb4NfXWI7cHy30GU764YZKQzg5rzx3b5027BtvisnlHisc_n8wSwFQ9XuDN--uWbz3Y05td9pTiIq117bYPEKYou4rFP5gt70kdN2M0UV4vWePIGwVdKz65LesfAa9fC-AyA8zfBrHrMUR_xCtOSQJhicuVl2Ywym-ecAFbaAWJUWRMR97-pGtlFIqy0mAQJzJSg3YihVMCZEFeqDabZh0v68io-j79OWWAd1R4n0aQ"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full text-label-sm font-label-sm uppercase tracking-wider bg-surface/90 backdrop-blur-sm text-primary font-bold shadow-sm">Timber Decks</span>
+<span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Timber Deck</span>
 </div>
 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
 <span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-white drop-shadow leading-none"><span class="material-symbols-outlined text-[16px] text-secondary leading-none">location_on</span><span class="leading-none">Whistler, BC</span></span>
@@ -1954,7 +2032,7 @@ tailwind.config = {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="High-end composite driftwood grey deck overlooking rocky Pacific saltwater cove with stainless steel horizontal cable railings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1QSrBGKUKyO0A4k4kVdbKHL773mGawb32_LIG9EzkrlZnLyh2sTuBLl5KeFwYvWRyvS5mvXXHhQsBlFsyBl7qXdAkZ_DXn_oIKnqfChOfdWyEGEBurzfI2c7i5JCo63T8fTFoec2lzrUm-VYhF3jPZMJT0elOqLDr9CV6ot4T68jt4dqHx0iKmQaMevf_3TmmSNox3kJ_iTqCUqddkSjELWHJHmNlY-LWEkdOctXMjZegYALCofQgDg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full text-label-sm font-label-sm uppercase tracking-wider bg-surface/90 backdrop-blur-sm text-primary font-bold shadow-sm">Composite Decks</span>
+<span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Composite Deck</span>
 </div>
 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
 <span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-white drop-shadow leading-none"><span class="material-symbols-outlined text-[16px] text-secondary leading-none">location_on</span><span class="leading-none">Friday Harbor, WA</span></span>
@@ -1983,8 +2061,8 @@ tailwind.config = {
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Expansive multi-tiered cedar and ipe architectural timber deck nestled on a slope with scenic hillside and evergreen views" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmQd4Pk43cks6_ESHJIle7t0VgRUdxDbGBjcyQsI73cQgeG-IWupMK9TyH6s8FqO2asMqqsGL0R6vH-CTnOfzcoz1b24kQYY-kFI8HR-V2akQi9SMJBUjEtW0FYaAgVVATCq57MedftCGbNG8leFg3s71Ptb2Lb3pTKMHPn8-QP2rwn9eP9Oitn8Z1FgQHUpZI8AZglGMQIR0r7FIGI5Vj7CF91fPX2frQE8-kV4jB4pNcrL9XN1-V6Q"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 <div class="absolute top-4 left-4 flex items-center gap-2">
-<span class="px-3 py-1 rounded-full text-label-sm font-label-sm uppercase tracking-wider bg-surface/90 backdrop-blur-sm text-primary font-bold shadow-sm">Timber Decks</span>
-<span class="px-3 py-1 rounded-full text-label-sm font-label-sm uppercase tracking-wider bg-secondary text-on-secondary font-bold shadow-sm">Featured</span>
+<span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Timber Deck</span>
+<span class="px-3 py-1 rounded-full bg-[#B85D19] dark:bg-[#D48B4E] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Featured</span>
 </div>
 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
 <span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-white drop-shadow leading-none"><span class="material-symbols-outlined text-[16px] text-secondary leading-none">location_on</span><span class="leading-none">Carmel Highlands, CA</span></span>
