@@ -149,6 +149,16 @@
   }
 
   /* ==========================================================================
+     GLOBAL ZERO LETTER SHADOW (Sharp, Clean Vector Typography)
+     ========================================================================== */
+  *, *::before, *::after {
+    text-shadow: none !important;
+  }
+  [class*="drop-shadow"] {
+    filter: none !important;
+  }
+
+  /* ==========================================================================
      2. LIGHT MODE: 100% MAXIMUM VISIBILITY ULTRA-CONTRAST (html:not(.dark))
      ========================================================================== */
   html:not(.dark) {
@@ -160,6 +170,7 @@
     font-size: 15.5px;
     line-height: 26px;
     font-weight: 550;
+    text-shadow: none !important;
   }
 
   /* Light Mode Surfaces & Containers */
@@ -186,6 +197,7 @@
     color: #000000 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   /* Light Mode Paragraphs & Body Text on Light Surfaces */
@@ -203,6 +215,7 @@
     color: #000000 !important;
     font-weight: 600 !important;
     opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   /* Light Mode Secondary, Meta, Captions & Description Text on Light Surfaces */
@@ -217,6 +230,7 @@
     color: #000000 !important;
     font-weight: 650 !important;
     opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   /* Light Mode Small Labels, Badges & Captions on Light Surfaces */
@@ -232,6 +246,7 @@
     color: #000000 !important;
     font-weight: 800 !important;
     opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   /* Light Mode Accent & Highlight Text on Light Surfaces: Deep Terracotta (9.5:1 Contrast) */
@@ -243,6 +258,7 @@
     color: #8A2B03 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   /* Light Mode Step Numbers, Badges & Counters on Light Surfaces */
@@ -254,17 +270,13 @@
     color: #6B2302 !important;
     font-weight: 900 !important;
     opacity: 1 !important;
-  }
-  html:not(.dark) p.text-surface-container-high,
-  html:not(.dark) p.text-surface-container,
-  html:not(.dark) p[class*="text-surface-container"] {
-    color: #000000 !important;
-    font-weight: 550 !important;
+    text-shadow: none !important;
   }
   html:not(.dark) td.text-outline,
   html:not(.dark) [class*="text-outline"] {
     color: #000000 !important;
     font-weight: 600 !important;
+    text-shadow: none !important;
   }
 
   /* Light Mode Box Cards: Distinct Boundaries & Crisp Elevation */
@@ -349,8 +361,7 @@
 
   /* ==========================================================================
      3. UNIVERSAL DARK CONTAINER & HIGH-CONTRAST RULES (html:not(.dark))
-     Cascades AFTER Section 2 and uses higher specificity (0,2,2) to GUARANTEE
-     that NO element in any dark container or badge is EVER black!
+     ZERO text-shadow, 100% Crisp White & Radiant Amber Typography!
      ========================================================================== */
 
   /* 3A. Dark Headings inside any dark container or hero */
@@ -366,7 +377,7 @@
   html:not(.dark) [class*="text-surface-bright"] {
     color: #FFFFFF !important;
     font-weight: 850 !important;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: none !important;
   }
 
   /* 3B. Two-Tone Accent Phrase inside Headings: Radiant Amber Gold */
@@ -382,7 +393,7 @@
   html:not(.dark) h2 span.italic {
     color: #F7BA7D !important;
     font-weight: 800 !important;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+    text-shadow: none !important;
   }
 
   /* 3C. Paragraphs, List Items & Body Text inside any dark container */
@@ -409,11 +420,17 @@
   html:not(.dark) p[class*="text-[#E8DCD0]"],
   html:not(.dark) [class*="text-surface-container-high/80"],
   html:not(.dark) [class*="text-surface-container-high/90"],
-  html:not(.dark) [class*="text-surface-container-high/70"] {
+  html:not(.dark) [class*="text-surface-container-high/70"],
+  html:not(.dark) [class*="text-surface-container-high"],
+  html:not(.dark) p[class*="text-surface-container-high"],
+  html:not(.dark) p[class*="text-surface-container"],
+  html:not(.dark) [class*="text-[#FAF5EF]"],
+  html:not(.dark) [class*="text-[#F5EBE1]"],
+  html:not(.dark) [class*="text-[#E8DCD0]"] {
     color: #FFFFFF !important;
-    font-weight: 500 !important;
+    font-weight: 550 !important;
     opacity: 1 !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+    text-shadow: none !important;
   }
 
   /* 3D. Secondary Text, Captions, Specifications & Meta inside Dark Containers */
@@ -439,7 +456,7 @@
     color: #FAF5EF !important;
     font-weight: 600 !important;
     opacity: 1 !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+    text-shadow: none !important;
   }
 
   /* 3E. Highlights, Golden Badges, Specifications & Telephone Links in Dark Containers */
@@ -459,7 +476,7 @@
     color: #F7BA7D !important;
     font-weight: 800 !important;
     opacity: 1 !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+    text-shadow: none !important;
   }
 
   /* 3F. Floating Dark Pill Badges over Images */
@@ -477,7 +494,7 @@
     color: #F7BA7D !important;
     font-weight: 800 !important;
     opacity: 1 !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: none !important;
   }
 
   /* 3G. Buttons & Links inside Dark Containers */
@@ -489,6 +506,7 @@
   html:not(.dark) [class*="min-h-"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]) * {
     color: #FFFFFF !important;
     font-weight: 750 !important;
+    text-shadow: none !important;
   }
 
   /* 3H. Protected Nested White Cards inside dark containers */
@@ -509,11 +527,12 @@
   html:not(.dark) [class*="bg-primary"] div.bg-white .text-secondary,
   html:not(.dark) [class*="bg-primary"] div.bg-surface-container-lowest .text-secondary {
     color: #8A2B03 !important;
+    text-shadow: none !important;
   }
 
   /* ==========================================================================
      4. DARK MODE: 100% MAXIMUM VISIBILITY ULTRA-CONTRAST (html.dark)
-     (Pure Brilliant White & Radiant Amber on Pure Obsidian)
+     (Pure Brilliant White & Radiant Amber on Pure Obsidian, ZERO Shadows)
      ========================================================================== */
   html.dark {
     color-scheme: dark;
@@ -524,6 +543,7 @@
     font-size: 15.5px;
     line-height: 26px;
     font-weight: 500;
+    text-shadow: none !important;
   }
 
   /* Dark Mode Surfaces */
@@ -546,7 +566,7 @@
   html.dark .text-title, html.dark .text-primary {
     color: #FFFFFF !important;
     font-weight: 850 !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: none !important;
   }
 
   /* Dark Mode Paragraphs, Lists & Body Text: Pure Solid White (21:1 Contrast Ratio) */
@@ -561,6 +581,7 @@
     color: #FFFFFF !important;
     font-weight: 500 !important;
     opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   /* Dark Mode Secondary, Meta, Variant & Description Text: Bright Clean Off-White */
@@ -582,6 +603,7 @@
     color: #F3F4F6 !important;
     font-weight: 550 !important;
     opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   /* Dark Mode Small Labels, Badges, Category Chips, Dates & Captions: Pure White */
@@ -593,6 +615,7 @@
     color: #FFFFFF !important;
     font-weight: 800 !important;
     opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   /* Dark Mode Accents, Highlights & Taglines: Radiant Luminous Amber Gold */
@@ -609,6 +632,7 @@
     color: #FDBA74 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   /* Dark Mode Opacity Overrides: Eliminate all washed-out text */
@@ -710,6 +734,7 @@
   html:not(.dark) header a.brand-logo,
   html:not(.dark) header a.brand-logo * {
     color: #000000 !important;
+    text-shadow: none !important;
   }
   html:not(.dark) header a.brand-logo span.font-serif {
     color: #000000 !important;
@@ -723,6 +748,7 @@
   html.dark header a.brand-logo,
   html.dark header a.brand-logo * {
     color: #FFFFFF !important;
+    text-shadow: none !important;
   }
   html.dark header a.brand-logo span.font-serif {
     color: #FFFFFF !important;
@@ -740,6 +766,7 @@
   html:not(.dark) header nav button.nav-link-default * {
     color: #000000 !important;
     font-weight: 750 !important;
+    text-shadow: none !important;
   }
   html:not(.dark) header nav a.nav-link-default:hover,
   html:not(.dark) header nav button.nav-link-default:hover,
@@ -755,6 +782,7 @@
   html.dark header nav button.nav-link-default * {
     color: #FFFFFF !important;
     font-weight: 650 !important;
+    text-shadow: none !important;
   }
   html.dark header nav a.nav-link-default:hover,
   html.dark header nav button.nav-link-default:hover,
@@ -776,6 +804,7 @@
     background-color: #24140A !important;
     color: #FFFFFF !important;
     font-weight: 800 !important;
+    text-shadow: none !important;
   }
   html.dark header nav a.nav-link-active,
   html.dark header nav button.nav-link-active,
@@ -787,6 +816,7 @@
     color: #FFFFFF !important;
     font-weight: 800 !important;
     box-shadow: 0 2px 8px rgba(184, 93, 25, 0.35) !important;
+    text-shadow: none !important;
   }
 
   /* Dropdown Menu Popover */
@@ -819,6 +849,7 @@
     color: #FFFFFF !important;
     font-weight: 800 !important;
     box-shadow: 0 2px 8px rgba(143, 62, 11, 0.25) !important;
+    text-shadow: none !important;
   }
   html:not(.dark) header .nav-quote-btn:hover { background-color: #B85D19 !important; }
   html.dark header .nav-quote-btn,
@@ -827,6 +858,7 @@
     color: #FFFFFF !important;
     font-weight: 800 !important;
     box-shadow: 0 2px 10px rgba(184, 93, 25, 0.4) !important;
+    text-shadow: none !important;
   }
   html.dark header .nav-quote-btn:hover { filter: brightness(1.1); }
 
@@ -892,6 +924,7 @@
   html:not(.dark) #mobile-menu a:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn) * {
     color: #000000 !important;
     font-weight: 750 !important;
+    text-shadow: none !important;
   }
   html:not(.dark) #mobile-menu a.nav-link-drawer:hover,
   html:not(.dark) #mobile-menu a:hover:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn) {
@@ -908,6 +941,7 @@
     background-color: #24140A !important;
     color: #FFFFFF !important;
     font-weight: 800 !important;
+    text-shadow: none !important;
   }
 
   html.dark #mobile-menu {
@@ -919,6 +953,7 @@
   html.dark #mobile-menu button:not(.theme-toggle-btn):not(.dir-toggle-btn) {
     color: #FAF5EF !important;
     font-weight: 600 !important;
+    text-shadow: none !important;
   }
   html.dark #mobile-menu a.nav-link-drawer:hover,
   html.dark #mobile-menu a:hover:not(.nav-link-active):not(.mobile-home-active):not(.nav-quote-btn) {
@@ -935,6 +970,7 @@
     background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
     color: #FFFFFF !important;
     font-weight: 800 !important;
+    text-shadow: none !important;
   }
 
   /* ==========================================================================
@@ -953,6 +989,7 @@
     color: #000000 !important;
     border: 1.5px solid #8C7769 !important;
     font-weight: 750 !important;
+    text-shadow: none !important;
   }
   html:not(.dark) .filter-btn:hover:not(.active-filter):not(.active):not(.bg-primary-container),
   html:not(.dark) .service-filter-btn:hover:not(.active):not(.bg-primary) {
@@ -982,6 +1019,7 @@
     color: #FFFFFF !important;
     border-color: #24140A !important;
     font-weight: 800 !important;
+    text-shadow: none !important;
   }
 
   /* Filter Pills in Dark Mode */
@@ -997,6 +1035,7 @@
     color: #FFFFFF !important;
     border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
     font-weight: 700 !important;
+    text-shadow: none !important;
   }
   html.dark .filter-btn:hover:not(.active-filter):not(.active),
   html.dark .service-filter-btn:hover:not(.active) {
@@ -1024,6 +1063,7 @@
     color: #FFFFFF !important;
     border-color: #F7BA7D !important;
     font-weight: 800 !important;
+    text-shadow: none !important;
   }
 
   /* Call-To-Action & Primary Buttons across all pages */
@@ -1046,6 +1086,7 @@
     background-color: #8F3E0B !important;
     color: #FFFFFF !important;
     font-weight: 750 !important;
+    text-shadow: none !important;
   }
   html:not(.dark) a.bg-primary-container:hover,
   html:not(.dark) button.bg-primary-container:hover,
@@ -1080,6 +1121,7 @@
     border: 1.5px solid #F7BA7D !important;
     box-shadow: 0 4px 20px 0 rgba(212, 139, 78, 0.45) !important;
     font-weight: 750 !important;
+    text-shadow: none !important;
   }
 
   /* Form Elements */
@@ -1090,6 +1132,7 @@
     color: #000000 !important;
     border: 1.5px solid #8C7769 !important;
     font-weight: 600 !important;
+    text-shadow: none !important;
   }
   html:not(.dark) input::placeholder,
   html:not(.dark) textarea::placeholder {
@@ -1105,6 +1148,7 @@
     color: #FFFFFF !important;
     border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
     font-weight: 550 !important;
+    text-shadow: none !important;
   }
   html.dark input::placeholder,
   html.dark textarea::placeholder {
