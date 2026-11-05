@@ -148,7 +148,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   }
 
-  /* ==========================================================================
+    /* ==========================================================================
      GLOBAL ZERO LETTER SHADOW (Sharp, Clean Vector Typography)
      ========================================================================== */
   *, *::before, *::after {
@@ -160,7 +160,9 @@
 
   /* ==========================================================================
      2. LIGHT MODE: 100% MAXIMUM VISIBILITY ULTRA-CONTRAST (html:not(.dark))
-     Pure Solid Pitch Black (#000000) for EVERY word, line, heading, button & label!
+     Pure Solid Pitch Black (#000000) for Headings, Body, Labels & Inputs
+     Warm Amber Gradient with Solid Black Text for CTA Buttons (NO WHITE FONT IN LIGHT MODE)
+     Deep Terracotta (#8A2B03) for Accents & Brand Taglines
      ========================================================================== */
   html:not(.dark) {
     color-scheme: light;
@@ -183,12 +185,14 @@
   html:not(.dark) .bg-surface-container-highest { background-color: #D4C6B4 !important; }
   html:not(.dark) .bg-surface-variant { background-color: #E8DFD2 !important; }
 
-  /* Universal 100% Pure Solid Black Typography in Light Mode */
+  /* Universal 100% Pure Solid Black Headings */
   html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3,
   html:not(.dark) h4, html:not(.dark) h5, html:not(.dark) h6,
   html:not(.dark) .font-title-lg, html:not(.dark) .font-title-md, html:not(.dark) .font-title-sm,
   html:not(.dark) .font-headline-lg, html:not(.dark) .font-headline-md, html:not(.dark) .font-headline-sm,
   html:not(.dark) .font-display, html:not(.dark) .font-display-lg, html:not(.dark) .font-display-md,
+  html:not(.dark) .text-headline-lg, html:not(.dark) .text-headline-md, html:not(.dark) .text-headline-sm,
+  html:not(.dark) .text-title-lg, html:not(.dark) .text-title-md, html:not(.dark) .text-title-sm,
   html:not(.dark) .text-title, html:not(.dark) .text-primary {
     color: #000000 !important;
     font-weight: 850 !important;
@@ -196,6 +200,7 @@
     text-shadow: none !important;
   }
 
+  /* Universal 100% Pure Solid Black Body, Paragraphs, Lists & Tables */
   html:not(.dark) p,
   html:not(.dark) li,
   html:not(.dark) td,
@@ -253,6 +258,15 @@
     text-shadow: none !important;
   }
 
+  /* Pure Solid Black for all Links in Light Mode */
+  html:not(.dark) a:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-[#"]):not(.nav-quote-btn):not(.filter-btn):not(.service-filter-btn) {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
+  html:not(.dark) a:hover:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-[#"]):not(.nav-quote-btn):not(.filter-btn):not(.service-filter-btn) {
+    color: #8A2B03 !important;
+  }
+
   /* Light Mode Box Cards: Distinct Boundaries & Crisp Elevation */
   html:not(.dark) div.bg-surface-container-lowest,
   html:not(.dark) div.bg-surface-container-low,
@@ -292,7 +306,7 @@
     border-color: #C4B19D !important;
   }
 
-  /* Badges & Containers in Light Mode: Light Warm Background with Pure Solid Black Text */
+  /* Badges & Containers in Light Mode */
   html:not(.dark) .bg-secondary-fixed,
   html:not(.dark) .bg-secondary-container,
   html:not(.dark) .bg-tertiary-container {
@@ -300,29 +314,11 @@
     color: #000000 !important;
     border: 1px solid #C4B19D !important;
   }
-  html.dark .bg-secondary-fixed,
-  html.dark .bg-secondary-container {
-    background-color: rgba(184, 93, 25, 0.25) !important;
-    color: #F7BA7D !important;
-    border: 1px solid rgba(247, 186, 125, 0.35) !important;
-  }
-  html.dark .text-on-secondary-fixed,
-  html.dark .text-on-secondary-fixed-variant {
-    color: #F7BA7D !important;
-    font-weight: 750 !important;
-  }
-  html.dark .text-on-primary-fixed {
-    color: #FFFFFF !important;
-    font-weight: 700 !important;
-  }
-  html.dark .text-on-tertiary-fixed {
-    color: #F7BA7D !important;
-    font-weight: 700 !important;
-  }
 
   /* ==========================================================================
      3. UNIVERSAL DARK CONTAINER & HIGH-CONTRAST RULES (html:not(.dark))
      In Light Mode, all cards, banners & heroes render with 100% Pure Solid Black Typography!
+     NO WHITE FONT IN LIGHT MODE!
      ========================================================================== */
 
   /* In Light Mode, convert dark cards and banners to crisp high-contrast light surfaces with pure black text */
@@ -331,38 +327,50 @@
   html:not(.dark) div[class*="bg-[#180F0A]"]:not(button):not(a),
   html:not(.dark) div[class*="bg-[#24150E]"]:not(button):not(a),
   html:not(.dark) div[class*="bg-[#24140A]"]:not(button):not(a),
+  html:not(.dark) div[class*="bg-[#1C1008]"]:not(button):not(a),
   html:not(.dark) div[class*="bg-black"]:not(button):not(a),
   html:not(.dark) section[class*="bg-primary"]:not(button):not(a),
-  html:not(.dark) section[class*="bg-primary-container"]:not(button):not(a) {
+  html:not(.dark) section[class*="bg-primary-container"]:not(button):not(a),
+  html:not(.dark) section[class*="bg-[#180F0A]"]:not(button):not(a),
+  html:not(.dark) section[class*="bg-[#1C1008]"]:not(button):not(a) {
     background-color: #F8F5F0 !important;
     border: 1.5px solid #C4B19D !important;
   }
 
-  /* Universal Pure Solid Black Text Rule for all elements in Light Mode */
-  html:not(.dark) [class*="bg-primary"] *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-primary-container"] *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#180F0A]"] *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#24150E]"] *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#24140A]"] *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-black"] *:not(input):not(textarea):not(select),
+  /* Universal Elimination of White Text in Light Mode: Turn all text on surfaces to Pure Solid Black */
+  html:not(.dark) [class*="bg-primary"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-primary-container"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#180F0A]"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#24150E]"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#24140A]"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#1C1008]"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-black"]:not(button):not(a) *:not(input):not(textarea):not(select),
   html:not(.dark) [class*="text-on-primary"],
   html:not(.dark) [class*="text-on-primary"] *:not(input):not(textarea):not(select),
   html:not(.dark) [class*="text-inverse-on-surface"],
   html:not(.dark) [class*="text-on-primary-container"],
+  html:not(.dark) .!text-white,
+  html:not(.dark) [class*="!text-white"],
+  html:not(.dark) .text-white,
+  html:not(.dark) [class*="text-white"],
+  html:not(.dark) [class*="text-[#FAF5EF]"],
+  html:not(.dark) [class*="text-[#FFFFFF]"],
+  html:not(.dark) .text-surface-bright,
   html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3, html:not(.dark) h4, html:not(.dark) h5, html:not(.dark) h6,
-  html:not(.dark) p, html:not(.dark) span:not(.material-symbols-outlined), html:not(.dark) a:not(.material-symbols-outlined) {
+  html:not(.dark) p, html:not(.dark) span:not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp) {
     color: #000000 !important;
     text-shadow: none !important;
   }
 
-  /* Light Mode Hero Overlays: Ensure light watermark backdrop so black text is 100% legible */
+  /* Light Mode Hero Overlays: Soft light backdrop so black text is 100% legible */
   html:not(.dark) section.relative > div.absolute.inset-0.z-0 > div[class*="bg-gradient"] {
     background: rgba(248, 245, 240, 0.90) !important;
   }
 
   /* ==========================================================================
      4. DARK MODE: 100% MAXIMUM VISIBILITY ULTRA-CONTRAST (html.dark)
-     (Pure Brilliant White & Radiant Amber on Pure Obsidian, ZERO Shadows)
+     Pure Brilliant White (#FFFFFF) & Radiant Amber Gold (#FDBA74) on Pure Obsidian
+     ZERO Shadows, ZERO Invisibility, ZERO Dark Clashes!
      ========================================================================== */
   html.dark {
     color-scheme: dark;
@@ -388,7 +396,7 @@
 
   /* Dark Mode ALL Headings: Pure Brilliant White (21:1 Contrast Ratio) */
   html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6,
-  html.dark .font-display-lg, html.dark .font-display-md, html.dark .font-display-sm,
+  html.dark .font-display, html.dark .font-display-lg, html.dark .font-display-md, html.dark .font-display-sm,
   html.dark .font-headline-lg, html.dark .font-headline-md, html.dark .font-headline-sm,
   html.dark .text-headline-lg, html.dark .text-headline-md, html.dark .text-headline-sm,
   html.dark .font-title-lg, html.dark .font-title-md, html.dark .font-title-sm,
@@ -406,12 +414,22 @@
   html.dark th,
   html.dark blockquote,
   html.dark .text-on-surface,
+  html.dark .text-on-background,
   html.dark .font-body-lg, html.dark .font-body-md, html.dark .font-body-sm, html.dark .font-body-xs,
   html.dark .text-body-lg, html.dark .text-body-md, html.dark .text-body-sm, html.dark .text-body-xs {
     color: #FFFFFF !important;
     font-weight: 500 !important;
     opacity: 1 !important;
     text-shadow: none !important;
+  }
+
+  /* Dark Mode ALL Links: Pure White by default, Radiant Amber Gold on Hover */
+  html.dark a:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-[#"]):not(.nav-quote-btn):not(.filter-btn):not(.service-filter-btn) {
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+  }
+  html.dark a:hover:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-[#"]):not(.nav-quote-btn):not(.filter-btn):not(.service-filter-btn) {
+    color: #F7BA7D !important;
   }
 
   /* Dark Mode Secondary, Meta, Variant & Description Text: Bright Clean Off-White */
@@ -425,6 +443,7 @@
   html.dark td.text-on-surface-variant,
   html.dark .text-outline,
   html.dark .text-outline-variant,
+  html.dark [class*="text-outline"],
   html.dark .text-surface-container-high,
   html.dark .text-surface-container,
   html.dark .text-surface-dim,
@@ -448,7 +467,7 @@
     text-shadow: none !important;
   }
 
-  /* Dark Mode Accents, Highlights & Taglines: Radiant Luminous Amber Gold */
+  /* Dark Mode Accents, Highlights, Taglines & Converted Dark Classes: Radiant Luminous Amber Gold */
   html.dark .text-secondary,
   html.dark .text-secondary-fixed,
   html.dark .text-primary-fixed,
@@ -456,9 +475,15 @@
   html.dark [class*="text-[#1C1008]"],
   html.dark [class*="text-[#24150E]"],
   html.dark [class*="text-[#5E4738]"],
+  html.dark [class*="text-[#7A6556]"],
+  html.dark [class*="text-[#8C7769]"],
+  html.dark [class*="text-[#8F3E0B]"],
   html.dark .text-on-secondary-fixed,
+  html.dark .text-on-secondary-fixed-variant,
+  html.dark .text-on-secondary-container,
   html.dark .text-on-tertiary-fixed,
-  html.dark .text-on-primary-fixed {
+  html.dark .text-on-primary-fixed,
+  html.dark .text-on-primary-fixed-variant {
     color: #FDBA74 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
@@ -519,6 +544,14 @@
     border-color: rgba(255, 255, 255, 0.25) !important;
   }
 
+  /* Dark Mode Badges */
+  html.dark .bg-secondary-fixed,
+  html.dark .bg-secondary-container {
+    background-color: rgba(184, 93, 25, 0.25) !important;
+    color: #F7BA7D !important;
+    border: 1px solid rgba(247, 186, 125, 0.35) !important;
+  }
+
   /* ==========================================================================
      5. UNIFIED STICKY HEADER & DUAL-THEME CONTRAST
      ========================================================================== */
@@ -560,7 +593,7 @@
     font-weight: 700 !important;
   }
 
-  /* Brand Logo & Tagline (100% Solid Black / Solid White) */
+  /* Brand Logo & Tagline (100% Solid Black in Light Mode / Solid White in Dark Mode) */
   html:not(.dark) header a.brand-logo,
   html:not(.dark) header a.brand-logo * {
     color: #000000 !important;
@@ -671,7 +704,7 @@
   html.dark header .nav-dropdown a.dropdown-item-active { background-color: rgba(255, 255, 255, 0.12) !important; }
   html.dark header .nav-dropdown a.dropdown-item-active .nav-dropdown-title { color: #F7BA7D !important; }
 
-  /* Header Quote CTA Button in Light Mode: Warm Amber with Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
+  /* Header Quote CTA Button in Light Mode: Warm Amber with Solid Black Text */
   html:not(.dark) header .nav-quote-btn,
   html:not(.dark) header .nav-quote-btn * {
     background: linear-gradient(135deg, #F5C7A1 0%, #ECC8AA 100%) !important;
@@ -807,9 +840,10 @@
   }
 
   /* ==========================================================================
-     6. BUTTONS, FILTER PILLS & FORM INPUTS
+     6. BUTTONS, FILTER PILLS & FORM INPUTS (Universal Dual-Theme Engine)
      ========================================================================== */
-  /* Filter Pills in Light Mode */
+
+  /* Inactive Filter Pills in Light Mode: Crisp White Surface with Solid Black Text */
   html:not(.dark) .filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
   html:not(.dark) .service-filter-btn:not(.active):not(.bg-primary):not(.bg-primary-container),
   html:not(.dark) #category-pills button:not(.active):not(.bg-primary-container):not(.bg-primary),
@@ -830,7 +864,7 @@
     color: #8A2B03 !important;
   }
 
-  /* Active Filter Pills in Light Mode: Warm Surface with Terracotta Border & Pure Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
+  /* Active Filter Pills in Light Mode: Warm Surface with Terracotta Border & Pure Solid Black Text (NO WHITE FONT) */
   html:not(.dark) .filter-btn.active,
   html:not(.dark) .filter-btn.active-filter,
   html:not(.dark) .service-filter-btn.active,
@@ -855,7 +889,7 @@
     text-shadow: none !important;
   }
 
-  /* Filter Pills in Dark Mode */
+  /* Inactive Filter Pills in Dark Mode */
   html.dark .filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
   html.dark .service-filter-btn:not(.active):not(.bg-primary):not(.bg-primary-container),
   html.dark #category-pills button:not(.active):not(.bg-primary-container):not(.bg-primary),
@@ -875,6 +909,8 @@
     border-color: #F7BA7D !important;
     color: #F7BA7D !important;
   }
+
+  /* Active Filter Pills in Dark Mode */
   html.dark .filter-btn.active,
   html.dark .filter-btn.active-filter,
   html.dark .service-filter-btn.active,
@@ -899,66 +935,247 @@
     text-shadow: none !important;
   }
 
-  /* Call-To-Action & Primary Buttons in Light Mode: Warm Amber with Pure Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
+  /* Primary & Call-To-Action Buttons in Light Mode: Warm Amber with Pure Solid Black Text */
   html:not(.dark) a.bg-primary-container,
   html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]),
-  html:not(.dark) a[class*="bg-[#B85D19]"],
-  html:not(.dark) button[class*="bg-[#B85D19]"],
-  html:not(.dark) a.bg-primary,
+  html:not(.dark) a.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]),
   html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]),
   html:not(.dark) a.bg-secondary,
   html:not(.dark) button.bg-secondary,
-  html:not(.dark) a.bg-primary-container *,
-  html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]) *,
-  html:not(.dark) a[class*="bg-[#B85D19]"] *,
-  html:not(.dark) button[class*="bg-[#B85D19]"] *,
-  html:not(.dark) a.bg-primary *,
-  html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]) *,
-  html:not(.dark) a.bg-secondary *,
-  html:not(.dark) button.bg-secondary * {
+  html:not(.dark) a[class*="bg-[#B85D19]"],
+  html:not(.dark) button[class*="bg-[#B85D19]"],
+  html:not(.dark) a[class*="bg-[#8F3E0B]"],
+  html:not(.dark) button[class*="bg-[#8F3E0B]"],
+  html:not(.dark) a[class*="bg-[#7A3A16]"],
+  html:not(.dark) button[class*="bg-[#7A3A16]"],
+  html:not(.dark) a[class*="bg-[#5E2B0F]"],
+  html:not(.dark) button[class*="bg-[#5E2B0F]"],
+  html:not(.dark) a[class*="bg-[#9E460E]"],
+  html:not(.dark) button[class*="bg-[#9E460E]"],
+  html:not(.dark) a[class*="bg-[#9E4C11]"],
+  html:not(.dark) button[class*="bg-[#9E4C11]"],
+  html:not(.dark) button[type="submit"]:not([class*="bg-transparent"]),
+  html:not(.dark) a.nav-quote-btn,
+  html:not(.dark) button.nav-quote-btn {
     background: linear-gradient(135deg, #F5C7A1 0%, #ECC8AA 100%) !important;
     color: #000000 !important;
     border: 1.5px solid #8A2B03 !important;
-    font-weight: 800 !important;
+    font-weight: 850 !important;
+    box-shadow: 0 2px 8px rgba(138, 43, 3, 0.2) !important;
+    text-shadow: none !important;
+  }
+  html:not(.dark) a.bg-primary-container *,
+  html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]) *,
+  html:not(.dark) a.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]) *,
+  html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]) *,
+  html:not(.dark) a.bg-secondary *,
+  html:not(.dark) button.bg-secondary *,
+  html:not(.dark) a[class*="bg-[#B85D19]"] *,
+  html:not(.dark) button[class*="bg-[#B85D19]"] *,
+  html:not(.dark) a[class*="bg-[#8F3E0B]"] *,
+  html:not(.dark) button[class*="bg-[#8F3E0B]"] *,
+  html:not(.dark) a[class*="bg-[#7A3A16]"] *,
+  html:not(.dark) button[class*="bg-[#7A3A16]"] *,
+  html:not(.dark) a[class*="bg-[#5E2B0F]"] *,
+  html:not(.dark) button[class*="bg-[#5E2B0F]"] *,
+  html:not(.dark) a[class*="bg-[#9E460E]"] *,
+  html:not(.dark) button[class*="bg-[#9E460E]"] *,
+  html:not(.dark) a[class*="bg-[#9E4C11]"] *,
+  html:not(.dark) button[class*="bg-[#9E4C11]"] *,
+  html:not(.dark) button[type="submit"] *,
+  html:not(.dark) a.nav-quote-btn *,
+  html:not(.dark) button.nav-quote-btn * {
+    color: #000000 !important;
+    font-weight: 850 !important;
     text-shadow: none !important;
   }
   html:not(.dark) a.bg-primary-container:hover,
   html:not(.dark) button.bg-primary-container:hover,
-  html:not(.dark) a[class*="bg-[#B85D19]"]:hover,
-  html:not(.dark) button[class*="bg-[#B85D19]"]:hover,
   html:not(.dark) a.bg-primary:hover,
   html:not(.dark) button.bg-primary:hover,
   html:not(.dark) a.bg-secondary:hover,
-  html:not(.dark) button.bg-secondary:hover {
+  html:not(.dark) button.bg-secondary:hover,
+  html:not(.dark) a[class*="bg-[#B85D19]"]:hover,
+  html:not(.dark) button[class*="bg-[#B85D19]"]:hover,
+  html:not(.dark) a[class*="bg-[#8F3E0B]"]:hover,
+  html:not(.dark) button[class*="bg-[#8F3E0B]"]:hover,
+  html:not(.dark) a[class*="bg-[#7A3A16]"]:hover,
+  html:not(.dark) button[class*="bg-[#7A3A16]"]:hover,
+  html:not(.dark) a[class*="bg-[#5E2B0F]"]:hover,
+  html:not(.dark) button[class*="bg-[#5E2B0F]"]:hover,
+  html:not(.dark) a[class*="bg-[#9E460E]"]:hover,
+  html:not(.dark) button[class*="bg-[#9E460E]"]:hover,
+  html:not(.dark) a[class*="bg-[#9E4C11]"]:hover,
+  html:not(.dark) button[class*="bg-[#9E4C11]"]:hover,
+  html:not(.dark) button[type="submit"]:hover,
+  html:not(.dark) a.nav-quote-btn:hover,
+  html:not(.dark) button.nav-quote-btn:hover {
     background: #E5A976 !important;
     color: #000000 !important;
   }
 
+  /* Secondary / Ghost / Outline Buttons in Light Mode: Crisp White Card Button with Solid Black Text */
+  html:not(.dark) a[class*="bg-white/"],
+  html:not(.dark) button[class*="bg-white/"],
+  html:not(.dark) a[class*="bg-surface/"],
+  html:not(.dark) button[class*="bg-surface/"],
+  html:not(.dark) a[class*="border-white/"],
+  html:not(.dark) button[class*="border-white/"],
+  html:not(.dark) a[class*="bg-transparent"][class*="rounded"],
+  html:not(.dark) button[class*="bg-transparent"][class*="rounded"] {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid #8A2B03 !important;
+    color: #000000 !important;
+    font-weight: 800 !important;
+    box-shadow: 0 2px 6px rgba(36, 21, 14, 0.08) !important;
+    text-shadow: none !important;
+  }
+  html:not(.dark) a[class*="bg-white/"] *,
+  html:not(.dark) button[class*="bg-white/"] *,
+  html:not(.dark) a[class*="bg-surface/"] *,
+  html:not(.dark) button[class*="bg-surface/"] *,
+  html:not(.dark) a[class*="border-white/"] *,
+  html:not(.dark) button[class*="border-white/"] *,
+  html:not(.dark) a[class*="bg-transparent"][class*="rounded"] *,
+  html:not(.dark) button[class*="bg-transparent"][class*="rounded"] * {
+    color: #000000 !important;
+    font-weight: 800 !important;
+    text-shadow: none !important;
+  }
+  html:not(.dark) a[class*="bg-white/"]:hover,
+  html:not(.dark) button[class*="bg-white/"]:hover,
+  html:not(.dark) a[class*="bg-surface/"]:hover,
+  html:not(.dark) button[class*="bg-surface/"]:hover,
+  html:not(.dark) a[class*="border-white/"]:hover,
+  html:not(.dark) button[class*="border-white/"]:hover,
+  html:not(.dark) a[class*="bg-transparent"][class*="rounded"]:hover,
+  html:not(.dark) button[class*="bg-transparent"][class*="rounded"]:hover {
+    background-color: #F2EBE1 !important;
+    color: #8A2B03 !important;
+    border-color: #8A2B03 !important;
+  }
+
+  /* Primary & Call-To-Action Buttons in Dark Mode: Radiant Glowing Amber with Pure White Text */
   html.dark a.bg-primary-container,
-  html.dark button.bg-primary-container,
-  html.dark a[class*="bg-[#B85D19]"],
-  html.dark button[class*="bg-[#B85D19]"],
-  html.dark a.bg-primary,
-  html.dark button.bg-primary,
+  html.dark button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]),
+  html.dark a.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]),
+  html.dark button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]),
   html.dark a.bg-secondary,
   html.dark button.bg-secondary,
-  html.dark a.bg-primary-container *,
-  html.dark button.bg-primary-container *,
-  html.dark a[class*="bg-[#B85D19]"] *,
-  html.dark button[class*="bg-[#B85D19]"] *,
-  html.dark a.bg-primary *,
-  html.dark button.bg-primary *,
-  html.dark a.bg-secondary *,
-  html.dark button.bg-secondary * {
+  html.dark a[class*="bg-[#B85D19]"],
+  html.dark button[class*="bg-[#B85D19]"],
+  html.dark a[class*="bg-[#8F3E0B]"],
+  html.dark button[class*="bg-[#8F3E0B]"],
+  html.dark a[class*="bg-[#7A3A16]"],
+  html.dark button[class*="bg-[#7A3A16]"],
+  html.dark a[class*="bg-[#5E2B0F]"],
+  html.dark button[class*="bg-[#5E2B0F]"],
+  html.dark a[class*="bg-[#9E460E]"],
+  html.dark button[class*="bg-[#9E460E]"],
+  html.dark a[class*="bg-[#9E4C11]"],
+  html.dark button[class*="bg-[#9E4C11]"],
+  html.dark button[type="submit"]:not([class*="bg-transparent"]),
+  html.dark a.nav-quote-btn,
+  html.dark button.nav-quote-btn {
     background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
     color: #FFFFFF !important;
     border: 1.5px solid #F7BA7D !important;
     box-shadow: 0 4px 20px 0 rgba(212, 139, 78, 0.45) !important;
+    font-weight: 800 !important;
+    text-shadow: none !important;
+  }
+  html.dark a.bg-primary-container *,
+  html.dark button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]) *,
+  html.dark a.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]) *,
+  html.dark button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]) *,
+  html.dark a.bg-secondary *,
+  html.dark button.bg-secondary *,
+  html.dark a[class*="bg-[#B85D19]"] *,
+  html.dark button[class*="bg-[#B85D19]"] *,
+  html.dark a[class*="bg-[#8F3E0B]"] *,
+  html.dark button[class*="bg-[#8F3E0B]"] *,
+  html.dark a[class*="bg-[#7A3A16]"] *,
+  html.dark button[class*="bg-[#7A3A16]"] *,
+  html.dark a[class*="bg-[#5E2B0F]"] *,
+  html.dark button[class*="bg-[#5E2B0F]"] *,
+  html.dark a[class*="bg-[#9E460E]"] *,
+  html.dark button[class*="bg-[#9E460E]"] *,
+  html.dark a[class*="bg-[#9E4C11]"] *,
+  html.dark button[class*="bg-[#9E4C11]"] *,
+  html.dark button[type="submit"] *,
+  html.dark a.nav-quote-btn *,
+  html.dark button.nav-quote-btn * {
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+    text-shadow: none !important;
+  }
+  html.dark a.bg-primary-container:hover,
+  html.dark button.bg-primary-container:hover,
+  html.dark a.bg-primary:hover,
+  html.dark button.bg-primary:hover,
+  html.dark a.bg-secondary:hover,
+  html.dark button.bg-secondary:hover,
+  html.dark a[class*="bg-[#B85D19]"]:hover,
+  html.dark button[class*="bg-[#B85D19]"]:hover,
+  html.dark a[class*="bg-[#8F3E0B]"]:hover,
+  html.dark button[class*="bg-[#8F3E0B]"]:hover,
+  html.dark a[class*="bg-[#7A3A16]"]:hover,
+  html.dark button[class*="bg-[#7A3A16]"]:hover,
+  html.dark a[class*="bg-[#5E2B0F]"]:hover,
+  html.dark button[class*="bg-[#5E2B0F]"]:hover,
+  html.dark a[class*="bg-[#9E460E]"]:hover,
+  html.dark button[class*="bg-[#9E460E]"]:hover,
+  html.dark a[class*="bg-[#9E4C11]"]:hover,
+  html.dark button[class*="bg-[#9E4C11]"]:hover,
+  html.dark button[type="submit"]:hover,
+  html.dark a.nav-quote-btn:hover,
+  html.dark button.nav-quote-btn:hover {
+    filter: brightness(1.12);
+    color: #FFFFFF !important;
+  }
+
+  /* Secondary / Ghost / Outline Buttons in Dark Mode: Frosted Obsidian with Crisp Border & White Text */
+  html.dark a[class*="bg-white/"],
+  html.dark button[class*="bg-white/"],
+  html.dark a[class*="bg-surface/"],
+  html.dark button[class*="bg-surface/"],
+  html.dark a[class*="border-white/"],
+  html.dark button[class*="border-white/"],
+  html.dark a[class*="bg-transparent"][class*="rounded"],
+  html.dark button[class*="bg-transparent"][class*="rounded"] {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+    color: #FFFFFF !important;
+    font-weight: 750 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+    text-shadow: none !important;
+  }
+  html.dark a[class*="bg-white/"] *,
+  html.dark button[class*="bg-white/"] *,
+  html.dark a[class*="bg-surface/"] *,
+  html.dark button[class*="bg-surface/"] *,
+  html.dark a[class*="border-white/"] *,
+  html.dark button[class*="border-white/"] *,
+  html.dark a[class*="bg-transparent"][class*="rounded"] *,
+  html.dark button[class*="bg-transparent"][class*="rounded"] * {
+    color: #FFFFFF !important;
     font-weight: 750 !important;
     text-shadow: none !important;
   }
+  html.dark a[class*="bg-white/"]:hover,
+  html.dark button[class*="bg-white/"]:hover,
+  html.dark a[class*="bg-surface/"]:hover,
+  html.dark button[class*="bg-surface/"]:hover,
+  html.dark a[class*="border-white/"]:hover,
+  html.dark button[class*="border-white/"]:hover,
+  html.dark a[class*="bg-transparent"][class*="rounded"]:hover,
+  html.dark button[class*="bg-transparent"][class*="rounded"]:hover {
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    border-color: #F7BA7D !important;
+    color: #F7BA7D !important;
+  }
 
-  /* Form Elements */
+  /* Form Elements in Light Mode */
   html:not(.dark) input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
   html:not(.dark) textarea,
   html:not(.dark) select {
@@ -975,6 +1192,7 @@
     opacity: 1 !important;
   }
 
+  /* Form Elements in Dark Mode */
   html.dark input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
   html.dark textarea,
   html.dark select {
