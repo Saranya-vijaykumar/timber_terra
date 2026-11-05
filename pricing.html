@@ -668,19 +668,19 @@
   }
   html:not(.dark) header {
     background-color: #FAF7F2 !important;
-    border-bottom: 1.5px solid #CFBEAC !important;
+    border-bottom: none !important; border: none !important;
     box-shadow: 0 2px 12px rgba(36, 21, 14, 0.06) !important;
   }
   html.dark header {
     background-color: #160D08 !important;
-    border-bottom: 1.5px solid rgba(255, 255, 255, 0.16) !important;
+    border-bottom: none !important; border: none !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
   }
 
   /* Top Utility Sub-Bar */
   html:not(.dark) header .top-utility-bar {
     background-color: #F0EAE1 !important;
-    border-bottom: 1px solid #CFBEAC !important;
+    border-bottom: none !important; border: none !important;
     color: #000000 !important;
   }
   html:not(.dark) header .top-utility-bar a {
@@ -697,7 +697,7 @@
 
   html.dark header .top-utility-bar {
     background-color: #100804 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-bottom: none !important; border: none !important;
     color: #FFFFFF !important;
   }
   html.dark header .top-utility-bar a {
@@ -1547,9 +1547,9 @@ tailwind.config = {
   </script>
 
 </head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-fixed"><!-- Unified Global Header -->
-<header class="sticky top-0 left-0 right-0 z-50 bg-surface/95 dark:bg-[#160D08]/95 backdrop-blur-xl border-b border-surface-container-high/40 dark:border-white/15 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<header class="sticky top-0 left-0 right-0 z-50 bg-surface/95 dark:bg-[#160D08]/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
   <!-- Top Utility Sub-Bar (Desktop Only) -->
-  <div class="top-utility-bar bg-surface-container-low dark:bg-[#100804] text-on-surface-variant dark:text-white hidden lg:block border-b border-surface-container-high/40 dark:border-white/10">
+  <div class="top-utility-bar bg-surface-container-low dark:bg-[#100804] text-on-surface-variant dark:text-white hidden lg:block">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-8 flex items-center justify-between text-xs font-label-md tracking-wider uppercase">
       <div class="flex items-center gap-2 truncate">
         <span class="w-2 h-2 rounded-full bg-[#B85D19] shrink-0"></span>
