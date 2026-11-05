@@ -527,7 +527,7 @@
     text-shadow: none !important;
   }
 
-  /* 3F. Floating Dark Pill Badges over Images */
+  /* 3F. Floating Pill Badges over Images in Light Mode: Solid White with Pure Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
   html:not(.dark) span[class*="bg-[#180F0A]"],
   html:not(.dark) span[class*="bg-[#140C07]"],
   html:not(.dark) span[class*="bg-[#24150E]"],
@@ -539,7 +539,9 @@
   html:not(.dark) span[class*="bg-[#1"] *,
   html:not(.dark) span[class*="bg-primary"] *,
   html:not(.dark) span[class*="bg-primary-container"] * {
-    color: #F7BA7D !important;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border: 1.5px solid #8C7769 !important;
     font-weight: 800 !important;
     opacity: 1 !important;
     text-shadow: none !important;
@@ -840,18 +842,17 @@
     background-color: rgba(255, 255, 255, 0.08) !important;
   }
 
-  /* Active Nav Link: Pure Brilliant White on Dark Pill */
+  /* Active Nav Link in Light Mode: Light Warm Pill with Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
   html:not(.dark) header nav a.nav-link-active,
   html:not(.dark) header nav button.nav-link-active,
   html:not(.dark) header nav a.nav-link-active *,
   html:not(.dark) header nav button.nav-link-active *,
   html:not(.dark) #mobile-menu a.nav-link-active,
-  html:not(.dark) #mobile-menu a.nav-link-active *,
-  .nav-link-active,
-  .nav-link-active * {
-    background-color: #24140A !important;
-    color: #FFFFFF !important;
-    font-weight: 800 !important;
+  html:not(.dark) #mobile-menu a.nav-link-active * {
+    background-color: #EAE1D4 !important;
+    color: #000000 !important;
+    border: 1.5px solid #8C7769 !important;
+    font-weight: 850 !important;
     text-shadow: none !important;
   }
   html.dark header nav a.nav-link-active,
@@ -890,16 +891,20 @@
   html.dark header .nav-dropdown a.dropdown-item-active { background-color: rgba(255, 255, 255, 0.12) !important; }
   html.dark header .nav-dropdown a.dropdown-item-active .nav-dropdown-title { color: #F7BA7D !important; }
 
-  /* Header Quote CTA Button */
+  /* Header Quote CTA Button in Light Mode: Warm Amber with Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
   html:not(.dark) header .nav-quote-btn,
   html:not(.dark) header .nav-quote-btn * {
-    background-color: #8F3E0B !important;
-    color: #FFFFFF !important;
-    font-weight: 800 !important;
-    box-shadow: 0 2px 8px rgba(143, 62, 11, 0.25) !important;
+    background: linear-gradient(135deg, #F5C7A1 0%, #ECC8AA 100%) !important;
+    color: #000000 !important;
+    border: 1.5px solid #8A2B03 !important;
+    font-weight: 850 !important;
+    box-shadow: 0 2px 8px rgba(138, 43, 3, 0.2) !important;
     text-shadow: none !important;
   }
-  html:not(.dark) header .nav-quote-btn:hover { background-color: #B85D19 !important; }
+  html:not(.dark) header .nav-quote-btn:hover {
+    background: #E5A976 !important;
+    color: #000000 !important;
+  }
   html.dark header .nav-quote-btn,
   html.dark header .nav-quote-btn * {
     background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
@@ -1045,7 +1050,7 @@
     color: #8A2B03 !important;
   }
 
-  /* Active Filter Pills in Light Mode (Pure Solid White on Pure Dark Brown) */
+  /* Active Filter Pills in Light Mode: Warm Surface with Terracotta Border & Pure Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
   html:not(.dark) .filter-btn.active,
   html:not(.dark) .filter-btn.active-filter,
   html:not(.dark) .service-filter-btn.active,
@@ -1063,10 +1068,10 @@
   html:not(.dark) #category-pills button.bg-primary-container *,
   html:not(.dark) button.active-filter *,
   html:not(.dark) button[data-category].bg-primary-container * {
-    background-color: #24140A !important;
-    color: #FFFFFF !important;
-    border-color: #24140A !important;
-    font-weight: 800 !important;
+    background-color: #EAE1D4 !important;
+    color: #000000 !important;
+    border: 2px solid #8A2B03 !important;
+    font-weight: 850 !important;
     text-shadow: none !important;
   }
 
@@ -1114,7 +1119,7 @@
     text-shadow: none !important;
   }
 
-  /* Call-To-Action & Primary Buttons across all pages */
+  /* Call-To-Action & Primary Buttons in Light Mode: Warm Amber with Pure Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
   html:not(.dark) a.bg-primary-container,
   html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]),
   html:not(.dark) a[class*="bg-[#B85D19]"],
@@ -1131,9 +1136,10 @@
   html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]) *,
   html:not(.dark) a.bg-secondary *,
   html:not(.dark) button.bg-secondary * {
-    background-color: #8F3E0B !important;
-    color: #FFFFFF !important;
-    font-weight: 750 !important;
+    background: linear-gradient(135deg, #F5C7A1 0%, #ECC8AA 100%) !important;
+    color: #000000 !important;
+    border: 1.5px solid #8A2B03 !important;
+    font-weight: 800 !important;
     text-shadow: none !important;
   }
   html:not(.dark) a.bg-primary-container:hover,
@@ -1144,8 +1150,8 @@
   html:not(.dark) button.bg-primary:hover,
   html:not(.dark) a.bg-secondary:hover,
   html:not(.dark) button.bg-secondary:hover {
-    background-color: #B85D19 !important;
-    color: #FFFFFF !important;
+    background: #E5A976 !important;
+    color: #000000 !important;
   }
 
   html.dark a.bg-primary-container,
@@ -1416,7 +1422,7 @@ tailwind.config = {
     <nav class="hidden xl:flex items-center gap-1.5 2xl:gap-3 text-[14px] 2xl:text-[14.5px] font-semibold tracking-normal whitespace-nowrap">
       <!-- Home Dropdown -->
       <div class="relative group/home">
-        <button class="nav-link-default px-2.5 2xl:px-3 py-1.5 flex items-center gap-1 rounded-lg transition-all focus:outline-none" aria-expanded="false" aria-haspopup="true">
+        <button class="nav-link-default h-9 px-2.5 2xl:px-3 inline-flex items-center justify-center gap-1 rounded-lg transition-all focus:outline-none" aria-expanded="false" aria-haspopup="true">
           <span>Home</span>
           <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover/home:rotate-180">expand_more</span>
         </button>
@@ -1439,12 +1445,12 @@ tailwind.config = {
         </div>
       </div>
 
-      <a href="about.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">About Us</a>
-      <a href="services.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Services</a>
-      <a href="gallery.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Projects</a>
-      <a href="pricing.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Pricing</a>
-      <a href="blog.html" class="nav-link-default px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Blog</a>
-      <a href="contact.html" class="nav-link-active px-2.5 2xl:px-3.5 py-1.5 2xl:py-2 rounded-lg transition-all">Contact</a>
+      <a href="about.html" class="nav-link-default h-9 px-2.5 2xl:px-3.5 inline-flex items-center justify-center rounded-lg transition-all">About Us</a>
+      <a href="services.html" class="nav-link-default h-9 px-2.5 2xl:px-3.5 inline-flex items-center justify-center rounded-lg transition-all">Services</a>
+      <a href="gallery.html" class="nav-link-default h-9 px-2.5 2xl:px-3.5 inline-flex items-center justify-center rounded-lg transition-all">Projects</a>
+      <a href="pricing.html" class="nav-link-default h-9 px-2.5 2xl:px-3.5 inline-flex items-center justify-center rounded-lg transition-all">Pricing</a>
+      <a href="blog.html" class="nav-link-default h-9 px-2.5 2xl:px-3.5 inline-flex items-center justify-center rounded-lg transition-all">Blog</a>
+      <a href="contact.html" class="nav-link-active h-9 px-2.5 2xl:px-3.5 inline-flex items-center justify-center rounded-lg transition-all">Contact</a>
     </nav>
 
     <!-- Action Utilities (Theme, Direction, CTA, Mobile Hamburger) -->
