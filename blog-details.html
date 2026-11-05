@@ -172,90 +172,74 @@
   html:not(.dark) .bg-surface-variant { background-color: #E8DFD2 !important; }
 
   /* Light Mode Headings on Light Surfaces (Pure Pitch Black, 21:1 Contrast Ratio) */
-  html:not(.dark) h1:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-[#"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
-  html:not(.dark) h2:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-[#"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
-  html:not(.dark) h3:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-[#"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
-  html:not(.dark) h4:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-[#"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
-  html:not(.dark) h5:not([class*="text-white"]),
-  html:not(.dark) h6:not([class*="text-white"]),
-  html:not(.dark) .font-display-lg:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-display-md:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-display-sm:not([class*="text-white"]),
-  html:not(.dark) .font-headline-lg:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-headline-md:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-headline-sm:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-headline-lg:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-headline-md:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-headline-sm:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-title-lg:not([class*="text-white"]),
-  html:not(.dark) .font-title-md:not([class*="text-white"]),
-  html:not(.dark) .font-title-sm:not([class*="text-white"]),
-  html:not(.dark) .text-title:not([class*="text-white"]),
-  html:not(.dark) .text-primary:not([class*="text-white"]):not([class*="text-secondary"]):not([class*="text-[#"]):not([class*="dark:"]) {
+  html:not(.dark) h1,
+  html:not(.dark) h2,
+  html:not(.dark) h3,
+  html:not(.dark) h4,
+  html:not(.dark) h5,
+  html:not(.dark) h6,
+  html:not(.dark) .font-title-lg,
+  html:not(.dark) .font-title-md,
+  html:not(.dark) .font-title-sm,
+  html:not(.dark) .text-title,
+  html:not(.dark) .text-primary {
     color: #000000 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
   }
 
-  /* Light Mode Paragraphs & Body Text on Light Surfaces (Pure Pitch Black, 21:1 Contrast Ratio) */
-  html:not(.dark) p:not([class*="text-white"]):not([class*="text-[#E8DCD0]"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-[#"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
-  html:not(.dark) li:not([class*="text-white"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) td:not([class*="text-white"]),
-  html:not(.dark) th:not([class*="text-white"]),
-  html:not(.dark) blockquote:not([class*="text-white"]),
-  html:not(.dark) .text-on-surface:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-body-lg:not([class*="text-white"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-body-md:not([class*="text-white"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-body-sm:not([class*="text-white"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-body-lg:not([class*="text-white"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-body-md:not([class*="text-white"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-body-sm:not([class*="text-white"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-body-xs:not([class*="text-white"]):not([class*="text-on-primary"]) {
+  /* Light Mode Paragraphs & Body Text on Light Surfaces */
+  html:not(.dark) p,
+  html:not(.dark) li,
+  html:not(.dark) td,
+  html:not(.dark) th,
+  html:not(.dark) blockquote,
+  html:not(.dark) .text-on-surface,
+  html:not(.dark) [class*="text-[#5E4738]"],
+  html:not(.dark) [class*="text-[#7A6556]"],
+  html:not(.dark) [class*="text-[#8C7769]"],
+  html:not(.dark) .text-outline,
+  html:not(.dark) .text-outline-variant {
     color: #000000 !important;
-    font-weight: 550 !important;
+    font-weight: 600 !important;
     opacity: 1 !important;
   }
 
   /* Light Mode Secondary, Meta, Captions & Description Text on Light Surfaces */
-  html:not(.dark) .text-on-surface-variant:not([class*="text-white"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) span.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) div.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) p.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) a.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) li.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .text-on-surface-variant,
+  html:not(.dark) span.text-on-surface-variant,
+  html:not(.dark) div.text-on-surface-variant,
+  html:not(.dark) p.text-on-surface-variant,
+  html:not(.dark) a.text-on-surface-variant,
+  html:not(.dark) li.text-on-surface-variant,
   html:not(.dark) label.text-on-surface-variant,
-  html:not(.dark) td.text-on-surface-variant,
-  html:not(.dark) .text-outline:not([class*="text-white"]),
-  html:not(.dark) .text-outline-variant:not([class*="text-white"]),
-  html:not(.dark) [class*="text-[#5E4738]"],
-  html:not(.dark) [class*="text-[#7A6556]"],
-  html:not(.dark) [class*="text-[#8C7769]"] {
+  html:not(.dark) td.text-on-surface-variant {
     color: #000000 !important;
     font-weight: 650 !important;
     opacity: 1 !important;
   }
 
   /* Light Mode Small Labels, Badges & Captions on Light Surfaces */
-  html:not(.dark) .text-label-sm:not([class*="text-white"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-label-md:not([class*="text-white"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-label-lg:not([class*="text-white"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-label-sm:not([class*="text-white"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-label-md:not([class*="text-white"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-label-lg:not([class*="text-white"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .font-caption:not([class*="text-white"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-caption:not([class*="text-white"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) label:not([class*="text-white"]) {
+  html:not(.dark) .text-label-sm,
+  html:not(.dark) .text-label-md,
+  html:not(.dark) .text-label-lg,
+  html:not(.dark) .font-label-sm,
+  html:not(.dark) .font-label-md,
+  html:not(.dark) .font-label-lg,
+  html:not(.dark) .font-caption,
+  html:not(.dark) .text-caption,
+  html:not(.dark) label {
     color: #000000 !important;
     font-weight: 800 !important;
     opacity: 1 !important;
   }
 
-  /* Light Mode Accent & Highlight Text: Deep Terracotta (9.5:1 Contrast) */
-  html:not(.dark) .text-secondary:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(section[class*="bg-[#"] *):not(div[class*="bg-black/"] *),
-  html:not(.dark) .text-secondary-fixed:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) .text-primary-fixed:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) span.text-secondary:not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
-  html:not(.dark) a.text-secondary:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *) {
+  /* Light Mode Accent & Highlight Text on Light Surfaces: Deep Terracotta (9.5:1 Contrast) */
+  html:not(.dark) .text-secondary,
+  html:not(.dark) .text-secondary-fixed,
+  html:not(.dark) .text-primary-fixed,
+  html:not(.dark) span.text-secondary,
+  html:not(.dark) a.text-secondary {
     color: #8A2B03 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
@@ -273,7 +257,7 @@
   }
   html:not(.dark) p.text-surface-container-high,
   html:not(.dark) p.text-surface-container,
-  html:not(.dark) p[class*="text-surface-container"]:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *) {
+  html:not(.dark) p[class*="text-surface-container"] {
     color: #000000 !important;
     font-weight: 550 !important;
   }
@@ -292,8 +276,8 @@
   html:not(.dark) div.bg-white,
   html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
-  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *):not(section[class*="bg-[#"] *),
-  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *):not(section[class*="bg-[#"] *),
+  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:not([class*="bg-primary"]):not([class*="bg-[#1"]):not([class*="bg-[#241"]):not([class*="bg-black"]):not([class*="bg-tertiary-container"]),
+  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:not([class*="bg-primary"]):not([class*="bg-[#1"]):not([class*="bg-[#241"]):not([class*="bg-black"]):not([class*="bg-tertiary-container"]),
   html:not(.dark) a.group[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) a.group[class*="rounded-3xl"][class*="shadow"] {
     border: 1.5px solid #C4B19D !important;
@@ -305,8 +289,8 @@
   html:not(.dark) div.bg-white:hover,
   html:not(.dark) article:not([class*="col-span"]):hover,
   html:not(.dark) .card:hover,
-  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(section[class*="bg-[#"] *),
-  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(section[class*="bg-[#"] *),
+  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover:not([class*="bg-primary"]):not([class*="bg-[#1"]):not([class*="bg-[#241"]):not([class*="bg-black"]):not([class*="bg-tertiary-container"]),
+  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover:not([class*="bg-primary"]):not([class*="bg-[#1"]):not([class*="bg-[#241"]):not([class*="bg-black"]):not([class*="bg-tertiary-container"]),
   html:not(.dark) a.group[class*="rounded-2xl"]:hover,
   html:not(.dark) a.group[class*="rounded-3xl"]:hover {
     border-color: #8A2B03 !important;
@@ -315,8 +299,8 @@
 
   /* Light Mode Dividers */
   html:not(.dark) hr,
-  html:not(.dark) div[class*="border-t"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
-  html:not(.dark) div[class*="border-b"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) div[class*="border-t"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *),
+  html:not(.dark) div[class*="border-b"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *),
   html:not(.dark) section[class*="border-t"]:not([class*="bg-primary"]):not([class*="bg-[#"]),
   html:not(.dark) section[class*="border-b"]:not([class*="bg-primary"]):not([class*="bg-[#"]),
   html:not(.dark) footer[class*="border-t"],
@@ -364,188 +348,167 @@
   }
 
   /* ==========================================================================
-     3. INTENTIONALLY DARK SECTIONS & HEROS (100% MAXIMUM VISIBILITY GUARANTEE)
+     3. UNIVERSAL DARK CONTAINER & HIGH-CONTRAST RULES (html:not(.dark))
+     Cascades AFTER Section 2 and uses higher specificity (0,2,2) to GUARANTEE
+     that NO element in any dark container or badge is EVER black!
      ========================================================================== */
-  /* Headings inside any dark container or section: Pure Brilliant White */
-  section[class*="min-h-"] h1,
-  section[class*="bg-[#140C07]"] h1,
-  section[class*="bg-[#180F0A]"] h1,
-  section[class*="bg-[#120A06]"] h1,
-  section[class*="bg-[#1C1008]"] h1,
-  section[class*="bg-[#24140A]"] h1,
-  section[class*="bg-[#24150E]"] h1,
-  section[class*="bg-primary"] h1,
-  section[class*="bg-primary-container"] h1,
-  section[class*="bg-primary"] h2,
-  section[class*="bg-primary-container"] h2,
-  section[class*="bg-[#140C07]"] h2,
-  section[class*="bg-[#180F0A]"] h2,
-  section[class*="bg-primary"] h3,
-  section[class*="bg-primary-container"] h3,
-  section[class*="bg-[#140C07]"] h3,
-  section[class*="bg-[#180F0A]"] h3,
-  div[class*="bg-black/"] h1,
-  div[class*="bg-black/"] h2,
-  h1.text-white,
-  h2.text-white,
-  h3.text-white {
+
+  /* 3A. Dark Headings inside any dark container or hero */
+  html:not(.dark) [class*="bg-primary"] h1, html:not(.dark) [class*="bg-primary"] h2, html:not(.dark) [class*="bg-primary"] h3, html:not(.dark) [class*="bg-primary"] h4, html:not(.dark) [class*="bg-primary"] h5, html:not(.dark) [class*="bg-primary"] h6,
+  html:not(.dark) [class*="bg-[#1"] h1, html:not(.dark) [class*="bg-[#1"] h2, html:not(.dark) [class*="bg-[#1"] h3, html:not(.dark) [class*="bg-[#1"] h4,
+  html:not(.dark) [class*="bg-[#241"] h1, html:not(.dark) [class*="bg-[#241"] h2, html:not(.dark) [class*="bg-[#241"] h3,
+  html:not(.dark) [class*="bg-black"] h1, html:not(.dark) [class*="bg-black"] h2, html:not(.dark) [class*="bg-black"] h3,
+  html:not(.dark) [class*="min-h-"] h1, html:not(.dark) [class*="min-h-"] h2, html:not(.dark) [class*="min-h-"] h3,
+  html:not(.dark) [class*="text-on-primary"] h1, html:not(.dark) [class*="text-on-primary"] h2, html:not(.dark) [class*="text-on-primary"] h3,
+  html:not(.dark) h1.text-on-primary, html:not(.dark) h2.text-on-primary, html:not(.dark) h3.text-on-primary,
+  html:not(.dark) h1[class*="text-white"], html:not(.dark) h2[class*="text-white"], html:not(.dark) h3[class*="text-white"],
+  html:not(.dark) h1[class*="text-[#FAF5EF]"], html:not(.dark) h2[class*="text-[#FAF5EF]"],
+  html:not(.dark) [class*="text-surface-bright"] {
     color: #FFFFFF !important;
     font-weight: 850 !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
   }
 
-  /* Two-Tone Accent Phrase inside Hero Headings: Radiant Amber Gold */
-  section[class*="min-h-"] h1 span,
-  section[class*="bg-[#140C07]"] h1 span,
-  section[class*="bg-[#180F0A]"] h1 span,
-  section[class*="bg-primary"] h1 span,
-  div[class*="bg-black/"] h1 span,
-  h1 span.text-\[\#F7BA7D\],
-  h1 [class*="text-[#F7BA7D]"],
-  h1 span.italic,
-  h1 .font-serif.italic,
-  h1 .text-secondary {
+  /* 3B. Two-Tone Accent Phrase inside Headings: Radiant Amber Gold */
+  html:not(.dark) [class*="bg-primary"] h1 span, html:not(.dark) [class*="bg-primary"] h2 span,
+  html:not(.dark) [class*="bg-[#1"] h1 span, html:not(.dark) [class*="bg-[#1"] h2 span,
+  html:not(.dark) [class*="bg-[#241"] h1 span,
+  html:not(.dark) [class*="bg-black"] h1 span,
+  html:not(.dark) [class*="min-h-"] h1 span,
+  html:not(.dark) h1 span.text-\[\#F7BA7D\],
+  html:not(.dark) h1 [class*="text-[#F7BA7D]"],
+  html:not(.dark) h1 span.italic,
+  html:not(.dark) h1 .font-serif.italic,
+  html:not(.dark) h2 span.italic {
     color: #F7BA7D !important;
     font-weight: 800 !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
   }
 
-  /* Paragraphs, List Items & Body Text inside any dark container: Pure Solid White */
-  section[class*="min-h-"] p,
-  section[class*="min-h-"] p *,
-  section[class*="bg-[#140C07]"] p,
-  section[class*="bg-[#140C07]"] p *,
-  section[class*="bg-[#180F0A]"] p,
-  section[class*="bg-[#180F0A]"] p *,
-  section[class*="bg-[#120A06]"] p,
-  section[class*="bg-[#1C1008]"] p,
-  section[class*="bg-[#24140A]"] p,
-  section[class*="bg-[#24150E]"] p,
-  section[class*="bg-primary"] p,
-  section[class*="bg-primary"] p *,
-  section[class*="bg-primary-container"] p,
-  section[class*="bg-primary-container"] p *,
-  div[class*="bg-black/"] p,
-  div[class*="bg-black/"] p *,
-  section[class*="bg-primary"] li,
-  section[class*="bg-primary"] li *,
-  section[class*="bg-primary-container"] li,
-  section[class*="bg-primary-container"] li *,
-  p.text-white,
-  p[class*="text-white"],
-  p[class*="text-[#FAF5EF]"],
-  p[class*="text-[#E8DCD0]"] {
+  /* 3C. Paragraphs, List Items & Body Text inside any dark container */
+  html:not(.dark) [class*="bg-primary"] p,
+  html:not(.dark) [class*="bg-primary"] p *,
+  html:not(.dark) [class*="bg-[#1"] p,
+  html:not(.dark) [class*="bg-[#1"] p *,
+  html:not(.dark) [class*="bg-[#241"] p,
+  html:not(.dark) [class*="bg-[#241"] p *,
+  html:not(.dark) [class*="bg-black"] p,
+  html:not(.dark) [class*="bg-black"] p *,
+  html:not(.dark) [class*="min-h-"] p,
+  html:not(.dark) [class*="min-h-"] p *,
+  html:not(.dark) [class*="text-on-primary"] p,
+  html:not(.dark) [class*="text-on-primary"] p *,
+  html:not(.dark) [class*="bg-primary"] li,
+  html:not(.dark) [class*="bg-primary"] li *,
+  html:not(.dark) p.text-on-primary,
+  html:not(.dark) p.text-on-primary-container,
+  html:not(.dark) p.text-inverse-on-surface,
+  html:not(.dark) p[class*="text-white"],
+  html:not(.dark) p[class*="text-[#FAF5EF]"],
+  html:not(.dark) p[class*="text-[#F5EBE1]"],
+  html:not(.dark) p[class*="text-[#E8DCD0]"],
+  html:not(.dark) [class*="text-surface-container-high/80"],
+  html:not(.dark) [class*="text-surface-container-high/90"],
+  html:not(.dark) [class*="text-surface-container-high/70"] {
     color: #FFFFFF !important;
     font-weight: 500 !important;
     opacity: 1 !important;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
   }
 
-  /* Subtext, Meta, Labels & Chips inside dark containers: Radiant Luminous Amber Gold */
-  div[class*="bg-black/"] div[class*="rounded-full"],
-  div[class*="bg-black/"] div[class*="rounded-full"] *,
-  div[class*="bg-[#B85D19]/35"],
-  div[class*="bg-[#B85D19]/35"] *,
-  section[class*="min-h-"] div[class*="rounded-full"],
-  section[class*="min-h-"] div[class*="rounded-full"] *,
-  section[class*="min-h-"] [class*="text-[#F7BA7D]"],
-  section[class*="min-h-"] [class*="text-[#F5C7A1]"],
-  section[class*="bg-primary"] [class*="text-secondary"],
-  section[class*="bg-primary"] [class*="text-label"],
-  section[class*="bg-primary-container"] [class*="text-secondary"],
-  section[class*="bg-primary-container"] [class*="text-label"],
-  section[class*="bg-primary"] [class*="text-surface-container-high"],
-  section[class*="bg-primary-container"] [class*="text-surface-container-high"] {
+  /* 3D. Secondary Text, Captions, Specifications & Meta inside Dark Containers */
+  html:not(.dark) [class*="bg-primary"] .text-on-primary-container,
+  html:not(.dark) [class*="bg-primary"] .text-inverse-on-surface,
+  html:not(.dark) [class*="bg-primary"] .font-caption,
+  html:not(.dark) [class*="bg-primary"] .text-caption,
+  html:not(.dark) [class*="bg-primary"] span.text-caption,
+  html:not(.dark) [class*="bg-primary"] p.text-caption,
+  html:not(.dark) [class*="bg-primary"] .space-y-1\.5 span,
+  html:not(.dark) [class*="bg-primary"] .space-y-3 span,
+  html:not(.dark) [class*="bg-primary"] span[class*="text-primary-fixed"],
+  html:not(.dark) [class*="bg-primary"] [class*="text-surface-container-high"],
+  html:not(.dark) [class*="bg-[#1"] [class*="text-[#F5EBE1]"],
+  html:not(.dark) [class*="bg-[#1"] [class*="text-[#FAF5EF]"],
+  html:not(.dark) [class*="bg-[#1"] [class*="text-[#E8DCD0]"],
+  html:not(.dark) [class*="bg-black"] [class*="text-[#FAF5EF]"],
+  html:not(.dark) [class*="bg-black"] [class*="text-[#E8DCD0]"],
+  html:not(.dark) [class*="min-h-"] [class*="text-[#FAF5EF]"],
+  html:not(.dark) [class*="min-h-"] [class*="text-[#E8DCD0]"],
+  html:not(.dark) .text-on-primary-container,
+  html:not(.dark) .text-inverse-on-surface {
+    color: #FAF5EF !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  /* 3E. Highlights, Golden Badges, Specifications & Telephone Links in Dark Containers */
+  html:not(.dark) [class*="bg-primary"] strong,
+  html:not(.dark) [class*="bg-primary"] .font-bold,
+  html:not(.dark) [class*="bg-primary"] [class*="text-secondary"],
+  html:not(.dark) [class*="bg-primary"] [class*="text-secondary-fixed"],
+  html:not(.dark) [class*="bg-primary"] span.text-primary-fixed,
+  html:not(.dark) [class*="bg-primary"] [class*="text-primary-fixed"]:not([class*="/80"]),
+  html:not(.dark) [class*="bg-primary"] a[href^="tel:"],
+  html:not(.dark) [class*="bg-primary"] a[href^="tel:"] *,
+  html:not(.dark) [class*="bg-black"] [class*="text-[#F7BA7D]"],
+  html:not(.dark) [class*="min-h-"] [class*="text-[#F7BA7D]"],
+  html:not(.dark) [class*="min-h-"] [class*="text-[#F5C7A1]"],
+  html:not(.dark) [class*="text-[#F7BA7D]"],
+  html:not(.dark) [class*="text-[#F5C7A1]"] {
     color: #F7BA7D !important;
-    font-weight: 750 !important;
+    font-weight: 800 !important;
     opacity: 1 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
   }
 
-  /* Buttons & Links inside Hero & Dark Sections */
-  div[class*="bg-black/"] a,
-  div[class*="bg-black/"] a *,
-  section[class*="min-h-"] a[class*="bg-[#B85D19]"],
-  section[class*="min-h-"] a[class*="bg-[#B85D19]"] *,
-  section[class*="min-h-"] a[class*="bg-[#24150E]"],
-  section[class*="min-h-"] a[class*="bg-[#24150E]"] *,
-  section[class*="min-h-"] a[class*="text-white"],
-  section[class*="min-h-"] a[class*="text-white"] *,
-  section[class*="bg-primary"] a[class*="bg-secondary"],
-  section[class*="bg-primary"] a[class*="bg-secondary"] *,
-  section[class*="bg-primary"] a[class*="bg-surface/10"],
-  section[class*="bg-primary"] a[class*="bg-surface/10"] * {
+  /* 3F. Floating Dark Pill Badges over Images */
+  html:not(.dark) span[class*="bg-[#180F0A]"],
+  html:not(.dark) span[class*="bg-[#140C07]"],
+  html:not(.dark) span[class*="bg-[#24150E]"],
+  html:not(.dark) span[class*="bg-[#24140A]"],
+  html:not(.dark) span[class*="bg-black"],
+  html:not(.dark) span[class*="bg-primary"],
+  html:not(.dark) span[class*="bg-primary-container"],
+  html:not(.dark) span.text-on-primary,
+  html:not(.dark) span[class*="bg-[#1"] *,
+  html:not(.dark) span[class*="bg-primary"] *,
+  html:not(.dark) span[class*="bg-primary-container"] * {
+    color: #F7BA7D !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  /* 3G. Buttons & Links inside Dark Containers */
+  html:not(.dark) [class*="bg-primary"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]),
+  html:not(.dark) [class*="bg-primary"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]) *,
+  html:not(.dark) [class*="bg-black"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]),
+  html:not(.dark) [class*="bg-black"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]) *,
+  html:not(.dark) [class*="min-h-"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]),
+  html:not(.dark) [class*="min-h-"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]) * {
     color: #FFFFFF !important;
-    font-weight: 700 !important;
-    opacity: 1 !important;
+    font-weight: 750 !important;
   }
 
-  /* ==========================================================================
-     CRITICAL: WHITE & LIGHT CARDS NESTED INSIDE DARK SECTIONS (Calculator, Forms)
-     ========================================================================== */
-  html:not(.dark) div.bg-white,
-  html:not(.dark) div.bg-surface-container-lowest {
+  /* 3H. Protected Nested White Cards inside dark containers */
+  html:not(.dark) [class*="bg-primary"] div.bg-white,
+  html:not(.dark) [class*="bg-primary"] div.bg-surface-container-lowest,
+  html:not(.dark) [class*="bg-[#1"] div.bg-white,
+  html:not(.dark) [class*="bg-[#1"] div.bg-surface-container-lowest {
+    background-color: #FFFFFF !important;
     color: #000000 !important;
   }
-
-  html:not(.dark) div.bg-white h1, html:not(.dark) div.bg-white h2, html:not(.dark) div.bg-white h3, html:not(.dark) div.bg-white h4, html:not(.dark) div.bg-white h5, html:not(.dark) div.bg-white h6,
-  html:not(.dark) div.bg-surface-container-lowest h1, html:not(.dark) div.bg-surface-container-lowest h2, html:not(.dark) div.bg-surface-container-lowest h3, html:not(.dark) div.bg-surface-container-lowest h4, html:not(.dark) div.bg-surface-container-lowest h5, html:not(.dark) div.bg-surface-container-lowest h6,
-  html:not(.dark) [class*="bg-white"] h3,
-  html:not(.dark) [class*="bg-white"] .font-serif,
-  html:not(.dark) [class*="bg-white"] .font-display,
-  html:not(.dark) [class*="bg-white"] .font-headline {
+  html:not(.dark) [class*="bg-primary"] div.bg-white *,
+  html:not(.dark) [class*="bg-primary"] div.bg-surface-container-lowest *,
+  html:not(.dark) [class*="bg-[#1"] div.bg-white *,
+  html:not(.dark) [class*="bg-[#1"] div.bg-surface-container-lowest * {
     color: #000000 !important;
-    font-weight: 850 !important;
     text-shadow: none !important;
   }
-
-  html:not(.dark) div.bg-white p,
-  html:not(.dark) div.bg-surface-container-lowest p,
-  html:not(.dark) div.bg-white li,
-  html:not(.dark) div.bg-surface-container-lowest li {
-    color: #000000 !important;
-    font-weight: 550 !important;
-    opacity: 1 !important;
-  }
-
-  html:not(.dark) div.bg-white span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
-  html:not(.dark) div.bg-surface-container-lowest span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]) {
-    color: #000000 !important;
-    opacity: 1 !important;
-  }
-
-  html:not(.dark) div.bg-white .text-primary,
-  html:not(.dark) div.bg-surface-container-lowest .text-primary {
-    color: #000000 !important;
-    font-weight: 850 !important;
-  }
-
-  html:not(.dark) div.bg-white .text-on-surface-variant,
-  html:not(.dark) div.bg-surface-container-lowest .text-on-surface-variant {
-    color: #000000 !important;
-    font-weight: 650 !important;
-    opacity: 1 !important;
-  }
-
-  html:not(.dark) div.bg-white .text-secondary,
-  html:not(.dark) div.bg-surface-container-lowest .text-secondary {
+  html:not(.dark) [class*="bg-primary"] div.bg-white .text-secondary,
+  html:not(.dark) [class*="bg-primary"] div.bg-surface-container-lowest .text-secondary {
     color: #8A2B03 !important;
-    font-weight: 850 !important;
-  }
-
-  html:not(.dark) div.bg-white label,
-  html:not(.dark) div.bg-surface-container-lowest label {
-    color: #000000 !important;
-    font-weight: 800 !important;
-  }
-
-  html:not(.dark) div.bg-white div[id*="est-"],
-  html:not(.dark) div.bg-surface-container-lowest div[id*="est-"],
-  html:not(.dark) div.bg-white span[id*="est-"],
-  html:not(.dark) div.bg-surface-container-lowest span[id*="est-"],
-  html:not(.dark) div.bg-white span[id*="calc-"],
-  html:not(.dark) div.bg-surface-container-lowest span[id*="calc-"] {
-    color: #000000 !important;
-    font-weight: 900 !important;
   }
 
   /* ==========================================================================
@@ -978,32 +941,43 @@
      6. BUTTONS, FILTER PILLS & FORM INPUTS
      ========================================================================== */
   /* Filter Pills in Light Mode */
-  html:not(.dark) .filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
-  html:not(.dark) .service-filter-btn:not(.bg-primary):not(.active),
-  html:not(.dark) #category-pills button:not(.bg-primary-container):not(.active),
-  html:not(.dark) button.filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
-  html:not(.dark) #filter-container button:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
-  html:not(.dark) #filter-buttons button:not(.bg-primary):not(.active),
-  html:not(.dark) button[data-filter]:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
-  html:not(.dark) button[data-category]:not(.bg-primary):not(.bg-primary-container):not(.active) {
+  html:not(.dark) .filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
+  html:not(.dark) .service-filter-btn:not(.active):not(.bg-primary):not(.bg-primary-container),
+  html:not(.dark) #category-pills button:not(.active):not(.bg-primary-container):not(.bg-primary),
+  html:not(.dark) button.filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
+  html:not(.dark) #filter-container button:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
+  html:not(.dark) #filter-buttons button:not(.active):not(.bg-primary):not(.bg-primary-container),
+  html:not(.dark) button[data-filter]:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
+  html:not(.dark) button[data-category]:not(.active):not(.bg-primary-container):not(.bg-primary) {
     background-color: #FFFFFF !important;
     color: #000000 !important;
     border: 1.5px solid #8C7769 !important;
     font-weight: 750 !important;
   }
-  html:not(.dark) .filter-btn:hover:not(.active-filter),
-  html:not(.dark) .service-filter-btn:hover:not(.active) {
+  html:not(.dark) .filter-btn:hover:not(.active-filter):not(.active):not(.bg-primary-container),
+  html:not(.dark) .service-filter-btn:hover:not(.active):not(.bg-primary) {
     border-color: #8A2B03 !important;
     color: #8A2B03 !important;
   }
+
+  /* Active Filter Pills in Light Mode (Pure Solid White on Pure Dark Brown) */
   html:not(.dark) .filter-btn.active,
   html:not(.dark) .filter-btn.active-filter,
   html:not(.dark) .service-filter-btn.active,
   html:not(.dark) #category-pills button.active,
+  html:not(.dark) #category-pills button.bg-primary-container,
+  html:not(.dark) button.filter-btn.bg-primary-container,
+  html:not(.dark) button.filter-btn.text-on-primary,
+  html:not(.dark) button.active-filter,
+  html:not(.dark) button[data-category].bg-primary-container,
+  html:not(.dark) button[data-filter].bg-primary-container,
   html:not(.dark) .filter-btn.active *,
   html:not(.dark) .filter-btn.active-filter *,
   html:not(.dark) .service-filter-btn.active *,
-  html:not(.dark) #category-pills button.active * {
+  html:not(.dark) #category-pills button.active *,
+  html:not(.dark) #category-pills button.bg-primary-container *,
+  html:not(.dark) button.active-filter *,
+  html:not(.dark) button[data-category].bg-primary-container * {
     background-color: #24140A !important;
     color: #FFFFFF !important;
     border-color: #24140A !important;
@@ -1011,20 +985,20 @@
   }
 
   /* Filter Pills in Dark Mode */
-  html.dark .filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
-  html.dark .service-filter-btn:not(.bg-primary):not(.active),
-  html.dark #category-pills button:not(.bg-primary-container):not(.active),
-  html.dark button.filter-btn:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
-  html.dark #filter-container button:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
-  html.dark #filter-buttons button:not(.bg-primary):not(.active),
-  html.dark button[data-filter]:not(.active-filter):not(.bg-primary-container):not(.bg-primary),
-  html.dark button[data-category]:not(.bg-primary):not(.bg-primary-container):not(.active) {
+  html.dark .filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
+  html.dark .service-filter-btn:not(.active):not(.bg-primary):not(.bg-primary-container),
+  html.dark #category-pills button:not(.active):not(.bg-primary-container):not(.bg-primary),
+  html.dark button.filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
+  html.dark #filter-container button:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
+  html.dark #filter-buttons button:not(.active):not(.bg-primary):not(.bg-primary-container),
+  html.dark button[data-filter]:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
+  html.dark button[data-category]:not(.active):not(.bg-primary-container):not(.bg-primary) {
     background-color: #24160E !important;
     color: #FFFFFF !important;
     border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
     font-weight: 700 !important;
   }
-  html.dark .filter-btn:hover:not(.active-filter),
+  html.dark .filter-btn:hover:not(.active-filter):not(.active),
   html.dark .service-filter-btn:hover:not(.active) {
     border-color: #F7BA7D !important;
     color: #F7BA7D !important;
@@ -1033,10 +1007,19 @@
   html.dark .filter-btn.active-filter,
   html.dark .service-filter-btn.active,
   html.dark #category-pills button.active,
+  html.dark #category-pills button.bg-primary-container,
+  html.dark button.filter-btn.bg-primary-container,
+  html.dark button.filter-btn.text-on-primary,
+  html.dark button.active-filter,
+  html.dark button[data-category].bg-primary-container,
+  html.dark button[data-filter].bg-primary-container,
   html.dark .filter-btn.active *,
   html.dark .filter-btn.active-filter *,
   html.dark .service-filter-btn.active *,
-  html.dark #category-pills button.active * {
+  html.dark #category-pills button.active *,
+  html.dark #category-pills button.bg-primary-container *,
+  html.dark button.active-filter *,
+  html.dark button[data-category].bg-primary-container * {
     background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
     color: #FFFFFF !important;
     border-color: #F7BA7D !important;
@@ -1045,17 +1028,21 @@
 
   /* Call-To-Action & Primary Buttons across all pages */
   html:not(.dark) a.bg-primary-container,
-  html:not(.dark) button.bg-primary-container,
+  html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]),
   html:not(.dark) a[class*="bg-[#B85D19]"],
   html:not(.dark) button[class*="bg-[#B85D19]"],
   html:not(.dark) a.bg-primary,
-  html:not(.dark) button.bg-primary,
+  html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]),
+  html:not(.dark) a.bg-secondary,
+  html:not(.dark) button.bg-secondary,
   html:not(.dark) a.bg-primary-container *,
-  html:not(.dark) button.bg-primary-container *,
+  html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]) *,
   html:not(.dark) a[class*="bg-[#B85D19]"] *,
   html:not(.dark) button[class*="bg-[#B85D19]"] *,
   html:not(.dark) a.bg-primary *,
-  html:not(.dark) button.bg-primary * {
+  html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]) *,
+  html:not(.dark) a.bg-secondary *,
+  html:not(.dark) button.bg-secondary * {
     background-color: #8F3E0B !important;
     color: #FFFFFF !important;
     font-weight: 750 !important;
@@ -1065,7 +1052,9 @@
   html:not(.dark) a[class*="bg-[#B85D19]"]:hover,
   html:not(.dark) button[class*="bg-[#B85D19]"]:hover,
   html:not(.dark) a.bg-primary:hover,
-  html:not(.dark) button.bg-primary:hover {
+  html:not(.dark) button.bg-primary:hover,
+  html:not(.dark) a.bg-secondary:hover,
+  html:not(.dark) button.bg-secondary:hover {
     background-color: #B85D19 !important;
     color: #FFFFFF !important;
   }
@@ -1076,12 +1065,16 @@
   html.dark button[class*="bg-[#B85D19]"],
   html.dark a.bg-primary,
   html.dark button.bg-primary,
+  html.dark a.bg-secondary,
+  html.dark button.bg-secondary,
   html.dark a.bg-primary-container *,
   html.dark button.bg-primary-container *,
   html.dark a[class*="bg-[#B85D19]"] *,
   html.dark button[class*="bg-[#B85D19]"] *,
   html.dark a.bg-primary *,
-  html.dark button.bg-primary * {
+  html.dark button.bg-primary *,
+  html.dark a.bg-secondary *,
+  html.dark button.bg-secondary * {
     background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
     color: #FFFFFF !important;
     border: 1.5px solid #F7BA7D !important;
@@ -1132,7 +1125,7 @@
     border-color: transparent !important;
     box-shadow: none !important;
   }
-  
+
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
