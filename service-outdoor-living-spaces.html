@@ -318,90 +318,169 @@
 
   /* ==========================================================================
      3. INTENTIONALLY DARK SECTIONS IN LIGHT MODE (Hero, Stats, Callout, CTA)
-     CRITICAL: Prevents dark-section text from being turned black in light mode!
+     CRITICAL: Only targets specific dark brown/obsidian backgrounds, NEVER wildcard bg-[#]!
      ========================================================================== */
-  html:not(.dark) section[class*="bg-primary"],
-  html:not(.dark) section[class*="bg-primary-container"],
+  html:not(.dark) section[class*="bg-primary"]:not([class*="bg-surface"]),
+  html:not(.dark) section[class*="bg-primary-container"]:not([class*="bg-surface"]),
   html:not(.dark) section[class*="bg-[#140C07]"],
   html:not(.dark) section[class*="bg-[#180F0A]"],
   html:not(.dark) section[class*="bg-[#120A06]"],
   html:not(.dark) section[class*="bg-[#1C1008]"],
   html:not(.dark) section[class*="bg-[#24140A]"],
-  html:not(.dark) section[class*="bg-secondary"],
-  html:not(.dark) div[class*="bg-primary"],
-  html:not(.dark) div[class*="bg-primary-container"],
+  html:not(.dark) section[class*="bg-[#24150E]"],
+  html:not(.dark) section[class*="bg-[#3D1E0E]"],
+  html:not(.dark) section[class*="bg-[#3D2418]"],
+  html:not(.dark) section[class*="bg-[#4A2411]"],
+  html:not(.dark) section[class*="bg-[#4E240E]"],
+  html:not(.dark) section[class*="bg-[#6B3214]"],
+  html:not(.dark) div[class*="bg-primary"]:not([class*="bg-surface"]):not([class*="bg-white"]):not([class*="bg-surface-container"]),
+  html:not(.dark) div[class*="bg-primary-container"]:not([class*="bg-surface"]):not([class*="bg-white"]):not([class*="bg-surface-container"]),
   html:not(.dark) div[class*="bg-[#140C07]"],
   html:not(.dark) div[class*="bg-[#180F0A]"],
   html:not(.dark) div[class*="bg-[#120A06]"],
   html:not(.dark) div[class*="bg-[#1C1008]"],
   html:not(.dark) div[class*="bg-[#24140A]"],
-  html:not(.dark) div[class*="bg-secondary"] {
-    color: #FFFFFF !important;
+  html:not(.dark) div[class*="bg-[#24150E]"],
+  html:not(.dark) div[class*="bg-[#3D1E0E]"],
+  html:not(.dark) div[class*="bg-[#3D2418]"],
+  html:not(.dark) div[class*="bg-[#4A2411]"],
+  html:not(.dark) div[class*="bg-[#4E240E]"],
+  html:not(.dark) div[class*="bg-[#6B3214]"] {
+    color: #FAF5EF !important;
   }
 
-  /* Headings inside dark sections in Light Mode: Pure White */
-  html:not(.dark) section[class*="bg-primary"] h1, html:not(.dark) section[class*="bg-primary"] h2, html:not(.dark) section[class*="bg-primary"] h3, html:not(.dark) section[class*="bg-primary"] h4, html:not(.dark) section[class*="bg-primary"] h5, html:not(.dark) section[class*="bg-primary"] h6,
-  html:not(.dark) section[class*="bg-primary-container"] h1, html:not(.dark) section[class*="bg-primary-container"] h2, html:not(.dark) section[class*="bg-primary-container"] h3, html:not(.dark) section[class*="bg-primary-container"] h4, html:not(.dark) section[class*="bg-primary-container"] h5, html:not(.dark) section[class*="bg-primary-container"] h6,
-  html:not(.dark) section[class*="bg-[#"] h1, html:not(.dark) section[class*="bg-[#"] h2, html:not(.dark) section[class*="bg-[#"] h3, html:not(.dark) section[class*="bg-[#"] h4,
-  html:not(.dark) div[class*="bg-primary"] h1, html:not(.dark) div[class*="bg-primary"] h2, html:not(.dark) div[class*="bg-primary"] h3, html:not(.dark) div[class*="bg-primary"] h4,
-  html:not(.dark) div[class*="bg-primary-container"] h1, html:not(.dark) div[class*="bg-primary-container"] h2, html:not(.dark) div[class*="bg-primary-container"] h3, html:not(.dark) div[class*="bg-primary-container"] h4,
-  html:not(.dark) div[class*="bg-[#140C07]"] h1, html:not(.dark) div[class*="bg-[#140C07]"] h2, html:not(.dark) div[class*="bg-[#140C07]"] h3,
-  html:not(.dark) div[class*="bg-[#180F0A]"] h1, html:not(.dark) div[class*="bg-[#180F0A]"] h2, html:not(.dark) div[class*="bg-[#180F0A]"] h3,
-  html:not(.dark) div[class*="bg-[#1C1008]"] h1, html:not(.dark) div[class*="bg-[#1C1008]"] h2, html:not(.dark) div[class*="bg-[#1C1008]"] h3,
-  html:not(.dark) section[class*="bg-primary"] .font-display-lg,
-  html:not(.dark) section[class*="bg-primary"] .font-headline-lg,
-  html:not(.dark) section[class*="bg-primary"] .font-title-lg,
-  html:not(.dark) section[class*="bg-[#"] .font-display-lg,
-  html:not(.dark) section[class*="bg-[#"] .font-headline-lg {
+  /* Headings directly inside dark sections in Light Mode: Pure White */
+  html:not(.dark) section[class*="bg-primary"] h1, html:not(.dark) section[class*="bg-primary"] h2, html:not(.dark) section[class*="bg-primary"] h3, html:not(.dark) section[class*="bg-primary"] h4,
+  html:not(.dark) section[class*="bg-primary-container"] h1, html:not(.dark) section[class*="bg-primary-container"] h2, html:not(.dark) section[class*="bg-primary-container"] h3, html:not(.dark) section[class*="bg-primary-container"] h4,
+  html:not(.dark) section[class*="bg-[#180F0A]"] > div h1, html:not(.dark) section[class*="bg-[#180F0A]"] > div h2,
+  html:not(.dark) section[class*="bg-[#140C07]"] h1, html:not(.dark) section[class*="bg-[#140C07]"] h2, html:not(.dark) section[class*="bg-[#140C07]"] h3,
+  html:not(.dark) section[class*="bg-[#1C1008]"] h1, html:not(.dark) section[class*="bg-[#1C1008]"] h2, html:not(.dark) section[class*="bg-[#1C1008]"] h3,
+  html:not(.dark) div[class*="bg-primary"] > h1, html:not(.dark) div[class*="bg-primary"] > h2, html:not(.dark) div[class*="bg-primary"] > h3,
+  html:not(.dark) div[class*="bg-primary-container"] > h1, html:not(.dark) div[class*="bg-primary-container"] > h2, html:not(.dark) div[class*="bg-primary-container"] > h3,
+  html:not(.dark) div[class*="bg-[#140C07]"] > h1, html:not(.dark) div[class*="bg-[#140C07]"] > h2, html:not(.dark) div[class*="bg-[#140C07]"] > h3,
+  html:not(.dark) div[class*="bg-[#180F0A]"] > h1, html:not(.dark) div[class*="bg-[#180F0A]"] > h2, html:not(.dark) div[class*="bg-[#180F0A]"] > h3,
+  html:not(.dark) div[class*="bg-[#180F0A]"] > div > h1, html:not(.dark) div[class*="bg-[#180F0A]"] > div > h2 {
     color: #FFFFFF !important;
     font-weight: 750 !important;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
   }
 
-  /* Body text, paragraphs & list items inside dark sections in Light Mode: Warm White / Ivory Linen */
-  html:not(.dark) section[class*="bg-primary"] p,
+  /* Body text directly inside dark sections in Light Mode: Warm White / Ivory */
+  html:not(.dark) section[class*="bg-primary"] > div > p,
+  html:not(.dark) section[class*="bg-primary"] .lg\:col-span-8 p,
+  html:not(.dark) section[class*="bg-primary"] .lg\:col-span-6 p,
+  html:not(.dark) section[class*="bg-primary"] .lg\:col-span-4 p,
   html:not(.dark) section[class*="bg-primary-container"] p,
-  html:not(.dark) section[class*="bg-[#"] p,
-  html:not(.dark) div[class*="bg-primary"] p,
-  html:not(.dark) div[class*="bg-primary-container"] p,
-  html:not(.dark) div[class*="bg-[#"] p,
-  html:not(.dark) section[class*="bg-primary"] li,
-  html:not(.dark) section[class*="bg-primary-container"] li,
-  html:not(.dark) section[class*="bg-[#"] li,
-  html:not(.dark) div[class*="bg-primary"] li,
-  html:not(.dark) div[class*="bg-primary-container"] li,
-  html:not(.dark) div[class*="bg-[#"] li,
-  html:not(.dark) section[class*="bg-primary"] span:not(.material-symbols-outlined):not([class*="text-[#F7BA7D]"]):not([class*="text-[#D48B4E]"]):not([class*="text-secondary"]),
-  html:not(.dark) section[class*="bg-primary-container"] span:not(.material-symbols-outlined):not([class*="text-[#F7BA7D]"]):not([class*="text-[#D48B4E]"]):not([class*="text-secondary"]),
-  html:not(.dark) section[class*="bg-[#"] span:not(.material-symbols-outlined):not([class*="text-[#F7BA7D]"]):not([class*="text-[#D48B4E]"]):not([class*="text-secondary"]),
-  html:not(.dark) div[class*="bg-primary"] span:not(.material-symbols-outlined):not([class*="text-[#F7BA7D]"]):not([class*="text-[#D48B4E]"]):not([class*="text-secondary"]),
-  html:not(.dark) div[class*="bg-primary-container"] span:not(.material-symbols-outlined):not([class*="text-[#F7BA7D]"]):not([class*="text-[#D48B4E]"]):not([class*="text-secondary"]),
-  html:not(.dark) div[class*="bg-[#"] span:not(.material-symbols-outlined):not([class*="text-[#F7BA7D]"]):not([class*="text-[#D48B4E]"]):not([class*="text-secondary"]),
+  html:not(.dark) section[class*="bg-[#180F0A]"] > div > p,
+  html:not(.dark) section[class*="bg-[#180F0A]"] .lg\:col-span-8 p,
+  html:not(.dark) section[class*="bg-[#180F0A]"] .max-w-2xl p,
+  html:not(.dark) section[class*="bg-[#180F0A]"] .max-w-3xl p,
+  html:not(.dark) div[class*="bg-[#180F0A]"] > p,
+  html:not(.dark) div[class*="bg-[#140C07]"] > p,
   html:not(.dark) p.text-on-primary,
   html:not(.dark) p.text-on-primary-container,
-  html:not(.dark) p[class*="text-[#E8DCD0]"],
-  html:not(.dark) p[class*="text-surface-container-high"],
-  html:not(.dark) p[class*="text-surface-bright"] {
+  html:not(.dark) p[class*="text-[#E8DCD0]"] {
     color: #FAF5EF !important;
     font-weight: 500 !important;
     opacity: 1 !important;
   }
 
-  /* Highlight accents inside dark sections in Light Mode: Radiant Amber */
-  html:not(.dark) section[class*="bg-primary"] .text-secondary,
-  html:not(.dark) section[class*="bg-primary-container"] .text-secondary,
-  html:not(.dark) section[class*="bg-[#"] .text-secondary,
-  html:not(.dark) div[class*="bg-primary"] .text-secondary,
-  html:not(.dark) div[class*="bg-primary-container"] .text-secondary,
-  html:not(.dark) div[class*="bg-[#"] .text-secondary,
-  html:not(.dark) section[class*="bg-primary"] .text-secondary-fixed,
-  html:not(.dark) section[class*="bg-primary-container"] .text-secondary-fixed,
-  html:not(.dark) section[class*="bg-[#"] .text-secondary-fixed,
-  html:not(.dark) div[class*="bg-primary"] .text-secondary-fixed,
-  html:not(.dark) div[class*="bg-primary-container"] .text-secondary-fixed,
-  html:not(.dark) div[class*="bg-[#"] .text-secondary-fixed {
-    color: #F7BA7D !important;
+  /* ==========================================================================
+     CRITICAL: WHITE & LIGHT CARDS NESTED INSIDE DARK SECTIONS MUST HAVE SOLID BLACK/DARK TEXT!
+     ========================================================================== */
+  html:not(.dark) .bg-white,
+  html:not(.dark) .bg-surface-container-lowest,
+  html:not(.dark) .bg-surface,
+  html:not(.dark) .bg-surface-container-low,
+  html:not(.dark) .bg-surface-container,
+  html:not(.dark) .bg-surface-container-high,
+  html:not(.dark) .bg-surface-container-highest {
+    color: #1A0E08 !important;
+  }
+
+  html:not(.dark) .bg-white h1, html:not(.dark) .bg-white h2, html:not(.dark) .bg-white h3, html:not(.dark) .bg-white h4, html:not(.dark) .bg-white h5, html:not(.dark) .bg-white h6,
+  html:not(.dark) .bg-surface-container-lowest h1, html:not(.dark) .bg-surface-container-lowest h2, html:not(.dark) .bg-surface-container-lowest h3, html:not(.dark) .bg-surface-container-lowest h4, html:not(.dark) .bg-surface-container-lowest h5, html:not(.dark) .bg-surface-container-lowest h6,
+  html:not(.dark) .bg-surface h1, html:not(.dark) .bg-surface h2, html:not(.dark) .bg-surface h3, html:not(.dark) .bg-surface h4,
+  html:not(.dark) .bg-surface-container h1, html:not(.dark) .bg-surface-container h2, html:not(.dark) .bg-surface-container h3, html:not(.dark) .bg-surface-container h4,
+  html:not(.dark) .bg-surface-container-low h1, html:not(.dark) .bg-surface-container-low h2, html:not(.dark) .bg-surface-container-low h3, html:not(.dark) .bg-surface-container-low h4,
+  html:not(.dark) [class*="bg-white"] h3,
+  html:not(.dark) [class*="bg-white"] .font-serif,
+  html:not(.dark) [class*="bg-white"] .font-display,
+  html:not(.dark) [class*="bg-white"] .font-headline {
+    color: #120A05 !important;
+    font-weight: 800 !important;
+    text-shadow: none !important;
+  }
+
+  html:not(.dark) .bg-white p,
+  html:not(.dark) .bg-surface-container-lowest p,
+  html:not(.dark) .bg-surface p,
+  html:not(.dark) .bg-surface-container-low p,
+  html:not(.dark) .bg-surface-container p,
+  html:not(.dark) .bg-white li,
+  html:not(.dark) .bg-surface-container-lowest li,
+  html:not(.dark) .bg-surface li,
+  html:not(.dark) .bg-surface-container-low li,
+  html:not(.dark) .bg-surface-container li {
+    color: #1A0E08 !important;
+    font-weight: 550 !important;
+    opacity: 1 !important;
+  }
+
+  html:not(.dark) .bg-white span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
+  html:not(.dark) .bg-surface-container-lowest span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
+  html:not(.dark) .bg-surface span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
+  html:not(.dark) .bg-surface-container-low span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
+  html:not(.dark) .bg-surface-container span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]) {
+    color: #24140A !important;
+    opacity: 1 !important;
+  }
+
+  html:not(.dark) .bg-white .text-primary,
+  html:not(.dark) .bg-surface-container-lowest .text-primary,
+  html:not(.dark) .bg-surface .text-primary,
+  html:not(.dark) .bg-surface-container-low .text-primary,
+  html:not(.dark) .bg-surface-container .text-primary {
+    color: #120A05 !important;
+    font-weight: 800 !important;
+  }
+
+  html:not(.dark) .bg-white .text-on-surface-variant,
+  html:not(.dark) .bg-surface-container-lowest .text-on-surface-variant,
+  html:not(.dark) .bg-surface .text-on-surface-variant,
+  html:not(.dark) .bg-surface-container-low .text-on-surface-variant,
+  html:not(.dark) .bg-surface-container .text-on-surface-variant {
+    color: #4A3324 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+  }
+
+  html:not(.dark) .bg-white .text-secondary,
+  html:not(.dark) .bg-surface-container-lowest .text-secondary,
+  html:not(.dark) .bg-surface .text-secondary,
+  html:not(.dark) .bg-surface-container-low .text-secondary,
+  html:not(.dark) .bg-surface-container .text-secondary {
+    color: #8F3E0B !important;
     font-weight: 750 !important;
+  }
+
+  html:not(.dark) .bg-white label,
+  html:not(.dark) .bg-surface-container-lowest label,
+  html:not(.dark) .bg-surface label,
+  html:not(.dark) .bg-surface-container-low label,
+  html:not(.dark) .bg-surface-container label {
+    color: #120A05 !important;
+    font-weight: 750 !important;
+  }
+
+  html:not(.dark) .bg-white div[id*="est-"],
+  html:not(.dark) .bg-surface-container-lowest div[id*="est-"],
+  html:not(.dark) .bg-white span[id*="est-"],
+  html:not(.dark) .bg-surface-container-lowest span[id*="est-"],
+  html:not(.dark) .bg-white span[id*="calc-"],
+  html:not(.dark) .bg-surface-container-lowest span[id*="calc-"] {
+    color: #120A05 !important;
+    font-weight: 900 !important;
   }
 
   /* ==========================================================================
