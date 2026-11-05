@@ -149,29 +149,29 @@
   }
 
   /* ==========================================================================
-     2. LIGHT MODE: CRYSTAL-CLEAR CONTRAST (html:not(.dark))
+     2. LIGHT MODE: MAXIMUM ULTRA-HIGH CONTRAST (html:not(.dark))
      ========================================================================== */
   html:not(.dark) {
     color-scheme: light;
   }
   html:not(.dark) body {
-    background-color: #F6F2EC !important;
-    color: #1A0E08 !important;
+    background-color: #F8F5F0 !important;
+    color: #0A0502 !important;
     font-size: 15.5px;
     line-height: 26px;
-    font-weight: 500;
+    font-weight: 550;
   }
 
-  /* Light Mode Surfaces & Containers */
-  html:not(.dark) .bg-surface { background-color: #F6F2EC !important; }
+  /* Light Mode Surfaces & Containers (Clean, luminous, distinct elevation) */
+  html:not(.dark) .bg-surface { background-color: #F8F5F0 !important; }
   html:not(.dark) .bg-surface-container-lowest { background-color: #FFFFFF !important; }
-  html:not(.dark) .bg-surface-container-low { background-color: #EFE9DF !important; }
-  html:not(.dark) .bg-surface-container { background-color: #E5DDD1 !important; }
-  html:not(.dark) .bg-surface-container-high { background-color: #DCD3C5 !important; }
-  html:not(.dark) .bg-surface-container-highest { background-color: #D0C5B5 !important; }
-  html:not(.dark) .bg-surface-variant { background-color: #EAE2D6 !important; }
+  html:not(.dark) .bg-surface-container-low { background-color: #F2EBE1 !important; }
+  html:not(.dark) .bg-surface-container { background-color: #EAE1D4 !important; }
+  html:not(.dark) .bg-surface-container-high { background-color: #DFD4C4 !important; }
+  html:not(.dark) .bg-surface-container-highest { background-color: #D4C6B4 !important; }
+  html:not(.dark) .bg-surface-variant { background-color: #E8DFD2 !important; }
 
-  /* Light Mode Default Headings on Light Surfaces (18:1 contrast) */
+  /* Light Mode Default Headings on Light Surfaces (Pure Pitch Black, 21:1 Contrast) */
   html:not(.dark) h1:not([class*="text-white"]):not([class*="text-surface"]),
   html:not(.dark) h2:not([class*="text-white"]):not([class*="text-surface"]),
   html:not(.dark) h3:not([class*="text-white"]):not([class*="text-surface"]),
@@ -193,14 +193,15 @@
   html:not(.dark) .text-title-lg:not([class*="text-white"]):not([class*="text-surface"]),
   html:not(.dark) .text-title-md:not([class*="text-white"]):not([class*="text-surface"]),
   html:not(.dark) .text-title-sm:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) .text-title:not([class*="text-white"]):not([class*="text-surface"]) {
-    color: #120A05 !important;
-    font-weight: 750 !important;
+  html:not(.dark) .text-title:not([class*="text-white"]):not([class*="text-surface"]),
+  html:not(.dark) .text-primary:not([class*="text-white"]):not([class*="text-secondary"]):not([class*="text-[#"]):not([class*="dark:"]) {
+    color: #000000 !important;
+    font-weight: 800 !important;
   }
 
-  /* Light Mode Paragraphs & Body Text on Light Surfaces (14:1 contrast) */
-  html:not(.dark) p:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#E8DCD0]"]):not([class*="text-on-primary"]),
-  html:not(.dark) li:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
+  /* Light Mode Paragraphs & Body Text on Light Surfaces (Crisp Charcoal Black, 18.5:1 Contrast) */
+  html:not(.dark) p:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#E8DCD0]"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]),
+  html:not(.dark) li:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]),
   html:not(.dark) td:not([class*="text-white"]),
   html:not(.dark) th:not([class*="text-white"]),
   html:not(.dark) blockquote:not([class*="text-white"]),
@@ -212,12 +213,13 @@
   html:not(.dark) .text-body-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
   html:not(.dark) .text-body-sm:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
   html:not(.dark) .text-body-xs:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]) {
-    color: #24140A !important;
-    font-weight: 500 !important;
+    color: #0A0502 !important;
+    font-weight: 550 !important;
+    opacity: 1 !important;
   }
 
-  /* Light Mode Secondary, Meta & Description Text: Deep Umber (10:1 contrast) */
-  html:not(.dark) .text-on-surface-variant:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
+  /* Light Mode Secondary, Meta & Description Text: Rich Deep Espresso (14:1 Contrast) */
+  html:not(.dark) .text-on-surface-variant:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]),
   html:not(.dark) span.text-on-surface-variant,
   html:not(.dark) div.text-on-surface-variant,
   html:not(.dark) p.text-on-surface-variant,
@@ -227,55 +229,60 @@
   html:not(.dark) td.text-on-surface-variant,
   html:not(.dark) .text-outline:not([class*="text-white"]),
   html:not(.dark) .text-outline-variant:not([class*="text-white"]) {
-    color: #382013 !important;
-    font-weight: 600 !important;
+    color: #1C0F08 !important;
+    font-weight: 650 !important;
+    opacity: 1 !important;
   }
 
-  /* Light Mode Small Labels, Badges & Captions (15:1 contrast) */
-  html:not(.dark) .text-label-sm:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) .text-label-md:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) .text-label-lg:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) .font-label-sm:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) .font-label-md:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) .font-label-lg:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) .font-caption:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) .text-caption:not([class*="text-white"]):not([class*="text-surface"]) {
-    color: #1F1008 !important;
-    font-weight: 700 !important;
+  /* Light Mode Small Labels, Badges & Captions (Solid Pitch Black, 21:1 Contrast) */
+  html:not(.dark) .text-label-sm:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
+  html:not(.dark) .text-label-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
+  html:not(.dark) .text-label-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
+  html:not(.dark) .font-label-sm:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
+  html:not(.dark) .font-label-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
+  html:not(.dark) .font-label-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
+  html:not(.dark) .font-caption:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
+  html:not(.dark) .text-caption:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
+  html:not(.dark) label:not([class*="text-white"]) {
+    color: #000000 !important;
+    font-weight: 750 !important;
+    opacity: 1 !important;
   }
 
-  /* Light Mode Accent & Highlight Text: Deep Cognac Amber (7:1 contrast) */
-  html:not(.dark) .text-secondary:not([class*="text-white"]),
-  html:not(.dark) .text-secondary-fixed:not([class*="text-white"]),
-  html:not(.dark) .text-primary-fixed:not([class*="text-white"]),
-  html:not(.dark) span.text-secondary,
+  /* Light Mode Accent & Highlight Text: Deep Terracotta (9.5:1 Contrast) */
+  html:not(.dark) .text-secondary:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]),
+  html:not(.dark) .text-secondary-fixed:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]),
+  html:not(.dark) .text-primary-fixed:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]),
+  html:not(.dark) span.text-secondary:not([class*="text-[#F7BA7D]"]),
   html:not(.dark) a.text-secondary {
-    color: #8F3E0B !important;
-    font-weight: 700 !important;
+    color: #702602 !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
   }
 
-  /* Light Mode Step Numbers, Badges & Counters (Turn faint beige into bold readable amber & dark walnut) */
+  /* Light Mode Step Numbers, Badges & Counters */
   html:not(.dark) span.font-display-md.text-surface-container,
   html:not(.dark) span.text-surface-container,
   html:not(.dark) span.text-surface-container-high,
   html:not(.dark) span.text-surface-dim,
   html:not(.dark) span.text-surface-tint {
-    color: #8F3E0B !important;
-    font-weight: 800 !important;
+    color: #6B2302 !important;
+    font-weight: 900 !important;
+    opacity: 1 !important;
   }
   html:not(.dark) p.text-surface-container-high,
   html:not(.dark) p.text-surface-container,
   html:not(.dark) p[class*="text-surface-container"] {
-    color: #24140A !important;
-    font-weight: 500 !important;
+    color: #0A0502 !important;
+    font-weight: 550 !important;
   }
   html:not(.dark) td.text-outline,
   html:not(.dark) [class*="text-outline"] {
-    color: #24140A !important;
-    font-weight: 550 !important;
+    color: #0A0502 !important;
+    font-weight: 600 !important;
   }
 
-  /* Light Mode Box Cards: Distinct Boundaries & Tactile Elevation */
+  /* Light Mode Box Cards: Distinct Boundaries & Crisp Elevation */
   html:not(.dark) div.bg-surface-container-lowest,
   html:not(.dark) div.bg-surface-container-low,
   html:not(.dark) div.bg-surface-container,
@@ -288,7 +295,7 @@
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
   html:not(.dark) a.group[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) a.group[class*="rounded-3xl"][class*="shadow"] {
-    border: 1.5px solid #CFBEAC !important;
+    border: 1.5px solid #C4B19D !important;
     box-shadow: 0 4px 16px -2px rgba(36, 21, 14, 0.08) !important;
   }
   html:not(.dark) div.bg-surface-container-lowest:hover,
@@ -301,7 +308,7 @@
   html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover,
   html:not(.dark) a.group[class*="rounded-2xl"]:hover,
   html:not(.dark) a.group[class*="rounded-3xl"]:hover {
-    border-color: #B85D19 !important;
+    border-color: #702602 !important;
     box-shadow: 0 10px 28px -4px rgba(36, 21, 14, 0.16) !important;
   }
 
@@ -313,7 +320,7 @@
   html:not(.dark) section[class*="border-b"]:not([class*="bg-primary"]):not([class*="bg-[#"]),
   html:not(.dark) footer[class*="border-t"],
   html:not(.dark) div[class*="border-surface-container"] {
-    border-color: #CFBEAC !important;
+    border-color: #C4B19D !important;
   }
 
   /* ==========================================================================
