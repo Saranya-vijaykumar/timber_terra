@@ -739,13 +739,26 @@
     font-weight: 700 !important;
   }
 
-  /* Desktop Nav Links (Solid Pitch Black in Light Mode) */
+  /* Desktop Nav Links (Clean Typography - 100% ZERO BOX, ZERO BORDER) */
+  header nav *,
+  header nav a,
+  header nav button,
+  header nav span {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
   html:not(.dark) header nav a.nav-link-default,
   html:not(.dark) header nav button.nav-link-default,
   html:not(.dark) header nav a.nav-link-default *,
   html:not(.dark) header nav button.nav-link-default * {
     color: #000000 !important;
     font-weight: 750 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     text-shadow: none !important;
   }
   html:not(.dark) header nav a.nav-link-default:hover,
@@ -753,8 +766,10 @@
   html:not(.dark) header nav a.nav-link-default:hover *,
   html:not(.dark) header nav button.nav-link-default:hover * {
     color: #8A2B03 !important;
-    background-color: rgba(138, 43, 3, 0.08) !important;
-    border-radius: 8px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
   html.dark header nav a.nav-link-default,
@@ -763,6 +778,11 @@
   html.dark header nav button.nav-link-default * {
     color: #FFFFFF !important;
     font-weight: 650 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     text-shadow: none !important;
   }
   html.dark header nav a.nav-link-default:hover,
@@ -770,44 +790,58 @@
   html.dark header nav a.nav-link-default:hover *,
   html.dark header nav button.nav-link-default:hover * {
     color: #F7BA7D !important;
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    border-radius: 8px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
-  /* Active Nav Link: Luxury Terracotta Pill in Light Mode (NO UGLY GREY BOX!) */
+  /* Active Nav Link: Clean Luxury Typography (100% ZERO BOX, ZERO BORDER) */
   html:not(.dark) header nav a.nav-link-active,
-  html:not(.dark) header nav button.nav-link-active {
-    background-color: rgba(138, 43, 3, 0.08) !important;
+  html:not(.dark) header nav button.nav-link-active,
+  html:not(.dark) header nav a.nav-link-active *,
+  html:not(.dark) header nav button.nav-link-active * {
+    background: transparent !important;
+    background-color: transparent !important;
     color: #8A2B03 !important;
-    border: 1.5px solid #8A2B03 !important;
-    border-radius: 8px !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     font-weight: 850 !important;
     text-shadow: none !important;
   }
-  html:not(.dark) header nav a.nav-link-active *,
-  html:not(.dark) header nav button.nav-link-active *,
+
+  html.dark header nav a.nav-link-active,
+  html.dark header nav button.nav-link-active,
+  html.dark header nav a.nav-link-active *,
+  html.dark header nav button.nav-link-active * {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #F7BA7D !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    font-weight: 850 !important;
+    text-shadow: none !important;
+  }
+
+  /* Mobile Active Link in Drawer */
   html:not(.dark) #mobile-menu a.nav-link-active,
   html:not(.dark) #mobile-menu a.nav-link-active * {
     color: #8A2B03 !important;
     font-weight: 850 !important;
+    background: transparent !important;
     text-shadow: none !important;
   }
-  html.dark header nav a.nav-link-active,
-  html.dark header nav button.nav-link-active,
-  html.dark header nav a.nav-link-active *,
-  html.dark header nav button.nav-link-active *,
   html.dark #mobile-menu a.nav-link-active,
   html.dark #mobile-menu a.nav-link-active * {
-    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
-    color: #FFFFFF !important;
+    color: #F7BA7D !important;
     font-weight: 800 !important;
-    border: none !important;
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(184, 93, 25, 0.35) !important;
+    background: transparent !important;
     text-shadow: none !important;
   }
 
-  /* Dropdown Menu Popover */
+  /* Dropdown Menu Container (High Contrast Glass) */
   html:not(.dark) header .nav-dropdown {
     background-color: #FAF7F2 !important;
     border: 1.5px solid #CFBEAC !important;
