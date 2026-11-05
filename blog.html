@@ -1640,33 +1640,33 @@ tailwind.config = {
 </div>
 </section>
 <!-- Interactive Filter, Search & Category Navigation -->
-<section class="w-full bg-surface py-4 sticky top-20 lg:top-[120px] z-30 bg-surface/95 backdrop-blur-md shadow-sm border-b border-surface-container-high/30">
+<section class="sticky top-20 lg:top-[120px] z-30 w-full bg-surface/95 backdrop-blur-xl py-4 shadow-sm border-b border-surface-container-high/40">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="flex flex-col lg:flex-row items-center justify-between gap-3">
-<!-- Search Input with Icon -->
-<div class="w-full lg:w-96 relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
-<input class="w-full pl-10 pr-4 py-2.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-outline shadow-sm focus:outline-none focus:ring-1 focus:ring-primary" id="article-search" placeholder="Search field notes, timber species, or codes..." type="search"/>
+<div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-3.5">
+<!-- Search Input with Icon (Harmonized Pill Shape & Equal 40px Height) -->
+<div class="relative w-full xl:w-72 2xl:w-80 shrink-0">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">search</span>
+<input class="w-full pl-10 pr-4 h-10 rounded-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-outline shadow-sm focus:outline-none focus:ring-1 focus:ring-secondary transition-all" id="article-search" placeholder="Search field notes, timber species, or codes..." style="border-radius: 9999px !important;" type="search"/>
 </div>
-<!-- Filter Pills Scrollable -->
-<div class="w-full lg:w-auto flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none" id="category-pills">
-<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary !text-white shadow-sm" data-category="all">
-            All Articles <span class="ml-1 opacity-80">(28)</span>
+<!-- Filter Pills (Harmonized Pill Shape, matching 40px height, flex-wrap to prevent horizontal cutoff) -->
+<div class="flex flex-wrap items-center gap-2" id="category-pills">
+<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-primary-container text-on-primary !text-white shadow-sm" data-category="all" type="button">
+            All Articles <span class="ml-1.5 opacity-80">(28)</span>
 </button>
-<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="engineering">
-            Structural Engineering <span class="ml-1 opacity-60">(9)</span>
+<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="engineering" type="button">
+            Structural Engineering <span class="ml-1.5 opacity-60">(9)</span>
 </button>
-<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="material">
-            Material Intelligence <span class="ml-1 opacity-60">(7)</span>
+<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="material" type="button">
+            Material Intelligence <span class="ml-1.5 opacity-60">(7)</span>
 </button>
-<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="permits">
-            Permits &amp; HOA <span class="ml-1 opacity-60">(4)</span>
+<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="permits" type="button">
+            Permits &amp; HOA <span class="ml-1.5 opacity-60">(4)</span>
 </button>
-<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="culinary">
-            Outdoor Living <span class="ml-1 opacity-60">(5)</span>
+<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="culinary" type="button">
+            Outdoor Living <span class="ml-1.5 opacity-60">(5)</span>
 </button>
-<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="studies">
-            Field Case Studies <span class="ml-1 opacity-60">(3)</span>
+<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="studies" type="button">
+            Field Case Studies <span class="ml-1.5 opacity-60">(3)</span>
 </button>
 </div>
 </div>
@@ -1979,38 +1979,7 @@ tailwind.config = {
 </div>
 </section>
 </div>
-<script>
-  // Filter Pill Interactions
-  const pills = document.querySelectorAll('#category-pills button');
-  pills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      pills.forEach(p => {
-        p.classList.remove('bg-primary-container', 'text-on-primary', '!text-white');
-        p.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
-      });
-      pill.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
-      pill.classList.add('bg-primary-container', 'text-on-primary', '!text-white');
-    });
-  });
-
-  // Simple Search Input highlight
-  const searchInput = document.getElementById('article-search');
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      const val = e.target.value.toLowerCase();
-      const articles = document.querySelectorAll('#articles-container article');
-      articles.forEach(art => {
-        const title = art.querySelector('h3').textContent.toLowerCase();
-        const desc = art.querySelector('p').textContent.toLowerCase();
-        if (title.includes(val) || desc.includes(val)) {
-          art.style.display = 'flex';
-        } else {
-          art.style.display = 'none';
-        }
-      });
-    });
-  }
-</script></main><!-- Unified Global Footer -->
+</main><!-- Unified Global Footer -->
 <footer class="w-full bg-surface-container-low text-on-surface mt-16 sm:mt-20 border-t border-surface-container-high/40">
   <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-12 pt-14 pb-10 sm:pt-16 sm:pb-12">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10">
@@ -2209,15 +2178,17 @@ tailwind.config = {
     let searchQuery = '';
 
     function filterArticles() {
+      let visibleCount = 0;
       cards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
+        const cardCat = card.getAttribute('data-category') || '';
         const text = card.textContent.toLowerCase();
 
-        const matchesCategory = (currentCategory === 'all' || cardCat === currentCategory);
+        const matchesCategory = (currentCategory === 'all' || cardCat.includes(currentCategory));
         const matchesSearch = (!searchQuery || text.includes(searchQuery));
 
         if (matchesCategory && matchesSearch) {
           card.style.display = 'flex';
+          visibleCount++;
         } else {
           card.style.display = 'none';
         }
@@ -2227,13 +2198,13 @@ tailwind.config = {
     pills.forEach(pill => {
       pill.addEventListener('click', () => {
         pills.forEach(p => {
-          p.classList.remove('bg-primary-container', 'text-on-primary');
+          p.classList.remove('bg-primary-container', 'text-on-primary', '!text-white');
           p.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
         });
         pill.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
-        pill.classList.add('bg-primary-container', 'text-on-primary');
+        pill.classList.add('bg-primary-container', 'text-on-primary', '!text-white');
 
-        currentCategory = pill.getAttribute('data-category');
+        currentCategory = pill.getAttribute('data-category') || 'all';
         filterArticles();
       });
     });
