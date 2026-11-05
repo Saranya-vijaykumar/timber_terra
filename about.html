@@ -378,17 +378,20 @@
      ========================================================================== */
   .photographic-hero,
   section.photographic-hero {
+    position: relative !important;
     background-color: #140C07 !important;
     color: #FFFFFF !important;
   }
-  .photographic-hero div[class*="bg-gradient"] {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.45) 100%) !important;
+  .photographic-hero img {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   .photographic-hero h1,
   .photographic-hero h1 * {
     color: #FFFFFF !important;
     font-weight: 850 !important;
-    text-shadow: none !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65) !important;
   }
   .photographic-hero h1 span[class*="text-"],
   .photographic-hero h1 em,
@@ -403,7 +406,7 @@
     color: #FFFFFF !important;
     font-weight: 550 !important;
     opacity: 1 !important;
-    text-shadow: none !important;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65) !important;
   }
   /* Trust Pill / Badges in Hero */
   .photographic-hero div[class*="rounded-full"],

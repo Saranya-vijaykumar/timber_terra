@@ -379,17 +379,20 @@
      ========================================================================== */
   .photographic-hero,
   section.photographic-hero {
+    position: relative !important;
     background-color: #140C07 !important;
     color: #FFFFFF !important;
   }
-  .photographic-hero div[class*="bg-gradient"] {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.45) 100%) !important;
+  .photographic-hero img {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   .photographic-hero h1,
   .photographic-hero h1 * {
     color: #FFFFFF !important;
     font-weight: 850 !important;
-    text-shadow: none !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65) !important;
   }
   .photographic-hero h1 span[class*="text-"],
   .photographic-hero h1 em,
@@ -404,7 +407,7 @@
     color: #FFFFFF !important;
     font-weight: 550 !important;
     opacity: 1 !important;
-    text-shadow: none !important;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65) !important;
   }
   /* Trust Pill / Badges in Hero */
   .photographic-hero div[class*="rounded-full"],
@@ -1639,14 +1642,14 @@ tailwind.config = {
   <div class="absolute inset-0 z-0">
     <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9XfB0yeHd3vjrZL6tz97g3ClR9rkU2EtQn9dCtDrIU27tzguyHlH4Mnyxae7J0VmWYUDhjFo9HXTMaJkudgLwLgUcRVPPz4qgkPPE1lLDWCNZ_FPNcSXISmb5kyzAe8q938WTngveToVtNPMbvLnutAchJMB6mPyORYBv7R_O3QbNhKVyTepRR5BTQPpFIaDkR1-fAbjz2nJOInfI6HI83n3STC0HlWBYDV61nMO_-RBvffIDtDFE" 
          alt="Artisan carpenter hand-chiseling a precision mortise and tenon timber joint on a large hardwood beam in a sunlit architectural woodshop, wood shavings curling around the chisel blade, workbench lined with traditional Japanese saws and hand planes" 
-         class="w-full h-full object-cover object-center scale-105 filter brightness-[0.78] contrast-[1.08]"/>
+         class="w-full h-full object-cover object-center scale-105 filter brightness-[0.92] contrast-[1.05]"/>
     <!-- Warm Artisan Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-[#140C07]/95 via-[#1E1109]/85 to-[#140C07]/70"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#140C07] via-transparent to-[#140C07]/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
-    <div class="max-w-3xl p-6 sm:p-8 lg:p-10 rounded-2xl bg-black/45 backdrop-blur-md border border-white/15 shadow-2xl">
+    <div class="max-w-3xl flex flex-col items-start w-full">
       <!-- Trust Pill -->
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B85D19]/35 border border-[#D48B4E]/50 text-[#F5C7A1] text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md shadow-lg">
         <span class="w-2 h-2 rounded-full bg-[#D48B4E] animate-pulse"></span>
