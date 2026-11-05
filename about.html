@@ -178,17 +178,17 @@
   html:not(.dark) .bg-surface-variant { background-color: #E8DFD2 !important; }
 
   /* Light Mode Headings on Light Surfaces (Pure Pitch Black, 21:1 Contrast Ratio) */
-  html:not(.dark) h1,
-  html:not(.dark) h2,
-  html:not(.dark) h3,
-  html:not(.dark) h4,
-  html:not(.dark) h5,
-  html:not(.dark) h6,
-  html:not(.dark) .font-title-lg,
-  html:not(.dark) .font-title-md,
-  html:not(.dark) .font-title-sm,
-  html:not(.dark) .text-title,
-  html:not(.dark) .text-primary {
+  html:not(.dark) h1:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
+  html:not(.dark) h2:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
+  html:not(.dark) h3:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
+  html:not(.dark) h4:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
+  html:not(.dark) h5:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
+  html:not(.dark) h6:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
+  html:not(.dark) .font-title-lg:not(.text-on-primary):not([class*="text-white"]),
+  html:not(.dark) .font-title-md:not(.text-on-primary):not([class*="text-white"]),
+  html:not(.dark) .font-title-sm:not(.text-on-primary):not([class*="text-white"]),
+  html:not(.dark) .text-title:not(.text-on-primary):not([class*="text-white"]),
+  html:not(.dark) .text-primary:not(.text-on-primary):not([class*="text-white"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]) {
     color: #000000 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
@@ -228,16 +228,16 @@
     text-shadow: none !important;
   }
 
-  /* Light Mode Small Labels, Badges & Captions on Light Surfaces */
-  html:not(.dark) .text-label-sm,
-  html:not(.dark) .text-label-md,
-  html:not(.dark) .text-label-lg,
-  html:not(.dark) .font-label-sm,
-  html:not(.dark) .font-label-md,
-  html:not(.dark) .font-label-lg,
-  html:not(.dark) .font-caption,
-  html:not(.dark) .text-caption,
-  html:not(.dark) label {
+  /* Light Mode Small Labels, Badges & Captions on Light Surfaces (Protected from Dark Containers) */
+  html:not(.dark) .text-label-sm:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
+  html:not(.dark) .text-label-md:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
+  html:not(.dark) .text-label-lg:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
+  html:not(.dark) .font-label-sm:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
+  html:not(.dark) .font-label-md:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
+  html:not(.dark) .font-label-lg:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
+  html:not(.dark) .font-caption:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not([class*="text-primary-fixed"]),
+  html:not(.dark) .text-caption:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not([class*="text-primary-fixed"]),
+  html:not(.dark) label:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active) {
     color: #000000 !important;
     font-weight: 800 !important;
     opacity: 1 !important;
@@ -358,6 +358,58 @@
      3. UNIVERSAL DARK CONTAINER & HIGH-CONTRAST RULES (html:not(.dark))
      ZERO text-shadow, 100% Crisp White & Radiant Amber Typography!
      ========================================================================== */
+
+  /* 3-ALL. OMNIPOTENT UNIVERSAL DARK CONTAINER TEXT RULE:
+     Guarantees that ANY element inside ANY dark container renders as pure solid white or luminous amber,
+     NEVER pitch black! Excludes only nested white cards and form inputs. */
+  html:not(.dark) [class*="bg-primary"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select):not(.bg-white):not(.bg-surface-container-lowest),
+  html:not(.dark) [class*="bg-primary-container"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select):not(.bg-white):not(.bg-surface-container-lowest),
+  html:not(.dark) [class*="bg-[#180F0A]"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#24150E]"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#24140A]"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#140C07]"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-black"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
+  html:not(.dark) [class*="text-on-primary"],
+  html:not(.dark) [class*="text-on-primary"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
+  html:not(.dark) span[class*="bg-primary"],
+  html:not(.dark) span[class*="bg-primary-container"],
+  html:not(.dark) span.text-on-primary,
+  html:not(.dark) button.active-filter,
+  html:not(.dark) button.active-filter *,
+  html:not(.dark) .filter-btn.active,
+  html:not(.dark) .filter-btn.active * {
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+  }
+
+  /* Specific accents inside dark containers: Radiant Luminous Amber Gold */
+  html:not(.dark) [class*="bg-primary"] .text-secondary,
+  html:not(.dark) [class*="bg-primary"] .text-secondary-fixed,
+  html:not(.dark) [class*="bg-primary"] .text-primary-fixed,
+  html:not(.dark) [class*="bg-primary"] strong,
+  html:not(.dark) [class*="bg-primary-container"] .text-secondary,
+  html:not(.dark) [class*="bg-primary-container"] .text-primary-fixed,
+  html:not(.dark) [class*="bg-[#1"] .text-secondary,
+  html:not(.dark) [class*="bg-[#1"] .text-secondary-fixed,
+  html:not(.dark) [class*="bg-[#1"] .text-primary-fixed,
+  html:not(.dark) [class*="bg-[#241"] .text-secondary,
+  html:not(.dark) [class*="bg-[#241"] .text-primary-fixed,
+  html:not(.dark) [class*="bg-black"] .text-secondary,
+  html:not(.dark) [class*="bg-black"] .text-primary-fixed {
+    color: #F7BA7D !important;
+    text-shadow: none !important;
+  }
+
+  /* Specific secondary/meta paragraphs inside dark containers: Warm Crisp Off-White */
+  html:not(.dark) [class*="bg-primary"] p,
+  html:not(.dark) [class*="bg-primary"] p *,
+  html:not(.dark) [class*="bg-[#1"] p,
+  html:not(.dark) [class*="bg-[#1"] p *,
+  html:not(.dark) [class*="bg-[#241"] p,
+  html:not(.dark) [class*="bg-[#241"] p * {
+    color: #FAF5EF !important;
+    text-shadow: none !important;
+  }
 
   /* 3A. Dark Headings inside any dark container or hero */
   html:not(.dark) [class*="bg-primary"] h1, html:not(.dark) [class*="bg-primary"] h2, html:not(.dark) [class*="bg-primary"] h3, html:not(.dark) [class*="bg-primary"] h4, html:not(.dark) [class*="bg-primary"] h5, html:not(.dark) [class*="bg-primary"] h6,
