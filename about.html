@@ -401,10 +401,15 @@
     visibility: visible !important;
   }
   .photographic-hero h1,
-  .photographic-hero h1 * {
+  .photographic-hero h1 *,
+  section.photographic-hero h1,
+  section.photographic-hero h1 *,
+  .photographic-hero p,
+  .photographic-hero p *,
+  section.photographic-hero p,
+  section.photographic-hero p * {
     color: #FFFFFF !important;
-    font-weight: 850 !important;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65) !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75) !important;
   }
   .photographic-hero h1 span[class*="text-"],
   .photographic-hero h1 em,
@@ -1040,69 +1045,28 @@
   html:not(.dark) .filter-btn.active,
   html:not(.dark) .filter-btn.active-filter,
   html:not(.dark) .service-filter-btn.active,
+  html:not(.dark) .service-filter-btn.bg-primary,
   html:not(.dark) #category-pills button.active,
   html:not(.dark) #category-pills button.bg-primary-container,
   html:not(.dark) button.filter-btn.bg-primary-container,
   html:not(.dark) button.filter-btn.text-on-primary,
   html:not(.dark) button.active-filter,
+  html:not(.dark) button[data-category].bg-primary,
   html:not(.dark) button[data-category].bg-primary-container,
   html:not(.dark) button[data-filter].bg-primary-container,
   html:not(.dark) .filter-btn.active *,
   html:not(.dark) .filter-btn.active-filter *,
   html:not(.dark) .service-filter-btn.active *,
+  html:not(.dark) .service-filter-btn.bg-primary *,
   html:not(.dark) #category-pills button.active *,
   html:not(.dark) #category-pills button.bg-primary-container *,
   html:not(.dark) button.active-filter *,
+  html:not(.dark) button[data-category].bg-primary *,
   html:not(.dark) button[data-category].bg-primary-container * {
-    background-color: #EAE1D4 !important;
-    color: #000000 !important;
-    border: 2px solid #8A2B03 !important;
-    font-weight: 850 !important;
-    text-shadow: none !important;
-  }
-
-  /* Inactive Filter Pills in Dark Mode */
-  html.dark .filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark .service-filter-btn:not(.active):not(.bg-primary):not(.bg-primary-container),
-  html.dark #category-pills button:not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark button.filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark #filter-container button:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark #filter-buttons button:not(.active):not(.bg-primary):not(.bg-primary-container),
-  html.dark button[data-filter]:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark button[data-category]:not(.active):not(.bg-primary-container):not(.bg-primary) {
-    background-color: #24160E !important;
+    background: #8A2B03 !important;
+    background-color: #8A2B03 !important;
     color: #FFFFFF !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
-    font-weight: 700 !important;
-    text-shadow: none !important;
-  }
-  html.dark .filter-btn:hover:not(.active-filter):not(.active),
-  html.dark .service-filter-btn:hover:not(.active) {
-    border-color: #F7BA7D !important;
-    color: #F7BA7D !important;
-  }
-
-  /* Active Filter Pills in Dark Mode */
-  html.dark .filter-btn.active,
-  html.dark .filter-btn.active-filter,
-  html.dark .service-filter-btn.active,
-  html.dark #category-pills button.active,
-  html.dark #category-pills button.bg-primary-container,
-  html.dark button.filter-btn.bg-primary-container,
-  html.dark button.filter-btn.text-on-primary,
-  html.dark button.active-filter,
-  html.dark button[data-category].bg-primary-container,
-  html.dark button[data-filter].bg-primary-container,
-  html.dark .filter-btn.active *,
-  html.dark .filter-btn.active-filter *,
-  html.dark .service-filter-btn.active *,
-  html.dark #category-pills button.active *,
-  html.dark #category-pills button.bg-primary-container *,
-  html.dark button.active-filter *,
-  html.dark button[data-category].bg-primary-container * {
-    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
-    color: #FFFFFF !important;
-    border-color: #F7BA7D !important;
+    border: 1.5px solid #8A2B03 !important;
     font-weight: 800 !important;
     text-shadow: none !important;
   }
@@ -2048,7 +2012,7 @@ tailwind.config = {
 <div class="lg:col-span-7">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="h-full bg-surface-container-lowest p-5 sm:p-6 rounded-xl shadow-sm space-y-2">
-<div class="w-10 h-10 rounded bg-primary-container text-on-primary flex items-center justify-center">
+<div class="w-10 h-10 rounded bg-[#8A2B03]/15 dark:bg-primary-container text-[#8A2B03] dark:text-[#F7BA7D] flex items-center justify-center border border-[#8A2B03]/30 dark:border-white/10">
 <span class="material-symbols-outlined text-[22px]">nature</span>
 </div>
 <h4 class="font-title text-title text-primary">Reclaimed Timber Vault</h4>

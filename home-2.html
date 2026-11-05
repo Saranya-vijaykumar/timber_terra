@@ -402,10 +402,15 @@
     visibility: visible !important;
   }
   .photographic-hero h1,
-  .photographic-hero h1 * {
+  .photographic-hero h1 *,
+  section.photographic-hero h1,
+  section.photographic-hero h1 *,
+  .photographic-hero p,
+  .photographic-hero p *,
+  section.photographic-hero p,
+  section.photographic-hero p * {
     color: #FFFFFF !important;
-    font-weight: 850 !important;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65) !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75) !important;
   }
   .photographic-hero h1 span[class*="text-"],
   .photographic-hero h1 em,
@@ -1041,69 +1046,28 @@
   html:not(.dark) .filter-btn.active,
   html:not(.dark) .filter-btn.active-filter,
   html:not(.dark) .service-filter-btn.active,
+  html:not(.dark) .service-filter-btn.bg-primary,
   html:not(.dark) #category-pills button.active,
   html:not(.dark) #category-pills button.bg-primary-container,
   html:not(.dark) button.filter-btn.bg-primary-container,
   html:not(.dark) button.filter-btn.text-on-primary,
   html:not(.dark) button.active-filter,
+  html:not(.dark) button[data-category].bg-primary,
   html:not(.dark) button[data-category].bg-primary-container,
   html:not(.dark) button[data-filter].bg-primary-container,
   html:not(.dark) .filter-btn.active *,
   html:not(.dark) .filter-btn.active-filter *,
   html:not(.dark) .service-filter-btn.active *,
+  html:not(.dark) .service-filter-btn.bg-primary *,
   html:not(.dark) #category-pills button.active *,
   html:not(.dark) #category-pills button.bg-primary-container *,
   html:not(.dark) button.active-filter *,
+  html:not(.dark) button[data-category].bg-primary *,
   html:not(.dark) button[data-category].bg-primary-container * {
-    background-color: #EAE1D4 !important;
-    color: #000000 !important;
-    border: 2px solid #8A2B03 !important;
-    font-weight: 850 !important;
-    text-shadow: none !important;
-  }
-
-  /* Inactive Filter Pills in Dark Mode */
-  html.dark .filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark .service-filter-btn:not(.active):not(.bg-primary):not(.bg-primary-container),
-  html.dark #category-pills button:not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark button.filter-btn:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark #filter-container button:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark #filter-buttons button:not(.active):not(.bg-primary):not(.bg-primary-container),
-  html.dark button[data-filter]:not(.active-filter):not(.active):not(.bg-primary-container):not(.bg-primary),
-  html.dark button[data-category]:not(.active):not(.bg-primary-container):not(.bg-primary) {
-    background-color: #24160E !important;
+    background: #8A2B03 !important;
+    background-color: #8A2B03 !important;
     color: #FFFFFF !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
-    font-weight: 700 !important;
-    text-shadow: none !important;
-  }
-  html.dark .filter-btn:hover:not(.active-filter):not(.active),
-  html.dark .service-filter-btn:hover:not(.active) {
-    border-color: #F7BA7D !important;
-    color: #F7BA7D !important;
-  }
-
-  /* Active Filter Pills in Dark Mode */
-  html.dark .filter-btn.active,
-  html.dark .filter-btn.active-filter,
-  html.dark .service-filter-btn.active,
-  html.dark #category-pills button.active,
-  html.dark #category-pills button.bg-primary-container,
-  html.dark button.filter-btn.bg-primary-container,
-  html.dark button.filter-btn.text-on-primary,
-  html.dark button.active-filter,
-  html.dark button[data-category].bg-primary-container,
-  html.dark button[data-filter].bg-primary-container,
-  html.dark .filter-btn.active *,
-  html.dark .filter-btn.active-filter *,
-  html.dark .service-filter-btn.active *,
-  html.dark #category-pills button.active *,
-  html.dark #category-pills button.bg-primary-container *,
-  html.dark button.active-filter *,
-  html.dark button[data-category].bg-primary-container * {
-    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
-    color: #FFFFFF !important;
-    border-color: #F7BA7D !important;
+    border: 1.5px solid #8A2B03 !important;
     font-weight: 800 !important;
     text-shadow: none !important;
   }
@@ -1701,16 +1665,16 @@ tailwind.config = {
         <!-- Trust Badge -->
         <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface/10 backdrop-blur-md text-primary-fixed mb-6 sm:mb-8 shadow-sm max-w-full flex-wrap sm:flex-nowrap border border-white/10">
           <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-          <span class="font-label-md text-xs sm:text-label-md uppercase tracking-wider text-surface-bright break-words">Home 2: Estate Living Pavilions &amp; Cantilevers</span>
+          <span class="font-label-md text-xs sm:text-label-md uppercase tracking-wider !text-[#F7BA7D] break-words font-bold">Home 2: Estate Living Pavilions &amp; Cantilevers</span>
         </div>
 
         <!-- Main Headline -->
-        <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-display-lg font-bold tracking-tight text-surface-bright mb-6 leading-[1.15]">
+        <h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-display-lg font-bold tracking-tight !text-white mb-6 leading-[1.15] drop-shadow-md">
           Generational Estate Living. Engineered for the Pacific Northwest Horizon.
         </h1>
 
         <!-- Subheading Paragraph -->
-        <p class="font-body-lg text-base sm:text-body-lg text-surface-container-high/90 mb-8 sm:mb-10 max-w-2xl leading-relaxed">
+        <p class="font-body-lg text-base sm:text-body-lg !text-white/95 mb-8 sm:mb-10 max-w-2xl leading-relaxed drop-shadow">
           We architect bespoke outdoor sanctuaries for private estates — uniting structural glulam timbers, concealed helical micro-piles, and climate-responsive bioclimatic glass pavilions.
         </p>
 
@@ -1768,7 +1732,7 @@ tailwind.config = {
       <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-surface-container-high/40">
         <div class="relative aspect-[4/3] overflow-hidden">
           <img alt="Cantilevered Hillside Pavilion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmQd4Pk43cks6_ESHJIle7t0VgRUdxDbGBjcyQsI73cQgeG-IWupMK9TyH6s8FqO2asMqqsGL0R6vH-CTnOfzcoz1b24kQYY-kFI8HR-V2akQi9SMJBUjEtW0FYaAgVVATCq57MedftCGbNG8leFg3s71Ptb2Lb3pTKMHPn8-QP2rwn9eP9Oitn8Z1FgQHUpZI8AZglGMQIR0r7FIGI5Vj7CF91fPX2frQE8-kV4jB4pNcrL9XN1-V6Q"/>
-          <div class="absolute top-3 left-3 bg-primary/90 text-on-primary px-3 py-1 rounded-full text-xs font-semibold">Discipline 01</div>
+          <span class="absolute top-3 left-3 px-3 py-1 bg-white/95 dark:bg-black/75 backdrop-blur-md rounded-full !text-[#000000] dark:!text-white text-xs font-extrabold uppercase tracking-wider border border-black/15 dark:border-white/20 shadow-md">Discipline 01</span>
         </div>
         <div class="p-6 flex flex-col flex-1 justify-between gap-4">
           <div>
@@ -1786,7 +1750,7 @@ tailwind.config = {
       <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-surface-container-high/40">
         <div class="relative aspect-[4/3] overflow-hidden">
           <img alt="Estate Culinary Pavilions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmeESg2xB6XgEkGyYcNtccku6e72vXace69DE-tUk-1_6oSRR6V1QBOxyikCOKc8kEVZ9CdnIKJVXONvQpmEiqisWRnDVbwOi9uYjN4vlVqVUQ75CGQeuTa3ReowCmTvt_pHYsGr1gJtUPK9ZIEb87FnBW32BF7ZRnc70WfERj3GmE9d6uT8I_l1sgn42ZdB3a--EHC5hOmFgyng45XhcHYQhzqGUmV4KKFIxU6C_MbQ9JvyfbPpMWvA"/>
-          <div class="absolute top-3 left-3 bg-primary/90 text-on-primary px-3 py-1 rounded-full text-xs font-semibold">Discipline 02</div>
+          <span class="absolute top-3 left-3 px-3 py-1 bg-white/95 dark:bg-black/75 backdrop-blur-md rounded-full !text-[#000000] dark:!text-white text-xs font-extrabold uppercase tracking-wider border border-black/15 dark:border-white/20 shadow-md">Discipline 02</span>
         </div>
         <div class="p-6 flex flex-col flex-1 justify-between gap-4">
           <div>
@@ -1804,7 +1768,7 @@ tailwind.config = {
       <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-surface-container-high/40">
         <div class="relative aspect-[4/3] overflow-hidden">
           <img alt="Bioclimatic Glass Louvered Pavilions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmTC20aywszTvWIWu9HhwttEbEpAoRUuerkdQx8dICyGAipWNmYvq6VOc5gR9GJyzOyhgMajL67FWN5ALBo2NPTkQH1qEn4ERPs42c1vAroi71RzaUfcox5HblFdR65CTHiisuzlW1DjX3QsYKR4SS-4J5ORsPAMpCX0uIKii0gy8ptswkchLzzHSLoPTjm0-XiiWV9MOvGcMcDjH8QqWzbUvtPQLD5VkZW9QFKopIoDC1Ngxj1XkAsA"/>
-          <div class="absolute top-3 left-3 bg-primary/90 text-on-primary px-3 py-1 rounded-full text-xs font-semibold">Discipline 03</div>
+          <span class="absolute top-3 left-3 px-3 py-1 bg-white/95 dark:bg-black/75 backdrop-blur-md rounded-full !text-[#000000] dark:!text-white text-xs font-extrabold uppercase tracking-wider border border-black/15 dark:border-white/20 shadow-md">Discipline 03</span>
         </div>
         <div class="p-6 flex flex-col flex-1 justify-between gap-4">
           <div>
@@ -1822,7 +1786,7 @@ tailwind.config = {
       <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-surface-container-high/40">
         <div class="relative aspect-[4/3] overflow-hidden">
           <img alt="Resort-Grade Shoreline Sanctuaries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcjdIaOEW6G5XsHMtZfrsy1JQq3_M2F76yApHa4-SUWzbODLlBtGObOCYVhQU-PMnyQdMiK-lCk-VifU_NfiQKd_PwR6BGI1ufmNQEd-VfII4vj3ufOD4sRNuIOODYzt7hjT_WwkmjYH4aaj2D45ah9YQV2pz3XbC9rr1DnP-sysBZchySezDWsDjvqJO4m-hKnr4dnGK6XAyTldGIiKJJ6AiTJwnwJzLsc8jvzmQNhvw8BD0SR7GTEA"/>
-          <div class="absolute top-3 left-3 bg-primary/90 text-on-primary px-3 py-1 rounded-full text-xs font-semibold">Discipline 04</div>
+          <span class="absolute top-3 left-3 px-3 py-1 bg-white/95 dark:bg-black/75 backdrop-blur-md rounded-full !text-[#000000] dark:!text-white text-xs font-extrabold uppercase tracking-wider border border-black/15 dark:border-white/20 shadow-md">Discipline 04</span>
         </div>
         <div class="p-6 flex flex-col flex-1 justify-between gap-4">
           <div>
