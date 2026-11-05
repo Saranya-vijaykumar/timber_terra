@@ -213,6 +213,14 @@
   }
 
   /* Universal 100% Pure Solid Black Body, Paragraphs, Lists & Tables (Excluding Photographic Heroes) */
+  html:not(.dark) section:not(.photographic-hero) strong,
+  html:not(.dark) section:not(.photographic-hero) b,
+  html:not(.dark) section:not(.photographic-hero) dt,
+  html:not(.dark) section:not(.photographic-hero) dd,
+  html:not(.dark) section:not(.photographic-hero) .text-surface-bright,
+  html:not(.dark) section:not(.photographic-hero) [class*="text-surface-bright"],
+  html:not(.dark) section:not(.photographic-hero) [class*="text-surface-container"],
+  html:not(.dark) section:not(.photographic-hero) [class*="text-surface-container"] *,
   html:not(.dark) section:not(.photographic-hero) p,
   html:not(.dark) section:not(.photographic-hero) li,
   html:not(.dark) section:not(.photographic-hero) td,
@@ -2817,53 +2825,53 @@ tailwind.config = {
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Material 1: Western Red Cedar -->
-        <div class="h-full bg-primary-container/70 rounded-xl p-5 border border-white/10 flex flex-col justify-between">
+        <div class="h-full bg-white dark:bg-primary-container/70 rounded-xl p-5 border border-surface-container-high/60 dark:border-white/10 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-bold text-secondary-fixed uppercase tracking-wider">Natural Hardwood</span>
-              <span class="text-[11px] bg-secondary/30 px-2 py-0.5 rounded text-secondary-fixed font-bold">Top Choice</span>
+              <span class="text-xs font-bold text-[#8A2B03] dark:text-secondary-fixed uppercase tracking-wider">Natural Hardwood</span>
+              <span class="text-[11px] bg-[#8A2B03]/15 dark:bg-secondary/30 px-2 py-0.5 rounded text-[#8A2B03] dark:text-secondary-fixed font-bold">Top Choice</span>
             </div>
-            <h4 class="font-headline-sm text-base text-surface-bright font-bold mb-1">Western Red Cedar</h4>
-            <p class="text-xs text-surface-container-high/80 leading-relaxed mb-4">Aromatic, dimensionally stable, and naturally resistant to rot and insect infestation.</p>
+            <h4 class="font-headline-sm text-base text-[#24150E] dark:text-surface-bright font-bold mb-1">Western Red Cedar</h4>
+            <p class="text-xs text-[#5E4738] dark:text-surface-container-high/80 leading-relaxed mb-4">Aromatic, dimensionally stable, and naturally resistant to rot and insect infestation.</p>
           </div>
-          <div class="space-y-1.5 text-xs border-t border-white/10 pt-3 text-surface-container-high/90">
-            <div class="flex justify-between"><span>Hardness:</span> <strong class="text-surface-bright">350 lbf</strong></div>
-            <div class="flex justify-between"><span>Lifespan:</span> <strong class="text-surface-bright">25–30 Years</strong></div>
-            <div class="flex justify-between"><span>Maintenance:</span> <strong class="text-secondary-fixed">Biennial Oil</strong></div>
+          <div class="space-y-1.5 text-xs border-t border-surface-container-high/60 dark:border-white/10 pt-3">
+            <div class="flex justify-between"><span class="text-[#5E4738] dark:text-[#EAE1D4] font-medium">Hardness:</span> <strong class="!text-[#000000] dark:!text-surface-bright font-bold">350 lbf</strong></div>
+            <div class="flex justify-between"><span class="text-[#5E4738] dark:text-[#EAE1D4] font-medium">Lifespan:</span> <strong class="!text-[#000000] dark:!text-surface-bright font-bold">25–30 Years</strong></div>
+            <div class="flex justify-between"><span class="text-[#5E4738] dark:text-[#EAE1D4] font-medium">Maintenance:</span> <strong class="!text-[#8A2B03] dark:!text-secondary-fixed font-bold">Biennial Oil</strong></div>
           </div>
         </div>
 
         <!-- Material 2: Brazilian Ipe -->
-        <div class="h-full bg-primary-container/70 rounded-xl p-5 border border-white/10 flex flex-col justify-between">
+        <div class="h-full bg-white dark:bg-primary-container/70 rounded-xl p-5 border border-surface-container-high/60 dark:border-white/10 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-bold text-secondary-fixed uppercase tracking-wider">Exotic Ironwood</span>
-              <span class="text-[11px] bg-secondary/30 px-2 py-0.5 rounded text-secondary-fixed font-bold">Ultra-Dense</span>
+              <span class="text-xs font-bold text-[#8A2B03] dark:text-secondary-fixed uppercase tracking-wider">Exotic Ironwood</span>
+              <span class="text-[11px] bg-[#8A2B03]/15 dark:bg-secondary/30 px-2 py-0.5 rounded text-[#8A2B03] dark:text-secondary-fixed font-bold">Ultra-Dense</span>
             </div>
-            <h4 class="font-headline-sm text-base text-surface-bright font-bold mb-1">Brazilian Ipe (FSC®)</h4>
-            <p class="text-xs text-surface-container-high/80 leading-relaxed mb-4">Class A flame spread rating, so dense it does not float. Highly impervious to saltwater.</p>
+            <h4 class="font-headline-sm text-base text-[#24150E] dark:text-surface-bright font-bold mb-1">Brazilian Ipe (FSC®)</h4>
+            <p class="text-xs text-[#5E4738] dark:text-surface-container-high/80 leading-relaxed mb-4">Class A flame spread rating, so dense it does not float. Highly impervious to saltwater.</p>
           </div>
-          <div class="space-y-1.5 text-xs border-t border-white/10 pt-3 text-surface-container-high/90">
-            <div class="flex justify-between"><span>Hardness:</span> <strong class="text-surface-bright">3,680 lbf</strong></div>
-            <div class="flex justify-between"><span>Lifespan:</span> <strong class="text-surface-bright">40–50+ Years</strong></div>
-            <div class="flex justify-between"><span>Maintenance:</span> <strong class="text-secondary-fixed">Optional UV Oil</strong></div>
+          <div class="space-y-1.5 text-xs border-t border-surface-container-high/60 dark:border-white/10 pt-3">
+            <div class="flex justify-between"><span class="text-[#5E4738] dark:text-[#EAE1D4] font-medium">Hardness:</span> <strong class="!text-[#000000] dark:!text-surface-bright font-bold">3,680 lbf</strong></div>
+            <div class="flex justify-between"><span class="text-[#5E4738] dark:text-[#EAE1D4] font-medium">Lifespan:</span> <strong class="!text-[#000000] dark:!text-surface-bright font-bold">40–50+ Years</strong></div>
+            <div class="flex justify-between"><span class="text-[#5E4738] dark:text-[#EAE1D4] font-medium">Maintenance:</span> <strong class="!text-[#8A2B03] dark:!text-secondary-fixed font-bold">Optional UV Oil</strong></div>
           </div>
         </div>
 
         <!-- Material 3: Thermory Ash -->
-        <div class="h-full bg-primary-container/70 rounded-xl p-5 border border-white/10 flex flex-col justify-between">
+        <div class="h-full bg-white dark:bg-primary-container/70 rounded-xl p-5 border border-surface-container-high/60 dark:border-white/10 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-bold text-secondary-fixed uppercase tracking-wider">Thermally Modified</span>
-              <span class="text-[11px] bg-secondary/30 px-2 py-0.5 rounded text-secondary-fixed font-bold">Sub-Zero</span>
+              <span class="text-xs font-bold text-[#8A2B03] dark:text-secondary-fixed uppercase tracking-wider">Thermally Modified</span>
+              <span class="text-[11px] bg-[#8A2B03]/15 dark:bg-secondary/30 px-2 py-0.5 rounded text-[#8A2B03] dark:text-secondary-fixed font-bold">Sub-Zero</span>
             </div>
-            <h4 class="font-headline-sm text-base text-surface-bright font-bold mb-1">Thermory Alpine Ash</h4>
-            <p class="text-xs text-surface-container-high/80 leading-relaxed mb-4">Heat-treated at 400°F without chemicals for near-zero expansion in wet PNW climates.</p>
+            <h4 class="font-headline-sm text-base text-[#24150E] dark:text-surface-bright font-bold mb-1">Thermory Alpine Ash</h4>
+            <p class="text-xs text-[#5E4738] dark:text-surface-container-high/80 leading-relaxed mb-4">Heat-treated at 400°F without chemicals for near-zero expansion in wet PNW winters.</p>
           </div>
-          <div class="space-y-1.5 text-xs border-t border-white/10 pt-3 text-surface-container-high/90">
-            <div class="flex justify-between"><span>Hardness:</span> <strong class="text-surface-bright">1,320 lbf</strong></div>
-            <div class="flex justify-between"><span>Lifespan:</span> <strong class="text-surface-bright">30+ Years</strong></div>
-            <div class="flex justify-between"><span>Maintenance:</span> <strong class="text-secondary-fixed">Zero Sealing</strong></div>
+          <div class="space-y-1.5 text-xs border-t border-surface-container-high/60 dark:border-white/10 pt-3">
+            <div class="flex justify-between"><span class="text-[#5E4738] dark:text-[#EAE1D4] font-medium">Hardness:</span> <strong class="!text-[#000000] dark:!text-surface-bright font-bold">1,320 lbf</strong></div>
+            <div class="flex justify-between"><span class="text-[#5E4738] dark:text-[#EAE1D4] font-medium">Lifespan:</span> <strong class="!text-[#000000] dark:!text-surface-bright font-bold">30+ Years</strong></div>
+            <div class="flex justify-between"><span class="text-[#5E4738] dark:text-[#EAE1D4] font-medium">Maintenance:</span> <strong class="!text-[#8A2B03] dark:!text-secondary-fixed font-bold">Zero Sealing</strong></div>
           </div>
         </div>
 
