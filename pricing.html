@@ -157,6 +157,7 @@
 
   /* ==========================================================================
      2. LIGHT MODE: 100% MAXIMUM VISIBILITY ULTRA-CONTRAST (html:not(.dark))
+     Pure Solid Pitch Black (#000000) for EVERY word, line, heading, button & label!
      ========================================================================== */
   html:not(.dark) {
     color-scheme: light;
@@ -179,25 +180,19 @@
   html:not(.dark) .bg-surface-container-highest { background-color: #D4C6B4 !important; }
   html:not(.dark) .bg-surface-variant { background-color: #E8DFD2 !important; }
 
-  /* Light Mode Headings on Light Surfaces (Pure Pitch Black, 21:1 Contrast Ratio) */
-  html:not(.dark) h1:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
-  html:not(.dark) h2:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
-  html:not(.dark) h3:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
-  html:not(.dark) h4:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
-  html:not(.dark) h5:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
-  html:not(.dark) h6:not(.text-on-primary):not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-surface-bright"]),
-  html:not(.dark) .font-title-lg:not(.text-on-primary):not([class*="text-white"]),
-  html:not(.dark) .font-title-md:not(.text-on-primary):not([class*="text-white"]),
-  html:not(.dark) .font-title-sm:not(.text-on-primary):not([class*="text-white"]),
-  html:not(.dark) .text-title:not(.text-on-primary):not([class*="text-white"]),
-  html:not(.dark) .text-primary:not(.text-on-primary):not([class*="text-white"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]) {
+  /* Universal 100% Pure Solid Black Typography in Light Mode */
+  html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3,
+  html:not(.dark) h4, html:not(.dark) h5, html:not(.dark) h6,
+  html:not(.dark) .font-title-lg, html:not(.dark) .font-title-md, html:not(.dark) .font-title-sm,
+  html:not(.dark) .font-headline-lg, html:not(.dark) .font-headline-md, html:not(.dark) .font-headline-sm,
+  html:not(.dark) .font-display, html:not(.dark) .font-display-lg, html:not(.dark) .font-display-md,
+  html:not(.dark) .text-title, html:not(.dark) .text-primary {
     color: #000000 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
     text-shadow: none !important;
   }
 
-  /* Light Mode Paragraphs & Body Text on Light Surfaces */
   html:not(.dark) p,
   html:not(.dark) li,
   html:not(.dark) td,
@@ -208,14 +203,7 @@
   html:not(.dark) [class*="text-[#7A6556]"],
   html:not(.dark) [class*="text-[#8C7769]"],
   html:not(.dark) .text-outline,
-  html:not(.dark) .text-outline-variant {
-    color: #000000 !important;
-    font-weight: 600 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
-
-  /* Light Mode Secondary, Meta, Captions & Description Text on Light Surfaces */
+  html:not(.dark) .text-outline-variant,
   html:not(.dark) .text-on-surface-variant,
   html:not(.dark) span.text-on-surface-variant,
   html:not(.dark) div.text-on-surface-variant,
@@ -225,54 +213,40 @@
   html:not(.dark) label.text-on-surface-variant,
   html:not(.dark) td.text-on-surface-variant {
     color: #000000 !important;
-    font-weight: 650 !important;
+    font-weight: 600 !important;
     opacity: 1 !important;
     text-shadow: none !important;
   }
 
-  /* Light Mode Small Labels, Badges & Captions on Light Surfaces (Protected from Dark Containers) */
-  html:not(.dark) .text-label-sm:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
-  html:not(.dark) .text-label-md:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
-  html:not(.dark) .text-label-lg:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
-  html:not(.dark) .font-label-sm:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
-  html:not(.dark) .font-label-md:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
-  html:not(.dark) .font-label-lg:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active),
-  html:not(.dark) .font-caption:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not([class*="text-primary-fixed"]),
-  html:not(.dark) .text-caption:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not([class*="text-primary-fixed"]),
-  html:not(.dark) label:not([class*="bg-primary"]):not([class*="bg-[#"]):not([class*="bg-black"]):not([class*="text-on-primary"]):not([class*="text-white"]):not(.active-filter):not(.active) {
-    color: #000000 !important;
-    font-weight: 800 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
-
-  /* Light Mode Accent & Highlight Text on Light Surfaces: Deep Terracotta (9.5:1 Contrast) */
+  /* All Labels, Badges, Captions & Spans: Pure Solid Black */
+  html:not(.dark) .text-label-sm,
+  html:not(.dark) .text-label-md,
+  html:not(.dark) .text-label-lg,
+  html:not(.dark) .font-label-sm,
+  html:not(.dark) .font-label-md,
+  html:not(.dark) .font-label-lg,
+  html:not(.dark) .font-caption,
+  html:not(.dark) .text-caption,
+  html:not(.dark) label,
   html:not(.dark) .text-secondary,
   html:not(.dark) .text-secondary-fixed,
   html:not(.dark) .text-primary-fixed,
   html:not(.dark) span.text-secondary,
-  html:not(.dark) a.text-secondary {
-    color: #8A2B03 !important;
-    font-weight: 850 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
-
-  /* Light Mode Step Numbers, Badges & Counters on Light Surfaces */
+  html:not(.dark) a.text-secondary,
   html:not(.dark) span.font-display-md.text-surface-container,
   html:not(.dark) span.text-surface-container,
   html:not(.dark) span.text-surface-container-high,
   html:not(.dark) span.text-surface-dim,
-  html:not(.dark) span.text-surface-tint {
-    color: #6B2302 !important;
-    font-weight: 900 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
+  html:not(.dark) span.text-surface-tint,
   html:not(.dark) td.text-outline,
-  html:not(.dark) [class*="text-outline"] {
+  html:not(.dark) [class*="text-outline"],
+  html:not(.dark) .text-on-secondary-fixed,
+  html:not(.dark) .text-on-secondary-fixed-variant,
+  html:not(.dark) .text-on-primary-fixed,
+  html:not(.dark) .text-on-tertiary-fixed {
     color: #000000 !important;
-    font-weight: 600 !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
     text-shadow: none !important;
   }
 
@@ -285,8 +259,8 @@
   html:not(.dark) div.bg-white,
   html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
-  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:not([class*="bg-primary"]):not([class*="bg-[#1"]):not([class*="bg-[#241"]):not([class*="bg-black"]):not([class*="bg-tertiary-container"]),
-  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:not([class*="bg-primary"]):not([class*="bg-[#1"]):not([class*="bg-[#241"]):not([class*="bg-black"]):not([class*="bg-tertiary-container"]),
+  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"],
+  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
   html:not(.dark) a.group[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) a.group[class*="rounded-3xl"][class*="shadow"] {
     border: 1.5px solid #C4B19D !important;
@@ -298,8 +272,6 @@
   html:not(.dark) div.bg-white:hover,
   html:not(.dark) article:not([class*="col-span"]):hover,
   html:not(.dark) .card:hover,
-  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover:not([class*="bg-primary"]):not([class*="bg-[#1"]):not([class*="bg-[#241"]):not([class*="bg-black"]):not([class*="bg-tertiary-container"]),
-  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover:not([class*="bg-primary"]):not([class*="bg-[#1"]):not([class*="bg-[#241"]):not([class*="bg-black"]):not([class*="bg-tertiary-container"]),
   html:not(.dark) a.group[class*="rounded-2xl"]:hover,
   html:not(.dark) a.group[class*="rounded-3xl"]:hover {
     border-color: #8A2B03 !important;
@@ -308,25 +280,22 @@
 
   /* Light Mode Dividers */
   html:not(.dark) hr,
-  html:not(.dark) div[class*="border-t"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *),
-  html:not(.dark) div[class*="border-b"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *),
-  html:not(.dark) section[class*="border-t"]:not([class*="bg-primary"]):not([class*="bg-[#"]),
-  html:not(.dark) section[class*="border-b"]:not([class*="bg-primary"]):not([class*="bg-[#"]),
+  html:not(.dark) div[class*="border-t"],
+  html:not(.dark) div[class*="border-b"],
+  html:not(.dark) section[class*="border-t"],
+  html:not(.dark) section[class*="border-b"],
   html:not(.dark) footer[class*="border-t"],
   html:not(.dark) div[class*="border-surface-container"] {
     border-color: #C4B19D !important;
   }
 
-  /* Fixed Badges & Tags Engine */
+  /* Badges & Containers in Light Mode: Light Warm Background with Pure Solid Black Text */
   html:not(.dark) .bg-secondary-fixed,
-  html:not(.dark) .bg-secondary-container {
-    background-color: #F7EBE1 !important;
-    color: #8F3E0B !important;
-  }
-  html:not(.dark) .text-on-secondary-fixed,
-  html:not(.dark) .text-on-secondary-fixed-variant {
-    color: #7A3308 !important;
-    font-weight: 700 !important;
+  html:not(.dark) .bg-secondary-container,
+  html:not(.dark) .bg-tertiary-container {
+    background-color: #F2EBE1 !important;
+    color: #000000 !important;
+    border: 1px solid #C4B19D !important;
   }
   html.dark .bg-secondary-fixed,
   html.dark .bg-secondary-container {
@@ -339,16 +308,8 @@
     color: #F7BA7D !important;
     font-weight: 750 !important;
   }
-  html:not(.dark) .text-on-primary-fixed {
-    color: #1F1008 !important;
-    font-weight: 700 !important;
-  }
   html.dark .text-on-primary-fixed {
     color: #FFFFFF !important;
-    font-weight: 700 !important;
-  }
-  html:not(.dark) .text-on-tertiary-fixed {
-    color: #281205 !important;
     font-weight: 700 !important;
   }
   html.dark .text-on-tertiary-fixed {
@@ -358,227 +319,42 @@
 
   /* ==========================================================================
      3. UNIVERSAL DARK CONTAINER & HIGH-CONTRAST RULES (html:not(.dark))
-     ZERO text-shadow, 100% Crisp White & Radiant Amber Typography!
+     In Light Mode, all cards, banners & heroes render with 100% Pure Solid Black Typography!
      ========================================================================== */
 
-  /* 3-ALL. OMNIPOTENT UNIVERSAL DARK CONTAINER TEXT RULE:
-     Guarantees that ANY element inside ANY dark container renders as pure solid white or luminous amber,
-     NEVER pitch black! Excludes only nested white cards and form inputs. */
-  html:not(.dark) [class*="bg-primary"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select):not(.bg-white):not(.bg-surface-container-lowest),
-  html:not(.dark) [class*="bg-primary-container"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select):not(.bg-white):not(.bg-surface-container-lowest),
-  html:not(.dark) [class*="bg-[#180F0A]"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#24150E]"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#24140A]"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#140C07]"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-black"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
+  /* In Light Mode, convert dark cards and banners to crisp high-contrast light surfaces with pure black text */
+  html:not(.dark) div[class*="bg-primary"]:not(button):not(a),
+  html:not(.dark) div[class*="bg-primary-container"]:not(button):not(a),
+  html:not(.dark) div[class*="bg-[#180F0A]"]:not(button):not(a),
+  html:not(.dark) div[class*="bg-[#24150E]"]:not(button):not(a),
+  html:not(.dark) div[class*="bg-[#24140A]"]:not(button):not(a),
+  html:not(.dark) div[class*="bg-black"]:not(button):not(a),
+  html:not(.dark) section[class*="bg-primary"]:not(button):not(a),
+  html:not(.dark) section[class*="bg-primary-container"]:not(button):not(a) {
+    background-color: #F8F5F0 !important;
+    border: 1.5px solid #C4B19D !important;
+  }
+
+  /* Universal Pure Solid Black Text Rule for all elements in Light Mode */
+  html:not(.dark) [class*="bg-primary"] *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-primary-container"] *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#180F0A]"] *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#24150E]"] *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-[#24140A]"] *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="bg-black"] *:not(input):not(textarea):not(select),
   html:not(.dark) [class*="text-on-primary"],
-  html:not(.dark) [class*="text-on-primary"] *:not(div.bg-white *):not(div.bg-surface-container-lowest *):not(div.bg-surface *):not(input):not(textarea):not(select),
-  html:not(.dark) span[class*="bg-primary"],
-  html:not(.dark) span[class*="bg-primary-container"],
-  html:not(.dark) span.text-on-primary,
-  html:not(.dark) button.active-filter,
-  html:not(.dark) button.active-filter *,
-  html:not(.dark) .filter-btn.active,
-  html:not(.dark) .filter-btn.active * {
-    color: #FFFFFF !important;
-    text-shadow: none !important;
-  }
-
-  /* Specific accents inside dark containers: Radiant Luminous Amber Gold */
-  html:not(.dark) [class*="bg-primary"] .text-secondary,
-  html:not(.dark) [class*="bg-primary"] .text-secondary-fixed,
-  html:not(.dark) [class*="bg-primary"] .text-primary-fixed,
-  html:not(.dark) [class*="bg-primary"] strong,
-  html:not(.dark) [class*="bg-primary-container"] .text-secondary,
-  html:not(.dark) [class*="bg-primary-container"] .text-primary-fixed,
-  html:not(.dark) [class*="bg-[#1"] .text-secondary,
-  html:not(.dark) [class*="bg-[#1"] .text-secondary-fixed,
-  html:not(.dark) [class*="bg-[#1"] .text-primary-fixed,
-  html:not(.dark) [class*="bg-[#241"] .text-secondary,
-  html:not(.dark) [class*="bg-[#241"] .text-primary-fixed,
-  html:not(.dark) [class*="bg-black"] .text-secondary,
-  html:not(.dark) [class*="bg-black"] .text-primary-fixed {
-    color: #F7BA7D !important;
-    text-shadow: none !important;
-  }
-
-  /* Specific secondary/meta paragraphs inside dark containers: Warm Crisp Off-White */
-  html:not(.dark) [class*="bg-primary"] p,
-  html:not(.dark) [class*="bg-primary"] p *,
-  html:not(.dark) [class*="bg-[#1"] p,
-  html:not(.dark) [class*="bg-[#1"] p *,
-  html:not(.dark) [class*="bg-[#241"] p,
-  html:not(.dark) [class*="bg-[#241"] p * {
-    color: #FAF5EF !important;
-    text-shadow: none !important;
-  }
-
-  /* 3A. Dark Headings inside any dark container or hero */
-  html:not(.dark) [class*="bg-primary"] h1, html:not(.dark) [class*="bg-primary"] h2, html:not(.dark) [class*="bg-primary"] h3, html:not(.dark) [class*="bg-primary"] h4, html:not(.dark) [class*="bg-primary"] h5, html:not(.dark) [class*="bg-primary"] h6,
-  html:not(.dark) [class*="bg-[#1"] h1, html:not(.dark) [class*="bg-[#1"] h2, html:not(.dark) [class*="bg-[#1"] h3, html:not(.dark) [class*="bg-[#1"] h4,
-  html:not(.dark) [class*="bg-[#241"] h1, html:not(.dark) [class*="bg-[#241"] h2, html:not(.dark) [class*="bg-[#241"] h3,
-  html:not(.dark) [class*="bg-black"] h1, html:not(.dark) [class*="bg-black"] h2, html:not(.dark) [class*="bg-black"] h3,
-  html:not(.dark) [class*="min-h-"] h1, html:not(.dark) [class*="min-h-"] h2, html:not(.dark) [class*="min-h-"] h3,
-  html:not(.dark) [class*="text-on-primary"] h1, html:not(.dark) [class*="text-on-primary"] h2, html:not(.dark) [class*="text-on-primary"] h3,
-  html:not(.dark) h1.text-on-primary, html:not(.dark) h2.text-on-primary, html:not(.dark) h3.text-on-primary,
-  html:not(.dark) h1[class*="text-white"], html:not(.dark) h2[class*="text-white"], html:not(.dark) h3[class*="text-white"],
-  html:not(.dark) h1[class*="text-[#FAF5EF]"], html:not(.dark) h2[class*="text-[#FAF5EF]"],
-  html:not(.dark) [class*="text-surface-bright"] {
-    color: #FFFFFF !important;
-    font-weight: 850 !important;
-    text-shadow: none !important;
-  }
-
-  /* 3B. Two-Tone Accent Phrase inside Headings: Radiant Amber Gold */
-  html:not(.dark) [class*="bg-primary"] h1 span, html:not(.dark) [class*="bg-primary"] h2 span,
-  html:not(.dark) [class*="bg-[#1"] h1 span, html:not(.dark) [class*="bg-[#1"] h2 span,
-  html:not(.dark) [class*="bg-[#241"] h1 span,
-  html:not(.dark) [class*="bg-black"] h1 span,
-  html:not(.dark) [class*="min-h-"] h1 span,
-  html:not(.dark) h1 span.text-\[\#F7BA7D\],
-  html:not(.dark) h1 [class*="text-[#F7BA7D]"],
-  html:not(.dark) h1 span.italic,
-  html:not(.dark) h1 .font-serif.italic,
-  html:not(.dark) h2 span.italic {
-    color: #F7BA7D !important;
-    font-weight: 800 !important;
-    text-shadow: none !important;
-  }
-
-  /* 3C. Paragraphs, List Items & Body Text inside any dark container */
-  html:not(.dark) [class*="bg-primary"] p,
-  html:not(.dark) [class*="bg-primary"] p *,
-  html:not(.dark) [class*="bg-[#1"] p,
-  html:not(.dark) [class*="bg-[#1"] p *,
-  html:not(.dark) [class*="bg-[#241"] p,
-  html:not(.dark) [class*="bg-[#241"] p *,
-  html:not(.dark) [class*="bg-black"] p,
-  html:not(.dark) [class*="bg-black"] p *,
-  html:not(.dark) [class*="min-h-"] p,
-  html:not(.dark) [class*="min-h-"] p *,
-  html:not(.dark) [class*="text-on-primary"] p,
-  html:not(.dark) [class*="text-on-primary"] p *,
-  html:not(.dark) [class*="bg-primary"] li,
-  html:not(.dark) [class*="bg-primary"] li *,
-  html:not(.dark) p.text-on-primary,
-  html:not(.dark) p.text-on-primary-container,
-  html:not(.dark) p.text-inverse-on-surface,
-  html:not(.dark) p[class*="text-white"],
-  html:not(.dark) p[class*="text-[#FAF5EF]"],
-  html:not(.dark) p[class*="text-[#F5EBE1]"],
-  html:not(.dark) p[class*="text-[#E8DCD0]"],
-  html:not(.dark) [class*="text-surface-container-high/80"],
-  html:not(.dark) [class*="text-surface-container-high/90"],
-  html:not(.dark) [class*="text-surface-container-high/70"],
-  html:not(.dark) [class*="text-surface-container-high"],
-  html:not(.dark) p[class*="text-surface-container-high"],
-  html:not(.dark) p[class*="text-surface-container"],
-  html:not(.dark) [class*="text-[#FAF5EF]"],
-  html:not(.dark) [class*="text-[#F5EBE1]"],
-  html:not(.dark) [class*="text-[#E8DCD0]"] {
-    color: #FFFFFF !important;
-    font-weight: 550 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
-
-  /* 3D. Secondary Text, Captions, Specifications & Meta inside Dark Containers */
-  html:not(.dark) [class*="bg-primary"] .text-on-primary-container,
-  html:not(.dark) [class*="bg-primary"] .text-inverse-on-surface,
-  html:not(.dark) [class*="bg-primary"] .font-caption,
-  html:not(.dark) [class*="bg-primary"] .text-caption,
-  html:not(.dark) [class*="bg-primary"] span.text-caption,
-  html:not(.dark) [class*="bg-primary"] p.text-caption,
-  html:not(.dark) [class*="bg-primary"] .space-y-1\.5 span,
-  html:not(.dark) [class*="bg-primary"] .space-y-3 span,
-  html:not(.dark) [class*="bg-primary"] span[class*="text-primary-fixed"],
-  html:not(.dark) [class*="bg-primary"] [class*="text-surface-container-high"],
-  html:not(.dark) [class*="bg-[#1"] [class*="text-[#F5EBE1]"],
-  html:not(.dark) [class*="bg-[#1"] [class*="text-[#FAF5EF]"],
-  html:not(.dark) [class*="bg-[#1"] [class*="text-[#E8DCD0]"],
-  html:not(.dark) [class*="bg-black"] [class*="text-[#FAF5EF]"],
-  html:not(.dark) [class*="bg-black"] [class*="text-[#E8DCD0]"],
-  html:not(.dark) [class*="min-h-"] [class*="text-[#FAF5EF]"],
-  html:not(.dark) [class*="min-h-"] [class*="text-[#E8DCD0]"],
-  html:not(.dark) .text-on-primary-container,
-  html:not(.dark) .text-inverse-on-surface {
-    color: #FAF5EF !important;
-    font-weight: 600 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
-
-  /* 3E. Highlights, Golden Badges, Specifications & Telephone Links in Dark Containers */
-  html:not(.dark) [class*="bg-primary"] strong,
-  html:not(.dark) [class*="bg-primary"] .font-bold,
-  html:not(.dark) [class*="bg-primary"] [class*="text-secondary"],
-  html:not(.dark) [class*="bg-primary"] [class*="text-secondary-fixed"],
-  html:not(.dark) [class*="bg-primary"] span.text-primary-fixed,
-  html:not(.dark) [class*="bg-primary"] [class*="text-primary-fixed"]:not([class*="/80"]),
-  html:not(.dark) [class*="bg-primary"] a[href^="tel:"],
-  html:not(.dark) [class*="bg-primary"] a[href^="tel:"] *,
-  html:not(.dark) [class*="bg-black"] [class*="text-[#F7BA7D]"],
-  html:not(.dark) [class*="min-h-"] [class*="text-[#F7BA7D]"],
-  html:not(.dark) [class*="min-h-"] [class*="text-[#F5C7A1]"],
-  html:not(.dark) [class*="text-[#F7BA7D]"],
-  html:not(.dark) [class*="text-[#F5C7A1]"] {
-    color: #F7BA7D !important;
-    font-weight: 800 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
-
-  /* 3F. Floating Pill Badges over Images in Light Mode: Solid White with Pure Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
-  html:not(.dark) span[class*="bg-[#180F0A]"],
-  html:not(.dark) span[class*="bg-[#140C07]"],
-  html:not(.dark) span[class*="bg-[#24150E]"],
-  html:not(.dark) span[class*="bg-[#24140A]"],
-  html:not(.dark) span[class*="bg-black"],
-  html:not(.dark) span[class*="bg-primary"],
-  html:not(.dark) span[class*="bg-primary-container"],
-  html:not(.dark) span.text-on-primary,
-  html:not(.dark) span[class*="bg-[#1"] *,
-  html:not(.dark) span[class*="bg-primary"] *,
-  html:not(.dark) span[class*="bg-primary-container"] * {
-    background-color: #FFFFFF !important;
-    color: #000000 !important;
-    border: 1.5px solid #8C7769 !important;
-    font-weight: 800 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
-
-  /* 3G. Buttons & Links inside Dark Containers */
-  html:not(.dark) [class*="bg-primary"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]),
-  html:not(.dark) [class*="bg-primary"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]) *,
-  html:not(.dark) [class*="bg-black"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]),
-  html:not(.dark) [class*="bg-black"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]) *,
-  html:not(.dark) [class*="min-h-"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]),
-  html:not(.dark) [class*="min-h-"] a:not([class*="bg-secondary"]):not([class*="bg-[#B85D19]"]) * {
-    color: #FFFFFF !important;
-    font-weight: 750 !important;
-    text-shadow: none !important;
-  }
-
-  /* 3H. Protected Nested White Cards inside dark containers */
-  html:not(.dark) [class*="bg-primary"] div.bg-white,
-  html:not(.dark) [class*="bg-primary"] div.bg-surface-container-lowest,
-  html:not(.dark) [class*="bg-[#1"] div.bg-white,
-  html:not(.dark) [class*="bg-[#1"] div.bg-surface-container-lowest {
-    background-color: #FFFFFF !important;
-    color: #000000 !important;
-  }
-  html:not(.dark) [class*="bg-primary"] div.bg-white *,
-  html:not(.dark) [class*="bg-primary"] div.bg-surface-container-lowest *,
-  html:not(.dark) [class*="bg-[#1"] div.bg-white *,
-  html:not(.dark) [class*="bg-[#1"] div.bg-surface-container-lowest * {
+  html:not(.dark) [class*="text-on-primary"] *:not(input):not(textarea):not(select),
+  html:not(.dark) [class*="text-inverse-on-surface"],
+  html:not(.dark) [class*="text-on-primary-container"],
+  html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3, html:not(.dark) h4, html:not(.dark) h5, html:not(.dark) h6,
+  html:not(.dark) p, html:not(.dark) span:not(.material-symbols-outlined), html:not(.dark) a:not(.material-symbols-outlined) {
     color: #000000 !important;
     text-shadow: none !important;
   }
-  html:not(.dark) [class*="bg-primary"] div.bg-white .text-secondary,
-  html:not(.dark) [class*="bg-primary"] div.bg-surface-container-lowest .text-secondary {
-    color: #8A2B03 !important;
-    text-shadow: none !important;
+
+  /* Light Mode Hero Overlays: Ensure light watermark backdrop so black text is 100% legible */
+  html:not(.dark) section.relative > div.absolute.inset-0.z-0 > div[class*="bg-gradient"] {
+    background: rgba(248, 245, 240, 0.90) !important;
   }
 
   /* ==========================================================================
