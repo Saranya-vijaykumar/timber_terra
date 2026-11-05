@@ -144,7 +144,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   }
 
-    /* ==========================================================================
+      /* ==========================================================================
      GLOBAL ZERO LETTER SHADOW (Sharp, Clean Vector Typography)
      ========================================================================== */
   *, *::before, *::after {
@@ -181,41 +181,56 @@
   html:not(.dark) .bg-surface-container-highest { background-color: #D4C6B4 !important; }
   html:not(.dark) .bg-surface-variant { background-color: #E8DFD2 !important; }
 
-  /* Universal 100% Pure Solid Black Headings */
-  html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3,
-  html:not(.dark) h4, html:not(.dark) h5, html:not(.dark) h6,
-  html:not(.dark) .font-title-lg, html:not(.dark) .font-title-md, html:not(.dark) .font-title-sm,
-  html:not(.dark) .font-headline-lg, html:not(.dark) .font-headline-md, html:not(.dark) .font-headline-sm,
-  html:not(.dark) .font-display, html:not(.dark) .font-display-lg, html:not(.dark) .font-display-md,
-  html:not(.dark) .text-headline-lg, html:not(.dark) .text-headline-md, html:not(.dark) .text-headline-sm,
-  html:not(.dark) .text-title-lg, html:not(.dark) .text-title-md, html:not(.dark) .text-title-sm,
-  html:not(.dark) .text-title, html:not(.dark) .text-primary {
+  /* Universal 100% Pure Solid Black Headings (Excluding Photographic Heroes) */
+  html:not(.dark) section:not(.photographic-hero) h1,
+  html:not(.dark) section:not(.photographic-hero) h2,
+  html:not(.dark) section:not(.photographic-hero) h3,
+  html:not(.dark) section:not(.photographic-hero) h4,
+  html:not(.dark) section:not(.photographic-hero) h5,
+  html:not(.dark) section:not(.photographic-hero) h6,
+  html:not(.dark) section:not(.photographic-hero) .font-title-lg,
+  html:not(.dark) section:not(.photographic-hero) .font-title-md,
+  html:not(.dark) section:not(.photographic-hero) .font-title-sm,
+  html:not(.dark) section:not(.photographic-hero) .font-headline-lg,
+  html:not(.dark) section:not(.photographic-hero) .font-headline-md,
+  html:not(.dark) section:not(.photographic-hero) .font-headline-sm,
+  html:not(.dark) section:not(.photographic-hero) .font-display,
+  html:not(.dark) section:not(.photographic-hero) .font-display-lg,
+  html:not(.dark) section:not(.photographic-hero) .font-display-md,
+  html:not(.dark) section:not(.photographic-hero) .text-headline-lg,
+  html:not(.dark) section:not(.photographic-hero) .text-headline-md,
+  html:not(.dark) section:not(.photographic-hero) .text-headline-sm,
+  html:not(.dark) section:not(.photographic-hero) .text-title-lg,
+  html:not(.dark) section:not(.photographic-hero) .text-title-md,
+  html:not(.dark) section:not(.photographic-hero) .text-title-sm,
+  html:not(.dark) section:not(.photographic-hero) .text-title,
+  html:not(.dark) section:not(.photographic-hero) .text-primary {
     color: #000000 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
     text-shadow: none !important;
   }
 
-  /* Universal 100% Pure Solid Black Body, Paragraphs, Lists & Tables */
-  html:not(.dark) p,
-  html:not(.dark) li,
-  html:not(.dark) td,
-  html:not(.dark) th,
-  html:not(.dark) blockquote,
-  html:not(.dark) .text-on-surface,
-  html:not(.dark) [class*="text-[#5E4738]"],
-  html:not(.dark) [class*="text-[#7A6556]"],
-  html:not(.dark) [class*="text-[#8C7769]"],
-  html:not(.dark) .text-outline,
-  html:not(.dark) .text-outline-variant,
-  html:not(.dark) .text-on-surface-variant,
-  html:not(.dark) span.text-on-surface-variant,
-  html:not(.dark) div.text-on-surface-variant,
-  html:not(.dark) p.text-on-surface-variant,
-  html:not(.dark) a.text-on-surface-variant,
-  html:not(.dark) li.text-on-surface-variant,
-  html:not(.dark) label.text-on-surface-variant,
-  html:not(.dark) td.text-on-surface-variant {
+  /* Universal 100% Pure Solid Black Body, Paragraphs, Lists & Tables (Excluding Photographic Heroes) */
+  html:not(.dark) section:not(.photographic-hero) p,
+  html:not(.dark) section:not(.photographic-hero) li,
+  html:not(.dark) section:not(.photographic-hero) td,
+  html:not(.dark) section:not(.photographic-hero) th,
+  html:not(.dark) section:not(.photographic-hero) blockquote,
+  html:not(.dark) section:not(.photographic-hero) .text-on-surface,
+  html:not(.dark) section:not(.photographic-hero) [class*="text-[#5E4738]"],
+  html:not(.dark) section:not(.photographic-hero) [class*="text-[#7A6556]"],
+  html:not(.dark) section:not(.photographic-hero) [class*="text-[#8C7769]"],
+  html:not(.dark) section:not(.photographic-hero) .text-outline,
+  html:not(.dark) section:not(.photographic-hero) .text-outline-variant,
+  html:not(.dark) section:not(.photographic-hero) .text-on-surface-variant,
+  html:not(.dark) section:not(.photographic-hero) span.text-on-surface-variant,
+  html:not(.dark) section:not(.photographic-hero) div.text-on-surface-variant,
+  html:not(.dark) section:not(.photographic-hero) p.text-on-surface-variant,
+  html:not(.dark) section:not(.photographic-hero) a.text-on-surface-variant,
+  html:not(.dark) section:not(.photographic-hero) li.text-on-surface-variant,
+  html:not(.dark) section:not(.photographic-hero) label.text-on-surface-variant,
+  html:not(.dark) section:not(.photographic-hero) td.text-on-surface-variant {
     color: #000000 !important;
     font-weight: 600 !important;
     opacity: 1 !important;
@@ -223,43 +238,45 @@
   }
 
   /* All Labels, Badges, Captions & Spans: Pure Solid Black */
-  html:not(.dark) .text-label-sm,
-  html:not(.dark) .text-label-md,
-  html:not(.dark) .text-label-lg,
-  html:not(.dark) .font-label-sm,
-  html:not(.dark) .font-label-md,
-  html:not(.dark) .font-label-lg,
-  html:not(.dark) .font-caption,
-  html:not(.dark) .text-caption,
-  html:not(.dark) label,
-  html:not(.dark) .text-secondary,
-  html:not(.dark) .text-secondary-fixed,
-  html:not(.dark) .text-primary-fixed,
-  html:not(.dark) span.text-secondary,
-  html:not(.dark) a.text-secondary,
-  html:not(.dark) span.font-display-md.text-surface-container,
-  html:not(.dark) span.text-surface-container,
-  html:not(.dark) span.text-surface-container-high,
-  html:not(.dark) span.text-surface-dim,
-  html:not(.dark) span.text-surface-tint,
-  html:not(.dark) td.text-outline,
-  html:not(.dark) [class*="text-outline"],
-  html:not(.dark) .text-on-secondary-fixed,
-  html:not(.dark) .text-on-secondary-fixed-variant,
-  html:not(.dark) .text-on-primary-fixed,
-  html:not(.dark) .text-on-tertiary-fixed {
+  html:not(.dark) section:not(.photographic-hero) .text-label-sm,
+  html:not(.dark) section:not(.photographic-hero) .text-label-md,
+  html:not(.dark) section:not(.photographic-hero) .text-label-lg,
+  html:not(.dark) section:not(.photographic-hero) .font-label-sm,
+  html:not(.dark) section:not(.photographic-hero) .font-label-md,
+  html:not(.dark) section:not(.photographic-hero) .font-label-lg,
+  html:not(.dark) section:not(.photographic-hero) .font-caption,
+  html:not(.dark) section:not(.photographic-hero) .text-caption,
+  html:not(.dark) section:not(.photographic-hero) label,
+  html:not(.dark) section:not(.photographic-hero) .text-secondary,
+  html:not(.dark) section:not(.photographic-hero) .text-secondary-fixed,
+  html:not(.dark) section:not(.photographic-hero) .text-primary-fixed,
+  html:not(.dark) section:not(.photographic-hero) span.text-secondary,
+  html:not(.dark) section:not(.photographic-hero) a.text-secondary,
+  html:not(.dark) section:not(.photographic-hero) span.font-display-md.text-surface-container,
+  html:not(.dark) section:not(.photographic-hero) span.text-surface-container,
+  html:not(.dark) section:not(.photographic-hero) span.text-surface-container-high,
+  html:not(.dark) section:not(.photographic-hero) span.text-surface-dim,
+  html:not(.dark) section:not(.photographic-hero) span.text-surface-tint,
+  html:not(.dark) section:not(.photographic-hero) td.text-outline,
+  html:not(.dark) section:not(.photographic-hero) [class*="text-outline"],
+  html:not(.dark) section:not(.photographic-hero) .text-on-secondary-fixed,
+  html:not(.dark) section:not(.photographic-hero) .text-on-secondary-fixed-variant,
+  html:not(.dark) section:not(.photographic-hero) .text-on-primary-fixed,
+  html:not(.dark) section:not(.photographic-hero) .text-on-tertiary-fixed {
     color: #000000 !important;
     font-weight: 800 !important;
     opacity: 1 !important;
     text-shadow: none !important;
   }
 
-  /* Pure Solid Black for all Links in Light Mode */
-  html:not(.dark) a:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-[#"]):not(.nav-quote-btn):not(.filter-btn):not(.service-filter-btn) {
+  /* Pure Solid Black for all Links in Light Mode (outside hero & header) */
+  html:not(.dark) section:not(.photographic-hero) a:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-[#"]):not(.nav-quote-btn):not(.filter-btn):not(.service-filter-btn),
+  html:not(.dark) footer a:not(.material-symbols-outlined):not([class*="bg-[#"]) {
     color: #000000 !important;
     text-shadow: none !important;
   }
-  html:not(.dark) a:hover:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-[#"]):not(.nav-quote-btn):not(.filter-btn):not(.service-filter-btn) {
+  html:not(.dark) section:not(.photographic-hero) a:hover:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-[#"]):not(.nav-quote-btn):not(.filter-btn):not(.service-filter-btn),
+  html:not(.dark) footer a:hover:not(.material-symbols-outlined):not([class*="bg-[#"]) {
     color: #8A2B03 !important;
   }
 
@@ -272,8 +289,8 @@
   html:not(.dark) div.bg-white,
   html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
-  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"],
-  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
+  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:not(.photographic-hero *),
+  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:not(.photographic-hero *),
   html:not(.dark) a.group[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) a.group[class*="rounded-3xl"][class*="shadow"] {
     border: 1.5px solid #C4B19D !important;
@@ -303,9 +320,9 @@
   }
 
   /* Badges & Containers in Light Mode */
-  html:not(.dark) .bg-secondary-fixed,
-  html:not(.dark) .bg-secondary-container,
-  html:not(.dark) .bg-tertiary-container {
+  html:not(.dark) section:not(.photographic-hero) .bg-secondary-fixed,
+  html:not(.dark) section:not(.photographic-hero) .bg-secondary-container,
+  html:not(.dark) section:not(.photographic-hero) .bg-tertiary-container {
     background-color: #F2EBE1 !important;
     color: #000000 !important;
     border: 1px solid #C4B19D !important;
@@ -313,54 +330,144 @@
 
   /* ==========================================================================
      3. UNIVERSAL DARK CONTAINER & HIGH-CONTRAST RULES (html:not(.dark))
-     In Light Mode, all cards, banners & heroes render with 100% Pure Solid Black Typography!
-     NO WHITE FONT IN LIGHT MODE!
+     In Light Mode, all content cards, banners & modals render with 100% Pure Black Typography!
      ========================================================================== */
 
   /* In Light Mode, convert dark cards and banners to crisp high-contrast light surfaces with pure black text */
-  html:not(.dark) div[class*="bg-primary"]:not(button):not(a),
-  html:not(.dark) div[class*="bg-primary-container"]:not(button):not(a),
-  html:not(.dark) div[class*="bg-[#180F0A]"]:not(button):not(a),
-  html:not(.dark) div[class*="bg-[#24150E]"]:not(button):not(a),
-  html:not(.dark) div[class*="bg-[#24140A]"]:not(button):not(a),
-  html:not(.dark) div[class*="bg-[#1C1008]"]:not(button):not(a),
-  html:not(.dark) div[class*="bg-black"]:not(button):not(a),
-  html:not(.dark) section[class*="bg-primary"]:not(button):not(a),
-  html:not(.dark) section[class*="bg-primary-container"]:not(button):not(a),
-  html:not(.dark) section[class*="bg-[#180F0A]"]:not(button):not(a),
-  html:not(.dark) section[class*="bg-[#1C1008]"]:not(button):not(a) {
+  html:not(.dark) section:not(.photographic-hero) div[class*="bg-primary"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero) div[class*="bg-primary-container"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero) div[class*="bg-[#180F0A]"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero) div[class*="bg-[#24150E]"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero) div[class*="bg-[#24140A]"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero) div[class*="bg-[#1C1008]"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero) div[class*="bg-black"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero)[class*="bg-primary"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero)[class*="bg-primary-container"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero)[class*="bg-[#180F0A]"]:not(button):not(a),
+  html:not(.dark) section:not(.photographic-hero)[class*="bg-[#1C1008]"]:not(button):not(a) {
     background-color: #F8F5F0 !important;
     border: 1.5px solid #C4B19D !important;
   }
 
-  /* Universal Elimination of White Text in Light Mode: Turn all text on surfaces to Pure Solid Black */
-  html:not(.dark) [class*="bg-primary"]:not(button):not(a) *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-primary-container"]:not(button):not(a) *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#180F0A]"]:not(button):not(a) *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#24150E]"]:not(button):not(a) *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#24140A]"]:not(button):not(a) *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-[#1C1008]"]:not(button):not(a) *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="bg-black"]:not(button):not(a) *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="text-on-primary"],
-  html:not(.dark) [class*="text-on-primary"] *:not(input):not(textarea):not(select),
-  html:not(.dark) [class*="text-inverse-on-surface"],
-  html:not(.dark) [class*="text-on-primary-container"],
-  html:not(.dark) .!text-white,
-  html:not(.dark) [class*="!text-white"],
-  html:not(.dark) .text-white,
-  html:not(.dark) [class*="text-white"],
-  html:not(.dark) [class*="text-[#FAF5EF]"],
-  html:not(.dark) [class*="text-[#FFFFFF]"],
-  html:not(.dark) .text-surface-bright,
-  html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3, html:not(.dark) h4, html:not(.dark) h5, html:not(.dark) h6,
-  html:not(.dark) p, html:not(.dark) span:not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp) {
+  /* Universal Elimination of White Text on content surfaces in Light Mode */
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-primary"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-primary-container"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#180F0A]"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#24150E]"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#24140A]"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#1C1008]"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-black"]:not(button):not(a) *:not(input):not(textarea):not(select),
+  html:not(.dark) section:not(.photographic-hero) [class*="text-on-primary"],
+  html:not(.dark) section:not(.photographic-hero) [class*="text-on-primary"] *:not(input):not(textarea):not(select),
+  html:not(.dark) section:not(.photographic-hero) [class*="text-inverse-on-surface"],
+  html:not(.dark) section:not(.photographic-hero) [class*="text-on-primary-container"],
+  html:not(.dark) section:not(.photographic-hero) .!text-white,
+  html:not(.dark) section:not(.photographic-hero) [class*="!text-white"],
+  html:not(.dark) section:not(.photographic-hero) .text-white,
+  html:not(.dark) section:not(.photographic-hero) [class*="text-white"],
+  html:not(.dark) section:not(.photographic-hero) [class*="text-[#FAF5EF]"],
+  html:not(.dark) section:not(.photographic-hero) [class*="text-[#FFFFFF]"],
+  html:not(.dark) section:not(.photographic-hero) .text-surface-bright,
+  html:not(.dark) section:not(.photographic-hero) span:not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp) {
     color: #000000 !important;
     text-shadow: none !important;
   }
 
-  /* Light Mode Hero Overlays: Soft light backdrop so black text is 100% legible */
-  html:not(.dark) section.relative > div.absolute.inset-0.z-0 > div[class*="bg-gradient"] {
-    background: rgba(248, 245, 240, 0.90) !important;
+  /* ==========================================================================
+     PHOTOGRAPHIC HERO SECTIONS (100% Crisp White Typography on Dark Photo)
+     Applies universally across BOTH Light Mode and Dark Mode!
+     ========================================================================== */
+  .photographic-hero,
+  section.photographic-hero {
+    background-color: #140C07 !important;
+    color: #FFFFFF !important;
+  }
+  .photographic-hero div[class*="bg-gradient"] {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.45) 100%) !important;
+  }
+  .photographic-hero h1,
+  .photographic-hero h1 * {
+    color: #FFFFFF !important;
+    font-weight: 850 !important;
+    text-shadow: none !important;
+  }
+  .photographic-hero h1 span[class*="text-"],
+  .photographic-hero h1 em,
+  .photographic-hero h1 i,
+  .photographic-hero h1 .italic {
+    color: #F7BA7D !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+  }
+  .photographic-hero p,
+  .photographic-hero p * {
+    color: #FFFFFF !important;
+    font-weight: 550 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+  /* Trust Pill / Badges in Hero */
+  .photographic-hero div[class*="rounded-full"],
+  .photographic-hero span[class*="rounded-full"] {
+    background: rgba(20, 12, 7, 0.75) !important;
+    border: 1px solid rgba(247, 186, 125, 0.45) !important;
+  }
+  .photographic-hero div[class*="rounded-full"] span,
+  .photographic-hero span[class*="rounded-full"] span {
+    color: #F7BA7D !important;
+    font-weight: 800 !important;
+  }
+  /* Glass card container if present in hero */
+  .photographic-hero div[class*="backdrop-blur"] {
+    background-color: rgba(20, 12, 7, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+  /* Primary Button in Hero */
+  .photographic-hero a.bg-primary,
+  .photographic-hero a.bg-secondary,
+  .photographic-hero a.bg-primary-container,
+  .photographic-hero a[class*="bg-[#"],
+  .photographic-hero button.bg-primary,
+  .photographic-hero button.bg-secondary {
+    background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
+    color: #FFFFFF !important;
+    border: 1.5px solid #F7BA7D !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 20px rgba(212, 139, 78, 0.45) !important;
+  }
+  .photographic-hero a.bg-primary *,
+  .photographic-hero a.bg-secondary *,
+  .photographic-hero a.bg-primary-container *,
+  .photographic-hero a[class*="bg-[#"] *,
+  .photographic-hero button.bg-primary *,
+  .photographic-hero button.bg-secondary * {
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+  }
+  /* Secondary / Outline Button in Hero */
+  .photographic-hero a[class*="bg-white/"],
+  .photographic-hero a[class*="bg-surface/"],
+  .photographic-hero a[class*="border-white/"],
+  .photographic-hero a[class*="bg-transparent"],
+  .photographic-hero button[class*="bg-white/"],
+  .photographic-hero button[class*="bg-surface/"],
+  .photographic-hero button[class*="border-white/"],
+  .photographic-hero button[class*="bg-transparent"] {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
+    color: #FFFFFF !important;
+    font-weight: 750 !important;
+  }
+  .photographic-hero a[class*="bg-white/"] *,
+  .photographic-hero a[class*="bg-surface/"] *,
+  .photographic-hero a[class*="border-white/"] *,
+  .photographic-hero a[class*="bg-transparent"] *,
+  .photographic-hero button[class*="bg-white/"] *,
+  .photographic-hero button[class*="bg-surface/"] *,
+  .photographic-hero button[class*="border-white/"] *,
+  .photographic-hero button[class*="bg-transparent"] * {
+    color: #FFFFFF !important;
+    font-weight: 750 !important;
   }
 
   /* ==========================================================================
@@ -554,10 +661,20 @@
   header {
     transition: background-color 0.25s ease, border-color 0.25s ease;
   }
+  html:not(.dark) header {
+    background-color: #FAF7F2 !important;
+    border-bottom: 1.5px solid #CFBEAC !important;
+    box-shadow: 0 2px 12px rgba(36, 21, 14, 0.06) !important;
+  }
+  html.dark header {
+    background-color: #160D08 !important;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.16) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+  }
 
   /* Top Utility Sub-Bar */
   html:not(.dark) header .top-utility-bar {
-    background-color: #EFE9DF !important;
+    background-color: #F0EAE1 !important;
     border-bottom: 1px solid #CFBEAC !important;
     color: #000000 !important;
   }
@@ -574,7 +691,7 @@
   }
 
   html.dark header .top-utility-bar {
-    background-color: #140C07 !important;
+    background-color: #100804 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     color: #FFFFFF !important;
   }
@@ -632,7 +749,8 @@
   html:not(.dark) header nav a.nav-link-default:hover *,
   html:not(.dark) header nav button.nav-link-default:hover * {
     color: #8A2B03 !important;
-    background-color: rgba(36, 21, 14, 0.08) !important;
+    background-color: rgba(138, 43, 3, 0.08) !important;
+    border-radius: 8px !important;
   }
 
   html.dark header nav a.nav-link-default,
@@ -649,18 +767,24 @@
   html.dark header nav button.nav-link-default:hover * {
     color: #F7BA7D !important;
     background-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
   }
 
-  /* Active Nav Link in Light Mode: Light Warm Pill with Solid Black Text (NO WHITE FONT IN LIGHT MODE) */
+  /* Active Nav Link: Luxury Terracotta Pill in Light Mode (NO UGLY GREY BOX!) */
   html:not(.dark) header nav a.nav-link-active,
-  html:not(.dark) header nav button.nav-link-active,
+  html:not(.dark) header nav button.nav-link-active {
+    background-color: rgba(138, 43, 3, 0.08) !important;
+    color: #8A2B03 !important;
+    border: 1.5px solid #8A2B03 !important;
+    border-radius: 8px !important;
+    font-weight: 850 !important;
+    text-shadow: none !important;
+  }
   html:not(.dark) header nav a.nav-link-active *,
   html:not(.dark) header nav button.nav-link-active *,
   html:not(.dark) #mobile-menu a.nav-link-active,
   html:not(.dark) #mobile-menu a.nav-link-active * {
-    background-color: #EAE1D4 !important;
-    color: #000000 !important;
-    border: 1.5px solid #8C7769 !important;
+    color: #8A2B03 !important;
     font-weight: 850 !important;
     text-shadow: none !important;
   }
@@ -673,6 +797,8 @@
     background: linear-gradient(135deg, #D48B4E 0%, #B85D19 100%) !important;
     color: #FFFFFF !important;
     font-weight: 800 !important;
+    border: none !important;
+    border-radius: 8px !important;
     box-shadow: 0 2px 8px rgba(184, 93, 25, 0.35) !important;
     text-shadow: none !important;
   }
@@ -686,7 +812,7 @@
   html:not(.dark) header .nav-dropdown .nav-dropdown-title { color: #000000 !important; font-weight: 800 !important; }
   html:not(.dark) header .nav-dropdown .nav-dropdown-desc { color: #333333 !important; font-weight: 550 !important; }
   html:not(.dark) header .nav-dropdown a:hover { background-color: rgba(36, 21, 14, 0.06) !important; }
-  html:not(.dark) header .nav-dropdown a.dropdown-item-active { background-color: rgba(36, 21, 14, 0.08) !important; }
+  html:not(.dark) header .nav-dropdown a.dropdown-item-active { background-color: rgba(138, 43, 3, 0.08) !important; }
   html:not(.dark) header .nav-dropdown a.dropdown-item-active .nav-dropdown-title { color: #8A2B03 !important; }
 
   html.dark header .nav-dropdown {
@@ -726,7 +852,7 @@
 
   /* Header Utility Buttons (Theme Toggle & LTR) */
   html:not(.dark) header .theme-toggle-btn {
-    background-color: rgba(36, 21, 14, 0.07) !important;
+    background-color: #FFFFFF !important;
     border: 1.5px solid #8C7769 !important;
     color: #000000 !important;
   }
@@ -742,7 +868,7 @@
   html.dark header .theme-toggle-btn:hover { background-color: rgba(255, 255, 255, 0.22) !important; border-color: #F7BA7D !important; color: #FFFFFF !important; }
 
   html:not(.dark) header .dir-toggle-btn {
-    background-color: rgba(36, 21, 14, 0.07) !important;
+    background-color: #FFFFFF !important;
     border: 1.5px solid #8C7769 !important;
     color: #000000 !important;
     font-weight: 800 !important;
@@ -762,7 +888,7 @@
   html.dark header .dir-toggle-btn .material-symbols-outlined { color: #F7BA7D !important; }
 
   html:not(.dark) header #hamburger-btn {
-    background-color: rgba(36, 21, 14, 0.07) !important;
+    background-color: #FFFFFF !important;
     border: 1.5px solid #8C7769 !important;
     color: #000000 !important;
   }
@@ -932,25 +1058,25 @@
   }
 
   /* Primary & Call-To-Action Buttons in Light Mode: Warm Amber with Pure Solid Black Text */
-  html:not(.dark) a.bg-primary-container,
-  html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]),
-  html:not(.dark) a.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]),
-  html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]),
-  html:not(.dark) a.bg-secondary,
-  html:not(.dark) button.bg-secondary,
-  html:not(.dark) a[class*="bg-[#B85D19]"],
-  html:not(.dark) button[class*="bg-[#B85D19]"],
-  html:not(.dark) a[class*="bg-[#8F3E0B]"],
-  html:not(.dark) button[class*="bg-[#8F3E0B]"],
-  html:not(.dark) a[class*="bg-[#7A3A16]"],
-  html:not(.dark) button[class*="bg-[#7A3A16]"],
-  html:not(.dark) a[class*="bg-[#5E2B0F]"],
-  html:not(.dark) button[class*="bg-[#5E2B0F]"],
-  html:not(.dark) a[class*="bg-[#9E460E]"],
-  html:not(.dark) button[class*="bg-[#9E460E]"],
-  html:not(.dark) a[class*="bg-[#9E4C11]"],
-  html:not(.dark) button[class*="bg-[#9E4C11]"],
-  html:not(.dark) button[type="submit"]:not([class*="bg-transparent"]),
+  html:not(.dark) a.bg-primary-container:not(.photographic-hero *),
+  html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]):not(.photographic-hero *),
+  html:not(.dark) a.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]):not(.photographic-hero *),
+  html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]):not(.photographic-hero *),
+  html:not(.dark) a.bg-secondary:not(.photographic-hero *),
+  html:not(.dark) button.bg-secondary:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#B85D19]"]:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#B85D19]"]:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#8F3E0B]"]:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#8F3E0B]"]:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#7A3A16]"]:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#7A3A16]"]:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#5E2B0F]"]:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#5E2B0F]"]:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#9E460E]"]:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#9E460E]"]:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#9E4C11]"]:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#9E4C11]"]:not(.photographic-hero *),
+  html:not(.dark) button[type="submit"]:not([class*="bg-transparent"]):not(.photographic-hero *),
   html:not(.dark) a.nav-quote-btn,
   html:not(.dark) button.nav-quote-btn {
     background: linear-gradient(135deg, #F5C7A1 0%, #ECC8AA 100%) !important;
@@ -960,50 +1086,50 @@
     box-shadow: 0 2px 8px rgba(138, 43, 3, 0.2) !important;
     text-shadow: none !important;
   }
-  html:not(.dark) a.bg-primary-container *,
-  html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]) *,
-  html:not(.dark) a.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]) *,
-  html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]) *,
-  html:not(.dark) a.bg-secondary *,
-  html:not(.dark) button.bg-secondary *,
-  html:not(.dark) a[class*="bg-[#B85D19]"] *,
-  html:not(.dark) button[class*="bg-[#B85D19]"] *,
-  html:not(.dark) a[class*="bg-[#8F3E0B]"] *,
-  html:not(.dark) button[class*="bg-[#8F3E0B]"] *,
-  html:not(.dark) a[class*="bg-[#7A3A16]"] *,
-  html:not(.dark) button[class*="bg-[#7A3A16]"] *,
-  html:not(.dark) a[class*="bg-[#5E2B0F]"] *,
-  html:not(.dark) button[class*="bg-[#5E2B0F]"] *,
-  html:not(.dark) a[class*="bg-[#9E460E]"] *,
-  html:not(.dark) button[class*="bg-[#9E460E]"] *,
-  html:not(.dark) a[class*="bg-[#9E4C11]"] *,
-  html:not(.dark) button[class*="bg-[#9E4C11]"] *,
-  html:not(.dark) button[type="submit"] *,
+  html:not(.dark) a.bg-primary-container:not(.photographic-hero *) *,
+  html:not(.dark) button.bg-primary-container:not(.filter-btn):not([data-category]):not([data-filter]):not(.photographic-hero *) *,
+  html:not(.dark) a.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]):not(.photographic-hero *) *,
+  html:not(.dark) button.bg-primary:not(.filter-btn):not([data-category]):not([data-filter]):not(.photographic-hero *) *,
+  html:not(.dark) a.bg-secondary:not(.photographic-hero *) *,
+  html:not(.dark) button.bg-secondary:not(.photographic-hero *) *,
+  html:not(.dark) a[class*="bg-[#B85D19]"]:not(.photographic-hero *) *,
+  html:not(.dark) button[class*="bg-[#B85D19]"]:not(.photographic-hero *) *,
+  html:not(.dark) a[class*="bg-[#8F3E0B]"]:not(.photographic-hero *) *,
+  html:not(.dark) button[class*="bg-[#8F3E0B]"]:not(.photographic-hero *) *,
+  html:not(.dark) a[class*="bg-[#7A3A16]"]:not(.photographic-hero *) *,
+  html:not(.dark) button[class*="bg-[#7A3A16]"]:not(.photographic-hero *) *,
+  html:not(.dark) a[class*="bg-[#5E2B0F]"]:not(.photographic-hero *) *,
+  html:not(.dark) button[class*="bg-[#5E2B0F]"]:not(.photographic-hero *) *,
+  html:not(.dark) a[class*="bg-[#9E460E]"]:not(.photographic-hero *) *,
+  html:not(.dark) button[class*="bg-[#9E460E]"]:not(.photographic-hero *) *,
+  html:not(.dark) a[class*="bg-[#9E4C11]"]:not(.photographic-hero *) *,
+  html:not(.dark) button[class*="bg-[#9E4C11]"]:not(.photographic-hero *) *,
+  html:not(.dark) button[type="submit"]:not(.photographic-hero *) *,
   html:not(.dark) a.nav-quote-btn *,
   html:not(.dark) button.nav-quote-btn * {
     color: #000000 !important;
     font-weight: 850 !important;
     text-shadow: none !important;
   }
-  html:not(.dark) a.bg-primary-container:hover,
-  html:not(.dark) button.bg-primary-container:hover,
-  html:not(.dark) a.bg-primary:hover,
-  html:not(.dark) button.bg-primary:hover,
-  html:not(.dark) a.bg-secondary:hover,
-  html:not(.dark) button.bg-secondary:hover,
-  html:not(.dark) a[class*="bg-[#B85D19]"]:hover,
-  html:not(.dark) button[class*="bg-[#B85D19]"]:hover,
-  html:not(.dark) a[class*="bg-[#8F3E0B]"]:hover,
-  html:not(.dark) button[class*="bg-[#8F3E0B]"]:hover,
-  html:not(.dark) a[class*="bg-[#7A3A16]"]:hover,
-  html:not(.dark) button[class*="bg-[#7A3A16]"]:hover,
-  html:not(.dark) a[class*="bg-[#5E2B0F]"]:hover,
-  html:not(.dark) button[class*="bg-[#5E2B0F]"]:hover,
-  html:not(.dark) a[class*="bg-[#9E460E]"]:hover,
-  html:not(.dark) button[class*="bg-[#9E460E]"]:hover,
-  html:not(.dark) a[class*="bg-[#9E4C11]"]:hover,
-  html:not(.dark) button[class*="bg-[#9E4C11]"]:hover,
-  html:not(.dark) button[type="submit"]:hover,
+  html:not(.dark) a.bg-primary-container:hover:not(.photographic-hero *),
+  html:not(.dark) button.bg-primary-container:hover:not(.photographic-hero *),
+  html:not(.dark) a.bg-primary:hover:not(.photographic-hero *),
+  html:not(.dark) button.bg-primary:hover:not(.photographic-hero *),
+  html:not(.dark) a.bg-secondary:hover:not(.photographic-hero *),
+  html:not(.dark) button.bg-secondary:hover:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#B85D19]"]:hover:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#B85D19]"]:hover:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#8F3E0B]"]:hover:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#8F3E0B]"]:hover:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#7A3A16]"]:hover:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#7A3A16]"]:hover:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#5E2B0F]"]:hover:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#5E2B0F]"]:hover:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#9E460E]"]:hover:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#9E460E]"]:hover:not(.photographic-hero *),
+  html:not(.dark) a[class*="bg-[#9E4C11]"]:hover:not(.photographic-hero *),
+  html:not(.dark) button[class*="bg-[#9E4C11]"]:hover:not(.photographic-hero *),
+  html:not(.dark) button[type="submit"]:hover:not(.photographic-hero *),
   html:not(.dark) a.nav-quote-btn:hover,
   html:not(.dark) button.nav-quote-btn:hover {
     background: #E5A976 !important;
@@ -1011,14 +1137,14 @@
   }
 
   /* Secondary / Ghost / Outline Buttons in Light Mode: Crisp White Card Button with Solid Black Text */
-  html:not(.dark) a[class*="bg-white/"],
-  html:not(.dark) button[class*="bg-white/"],
-  html:not(.dark) a[class*="bg-surface/"],
-  html:not(.dark) button[class*="bg-surface/"],
-  html:not(.dark) a[class*="border-white/"],
-  html:not(.dark) button[class*="border-white/"],
-  html:not(.dark) a[class*="bg-transparent"][class*="rounded"],
-  html:not(.dark) button[class*="bg-transparent"][class*="rounded"] {
+  html:not(.dark) section:not(.photographic-hero) a[class*="bg-white/"],
+  html:not(.dark) section:not(.photographic-hero) button[class*="bg-white/"],
+  html:not(.dark) section:not(.photographic-hero) a[class*="bg-surface/"],
+  html:not(.dark) section:not(.photographic-hero) button[class*="bg-surface/"],
+  html:not(.dark) section:not(.photographic-hero) a[class*="border-white/"],
+  html:not(.dark) section:not(.photographic-hero) button[class*="border-white/"],
+  html:not(.dark) section:not(.photographic-hero) a[class*="bg-transparent"][class*="rounded"],
+  html:not(.dark) section:not(.photographic-hero) button[class*="bg-transparent"][class*="rounded"] {
     background-color: #FFFFFF !important;
     border: 1.5px solid #8A2B03 !important;
     color: #000000 !important;
@@ -1026,26 +1152,26 @@
     box-shadow: 0 2px 6px rgba(36, 21, 14, 0.08) !important;
     text-shadow: none !important;
   }
-  html:not(.dark) a[class*="bg-white/"] *,
-  html:not(.dark) button[class*="bg-white/"] *,
-  html:not(.dark) a[class*="bg-surface/"] *,
-  html:not(.dark) button[class*="bg-surface/"] *,
-  html:not(.dark) a[class*="border-white/"] *,
-  html:not(.dark) button[class*="border-white/"] *,
-  html:not(.dark) a[class*="bg-transparent"][class*="rounded"] *,
-  html:not(.dark) button[class*="bg-transparent"][class*="rounded"] * {
+  html:not(.dark) section:not(.photographic-hero) a[class*="bg-white/"] *,
+  html:not(.dark) section:not(.photographic-hero) button[class*="bg-white/"] *,
+  html:not(.dark) section:not(.photographic-hero) a[class*="bg-surface/"] *,
+  html:not(.dark) section:not(.photographic-hero) button[class*="bg-surface/"] *,
+  html:not(.dark) section:not(.photographic-hero) a[class*="border-white/"] *,
+  html:not(.dark) section:not(.photographic-hero) button[class*="border-white/"] *,
+  html:not(.dark) section:not(.photographic-hero) a[class*="bg-transparent"][class*="rounded"] *,
+  html:not(.dark) section:not(.photographic-hero) button[class*="bg-transparent"][class*="rounded"] * {
     color: #000000 !important;
     font-weight: 800 !important;
     text-shadow: none !important;
   }
-  html:not(.dark) a[class*="bg-white/"]:hover,
-  html:not(.dark) button[class*="bg-white/"]:hover,
-  html:not(.dark) a[class*="bg-surface/"]:hover,
-  html:not(.dark) button[class*="bg-surface/"]:hover,
-  html:not(.dark) a[class*="border-white/"]:hover,
-  html:not(.dark) button[class*="border-white/"]:hover,
-  html:not(.dark) a[class*="bg-transparent"][class*="rounded"]:hover,
-  html:not(.dark) button[class*="bg-transparent"][class*="rounded"]:hover {
+  html:not(.dark) section:not(.photographic-hero) a[class*="bg-white/"]:hover,
+  html:not(.dark) section:not(.photographic-hero) button[class*="bg-white/"]:hover,
+  html:not(.dark) section:not(.photographic-hero) a[class*="bg-surface/"]:hover,
+  html:not(.dark) section:not(.photographic-hero) button[class*="bg-surface/"]:hover,
+  html:not(.dark) section:not(.photographic-hero) a[class*="border-white/"]:hover,
+  html:not(.dark) section:not(.photographic-hero) button[class*="border-white/"]:hover,
+  html:not(.dark) section:not(.photographic-hero) a[class*="bg-transparent"][class*="rounded"]:hover,
+  html:not(.dark) section:not(.photographic-hero) button[class*="bg-transparent"][class*="rounded"]:hover {
     background-color: #F2EBE1 !important;
     color: #8A2B03 !important;
     border-color: #8A2B03 !important;
@@ -1384,24 +1510,6 @@ tailwind.config = {
 </head>
 <body class="bg-surface text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 
-<!-- Top Utility Sub-Bar -->
-<div class="w-full bg-surface-container-low border-b border-surface-container-high/60 text-on-surface-variant font-label-md text-label-md py-1.5 transition-colors">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 flex items-center justify-between gap-4">
-    <div class="flex items-center gap-2 overflow-hidden text-xs sm:text-label-md">
-      <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-      <span class="truncate">Private Estate Architecture &amp; Hillside Engineering</span>
-    </div>
-    <div class="flex items-center gap-3 xl:gap-6 2xl:gap-8 shrink-0 text-xs sm:text-label-md">
-      <a href="tel:18004928377" class="hover:text-primary transition-colors flex items-center gap-1.5 font-medium">
-        <span class="material-symbols-outlined text-[15px]">call</span>
-        +1 (800) 492-8377
-      </a>
-      <span class="hidden 2xl:inline whitespace-nowrap">Mon - Sat: 8:00 AM - 6:00 PM</span>
-      <span class="text-secondary font-semibold whitespace-nowrap">CCB #TL-89420 • Master Guild Member</span>
-    </div>
-  </div>
-</div>
-
 <!-- Main Sticky Header -->
 <header class="sticky top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-high/40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
   <!-- Top Utility Sub-Bar (Desktop Only) -->
@@ -1437,7 +1545,7 @@ tailwind.config = {
     <nav class="hidden xl:flex items-center gap-1.5 2xl:gap-3 text-[14px] 2xl:text-[14.5px] font-semibold tracking-normal whitespace-nowrap">
       <!-- Home Dropdown -->
       <div class="relative group/home">
-        <button class="nav-link-active px-2.5 2xl:px-3 py-1.5 flex items-center gap-1 rounded-lg transition-all focus:outline-none" aria-expanded="false" aria-haspopup="true">
+        <button class="nav-link-active h-9 px-2.5 2xl:px-3 inline-flex items-center justify-center gap-1 rounded-lg transition-all focus:outline-none" aria-expanded="false" aria-haspopup="true">
           <span>Home</span>
           <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover/home:rotate-180">expand_more</span>
         </button>
@@ -1527,7 +1635,7 @@ tailwind.config = {
 </header>
 
 <!-- HERO SECTION: Grand Estate Architecture (New Content & Details) -->
-<section class="relative w-full overflow-hidden bg-primary text-on-primary">
+<section class="photographic-hero relative w-full overflow-hidden bg-primary text-on-primary">
   <div class="relative w-full min-h-[80vh] flex items-center">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
