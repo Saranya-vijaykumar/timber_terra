@@ -167,14 +167,14 @@
   html:not(.dark) .bg-surface-container-highest { background-color: #D4C6B4 !important; }
   html:not(.dark) .bg-surface-variant { background-color: #E8DFD2 !important; }
 
-  /* Light Mode Headings (Pure Solid Black, 21:1 Contrast Ratio) */
-  html:not(.dark) h1:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) h2:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) h3:not([class*="text-white"]):not([class*="text-surface"]),
+  /* Light Mode Headings (Pure Solid Black on Light Surfaces, 21:1 Contrast Ratio) */
+  html:not(.dark) h1:not([class*="text-white"]):not([class*="text-surface"]):not(section[class*="min-h-"] *):not(section[class*="bg-[#140C07]"] *):not(section[class*="bg-[#180F0A]"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
+  html:not(.dark) h2:not([class*="text-white"]):not([class*="text-surface"]):not(section[class*="min-h-"] *):not(section[class*="bg-[#140C07]"] *):not(section[class*="bg-[#180F0A]"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
+  html:not(.dark) h3:not([class*="text-white"]):not([class*="text-surface"]):not(section[class*="min-h-"] *):not(section[class*="bg-[#140C07]"] *):not(section[class*="bg-[#180F0A]"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
   html:not(.dark) h4:not([class*="text-white"]):not([class*="text-surface"]),
   html:not(.dark) h5:not([class*="text-white"]):not([class*="text-surface"]),
   html:not(.dark) h6:not([class*="text-white"]):not([class*="text-surface"]),
-  html:not(.dark) .font-display-lg:not([class*="text-white"]):not([class*="text-surface"]),
+  html:not(.dark) .font-display-lg:not([class*="text-white"]):not([class*="text-surface"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
   html:not(.dark) .font-display-md:not([class*="text-white"]):not([class*="text-surface"]),
   html:not(.dark) .font-display-sm:not([class*="text-white"]):not([class*="text-surface"]),
   html:not(.dark) .font-headline-lg:not([class*="text-white"]):not([class*="text-surface"]),
@@ -193,18 +193,18 @@
     opacity: 1 !important;
   }
 
-  /* Light Mode Paragraphs & Body Text (Pure Solid Black, 21:1 Contrast Ratio) */
-  html:not(.dark) p:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#E8DCD0]"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]),
-  html:not(.dark) li:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]),
+  /* Light Mode Paragraphs & Body Text on Light Surfaces (Pure Solid Black, 21:1 Contrast Ratio) */
+  html:not(.dark) p:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#E8DCD0]"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-[#140C07]"] *):not(section[class*="bg-[#180F0A]"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
+  html:not(.dark) li:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
   html:not(.dark) td:not([class*="text-white"]),
   html:not(.dark) th:not([class*="text-white"]),
   html:not(.dark) blockquote:not([class*="text-white"]),
-  html:not(.dark) .text-on-surface:not([class*="text-white"]),
-  html:not(.dark) .font-body-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
-  html:not(.dark) .font-body-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
+  html:not(.dark) .text-on-surface:not([class*="text-white"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .font-body-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .font-body-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
   html:not(.dark) .font-body-sm:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
-  html:not(.dark) .text-body-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
-  html:not(.dark) .text-body-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
+  html:not(.dark) .text-body-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .text-body-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
   html:not(.dark) .text-body-sm:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]),
   html:not(.dark) .text-body-xs:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]) {
     color: #000000 !important;
@@ -212,13 +212,13 @@
     opacity: 1 !important;
   }
 
-  /* Light Mode Secondary, Meta & Description Text (Solid Deep Charcoal Black, 19:1 Contrast) */
-  html:not(.dark) .text-on-surface-variant:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]),
-  html:not(.dark) span.text-on-surface-variant,
-  html:not(.dark) div.text-on-surface-variant,
-  html:not(.dark) p.text-on-surface-variant,
-  html:not(.dark) a.text-on-surface-variant,
-  html:not(.dark) li.text-on-surface-variant,
+  /* Light Mode Secondary, Meta & Description Text on Light Surfaces */
+  html:not(.dark) .text-on-surface-variant:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-on-primary"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) span.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) div.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) p.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) a.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) li.text-on-surface-variant:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
   html:not(.dark) label.text-on-surface-variant,
   html:not(.dark) td.text-on-surface-variant,
   html:not(.dark) .text-outline:not([class*="text-white"]),
@@ -228,15 +228,15 @@
     opacity: 1 !important;
   }
 
-  /* Light Mode Small Labels, Badges & Captions (Solid Pitch Black) */
-  html:not(.dark) .text-label-sm:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
-  html:not(.dark) .text-label-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
-  html:not(.dark) .text-label-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
-  html:not(.dark) .font-label-sm:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
-  html:not(.dark) .font-label-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
-  html:not(.dark) .font-label-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
-  html:not(.dark) .font-caption:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
-  html:not(.dark) .text-caption:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]),
+  /* Light Mode Small Labels, Badges & Captions on Light Surfaces */
+  html:not(.dark) .text-label-sm:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .text-label-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .text-label-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .font-label-sm:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .font-label-md:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .font-label-lg:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .font-caption:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .text-caption:not([class*="text-white"]):not([class*="text-surface"]):not([class*="text-[#FAF5EF]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
   html:not(.dark) label:not([class*="text-white"]) {
     color: #000000 !important;
     font-weight: 800 !important;
@@ -244,17 +244,17 @@
   }
 
   /* Light Mode Accent & Highlight Text: Deep Terracotta (9.5:1 Contrast) */
-  html:not(.dark) .text-secondary:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]),
-  html:not(.dark) .text-secondary-fixed:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]),
-  html:not(.dark) .text-primary-fixed:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]),
-  html:not(.dark) span.text-secondary:not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]),
-  html:not(.dark) a.text-secondary {
+  html:not(.dark) .text-secondary:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(section[class*="bg-[#140C07]"] *):not(section[class*="bg-[#180F0A]"] *):not(div[class*="bg-black/"] *),
+  html:not(.dark) .text-secondary-fixed:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) .text-primary-fixed:not([class*="text-white"]):not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) span.text-secondary:not([class*="text-[#F7BA7D]"]):not([class*="text-[#FDBA74]"]):not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
+  html:not(.dark) a.text-secondary:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *) {
     color: #8A2B03 !important;
     font-weight: 850 !important;
     opacity: 1 !important;
   }
 
-  /* Light Mode Step Numbers, Badges & Counters */
+  /* Light Mode Step Numbers, Badges & Counters on Light Surfaces */
   html:not(.dark) span.font-display-md.text-surface-container,
   html:not(.dark) span.text-surface-container,
   html:not(.dark) span.text-surface-container-high,
@@ -285,8 +285,8 @@
   html:not(.dark) div.bg-white,
   html:not(.dark) article:not([class*="col-span"]),
   html:not(.dark) .card,
-  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"],
-  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"],
+  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
+  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *):not(div[class*="bg-black/"] *),
   html:not(.dark) a.group[class*="rounded-2xl"][class*="shadow"],
   html:not(.dark) a.group[class*="rounded-3xl"][class*="shadow"] {
     border: 1.5px solid #C4B19D !important;
@@ -298,8 +298,8 @@
   html:not(.dark) div.bg-white:hover,
   html:not(.dark) article:not([class*="col-span"]):hover,
   html:not(.dark) .card:hover,
-  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover,
-  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover,
+  html:not(.dark) div[class*="rounded-2xl"][class*="shadow"]:hover:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
+  html:not(.dark) div[class*="rounded-3xl"][class*="shadow"]:hover:not(section[class*="min-h-"] *):not(section[class*="bg-primary"] *),
   html:not(.dark) a.group[class*="rounded-2xl"]:hover,
   html:not(.dark) a.group[class*="rounded-3xl"]:hover {
     border-color: #8A2B03 !important;
@@ -308,8 +308,8 @@
 
   /* Light Mode Dividers */
   html:not(.dark) hr,
-  html:not(.dark) div[class*="border-t"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *),
-  html:not(.dark) div[class*="border-b"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *),
+  html:not(.dark) div[class*="border-t"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *):not(section[class*="min-h-"] *),
+  html:not(.dark) div[class*="border-b"]:not([class*="bg-primary"]):not([class*="bg-[#"]):not(header *):not(section[class*="min-h-"] *),
   html:not(.dark) section[class*="border-t"]:not([class*="bg-primary"]):not([class*="bg-[#"]),
   html:not(.dark) section[class*="border-b"]:not([class*="bg-primary"]):not([class*="bg-[#"]),
   html:not(.dark) footer[class*="border-t"],
@@ -357,111 +357,116 @@
   }
 
   /* ==========================================================================
-     3. INTENTIONALLY DARK SECTIONS IN LIGHT MODE (Hero, Stats, Callout, CTA)
-     CRITICAL: Only targets specific dark brown/obsidian backgrounds, NEVER wildcard bg-[#]!
+     3. INTENTIONALLY DARK SECTIONS & HEROS (100% MAXIMUM VISIBILITY GUARANTEE)
      ========================================================================== */
-  html:not(.dark) section[class*="bg-primary"]:not([class*="bg-surface"]),
-  html:not(.dark) section[class*="bg-primary-container"]:not([class*="bg-surface"]),
-  html:not(.dark) section[class*="bg-[#140C07]"],
-  html:not(.dark) section[class*="bg-[#180F0A]"],
-  html:not(.dark) section[class*="bg-[#120A06]"],
-  html:not(.dark) section[class*="bg-[#1C1008]"],
-  html:not(.dark) section[class*="bg-[#24140A]"],
-  html:not(.dark) section[class*="bg-[#24150E]"],
-  html:not(.dark) section[class*="bg-[#3D1E0E]"],
-  html:not(.dark) section[class*="bg-[#3D2418]"],
-  html:not(.dark) section[class*="bg-[#4A2411]"],
-  html:not(.dark) section[class*="bg-[#4E240E]"],
-  html:not(.dark) section[class*="bg-[#6B3214]"],
-  html:not(.dark) div[class*="bg-primary"]:not([class*="bg-surface"]):not([class*="bg-white"]):not([class*="bg-surface-container"]),
-  html:not(.dark) div[class*="bg-primary-container"]:not([class*="bg-surface"]):not([class*="bg-white"]):not([class*="bg-surface-container"]),
-  html:not(.dark) div[class*="bg-[#140C07]"],
-  html:not(.dark) div[class*="bg-[#180F0A]"],
-  html:not(.dark) div[class*="bg-[#120A06]"],
-  html:not(.dark) div[class*="bg-[#1C1008]"],
-  html:not(.dark) div[class*="bg-[#24140A]"],
-  html:not(.dark) div[class*="bg-[#24150E]"],
-  html:not(.dark) div[class*="bg-[#3D1E0E]"],
-  html:not(.dark) div[class*="bg-[#3D2418]"],
-  html:not(.dark) div[class*="bg-[#4A2411]"],
-  html:not(.dark) div[class*="bg-[#4E240E]"],
-  html:not(.dark) div[class*="bg-[#6B3214]"] {
+  /* Hero & Dark Section Headings: Pure Brilliant White */
+  section[class*="min-h-"] h1,
+  section[class*="bg-[#140C07]"] h1,
+  section[class*="bg-[#180F0A]"] h1,
+  section[class*="bg-[#120A06]"] h1,
+  section[class*="bg-[#1C1008]"] h1,
+  section[class*="bg-[#24140A]"] h1,
+  section[class*="bg-[#24150E]"] h1,
+  section[class*="bg-primary"] h1,
+  section[class*="bg-primary-container"] h1,
+  div[class*="bg-black/"] h1,
+  div[class*="bg-black/"] h2,
+  h1.text-white,
+  h2.text-white {
     color: #FFFFFF !important;
+    font-weight: 850 !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
   }
 
-  /* Headings directly inside dark sections in Light Mode: Pure White */
-  html:not(.dark) section[class*="bg-primary"] h1, html:not(.dark) section[class*="bg-primary"] h2, html:not(.dark) section[class*="bg-primary"] h3, html:not(.dark) section[class*="bg-primary"] h4,
-  html:not(.dark) section[class*="bg-primary-container"] h1, html:not(.dark) section[class*="bg-primary-container"] h2, html:not(.dark) section[class*="bg-primary-container"] h3, html:not(.dark) section[class*="bg-primary-container"] h4,
-  html:not(.dark) section[class*="bg-[#180F0A]"] > div h1, html:not(.dark) section[class*="bg-[#180F0A]"] > div h2,
-  html:not(.dark) section[class*="bg-[#140C07]"] h1, html:not(.dark) section[class*="bg-[#140C07]"] h2, html:not(.dark) section[class*="bg-[#140C07]"] h3,
-  html:not(.dark) section[class*="bg-[#1C1008]"] h1, html:not(.dark) section[class*="bg-[#1C1008]"] h2, html:not(.dark) section[class*="bg-[#1C1008]"] h3,
-  html:not(.dark) div[class*="bg-primary"] > h1, html:not(.dark) div[class*="bg-primary"] > h2, html:not(.dark) div[class*="bg-primary"] > h3,
-  html:not(.dark) div[class*="bg-primary-container"] > h1, html:not(.dark) div[class*="bg-primary-container"] > h2, html:not(.dark) div[class*="bg-primary-container"] > h3,
-  html:not(.dark) div[class*="bg-[#140C07]"] > h1, html:not(.dark) div[class*="bg-[#140C07]"] > h2, html:not(.dark) div[class*="bg-[#140C07]"] > h3,
-  html:not(.dark) div[class*="bg-[#180F0A]"] > h1, html:not(.dark) div[class*="bg-[#180F0A]"] > h2, html:not(.dark) div[class*="bg-[#180F0A]"] > h3,
-  html:not(.dark) div[class*="bg-[#180F0A]"] > div > h1, html:not(.dark) div[class*="bg-[#180F0A]"] > div > h2 {
+  /* Two-Tone Accent Phrase inside Hero Headings: Radiant Amber Gold */
+  section[class*="min-h-"] h1 span,
+  section[class*="bg-[#140C07]"] h1 span,
+  section[class*="bg-[#180F0A]"] h1 span,
+  section[class*="bg-primary"] h1 span,
+  div[class*="bg-black/"] h1 span,
+  h1 span.text-[#F7BA7D],
+  h1 [class*="text-[#F7BA7D]"],
+  h1 span.italic,
+  h1 .font-serif.italic,
+  h1 .text-secondary {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Hero & Dark Section Paragraphs & Subtitles: Pure Solid White */
+  section[class*="min-h-"] p,
+  section[class*="bg-[#140C07]"] p,
+  section[class*="bg-[#180F0A]"] p,
+  section[class*="bg-[#120A06]"] p,
+  section[class*="bg-[#1C1008]"] p,
+  section[class*="bg-[#24140A]"] p,
+  section[class*="bg-[#24150E]"] p,
+  section[class*="bg-primary"] p,
+  section[class*="bg-primary-container"] p,
+  div[class*="bg-black/"] p,
+  div[class*="bg-black/"] p span,
+  p.text-white,
+  p[class*="text-white"],
+  p[class*="text-[#FAF5EF]"],
+  p[class*="text-[#E8DCD0]"] {
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  /* Hero Badges, Trust Pills & Eyebrow Chips: Radiant Luminous Amber Gold */
+  div[class*="bg-black/"] div[class*="rounded-full"],
+  div[class*="bg-black/"] div[class*="rounded-full"] span,
+  div[class*="bg-[#B85D19]/35"],
+  div[class*="bg-[#B85D19]/35"] span,
+  section[class*="min-h-"] div[class*="rounded-full"] span,
+  section[class*="min-h-"] [class*="text-[#F7BA7D]"],
+  section[class*="min-h-"] [class*="text-[#F5C7A1]"],
+  section[class*="bg-primary"] [class*="text-secondary"],
+  section[class*="bg-primary"] [class*="text-label"] {
+    color: #F7BA7D !important;
+    font-weight: 750 !important;
+    opacity: 1 !important;
+  }
+
+  /* Hero & Dark Section Buttons & Links */
+  div[class*="bg-black/"] a,
+  div[class*="bg-black/"] a span,
+  section[class*="min-h-"] a[class*="bg-[#B85D19]"],
+  section[class*="min-h-"] a[class*="bg-[#B85D19]"] span,
+  section[class*="min-h-"] a[class*="bg-[#24150E]"],
+  section[class*="min-h-"] a[class*="bg-[#24150E]"] span,
+  section[class*="min-h-"] a[class*="text-white"],
+  section[class*="min-h-"] a[class*="text-white"] span {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+  }
+
+  /* Headings inside other dark sections (Stats, Callouts, Footers) */
+  html:not(.dark) section[class*="bg-primary"] h2, html:not(.dark) section[class*="bg-primary"] h3, html:not(.dark) section[class*="bg-primary"] h4,
+  html:not(.dark) section[class*="bg-primary-container"] h2, html:not(.dark) section[class*="bg-primary-container"] h3, html:not(.dark) section[class*="bg-primary-container"] h4,
+  html:not(.dark) div[class*="bg-primary"] > h2, html:not(.dark) div[class*="bg-primary"] > h3,
+  html:not(.dark) div[class*="bg-[#140C07]"] > h2, html:not(.dark) div[class*="bg-[#140C07]"] > h3,
+  html:not(.dark) div[class*="bg-[#180F0A]"] > h2, html:not(.dark) div[class*="bg-[#180F0A]"] > h3 {
     color: #FFFFFF !important;
     font-weight: 850 !important;
     text-shadow: 0 1px 3px rgba(0,0,0,0.6) !important;
   }
 
-  /* Body text directly inside dark sections in Light Mode: Pure White */
-  html:not(.dark) section[class*="bg-primary"] > div > p,
-  html:not(.dark) section[class*="bg-primary"] .lg\:col-span-8 p,
-  html:not(.dark) section[class*="bg-primary"] .lg\:col-span-6 p,
-  html:not(.dark) section[class*="bg-primary"] .lg\:col-span-4 p,
-  html:not(.dark) section[class*="bg-primary-container"] p,
-  html:not(.dark) section[class*="bg-[#180F0A]"] > div > p,
-  html:not(.dark) section[class*="bg-[#180F0A]"] .lg\:col-span-8 p,
-  html:not(.dark) section[class*="bg-[#180F0A]"] .max-w-2xl p,
-  html:not(.dark) section[class*="bg-[#180F0A]"] .max-w-3xl p,
-  html:not(.dark) div[class*="bg-[#180F0A]"] > p,
-  html:not(.dark) div[class*="bg-[#140C07]"] > p,
-  html:not(.dark) p.text-on-primary,
-  html:not(.dark) p.text-on-primary-container,
-  html:not(.dark) p[class*="text-[#E8DCD0]"] {
-    color: #FFFFFF !important;
-    font-weight: 500 !important;
-    opacity: 1 !important;
-  }
-
-  /* Subtext & labels inside dark containers in Light Mode: Radiant Warm Gold */
-  html:not(.dark) section[class*="bg-primary"] [class*="text-secondary"],
-  html:not(.dark) section[class*="bg-primary-container"] [class*="text-secondary"],
-  html:not(.dark) section[class*="bg-[#140C07]"] [class*="text-secondary"],
-  html:not(.dark) section[class*="bg-[#180F0A]"] [class*="text-secondary"],
-  html:not(.dark) section[class*="bg-[#1C1008]"] [class*="text-secondary"],
-  html:not(.dark) section[class*="bg-[#3D2418]"] [class*="text-secondary"],
-  html:not(.dark) section[class*="bg-[#6B3214]"] [class*="text-secondary"],
-  html:not(.dark) section[class*="bg-primary"] [class*="text-label"],
-  html:not(.dark) section[class*="bg-primary-container"] [class*="text-label"],
-  html:not(.dark) section[class*="bg-[#140C07]"] [class*="text-label"],
-  html:not(.dark) section[class*="bg-[#180F0A]"] [class*="text-label"],
-  html:not(.dark) section[class*="bg-[#1C1008]"] [class*="text-label"],
-  html:not(.dark) section[class*="bg-[#3D2418]"] [class*="text-label"],
-  html:not(.dark) section[class*="bg-[#6B3214]"] [class*="text-label"] {
-    color: #F7BA7D !important;
-    font-weight: 750 !important;
-  }
-
   /* ==========================================================================
-     CRITICAL: WHITE & LIGHT CARDS NESTED INSIDE DARK SECTIONS MUST HAVE SOLID PURE BLACK TEXT!
+     CRITICAL: WHITE & LIGHT CARDS NESTED INSIDE DARK SECTIONS (Calculator, Forms)
+     MUST HAVE SOLID PURE BLACK TEXT!
      ========================================================================== */
-  html:not(.dark) .bg-white,
-  html:not(.dark) .bg-surface-container-lowest,
-  html:not(.dark) .bg-surface,
-  html:not(.dark) .bg-surface-container-low,
-  html:not(.dark) .bg-surface-container,
-  html:not(.dark) .bg-surface-container-high,
-  html:not(.dark) .bg-surface-container-highest {
+  html:not(.dark) div.bg-white,
+  html:not(.dark) div.bg-surface-container-lowest {
     color: #000000 !important;
   }
 
-  html:not(.dark) .bg-white h1, html:not(.dark) .bg-white h2, html:not(.dark) .bg-white h3, html:not(.dark) .bg-white h4, html:not(.dark) .bg-white h5, html:not(.dark) .bg-white h6,
-  html:not(.dark) .bg-surface-container-lowest h1, html:not(.dark) .bg-surface-container-lowest h2, html:not(.dark) .bg-surface-container-lowest h3, html:not(.dark) .bg-surface-container-lowest h4, html:not(.dark) .bg-surface-container-lowest h5, html:not(.dark) .bg-surface-container-lowest h6,
-  html:not(.dark) .bg-surface h1, html:not(.dark) .bg-surface h2, html:not(.dark) .bg-surface h3, html:not(.dark) .bg-surface h4,
-  html:not(.dark) .bg-surface-container h1, html:not(.dark) .bg-surface-container h2, html:not(.dark) .bg-surface-container h3, html:not(.dark) .bg-surface-container h4,
-  html:not(.dark) .bg-surface-container-low h1, html:not(.dark) .bg-surface-container-low h2, html:not(.dark) .bg-surface-container-low h3, html:not(.dark) .bg-surface-container-low h4,
+  html:not(.dark) div.bg-white h1, html:not(.dark) div.bg-white h2, html:not(.dark) div.bg-white h3, html:not(.dark) div.bg-white h4, html:not(.dark) div.bg-white h5, html:not(.dark) div.bg-white h6,
+  html:not(.dark) div.bg-surface-container-lowest h1, html:not(.dark) div.bg-surface-container-lowest h2, html:not(.dark) div.bg-surface-container-lowest h3, html:not(.dark) div.bg-surface-container-lowest h4, html:not(.dark) div.bg-surface-container-lowest h5, html:not(.dark) div.bg-surface-container-lowest h6,
   html:not(.dark) [class*="bg-white"] h3,
   html:not(.dark) [class*="bg-white"] .font-serif,
   html:not(.dark) [class*="bg-white"] .font-display,
@@ -471,73 +476,52 @@
     text-shadow: none !important;
   }
 
-  html:not(.dark) .bg-white p,
-  html:not(.dark) .bg-surface-container-lowest p,
-  html:not(.dark) .bg-surface p,
-  html:not(.dark) .bg-surface-container-low p,
-  html:not(.dark) .bg-surface-container p,
-  html:not(.dark) .bg-white li,
-  html:not(.dark) .bg-surface-container-lowest li,
-  html:not(.dark) .bg-surface li,
-  html:not(.dark) .bg-surface-container-low li,
-  html:not(.dark) .bg-surface-container li {
+  html:not(.dark) div.bg-white p,
+  html:not(.dark) div.bg-surface-container-lowest p,
+  html:not(.dark) div.bg-white li,
+  html:not(.dark) div.bg-surface-container-lowest li {
     color: #000000 !important;
     font-weight: 550 !important;
     opacity: 1 !important;
   }
 
-  html:not(.dark) .bg-white span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
-  html:not(.dark) .bg-surface-container-lowest span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
-  html:not(.dark) .bg-surface span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
-  html:not(.dark) .bg-surface-container-low span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
-  html:not(.dark) .bg-surface-container span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]) {
+  html:not(.dark) div.bg-white span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]),
+  html:not(.dark) div.bg-surface-container-lowest span:not(.material-symbols-outlined):not([class*="bg-primary"]):not([class*="bg-[#8F3E0B]"]):not([class*="text-secondary"]):not([class*="badge"]) {
     color: #000000 !important;
     opacity: 1 !important;
   }
 
-  html:not(.dark) .bg-white .text-primary,
-  html:not(.dark) .bg-surface-container-lowest .text-primary,
-  html:not(.dark) .bg-surface .text-primary,
-  html:not(.dark) .bg-surface-container-low .text-primary,
-  html:not(.dark) .bg-surface-container .text-primary {
+  html:not(.dark) div.bg-white .text-primary,
+  html:not(.dark) div.bg-surface-container-lowest .text-primary {
     color: #000000 !important;
     font-weight: 850 !important;
   }
 
-  html:not(.dark) .bg-white .text-on-surface-variant,
-  html:not(.dark) .bg-surface-container-lowest .text-on-surface-variant,
-  html:not(.dark) .bg-surface .text-on-surface-variant,
-  html:not(.dark) .bg-surface-container-low .text-on-surface-variant,
-  html:not(.dark) .bg-surface-container .text-on-surface-variant {
+  html:not(.dark) div.bg-white .text-on-surface-variant,
+  html:not(.dark) div.bg-surface-container-lowest .text-on-surface-variant {
     color: #111111 !important;
     font-weight: 650 !important;
     opacity: 1 !important;
   }
 
-  html:not(.dark) .bg-white .text-secondary,
-  html:not(.dark) .bg-surface-container-lowest .text-secondary,
-  html:not(.dark) .bg-surface .text-secondary,
-  html:not(.dark) .bg-surface-container-low .text-secondary,
-  html:not(.dark) .bg-surface-container .text-secondary {
+  html:not(.dark) div.bg-white .text-secondary,
+  html:not(.dark) div.bg-surface-container-lowest .text-secondary {
     color: #8A2B03 !important;
     font-weight: 850 !important;
   }
 
-  html:not(.dark) .bg-white label,
-  html:not(.dark) .bg-surface-container-lowest label,
-  html:not(.dark) .bg-surface label,
-  html:not(.dark) .bg-surface-container-low label,
-  html:not(.dark) .bg-surface-container label {
+  html:not(.dark) div.bg-white label,
+  html:not(.dark) div.bg-surface-container-lowest label {
     color: #000000 !important;
     font-weight: 800 !important;
   }
 
-  html:not(.dark) .bg-white div[id*="est-"],
-  html:not(.dark) .bg-surface-container-lowest div[id*="est-"],
-  html:not(.dark) .bg-white span[id*="est-"],
-  html:not(.dark) .bg-surface-container-lowest span[id*="est-"],
-  html:not(.dark) .bg-white span[id*="calc-"],
-  html:not(.dark) .bg-surface-container-lowest span[id*="calc-"] {
+  html:not(.dark) div.bg-white div[id*="est-"],
+  html:not(.dark) div.bg-surface-container-lowest div[id*="est-"],
+  html:not(.dark) div.bg-white span[id*="est-"],
+  html:not(.dark) div.bg-surface-container-lowest span[id*="est-"],
+  html:not(.dark) div.bg-white span[id*="calc-"],
+  html:not(.dark) div.bg-surface-container-lowest span[id*="calc-"] {
     color: #000000 !important;
     font-weight: 900 !important;
   }
