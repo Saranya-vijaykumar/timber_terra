@@ -386,6 +386,33 @@
 
   
   /* Universal Photo Overlay Badges & Dark Chips in Light & Dark Mode: 100% Crisp White Typography */
+  /* ==========================================================================
+     PHOTO OVERLAYS & IMAGE CARDS (Light & Dark Mode)
+     Ensure all headings, paragraphs, and spans overlaid on images have 100% white typography
+     ========================================================================== */
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"],
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] p,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] span:not(.material-symbols-outlined),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h1,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h2,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h3,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h4,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] div:not([class*="bg-white"]):not([class*="bg-surface"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] *:not(input):not(textarea):not(button):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-[#FAF7F2]"]):not([class*="bg-surface-container-lowest"]) {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85) !important;
+  }
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-[#F7BA7D]"],
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary"],
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary-fixed"],
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-[#F7BA7D]"],
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary"],
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary-fixed"] {
+    color: #F7BA7D !important;
+    -webkit-text-fill-color: #F7BA7D !important;
+  }
+
   html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]),
   html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-lg"]:not([class*="bg-white"]):not([class*="bg-surface"]),
   html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"],
@@ -2040,7 +2067,7 @@ tailwind.config = {
 <span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Timber Deck</span>
 </div>
 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
-<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-white drop-shadow leading-none"><span class="material-symbols-outlined text-[16px] text-secondary leading-none">location_on</span><span class="leading-none">Whistler, BC</span></span>
+<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-white drop-shadow leading-none" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; text-shadow: 0 1px 3px rgba(0,0,0,0.9) !important;"><span class="material-symbols-outlined text-[16px] text-[#F7BA7D] leading-none" style="color: #F7BA7D !important;">location_on</span><span class="leading-none" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Whistler, BC</span></span>
 <div class="px-3.5 py-1.5 rounded-full bg-white/95 text-[#24150E] dark:bg-[#20140D]/95 dark:text-white border border-outline-variant/50 dark:border-white/25 shadow-lg flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-300">
   <span class="material-symbols-outlined text-[16px] text-[#8F3E0B] dark:text-[#F7BA7D]">visibility</span>
   <span class="font-bold text-xs uppercase tracking-wider text-[#24150E] dark:text-white">View</span>
@@ -2069,7 +2096,7 @@ tailwind.config = {
 <span class="px-3 py-1 rounded-full bg-[#8A2B03] dark:bg-[#B85D19] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Composite Deck</span>
 </div>
 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
-<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-white drop-shadow leading-none"><span class="material-symbols-outlined text-[16px] text-secondary leading-none">location_on</span><span class="leading-none">Friday Harbor, WA</span></span>
+<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-white drop-shadow leading-none" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; text-shadow: 0 1px 3px rgba(0,0,0,0.9) !important;"><span class="material-symbols-outlined text-[16px] text-[#F7BA7D] leading-none" style="color: #F7BA7D !important;">location_on</span><span class="leading-none" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Friday Harbor, WA</span></span>
 <div class="px-3.5 py-1.5 rounded-full bg-white/95 text-[#24150E] dark:bg-[#20140D]/95 dark:text-white border border-outline-variant/50 dark:border-white/25 shadow-lg flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-300">
   <span class="material-symbols-outlined text-[16px] text-[#8F3E0B] dark:text-[#F7BA7D]">visibility</span>
   <span class="font-bold text-xs uppercase tracking-wider text-[#24150E] dark:text-white">View</span>
@@ -2099,7 +2126,7 @@ tailwind.config = {
 <span class="px-3 py-1 rounded-full bg-[#B85D19] dark:bg-[#D48B4E] !text-white font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Featured</span>
 </div>
 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
-<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-white drop-shadow leading-none"><span class="material-symbols-outlined text-[16px] text-secondary leading-none">location_on</span><span class="leading-none">Carmel Highlands, CA</span></span>
+<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-white drop-shadow leading-none" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; text-shadow: 0 1px 3px rgba(0,0,0,0.9) !important;"><span class="material-symbols-outlined text-[16px] text-[#F7BA7D] leading-none" style="color: #F7BA7D !important;">location_on</span><span class="leading-none" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Carmel Highlands, CA</span></span>
 <div class="px-3.5 py-1.5 rounded-full bg-white/95 text-[#24150E] dark:bg-[#20140D]/95 dark:text-white border border-outline-variant/50 dark:border-white/25 shadow-lg flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-300">
   <span class="material-symbols-outlined text-[16px] text-[#8F3E0B] dark:text-[#F7BA7D]">visibility</span>
   <span class="font-bold text-xs uppercase tracking-wider text-[#24150E] dark:text-white">View</span>

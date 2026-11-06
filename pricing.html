@@ -387,6 +387,33 @@
 
   
   /* Universal Photo Overlay Badges & Dark Chips in Light & Dark Mode: 100% Crisp White Typography */
+  /* ==========================================================================
+     PHOTO OVERLAYS & IMAGE CARDS (Light & Dark Mode)
+     Ensure all headings, paragraphs, and spans overlaid on images have 100% white typography
+     ========================================================================== */
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"],
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] p,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] span:not(.material-symbols-outlined),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h1,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h2,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h3,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h4,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] div:not([class*="bg-white"]):not([class*="bg-surface"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] *:not(input):not(textarea):not(button):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-[#FAF7F2]"]):not([class*="bg-surface-container-lowest"]) {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85) !important;
+  }
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-[#F7BA7D]"],
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary"],
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary-fixed"],
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-[#F7BA7D]"],
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary"],
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary-fixed"] {
+    color: #F7BA7D !important;
+    -webkit-text-fill-color: #F7BA7D !important;
+  }
+
   html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]),
   html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-lg"]:not([class*="bg-white"]):not([class*="bg-surface"]),
   html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"],

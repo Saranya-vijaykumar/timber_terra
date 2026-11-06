@@ -386,6 +386,33 @@
 
   
   /* Universal Photo Overlay Badges & Dark Chips in Light & Dark Mode: 100% Crisp White Typography */
+  /* ==========================================================================
+     PHOTO OVERLAYS & IMAGE CARDS (Light & Dark Mode)
+     Ensure all headings, paragraphs, and spans overlaid on images have 100% white typography
+     ========================================================================== */
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"],
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] p,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] span:not(.material-symbols-outlined),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h1,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h2,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h3,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h4,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] div:not([class*="bg-white"]):not([class*="bg-surface"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] *:not(input):not(textarea):not(button):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-[#FAF7F2]"]):not([class*="bg-surface-container-lowest"]) {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85) !important;
+  }
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-[#F7BA7D]"],
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary"],
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary-fixed"],
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-[#F7BA7D]"],
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary"],
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] [class*="text-secondary-fixed"] {
+    color: #F7BA7D !important;
+    -webkit-text-fill-color: #F7BA7D !important;
+  }
+
   html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]),
   html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-lg"]:not([class*="bg-white"]):not([class*="bg-surface"]),
   html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"],
@@ -3045,10 +3072,10 @@ tailwind.config = {
         <div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/40 shadow-sm">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Timber & Terra architectural consultation and property appraisal" class="w-full h-full object-cover"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-            <div class="absolute bottom-3 left-4 right-4 text-white">
-              <span class="text-[11px] font-bold uppercase tracking-wider bg-secondary px-2.5 py-0.5 rounded-full inline-block mb-1">Direct Feasibility</span>
-              <p class="text-xs font-medium text-white/90">Talk directly with a Principal Structural Designer</p>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 right-4 z-10" style="color: #FFFFFF !important;">
+              <span class="text-[11px] font-bold uppercase tracking-wider bg-[#8A2B03] dark:bg-[#B85D19] !text-white px-2.5 py-0.5 rounded-full inline-block mb-1 shadow-sm border border-white/25" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Direct Feasibility</span>
+              <p class="text-xs font-bold text-white drop-shadow" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0,0,0,0.95) !important;">Talk directly with a Principal Structural Designer</p>
             </div>
           </div>
           <div class="p-6 flex flex-col gap-4">
@@ -3176,10 +3203,10 @@ tailwind.config = {
             <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Bespoke timber pergola sanctuary concept rendering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <span class="absolute top-4 right-4 bg-[#8A2B03] dark:bg-[#B85D19] !text-white text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-white/25 shadow-md" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">2025 Commission</span>
-            <div class="absolute bottom-4 left-4 right-4 text-white">
-              <span class="text-xs text-secondary-fixed uppercase tracking-wider font-semibold block mb-0.5">Architectural Commission</span>
-              <p class="text-sm font-bold text-surface-bright">The Bainbridge Island Pavilion &amp; Multi-Tier Deck</p>
-              <p class="text-xs text-surface-container-high mt-1">Select Western Red Cedar • Helical Anchors • Integrated Optics</p>
+            <div class="absolute bottom-4 left-4 right-4 z-10 text-white" style="color: #FFFFFF !important;">
+              <span class="text-xs text-[#F7BA7D] uppercase tracking-wider font-bold block mb-0.5" style="color: #F7BA7D !important; -webkit-text-fill-color: #F7BA7D !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">Architectural Commission</span>
+              <p class="text-sm font-bold text-white drop-shadow" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0,0,0,0.95) !important;">The Bainbridge Island Pavilion &amp; Multi-Tier Deck</p>
+              <p class="text-xs text-white/90 mt-1" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">Select Western Red Cedar • Helical Anchors • Integrated Optics</p>
             </div>
           </div>
         </div>
