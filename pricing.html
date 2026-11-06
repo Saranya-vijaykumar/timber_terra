@@ -2396,7 +2396,7 @@ Standard builder-grade softwoods create an endless cycle of stripping, re-staini
           </p>
 </div>
 </div>
-<a class="shrink-0 px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold hover:bg-primary-container transition-colors" href="#">
+<a class="shrink-0 px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold hover:bg-primary-container transition-colors" href="blog-ipe-vs-cumaru.html">
         Read Sourcing Whitepaper
       </a>
 </div>
@@ -2719,16 +2719,16 @@ Standard builder-grade softwoods create an endless cycle of stripping, re-staini
           </p>
 </div>
 <div class="lg:col-span-4 flex flex-col gap-4">
-<a class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-lg bg-secondary text-surface hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] dark:hover:!text-white font-label-lg text-label-lg transition-colors font-bold shadow-lg" href="#">
-<span class="">Book On-Site Appraisal</span>
+<button id="btn-book-appraisal" type="button" onclick="openAppraisalModal()" class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-secondary !text-white hover:!bg-[#8F3E0B] dark:hover:!bg-[#B85D19] font-label-lg text-label-lg transition-all font-bold shadow-lg hover:shadow-xl active:scale-[0.99] cursor-pointer" aria-haspopup="dialog">
+<span>Book On-Site Appraisal</span>
 <span class="material-symbols-outlined text-[20px]">calendar_today</span>
-</a>
-<a class="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-white/10 text-on-primary !text-white hover:bg-white/20 font-label-lg text-label-lg transition-colors" href="#">
+</button>
+<a href="Timber_Terra_2025_Specifier_Guide.pdf" download="Timber_Terra_2025_Specifier_Guide.pdf" onclick="showDownloadFeedback(this)" class="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-white/10 text-on-primary !text-white hover:bg-white/20 font-label-lg text-label-lg transition-all font-semibold shadow-sm hover:shadow-md cursor-pointer">
 <span class="material-symbols-outlined text-[20px]">download</span>
-<span class="">Download 2025 Specifier PDF</span>
+<span id="pdf-download-text">Download 2025 Specifier PDF</span>
 </a>
 <div class="text-center pt-2">
-<a class="font-label-sm text-label-sm text-primary-fixed hover:underline flex items-center justify-center gap-1" href="tel:5558462377">
+<a class="font-label-sm text-label-sm text-primary-fixed hover:underline flex items-center justify-center gap-1 text-[#F7BA7D]" href="tel:5558462377">
 <span class="material-symbols-outlined text-[16px]">call</span>
               Direct Estimating Desk: (555) 846-2377
             </a>
@@ -3332,5 +3332,201 @@ Standard builder-grade softwoods create an endless cycle of stripping, re-staini
 
   </div>
 </div>
+
+
+<!-- On-Site Appraisal Booking Modal -->
+<div id="appraisal-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-sm transition-all" role="dialog" aria-modal="true" aria-labelledby="appraisal-modal-title" onclick="handleAppraisalBackdropClick(event)">
+  <div class="relative w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-2xl border border-surface-container-high/60 overflow-hidden my-8 text-on-surface" onclick="event.stopPropagation()">
+    
+    <!-- Modal Header -->
+    <div class="p-6 sm:p-8 bg-surface-container-low border-b border-surface-container-high/40 flex items-start justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2 text-secondary font-label-sm text-xs uppercase tracking-widest font-bold mb-1">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Geotechnical &amp; Site Feasibility Survey
+        </div>
+        <h3 id="appraisal-modal-title" class="font-headline-md text-2xl text-primary font-bold">Book On-Site Topography Appraisal</h3>
+        <p class="font-body-sm text-xs text-on-surface-variant mt-1">Direct parcel laser-grade scan, soil resistance sounding, and binding fixed-price investment proposal.</p>
+      </div>
+      <button type="button" onclick="closeAppraisalModal()" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors cursor-pointer" aria-label="Close modal">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+
+    <!-- Modal Body: Booking Form -->
+    <div id="appraisal-modal-body" class="p-6 sm:p-8 space-y-6">
+      
+      <!-- Key Survey Inclusions -->
+      <div class="p-4 rounded-xl bg-surface-container-low border border-surface-container-high/50 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+        <div class="flex items-center gap-2 text-on-surface font-semibold">
+          <span class="material-symbols-outlined text-secondary text-[18px]">drone</span>
+          <span>Drone LiDAR Mapping</span>
+        </div>
+        <div class="flex items-center gap-2 text-on-surface font-semibold">
+          <span class="material-symbols-outlined text-secondary text-[18px]">hardware</span>
+          <span>Borehole Core Sounding</span>
+        </div>
+        <div class="flex items-center gap-2 text-on-surface font-semibold">
+          <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+          <span>Fixed-Price Scope Lock</span>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="appraisal-booking-form" onsubmit="handleAppraisalSubmit(event)" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="appraisal-name" class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold">Client Name *</label>
+            <input type="text" id="appraisal-name" required placeholder="e.g. Sarah &amp; David Miller" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low border border-surface-container-high text-on-surface placeholder:text-on-surface-variant/50 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-sm font-medium">
+          </div>
+          <div>
+            <label for="appraisal-phone" class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold">Phone Number *</label>
+            <input type="tel" id="appraisal-phone" required placeholder="(555) 000-0000" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low border border-surface-container-high text-on-surface placeholder:text-on-surface-variant/50 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-sm font-medium">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="appraisal-email" class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold">Email Address *</label>
+            <input type="email" id="appraisal-email" required placeholder="name@domain.com" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low border border-surface-container-high text-on-surface placeholder:text-on-surface-variant/50 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-sm font-medium">
+          </div>
+          <div>
+            <label for="appraisal-location" class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold">Property Address / City *</label>
+            <input type="text" id="appraisal-location" required placeholder="e.g. Mercer Island / Hood River" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low border border-surface-container-high text-on-surface placeholder:text-on-surface-variant/50 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-sm font-medium">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="appraisal-window" class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold">Target Timeline</label>
+            <select id="appraisal-window" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low border border-surface-container-high text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-sm font-medium">
+              <option value="Immediate (Next 14 Days)">Immediate Feasibility (Next 14 Days)</option>
+              <option value="Spring / Q2 2025" selected>Spring / Q2 2025 Commission</option>
+              <option value="Summer / Q3 2025">Summer / Q3 2025 Commission</option>
+              <option value="Long-Range Master Plan">2026 Architectural Master Planning</option>
+            </select>
+          </div>
+          <div>
+            <label for="appraisal-topography" class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold">Site Setting</label>
+            <select id="appraisal-topography" class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low border border-surface-container-high text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-sm font-medium">
+              <option value="Moderate Slope">Moderate Slope / Ravine (9°–20°)</option>
+              <option value="Steep Escarpment">Steep Ridge / Bluff (21°–40°+)</option>
+              <option value="Level Ground">Level Grade / Courtyard</option>
+              <option value="Waterfront / Marine">Waterfront / High-Salinity Marine</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="appraisal-notes" class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold">Project Notes / Existing Structures</label>
+          <textarea id="appraisal-notes" rows="2" placeholder="e.g. Demolition of existing deck needed; rocky soil; glass railing priority." class="w-full px-4 py-2 rounded-xl bg-surface-container-low border border-surface-container-high text-on-surface placeholder:text-on-surface-variant/50 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none text-sm font-medium"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-2">
+          <button type="submit" class="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-secondary !text-white hover:!bg-[#8F3E0B] dark:hover:!bg-[#B85D19] font-label-lg text-label-lg font-bold transition-all shadow-lg hover:shadow-xl active:scale-[0.99] cursor-pointer">
+            <span>Confirm On-Site Appraisal Booking</span>
+            <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+          </button>
+          <p class="text-[11px] text-center text-on-surface-variant mt-2">Zero commitment. Our Principal Surveyor will contact you within 24 business hours to confirm your drone window.</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Modal Success State -->
+    <div id="appraisal-modal-success" class="hidden p-8 sm:p-12 text-center space-y-6">
+      <div class="w-16 h-16 rounded-full bg-secondary/15 text-secondary flex items-center justify-center mx-auto">
+        <span class="material-symbols-outlined text-[36px]">check_circle</span>
+      </div>
+      <div>
+        <h3 class="font-headline-md text-2xl text-primary font-bold">Appraisal Request Registered</h3>
+        <p class="font-body-md text-sm text-on-surface-variant max-w-md mx-auto mt-2">
+          Your property site appraisal inquiry has been assigned to our Field Engineering Desk.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-surface-container-low border border-surface-container-high/60 max-w-sm mx-auto text-left space-y-2 text-xs">
+        <div class="flex justify-between items-center">
+          <span class="text-on-surface-variant">Booking Reference:</span>
+          <span id="appraisal-ref-id" class="font-mono font-bold text-primary">#TT-APP-7821</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-on-surface-variant">SLA Confirmation:</span>
+          <span class="font-semibold text-secondary">Within 24 Business Hours</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-on-surface-variant">Direct Desk:</span>
+          <span class="font-mono text-on-surface font-semibold">(555) 846-2377</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+        <button type="button" onclick="closeAppraisalModal()" class="w-full sm:w-auto py-3 px-8 rounded-xl bg-primary text-white font-label-md text-sm font-bold hover:bg-primary/90 transition-colors cursor-pointer">
+          Return to Pricing
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Appraisal Modal Controller
+function openAppraisalModal() {
+  const modal = document.getElementById('appraisal-modal');
+  if (!modal) return;
+  document.getElementById('appraisal-modal-body').classList.remove('hidden');
+  document.getElementById('appraisal-modal-success').classList.add('hidden');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAppraisalModal() {
+  const modal = document.getElementById('appraisal-modal');
+  if (!modal) return;
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+  document.body.style.overflow = '';
+}
+
+function handleAppraisalBackdropClick(e) {
+  if (e.target.id === 'appraisal-modal') {
+    closeAppraisalModal();
+  }
+}
+
+function handleAppraisalSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('appraisal-booking-form');
+  if (!form || !form.checkValidity()) return;
+
+  const refCode = '#TT-APP-' + Math.floor(1000 + Math.random() * 9000);
+  document.getElementById('appraisal-ref-id').textContent = refCode;
+
+  document.getElementById('appraisal-modal-body').classList.add('hidden');
+  document.getElementById('appraisal-modal-success').classList.remove('hidden');
+}
+
+// Download feedback toast
+function showDownloadFeedback(el) {
+  const textEl = document.getElementById('pdf-download-text');
+  if (!textEl) return;
+  const original = textEl.textContent;
+  textEl.textContent = 'Downloading PDF...';
+  setTimeout(() => {
+    textEl.textContent = 'Downloaded 2025 Specifier Guide';
+    setTimeout(() => {
+      textEl.textContent = original;
+    }, 3000);
+  }, 1000);
+}
+
+// Global escape key listener extension
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeAppraisalModal();
+  }
+});
+</script>
 
 </body></html>
