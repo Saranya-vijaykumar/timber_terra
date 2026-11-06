@@ -1838,28 +1838,28 @@ tailwind.config = {
   </div>
 </section>
 <!-- Interactive Filter Bar -->
-<section class="sticky top-16 z-30 w-full bg-surface/95 backdrop-blur-xl py-6 shadow-sm border-b border-surface-container-high/40">
-<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-<!-- Category Tabs -->
-<div class="flex flex-wrap items-center gap-2" id="filter-container">
-<button class="filter-btn active-filter px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-primary-container text-on-primary !text-white" data-filter="all" type="button">
+<section class="sticky top-16 z-30 w-full bg-surface/95 backdrop-blur-xl py-4 shadow-sm border-b border-surface-container-high/40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-4">
+<!-- Category Tabs (Smooth Non-breaking Horizontal Scroll) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar max-w-full w-full lg:w-auto py-1 scroll-smooth" id="filter-container">
+<button class="filter-btn active-filter whitespace-nowrap shrink-0 px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-primary-container text-on-primary !text-white" data-filter="all" type="button">
           All Projects
         </button>
-<button class="filter-btn px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="timber" type="button">
+<button class="filter-btn whitespace-nowrap shrink-0 px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="timber" type="button">
           Timber Decks
         </button>
-<button class="filter-btn px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="composite" type="button">
+<button class="filter-btn whitespace-nowrap shrink-0 px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="composite" type="button">
           Composite Decks
         </button>
-<button class="filter-btn px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="pergolas" type="button">
+<button class="filter-btn whitespace-nowrap shrink-0 px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="pergolas" type="button">
           Pergolas &amp; Pavilions
         </button>
-<button class="filter-btn px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="kitchens" type="button">
+<button class="filter-btn whitespace-nowrap shrink-0 px-5 py-2.5 rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="kitchens" type="button">
           Outdoor Living &amp; Kitchens
         </button>
 </div>
 <!-- Live Results Counter -->
-<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant flex items-center gap-2 flex-shrink-0">
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant flex items-center gap-2 shrink-0 self-center lg:self-auto">
 <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
 <span id="results-count">Showing 9 of 9 Master Projects</span>
 </div>
