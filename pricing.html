@@ -2259,10 +2259,10 @@ tailwind.config = {
 </div>
 </div>
 <!-- Action Button -->
-<a class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-lg bg-secondary text-surface hover:!bg-[#8F3E0B] hover:!text-white dark:hover:!bg-[#B85D19] dark:hover:!text-white font-label-lg text-label-lg transition-colors font-bold shadow-md" href="#">
-<span class="">Send This Estimate to Engineering</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
+<button id="btn-send-estimate" type="button" onclick="openEstimateModal()" class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-secondary !text-white hover:!bg-[#8F3E0B] dark:hover:!bg-[#B85D19] font-label-lg text-label-lg transition-all font-bold shadow-lg hover:shadow-xl active:scale-[0.99] cursor-pointer" aria-haspopup="dialog">
+  <span class="font-bold">Send This Estimate to Engineering</span>
+  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
 </div>
 <!-- Forensic Guarantee Card -->
 <div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
@@ -2742,7 +2742,87 @@ tailwind.config = {
         document.getElementById('addon-spa')
       ].filter(Boolean);
 
-      function updateCalculation() {
+      
+    // Estimate Intake Modal Functions
+    function openEstimateModal() {
+      const modal = document.getElementById('estimate-modal');
+      if (!modal) return;
+
+      const total = document.getElementById('display-total')?.textContent || '$116,375';
+      const sqft = document.getElementById('footprint-val')?.textContent || '650 sq. ft.';
+      
+      const checkedMat = document.querySelector('input[name="material"]:checked');
+      const matName = checkedMat ? checkedMat.closest('label').querySelector('.font-label-lg').textContent.trim() : 'FSC Brazilian Ipe';
+
+      const checkedSlope = document.querySelector('input[name="topography"]:checked');
+      const slopeName = checkedSlope ? checkedSlope.closest('label').querySelector('.font-label-lg').textContent.trim() : 'Moderate Hillside (10°–25°)';
+
+      const addons = [];
+      document.querySelectorAll('#addon-glass, #addon-pergola, #addon-kitchen, #addon-fire, #addon-spa').forEach(cb => {
+        if (cb.checked) {
+          const label = cb.closest('label').querySelector('.font-body-sm').textContent.trim();
+          addons.push(label);
+        }
+      });
+
+      document.getElementById('modal-summary-total').textContent = total;
+      document.getElementById('modal-summary-sqft').textContent = sqft;
+      document.getElementById('modal-summary-material').textContent = matName;
+      document.getElementById('modal-summary-slope').textContent = slopeName;
+
+      const addonsList = document.getElementById('modal-summary-addons-list');
+      if (addonsList) {
+        if (addons.length > 0) {
+          addonsList.innerHTML = addons.map(a => `<span class="px-2 py-0.5 rounded bg-white/20 text-[11px] font-medium text-white">${a.split('(')[0].trim()}</span>`).join('');
+        } else {
+          addonsList.innerHTML = '<span class="text-white/60 text-xs">Standard Structural Specification</span>';
+        }
+      }
+
+      document.getElementById('estimate-modal-body').classList.remove('hidden');
+      document.getElementById('estimate-modal-success').classList.add('hidden');
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeEstimateModal() {
+      const modal = document.getElementById('estimate-modal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function handleEstimateBackdropClick(e) {
+      if (e.target.id === 'estimate-modal') {
+        closeEstimateModal();
+      }
+    }
+
+    function handleEstimateSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('estimate-dispatch-form');
+      if (!form || !form.checkValidity()) return;
+
+      const total = document.getElementById('modal-summary-total')?.textContent || '$116,375';
+      const refCode = '#TT-EST-' + Math.floor(1000 + Math.random() * 9000);
+
+      document.getElementById('success-total').textContent = total;
+      document.getElementById('success-ref-id').textContent = refCode;
+
+      document.getElementById('estimate-modal-body').classList.add('hidden');
+      document.getElementById('estimate-modal-success').classList.remove('hidden');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeEstimateModal();
+      }
+    });
+
+    function updateCalculation() {
         if (!slider) return;
         const sqft = parseInt(slider.value, 10);
         footprintVal.textContent = sqft + ' sq. ft.';
@@ -3102,5 +3182,137 @@ tailwind.config = {
     });
   });
 </script>
+
+
+<!-- Estimate Submission Modal -->
+<div id="estimate-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-sm transition-all" role="dialog" aria-modal="true" aria-labelledby="estimate-modal-title" onclick="handleEstimateBackdropClick(event)">
+  <div class="relative w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-2xl border border-surface-container-high/60 overflow-hidden my-8 text-on-surface" onclick="event.stopPropagation()">
+    
+    <!-- Modal Header -->
+    <div class="p-6 sm:p-8 bg-surface-container-low border-b border-surface-container-high/40 flex items-start justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2 text-secondary font-label-sm text-xs uppercase tracking-widest font-bold mb-1">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Engineering Retainer Intake
+        </div>
+        <h3 id="estimate-modal-title" class="font-headline-md text-2xl text-primary font-bold">Dispatch Estimate to Engineering</h3>
+        <p class="font-body-sm text-xs text-on-surface-variant mt-1">Submit your custom scope calculations directly to our Principal Structural Design Desk.</p>
+      </div>
+      <button type="button" onclick="closeEstimateModal()" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" aria-label="Close modal">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+
+    <!-- Modal Body: Initial Form State -->
+    <div id="estimate-modal-body" class="p-6 sm:p-8 space-y-6">
+      
+      <!-- Scope Summary Card -->
+      <div class="p-4 sm:p-5 rounded-xl bg-primary text-white shadow-md">
+        <div class="flex items-center justify-between mb-3 pb-3 border-b border-white/15">
+          <span class="text-xs uppercase tracking-wider font-bold text-[#F7BA7D]">Configured Architectural Scope</span>
+          <span id="modal-summary-total" class="font-headline-sm text-xl font-bold font-mono text-white">$116,375</span>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+          <div>
+            <span class="block text-white/60 text-[11px] uppercase">Footprint</span>
+            <span id="modal-summary-sqft" class="font-semibold text-white">650 sq. ft.</span>
+          </div>
+          <div>
+            <span class="block text-white/60 text-[11px] uppercase">Material</span>
+            <span id="modal-summary-material" class="font-semibold text-white">FSC Brazilian Ipe</span>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <span class="block text-white/60 text-[11px] uppercase">Topography</span>
+            <span id="modal-summary-slope" class="font-semibold text-white">Moderate Slope</span>
+          </div>
+        </div>
+        <div id="modal-summary-addons-row" class="mt-3 pt-3 border-t border-white/10 text-xs flex flex-wrap gap-1.5 items-center">
+          <span class="text-white/60 text-[11px] uppercase mr-1">Modules:</span>
+          <div id="modal-summary-addons-list" class="flex flex-wrap gap-1.5">
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Lead Capture Form -->
+      <form id="estimate-dispatch-form" onsubmit="handleEstimateSubmit(event)" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-label-sm text-xs uppercase tracking-wider text-on-surface font-bold mb-1.5" for="est-client-name">Full Name *</label>
+            <input type="text" id="est-client-name" required placeholder="e.g. Alistair Vance" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low border border-surface-container-high/60 text-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary"/>
+          </div>
+          <div>
+            <label class="block font-label-sm text-xs uppercase tracking-wider text-on-surface font-bold mb-1.5" for="est-client-email">Email Address *</label>
+            <input type="email" id="est-client-email" required placeholder="alistair@domain.com" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low border border-surface-container-high/60 text-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary"/>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-label-sm text-xs uppercase tracking-wider text-on-surface font-bold mb-1.5" for="est-client-phone">Phone Number *</label>
+            <input type="tel" id="est-client-phone" required placeholder="+1 (503) 555-0192" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low border border-surface-container-high/60 text-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary"/>
+          </div>
+          <div>
+            <label class="block font-label-sm text-xs uppercase tracking-wider text-on-surface font-bold mb-1.5" for="est-client-address">Site Location / City *</label>
+            <input type="text" id="est-client-address" required placeholder="e.g. Portland, OR / Lake Oswego" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low border border-surface-container-high/60 text-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary"/>
+          </div>
+        </div>
+        <div>
+          <label class="block font-label-sm text-xs uppercase tracking-wider text-on-surface font-bold mb-1.5" for="est-client-notes">Specific Geotechnical Notes / Questions (Optional)</label>
+          <textarea id="est-client-notes" rows="2" placeholder="e.g. Bedrock outcroppings present, interested in integrated lighting and fire table..." class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low border border-surface-container-high/60 text-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary"></textarea>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
+          <button type="submit" id="est-submit-btn" class="flex-1 py-3.5 px-6 rounded-xl bg-secondary !text-white font-label-md text-sm font-bold uppercase tracking-wider hover:bg-[#8F3E0B] dark:hover:bg-[#B85D19] transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer">
+            <span>Confirm &amp; Transmit Scope</span>
+            <span class="material-symbols-outlined text-[18px]">send</span>
+          </button>
+          <button type="button" onclick="closeEstimateModal()" class="py-3.5 px-5 rounded-xl bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-semibold text-sm transition-colors cursor-pointer">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Modal Success State (hidden initially) -->
+    <div id="estimate-modal-success" class="p-8 sm:p-10 text-center space-y-5 hidden">
+      <div class="w-16 h-16 rounded-full bg-secondary/15 text-secondary flex items-center justify-center mx-auto shadow-inner">
+        <span class="material-symbols-outlined text-[36px]">verified</span>
+      </div>
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-secondary block mb-1">Transmission Confirmed</span>
+        <h4 class="font-headline-md text-2xl text-primary font-bold">Estimate Package Dispatched!</h4>
+        <p class="font-body-md text-sm text-on-surface-variant max-w-md mx-auto mt-2 leading-relaxed">
+          Your architectural scope calculations (<span id="success-total" class="font-bold text-primary">$116,375</span>) have been transferred to our Principal Geotechnical Engineer.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-surface-container-low border border-surface-container-high/60 max-w-md mx-auto text-left text-xs space-y-2">
+        <div class="flex justify-between">
+          <span class="text-on-surface-variant">Reference ID:</span>
+          <span id="success-ref-id" class="font-mono font-bold text-secondary">#TT-EST-8492</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-on-surface-variant">Next Step:</span>
+          <span class="font-semibold text-primary">Pre-Engineering Topography Audit</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-on-surface-variant">Turnaround SLA:</span>
+          <span class="font-semibold text-primary">Within 24 Business Hours</span>
+        </div>
+      </div>
+
+      <div class="pt-3 flex items-center justify-center gap-3">
+        <button type="button" onclick="closeEstimateModal()" class="py-3 px-6 rounded-xl bg-primary text-white font-label-md text-xs font-bold uppercase tracking-wider hover:bg-primary-container transition-all shadow-md cursor-pointer">
+          Return to Pricing Guide
+        </button>
+        <button type="button" onclick="window.print()" class="py-3 px-5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-semibold text-xs transition-colors flex items-center gap-1.5 cursor-pointer">
+          <span class="material-symbols-outlined text-[16px]">print</span>
+          Print Scope
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 </body></html>
