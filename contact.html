@@ -1986,11 +1986,17 @@ tailwind.config = {
               </label>
 </div>
 <!-- Submit Button & Live State -->
-<div class="pt-4">
-<button class="w-full h-14 px-8 rounded-xl bg-primary text-on-primary !text-white font-label-lg text-label-lg uppercase tracking-wider inline-flex items-center justify-center gap-3 hover:bg-primary-container transition-all shadow-[0_10px_25px_-5px_rgba(24,61,50,0.2)] group" id="submit-button" type="submit">
+<div class="pt-4 space-y-3">
+<!-- Inline validation feedback banner -->
+<div id="submit-error-banner" class="hidden p-3.5 rounded-xl bg-error/10 border border-error/20 text-error font-body-sm text-xs font-semibold flex items-center gap-2">
+  <span class="material-symbols-outlined text-[18px] shrink-0">error</span>
+  <span>Please complete the highlighted required fields above to submit your consultation request.</span>
+</div>
+
+<button class="w-full h-14 px-8 rounded-xl bg-secondary !text-white hover:!bg-[#8F3E0B] dark:hover:!bg-[#B85D19] font-label-lg text-label-lg uppercase tracking-wider inline-flex items-center justify-center gap-3 transition-all font-bold shadow-lg hover:shadow-xl active:scale-[0.99] cursor-pointer group" id="submit-button" type="submit">
 <span id="button-text" class="inline-flex items-center leading-none tracking-wider font-bold">Submit Consultation Request</span>
 <span class="hidden" id="button-spinner">
-<svg class="animate-spin h-5 w-5 text-on-primary" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="animate-spin h-5 w-5 text-white" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
 <path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
 </svg>
@@ -1999,6 +2005,39 @@ tailwind.config = {
 </button>
 </div>
 </form>
+
+<!-- In-Place Consultation Confirmation Card -->
+<div id="consultation-success-card" class="hidden p-6 sm:p-10 text-center space-y-6">
+  <div class="w-16 h-16 rounded-full bg-secondary/15 text-secondary flex items-center justify-center mx-auto">
+    <span class="material-symbols-outlined text-[36px]">verified</span>
+  </div>
+  <div>
+    <span class="text-xs font-bold uppercase tracking-widest text-secondary block mb-1">Architectural Brief Received</span>
+    <h3 class="font-headline-md text-2xl sm:text-3xl text-primary font-bold">Consultation Request Confirmed</h3>
+    <p class="font-body-md text-sm sm:text-base text-on-surface-variant max-w-lg mx-auto mt-2 leading-relaxed">
+      Thank you, <span id="success-client-name" class="font-bold text-primary"></span>. Master Builder Jordan Voss and our structural engineering desk have been notified and will review your site feasibility within one business day.
+    </p>
+  </div>
+  <div class="p-5 rounded-2xl bg-surface-container-low border border-surface-container-high/60 max-w-md mx-auto text-left space-y-3 text-xs sm:text-sm">
+    <div class="flex justify-between items-center pb-2 border-b border-surface-container-high/40">
+      <span class="text-on-surface-variant">Docket Reference:</span>
+      <span id="success-docket-code" class="font-mono font-bold text-primary">#TT-CON-8492</span>
+    </div>
+    <div class="flex justify-between items-center pb-2 border-b border-surface-container-high/40">
+      <span class="text-on-surface-variant">Review Priority:</span>
+      <span class="font-semibold text-secondary">Within 24 Business Hours</span>
+    </div>
+    <div class="flex justify-between items-center">
+      <span class="text-on-surface-variant">Direct Operations Desk:</span>
+      <span class="font-mono font-bold text-primary">+1 (800) 492-8377</span>
+    </div>
+  </div>
+  <div class="pt-2">
+    <button type="button" onclick="resetConsultationForm()" class="px-8 py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all cursor-pointer shadow-md">
+      Submit Another Brief
+    </button>
+  </div>
+</div>
 </div>
 </div>
 <!-- COLUMN 2: Studio Information & Feasibility Details -->
@@ -2284,72 +2323,128 @@ tailwind.config = {
       const fullName = document.getElementById('fullName');
       const email = document.getElementById('email');
       const phone = document.getElementById('phone');
+      const propertyAddress = document.getElementById('propertyAddress');
+      const consentCheck = document.getElementById('consentCheck');
       
       const nameError = document.getElementById('name-error');
       const emailError = document.getElementById('email-error');
       const phoneError = document.getElementById('phone-error');
+      const submitErrorBanner = document.getElementById('submit-error-banner');
       
       let isValid = true;
+      let firstInvalid = null;
 
       // Validate Name
       if (!fullName.value.trim()) {
-        fullName.classList.add('ring-1', 'ring-error');
+        fullName.classList.add('ring-2', 'ring-red-500');
         nameError.classList.remove('hidden');
         isValid = false;
+        if (!firstInvalid) firstInvalid = fullName;
       } else {
-        fullName.classList.remove('ring-1', 'ring-error');
+        fullName.classList.remove('ring-2', 'ring-red-500');
         nameError.classList.add('hidden');
       }
 
       // Validate Email
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!email.value.trim() || !emailPattern.test(email.value)) {
-        email.classList.add('ring-1', 'ring-error');
+        email.classList.add('ring-2', 'ring-red-500');
         emailError.classList.remove('hidden');
         isValid = false;
+        if (!firstInvalid) firstInvalid = email;
       } else {
-        email.classList.remove('ring-1', 'ring-error');
+        email.classList.remove('ring-2', 'ring-red-500');
         emailError.classList.add('hidden');
       }
 
       // Validate Phone (at least 7 digits)
       const phoneClean = phone.value.replace(/\D/g, '');
       if (phoneClean.length < 7) {
-        phone.classList.add('ring-1', 'ring-error');
+        phone.classList.add('ring-2', 'ring-red-500');
         phoneError.classList.remove('hidden');
         isValid = false;
+        if (!firstInvalid) firstInvalid = phone;
       } else {
-        phone.classList.remove('ring-1', 'ring-error');
+        phone.classList.remove('ring-2', 'ring-red-500');
         phoneError.classList.add('hidden');
       }
 
-      if (!isValid) return false;
+      // Validate Property Address
+      if (propertyAddress && !propertyAddress.value.trim()) {
+        propertyAddress.classList.add('ring-2', 'ring-red-500');
+        isValid = false;
+        if (!firstInvalid) firstInvalid = propertyAddress;
+      } else if (propertyAddress) {
+        propertyAddress.classList.remove('ring-2', 'ring-red-500');
+      }
 
-      // Simulate submission state
+      // Validate Consent Checkbox
+      if (consentCheck && !consentCheck.checked) {
+        consentCheck.classList.add('ring-2', 'ring-red-500');
+        isValid = false;
+        if (!firstInvalid) firstInvalid = consentCheck;
+      } else if (consentCheck) {
+        consentCheck.classList.remove('ring-2', 'ring-red-500');
+      }
+
+      if (!isValid) {
+        if (submitErrorBanner) {
+          submitErrorBanner.classList.remove('hidden');
+        }
+        if (firstInvalid) {
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstInvalid.focus();
+        }
+        return false;
+      }
+
+      if (submitErrorBanner) {
+        submitErrorBanner.classList.add('hidden');
+      }
+
+      // Simulate submission state with instant UI feedback
       const button = document.getElementById('submit-button');
       const buttonText = document.getElementById('button-text');
       const buttonIcon = document.getElementById('button-icon');
       const buttonSpinner = document.getElementById('button-spinner');
-      const successBanner = document.getElementById('form-success-banner');
 
       button.disabled = true;
-      buttonText.textContent = "Processing Feasibility...";
+      buttonText.textContent = "Processing Feasibility Review...";
       buttonIcon.classList.add('hidden');
       buttonSpinner.classList.remove('hidden');
 
       setTimeout(() => {
         button.disabled = false;
-        buttonText.textContent = "Consultation Dispatched";
+        buttonText.textContent = "Submit Consultation Request";
         buttonSpinner.classList.add('hidden');
         buttonIcon.classList.remove('hidden');
-        buttonIcon.textContent = "check_circle";
 
-        form.reset();
-        successBanner.classList.remove('hidden');
-        successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 1200);
+        const clientName = fullName.value.trim() || 'Valued Client';
+        const docketCode = '#TT-CON-' + Math.floor(1000 + Math.random() * 9000);
+
+        // Hide form and show in-place confirmation card
+        form.classList.add('hidden');
+        const successCard = document.getElementById('consultation-success-card');
+        if (successCard) {
+          document.getElementById('success-client-name').textContent = clientName;
+          document.getElementById('success-docket-code').textContent = docketCode;
+          successCard.classList.remove('hidden');
+          successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 1000);
 
       return false;
+    }
+
+    function resetConsultationForm() {
+      const form = document.getElementById('consultation-form');
+      const successCard = document.getElementById('consultation-success-card');
+      if (form && successCard) {
+        form.reset();
+        form.classList.remove('hidden');
+        successCard.classList.add('hidden');
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     function toggleFaq(btn) {
