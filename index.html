@@ -387,6 +387,49 @@
   
   /* Universal Photo Overlay Badges & Dark Chips in Light & Dark Mode: 100% Crisp White Typography */
   /* ==========================================================================
+     HERITAGE 25-YEAR WAX-SEAL MEDALLION (Protected Universal Typography)
+     ========================================================================== */
+  #warranty-medallion .medallion-dashed-ring,
+  .medallion-dashed-ring {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  #warranty-medallion .medallion-disc,
+  .medallion-disc {
+    background: radial-gradient(circle, #3D1F12 0%, #201109 100%) !important;
+    background-color: #24140C !important;
+    border: 1.5px solid rgba(212, 139, 78, 0.6) !important;
+  }
+  #warranty-medallion .medallion-num,
+  .medallion-num {
+    color: #F7BA7D !important;
+    -webkit-text-fill-color: #F7BA7D !important;
+    font-weight: 900 !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  #warranty-medallion .medallion-unit,
+  .medallion-unit {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  #warranty-medallion .medallion-sub,
+  .medallion-sub {
+    color: #FAF5EF !important;
+    -webkit-text-fill-color: #FAF5EF !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* ==========================================================================
      PHOTO OVERLAYS & IMAGE CARDS (Light & Dark Mode)
      Ensure all headings, paragraphs, and spans overlaid on images have 100% white typography
      ========================================================================== */
@@ -413,7 +456,7 @@
     -webkit-text-fill-color: #F7BA7D !important;
   }
 
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]):not([class*="border-dashed"]):not(.medallion-dashed-ring),
   html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-lg"]:not([class*="bg-white"]):not([class*="bg-surface"]),
   html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"],
   html:not(.dark) section:not(.photographic-hero) div[class*="rounded-full"][class*="bg-[#8A2B03]"],
@@ -442,7 +485,7 @@
     font-weight: 700 !important;
     text-shadow: none !important;
   }
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]) *,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]):not([class*="border-dashed"]):not(.medallion-dashed-ring) *,
   html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="rounded-lg"]:not([class*="bg-white"]):not([class*="bg-surface"]) *,
   html:not(.dark) section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"] *,
   html:not(.dark) section:not(.photographic-hero) div[class*="rounded-full"][class*="bg-[#8A2B03]"] *,
@@ -470,7 +513,7 @@
     -webkit-text-fill-color: #FFFFFF !important;
   }
 
-  html.dark section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]),
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]):not([class*="border-dashed"]):not(.medallion-dashed-ring),
   html.dark section:not(.photographic-hero) [class*="absolute"][class*="rounded-lg"]:not([class*="bg-white"]):not([class*="bg-surface"]),
   html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"],
   html.dark section:not(.photographic-hero) div[class*="rounded-full"][class*="bg-[#8A2B03]"],
@@ -498,7 +541,7 @@
     border: 1px solid rgba(255, 255, 255, 0.25) !important;
     font-weight: 700 !important;
   }
-  html.dark section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]) *,
+  html.dark section:not(.photographic-hero) [class*="absolute"][class*="rounded-full"]:not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="w-"]):not([class*="h-"]):not([class*="border-dashed"]):not(.medallion-dashed-ring) *,
   html.dark section:not(.photographic-hero) [class*="absolute"][class*="rounded-lg"]:not([class*="bg-white"]):not([class*="bg-surface"]) *,
   html.dark section:not(.photographic-hero) span[class*="rounded-full"][class*="bg-[#8A2B03]"] *,
   html.dark section:not(.photographic-hero) div[class*="rounded-full"][class*="bg-[#8A2B03]"] *,
@@ -2049,17 +2092,19 @@ tailwind.config = {
       </div>
 
       <!-- 25-Year Bronze Wax-Seal Medallion -->
-      <div class="relative shrink-0 flex items-center justify-center">
+      <div id="warranty-medallion" class="relative shrink-0 flex items-center justify-center">
         <!-- Glowing Ambient Ring -->
-        <div class="absolute w-36 h-36 rounded-full bg-[#B85D19]/25 blur-xl"></div>
-        <!-- Circular Medallion -->
+        <div class="absolute w-36 h-36 rounded-full bg-[#B85D19]/25 blur-xl pointer-events-none"></div>
+        <!-- Circular Medallion Outer Shell with Bronze/Copper Gradient -->
         <div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-gradient-to-br from-[#D48B4E] via-[#A8541D] to-[#6E3512] p-[3px] shadow-2xl flex items-center justify-center">
-          <div class="w-full h-full rounded-full bg-[#1C1008] border border-[#D48B4E]/60 flex flex-col items-center justify-center text-center p-3 relative">
-            <!-- Concentric Decorative Ring -->
-            <div class="absolute inset-1.5 rounded-full border border-dashed border-[#D48B4E]/40 pointer-events-none"></div>
-            <span class="font-serif text-2xl sm:text-3xl font-black text-[#F5C7A1] leading-none tracking-tight">25</span>
-            <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#D48B4E] mt-0.5">YEARS</span>
-            <span class="text-[9px] uppercase tracking-wider text-[#E8DCD0] mt-1 font-semibold leading-tight">Established<br/>Expertise</span>
+          <!-- Inner Wax-Seal Disc -->
+          <div class="medallion-disc w-full h-full rounded-full flex flex-col items-center justify-center text-center p-3 relative overflow-hidden shadow-inner" style="background: radial-gradient(circle, #3D1F12 0%, #201109 100%) !important; background-color: #24140C !important; border: 1.5px solid rgba(212, 139, 78, 0.6) !important;">
+            <!-- Concentric Decorative Dashed Ring (strictly transparent background) -->
+            <div class="medallion-dashed-ring absolute inset-1.5 rounded-full border border-dashed border-[#D48B4E]/60 pointer-events-none" style="background: transparent !important; background-color: transparent !important; border-color: rgba(212, 139, 78, 0.6) !important;"></div>
+            <!-- Medallion Typography (Elevated z-10, bold contrast, immune to overrides) -->
+            <span class="medallion-num relative z-10 font-serif text-3xl sm:text-4xl font-black leading-none tracking-tight text-[#F7BA7D]" style="color: #F7BA7D !important; -webkit-text-fill-color: #F7BA7D !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;">25</span>
+            <span class="medallion-unit relative z-10 text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-[#FFFFFF] mt-0.5" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;">YEARS</span>
+            <span class="medallion-sub relative z-10 text-[9px] uppercase tracking-wider text-[#FAF5EF] mt-1 font-bold leading-tight" style="color: #FAF5EF !important; -webkit-text-fill-color: #FAF5EF !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;">Established<br/>Expertise</span>
           </div>
         </div>
       </div>
