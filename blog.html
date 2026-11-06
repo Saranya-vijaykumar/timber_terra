@@ -1934,24 +1934,21 @@ tailwind.config = {
 <input class="w-full pl-10 pr-4 h-10 rounded-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-outline shadow-sm focus:outline-none focus:ring-1 focus:ring-secondary transition-all" id="article-search" placeholder="Search field notes, timber species, or codes..." style="border-radius: 9999px !important;" type="search"/>
 </div>
 <!-- Filter Pills (Harmonized Pill Shape, matching 40px height, flex-wrap to prevent horizontal cutoff) -->
-<div class="flex flex-wrap items-center gap-2" id="category-pills">
-<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-primary-container text-on-primary !text-white shadow-sm" data-category="all" type="button">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth max-w-full py-1" id="category-pills">
+<button class="shrink-0 whitespace-nowrap px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-primary-container text-on-primary !text-white shadow-sm" data-category="all" type="button">
             All Articles <span class="ml-1.5 opacity-80">(28)</span>
 </button>
-<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="engineering" type="button">
+<button class="shrink-0 whitespace-nowrap px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="engineering" type="button">
             Structural Engineering <span class="ml-1.5 opacity-60">(9)</span>
 </button>
-<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="material" type="button">
+<button class="shrink-0 whitespace-nowrap px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="material" type="button">
             Material Intelligence <span class="ml-1.5 opacity-60">(7)</span>
 </button>
-<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="permits" type="button">
+<button class="shrink-0 whitespace-nowrap px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="permits" type="button">
             Permits &amp; HOA <span class="ml-1.5 opacity-60">(4)</span>
 </button>
-<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="culinary" type="button">
+<button class="shrink-0 whitespace-nowrap px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="culinary" type="button">
             Outdoor Living <span class="ml-1.5 opacity-60">(5)</span>
-</button>
-<button class="shrink-0 px-4 h-10 rounded-full font-label-sm text-label-sm font-semibold transition-all inline-flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm" data-category="studies" type="button">
-            Field Case Studies <span class="ml-1.5 opacity-60">(3)</span>
 </button>
 </div>
 </div>
@@ -2038,7 +2035,7 @@ tailwind.config = {
 </div>
 </article>
 <!-- Card 3: 3D LiDAR Topographic Scanning -->
-<article class="article-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-1" data-category="studies">
+<article class="article-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-1" data-category="engineering">
 <a href="blog-lidar-scanning.html" class="block relative h-48 sm:h-52 bg-surface-container overflow-hidden">
 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Architectural design consultation table in a high-ceiling design studio, an architect and lead builder analyzing precision elevation blueprints and tactile hardwood samples of Ipe, Teak, and Cumaru alongside calipers and a digital measuring tablet." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIylI3Z3hjztoFzd3fhBTddxBASeB6WdS_w3ag3Ud-yZWpyloVycLh17dTM05pW6TzMtkcC9-g9L86h-QyfEfKOClEeYIbwMjc5iTf9GytT5YvOfW6Bo1-GYGJX3YEgRFSWvlo_mVp5u9df0WSEcxJGMjCan3qMIZP9qPrz8L6TGjZakDdl45-Y2AjGQUVXwQ-pwDinei1KuwEZ8YAOcfDmLFtZdDAZkcgTcpnqs_ZHJ6FWX0_uUum"/>
 <div class="absolute top-3 left-3">
