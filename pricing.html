@@ -2082,196 +2082,213 @@ tailwind.config = {
 <!-- 3. Interactive Estimation & Budget Calculator -->
 <section class="w-full bg-surface py-14 sm:py-16 lg:py-20 border-b border-surface-container-high/20">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="rounded-2xl bg-surface-container-low p-6 md:p-12 shadow-md">
-<div class="max-w-3xl mb-10">
-<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-widest">Algorithmic Estimator</span>
-<h2 class="font-headline-lg text-headline-lg text-primary mt-2 mb-3">Live Architectural Investment Calculator</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Adjust your site parameters below for a preliminary budgetary snapshot based on our actual rolling 24-month regional build data.</p>
+<div class="rounded-2xl bg-surface-container-low p-6 sm:p-8 lg:p-12 shadow-sm border border-surface-container-high/40">
+<!-- Centered Section Header for Symmetric Balance -->
+<div class="text-center max-w-3xl mx-auto mb-10 lg:mb-12">
+<span class="inline-block font-label-sm text-label-sm text-secondary uppercase font-bold tracking-widest mb-2">Algorithmic Estimator</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mb-3">Live Architectural Investment Calculator</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Adjust your site parameters below for a preliminary budgetary snapshot based on our actual rolling 24-month regional build data.</p>
 </div>
+<!-- Dual-Column Interactive Grid -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 <!-- Input Parameters Column (7 Cols) -->
-<div class="lg:col-span-7 space-y-8">
+<div class="lg:col-span-7 space-y-6">
 <!-- Step 1: Footprint Slider -->
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-4">
-<div class="flex justify-between items-center">
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container-high/50 space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
 <div>
 <p class="font-label-lg text-label-lg text-primary font-bold">1. Outdoor Footprint Scale</p>
-<p class="font-caption text-caption text-on-surface-variant">Estimated continuous deck or pavilion floor square footage</p>
+<p class="font-caption text-caption text-on-surface-variant mt-0.5">Estimated continuous deck or pavilion floor square footage</p>
 </div>
-<span class="font-headline-sm text-headline-sm text-secondary font-bold" id="footprint-val">650 sq. ft.</span>
+<span class="inline-flex items-center justify-center self-start sm:self-center px-3.5 py-1.5 rounded-lg bg-surface-container-low font-mono font-bold text-secondary text-base sm:text-lg border border-secondary/20 shadow-xs" id="footprint-val">650 sq. ft.</span>
 </div>
 <input class="w-full accent-primary h-2 bg-surface-container-high rounded cursor-pointer" id="footprint-slider" max="2200" min="300" step="50" type="range" value="650">
 <div class="flex justify-between font-caption text-caption text-on-surface-variant">
-<span class="">300 sq. ft. (Intimate Terrace)</span>
-<span class="">1,200 sq. ft.</span>
-<span class="">2,200+ sq. ft. (Master Compound)</span>
+<span>300 sq. ft. (Intimate Terrace)</span>
+<span>1,200 sq. ft.</span>
+<span>2,200+ sq. ft. (Master Compound)</span>
 </div>
 </div>
 <!-- Step 2: Slope & Geotechnical Setting -->
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3">
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container-high/50 space-y-3">
+<div>
 <p class="font-label-lg text-label-lg text-primary font-bold">2. Topography &amp; Structural Subgrade</p>
-<p class="font-caption text-caption text-on-surface-variant mb-3">Foundation requirements scale with inclination and ground resistance</p>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-<label class="cursor-pointer">
+<p class="font-caption text-caption text-on-surface-variant mt-0.5">Foundation requirements scale with inclination and ground resistance</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+<label class="cursor-pointer block h-full">
 <input checked="" class="peer sr-only" name="topography" type="radio" value="1.0">
-<div class="p-3.5 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary text-on-surface transition-all flex flex-col items-start h-full">
-<span class="font-label-sm text-label-sm font-bold">Level / Gentle</span>
-<span class="font-caption text-caption opacity-80 mt-1">Grade 0° – 8°</span>
-<span class="font-caption text-caption opacity-70 mt-auto pt-2">Standard footings</span>
+<div class="p-3.5 rounded-xl bg-surface-container-low peer-checked:bg-secondary/15 peer-checked:border-secondary peer-checked:text-primary border border-surface-container-high/50 text-on-surface transition-all flex flex-col justify-between h-full">
+<div>
+<span class="font-label-sm text-label-sm font-bold block">Level / Gentle</span>
+<span class="font-caption text-caption text-on-surface-variant mt-1 block">Grade 0° – 8°</span>
+</div>
+<span class="font-caption text-caption text-secondary font-semibold pt-2 mt-auto block">Standard footings</span>
 </div>
 </label>
-<label class="cursor-pointer">
+<label class="cursor-pointer block h-full">
 <input class="peer sr-only" name="topography" type="radio" value="1.28">
-<div class="p-3.5 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary text-on-surface transition-all flex flex-col items-start h-full">
-<span class="font-label-sm text-label-sm font-bold">Moderate Slope</span>
-<span class="font-caption text-caption opacity-80 mt-1">Grade 9° – 20°</span>
-<span class="font-caption text-caption opacity-70 mt-auto pt-2">Braced posts</span>
+<div class="p-3.5 rounded-xl bg-surface-container-low peer-checked:bg-secondary/15 peer-checked:border-secondary peer-checked:text-primary border border-surface-container-high/50 text-on-surface transition-all flex flex-col justify-between h-full">
+<div>
+<span class="font-label-sm text-label-sm font-bold block">Moderate Slope</span>
+<span class="font-caption text-caption text-on-surface-variant mt-1 block">Grade 9° – 20°</span>
+</div>
+<span class="font-caption text-caption text-secondary font-semibold pt-2 mt-auto block">Braced posts</span>
 </div>
 </label>
-<label class="cursor-pointer">
+<label class="cursor-pointer block h-full">
 <input class="peer sr-only" name="topography" type="radio" value="1.55">
-<div class="p-3.5 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary text-on-surface transition-all flex flex-col items-start h-full">
-<span class="font-label-sm text-label-sm font-bold">Steep Ridge / Bluff</span>
-<span class="font-caption text-caption opacity-80 mt-1">Grade 21° – 40°+</span>
-<span class="font-caption text-caption opacity-70 mt-auto pt-2">Helical steel piles</span>
+<div class="p-3.5 rounded-xl bg-surface-container-low peer-checked:bg-secondary/15 peer-checked:border-secondary peer-checked:text-primary border border-surface-container-high/50 text-on-surface transition-all flex flex-col justify-between h-full">
+<div>
+<span class="font-label-sm text-label-sm font-bold block">Steep Ridge / Bluff</span>
+<span class="font-caption text-caption text-on-surface-variant mt-1 block">Grade 21° – 40°+</span>
+</div>
+<span class="font-caption text-caption text-secondary font-semibold pt-2 mt-auto block">Helical steel piles</span>
 </div>
 </label>
 </div>
 </div>
 <!-- Step 3: Decking Material Choice -->
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3">
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container-high/50 space-y-3">
+<div>
 <p class="font-label-lg text-label-lg text-primary font-bold">3. Surface Material Selection</p>
-<p class="font-caption text-caption text-on-surface-variant mb-3">Direct raw timber vs. advanced engineered capped composite</p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<label class="cursor-pointer">
+<p class="font-caption text-caption text-on-surface-variant mt-0.5">Direct raw timber vs. advanced engineered capped composite</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+<label class="cursor-pointer block h-full">
 <input checked="" class="peer sr-only" name="material" type="radio" value="68">
-<div class="p-4 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary transition-all">
-<div class="flex items-center justify-between">
-<span class="font-label-lg text-label-lg font-bold">FSC Brazilian Ipe</span>
-<span class="font-label-sm text-label-sm opacity-90">+$68 / sq.ft.</span>
+<div class="p-4 rounded-xl bg-surface-container-low peer-checked:bg-secondary/15 peer-checked:border-secondary border border-surface-container-high/50 transition-all flex flex-col justify-between h-full">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-lg text-label-lg font-bold text-primary">FSC Brazilian Ipe</span>
+<span class="font-mono font-bold text-secondary text-xs shrink-0">+$68 / sq.ft.</span>
 </div>
-<p class="font-caption text-caption opacity-80 mt-1">Class-A fire rated, 40+ year natural exotic ironwood.</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1.5">Dense, fire-resistant hardwood with 40+ yr lifespan.</p>
 </div>
 </label>
-<label class="cursor-pointer">
+<label class="cursor-pointer block h-full">
 <input class="peer sr-only" name="material" type="radio" value="56">
-<div class="p-4 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary transition-all">
-<div class="flex items-center justify-between">
-<span class="font-label-lg text-label-lg font-bold">TimberTech AZEK Vintage</span>
-<span class="font-label-sm text-label-sm opacity-90">+$56 / sq.ft.</span>
+<div class="p-4 rounded-xl bg-surface-container-low peer-checked:bg-secondary/15 peer-checked:border-secondary border border-surface-container-high/50 transition-all flex flex-col justify-between h-full">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-lg text-label-lg font-bold text-primary">TimberTech AZEK Vintage</span>
+<span class="font-mono font-bold text-secondary text-xs shrink-0">+$56 / sq.ft.</span>
 </div>
-<p class="font-caption text-caption opacity-80 mt-1">Capped cellular PVC, zero oiling, stay-cool tech.</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1.5">Capped cellular PVC, zero oiling, stay-cool tech.</p>
 </div>
 </label>
-<label class="cursor-pointer">
+<label class="cursor-pointer block h-full">
 <input class="peer sr-only" name="material" type="radio" value="60">
-<div class="p-4 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary transition-all">
-<div class="flex items-center justify-between">
-<span class="font-label-lg text-label-lg font-bold">Genuine Cumaru Hardwood</span>
-<span class="font-label-sm text-label-sm opacity-90">+$60 / sq.ft.</span>
+<div class="p-4 rounded-xl bg-surface-container-low peer-checked:bg-secondary/15 peer-checked:border-secondary border border-surface-container-high/50 transition-all flex flex-col justify-between h-full">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-lg text-label-lg font-bold text-primary">Genuine Cumaru Hardwood</span>
+<span class="font-mono font-bold text-secondary text-xs shrink-0">+$60 / sq.ft.</span>
 </div>
-<p class="font-caption text-caption opacity-80 mt-1">Golden-brown tone, extraordinary density &amp; hardness.</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1.5">Golden-brown tone, extraordinary density &amp; hardness.</p>
 </div>
 </label>
-<label class="cursor-pointer">
+<label class="cursor-pointer block h-full">
 <input class="peer sr-only" name="material" type="radio" value="50">
-<div class="p-4 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary transition-all">
-<div class="flex items-center justify-between">
-<span class="font-label-lg text-label-lg font-bold">Thermally Modified Ash</span>
-<span class="font-label-sm text-label-sm opacity-90">+$50 / sq.ft.</span>
+<div class="p-4 rounded-xl bg-surface-container-low peer-checked:bg-secondary/15 peer-checked:border-secondary border border-surface-container-high/50 transition-all flex flex-col justify-between h-full">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-lg text-label-lg font-bold text-primary">Thermally Modified Ash</span>
+<span class="font-mono font-bold text-secondary text-xs shrink-0">+$50 / sq.ft.</span>
 </div>
-<p class="font-caption text-caption opacity-80 mt-1">Steam-stabilized sustainable domestic hardwood.</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1.5">Steam-stabilized sustainable domestic hardwood.</p>
 </div>
 </label>
 </div>
 </div>
 <!-- Step 4: Add-on Modules -->
-<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3">
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container-high/50 space-y-3">
+<div>
 <p class="font-label-lg text-label-lg text-primary font-bold">4. Architectural Integration Modules</p>
-<p class="font-caption text-caption text-on-surface-variant mb-2">Optional turnkey elements integrated into the initial structural frame</p>
-<div class="space-y-2">
-<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<p class="font-caption text-caption text-on-surface-variant mt-0.5">Optional turnkey elements integrated into the initial structural frame</p>
+</div>
+<div class="space-y-2.5 pt-1">
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low border border-surface-container-high/50 cursor-pointer hover:bg-surface-container transition-all">
 <div class="flex items-center gap-3">
-<input checked="" class="w-4 h-4 accent-primary rounded" data-cost="16500" id="addon-glass" type="checkbox">
+<input checked="" class="w-4 h-4 accent-secondary rounded cursor-pointer" data-cost="16500" id="addon-glass" type="checkbox">
 <span class="font-body-sm text-body-sm text-on-surface font-semibold">Frameless Monolithic 1/2" Glass Railing System</span>
 </div>
-<span class="font-label-sm text-label-sm text-secondary font-bold">+$16,500</span>
+<span class="font-mono font-bold text-secondary text-sm shrink-0 ml-4">+$16,500</span>
 </label>
-<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low border border-surface-container-high/50 cursor-pointer hover:bg-surface-container transition-all">
 <div class="flex items-center gap-3">
-<input class="w-4 h-4 accent-primary rounded" data-cost="34000" id="addon-pergola" type="checkbox">
+<input class="w-4 h-4 accent-secondary rounded cursor-pointer" data-cost="34000" id="addon-pergola" type="checkbox">
 <span class="font-body-sm text-body-sm text-on-surface font-semibold">Motorized Bioclimatic Louvered Pergola (16' x 14')</span>
 </div>
-<span class="font-label-sm text-label-sm text-secondary font-bold">+$34,000</span>
+<span class="font-mono font-bold text-secondary text-sm shrink-0 ml-4">+$34,000</span>
 </label>
-<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low border border-surface-container-high/50 cursor-pointer hover:bg-surface-container transition-all">
 <div class="flex items-center gap-3">
-<input class="w-4 h-4 accent-primary rounded" data-cost="42000" id="addon-kitchen" type="checkbox">
+<input class="w-4 h-4 accent-secondary rounded cursor-pointer" data-cost="42000" id="addon-kitchen" type="checkbox">
 <span class="font-body-sm text-body-sm text-on-surface font-semibold">Integrated Exterior Chef's Culinary Island (Grill, Refrig, Granite)</span>
 </div>
-<span class="font-label-sm text-label-sm text-secondary font-bold">+$42,000</span>
+<span class="font-mono font-bold text-secondary text-sm shrink-0 ml-4">+$42,000</span>
 </label>
-<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low border border-surface-container-high/50 cursor-pointer hover:bg-surface-container transition-all">
 <div class="flex items-center gap-3">
-<input checked="" class="w-4 h-4 accent-primary rounded" data-cost="9500" id="addon-fire" type="checkbox">
+<input checked="" class="w-4 h-4 accent-secondary rounded cursor-pointer" data-cost="9500" id="addon-fire" type="checkbox">
 <span class="font-body-sm text-body-sm text-on-surface font-semibold">Plumbed Linear Gas Fire Hearth &amp; Timber Bench</span>
 </div>
-<span class="font-label-sm text-label-sm text-secondary font-bold">+$9,500</span>
+<span class="font-mono font-bold text-secondary text-sm shrink-0 ml-4">+$9,500</span>
 </label>
-<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low border border-surface-container-high/50 cursor-pointer hover:bg-surface-container transition-all">
 <div class="flex items-center gap-3">
-<input class="w-4 h-4 accent-primary rounded" data-cost="18500" id="addon-spa" type="checkbox">
+<input class="w-4 h-4 accent-secondary rounded cursor-pointer" data-cost="18500" id="addon-spa" type="checkbox">
 <span class="font-body-sm text-body-sm text-on-surface font-semibold">Reinforced Sub-Structure Spa Cradle &amp; Access Hatch</span>
 </div>
-<span class="font-label-sm text-label-sm text-secondary font-bold">+$18,500</span>
+<span class="font-mono font-bold text-secondary text-sm shrink-0 ml-4">+$18,500</span>
 </label>
 </div>
 </div>
 </div>
 <!-- Live Estimate Display & Breakdown Column (5 Cols) -->
 <div class="lg:col-span-5 sticky top-28 space-y-6">
-<div class="rounded-xl bg-primary text-on-primary p-6 md:p-8 shadow-xl">
-<span class="font-label-sm text-label-sm text-primary-fixed !text-[#F7BA7D] uppercase tracking-wider font-semibold">Projected Architectural Total</span>
-<div class="flex items-baseline gap-2 mt-2 mb-4">
-<span class="font-display text-display text-on-primary !text-white font-bold tracking-tight" id="display-total">$1,16,375</span>
-<span class="font-caption text-caption text-primary-fixed !text-[#F7BA7D]">EST. TOTAL</span>
+<div class="rounded-2xl bg-surface-container-lowest border-2 border-secondary/30 dark:border-secondary/40 p-6 md:p-8 shadow-xl text-on-surface">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-high/60 mb-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Projected Architectural Total</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-secondary/10 text-secondary border border-secondary/20">Real-Time</span>
 </div>
-<p class="font-caption text-caption text-primary-fixed/80 !text-[#FAF5EF] mb-6 pb-4 border-b border-white/10">
-              *Preliminary forecast includes labor, materials, permits, and engineering stamps. Subject to site soil boring &amp; topographic drone scan.
-            </p>
+<div class="flex items-baseline gap-3 mb-3">
+<span class="font-display text-4xl sm:text-5xl font-extrabold text-primary tracking-tight font-mono" id="display-total">$116,375</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase">EST. TOTAL</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant mb-6 pb-4 border-b border-surface-container-high/60 leading-relaxed">
+*Preliminary forecast includes labor, materials, permits, and engineering stamps. Subject to site soil boring &amp; topographic drone scan.
+</p>
 <!-- Categorized Cost Breakdown -->
-<div class="space-y-3 font-body-sm text-body-sm text-inverse-on-surface mb-8">
-<div class="flex justify-between items-center">
-<span class="text-on-primary-container">Substructure &amp; Foundation</span>
-<span class="font-semibold text-on-primary" id="breakdown-foundation">$27,300</span>
+<div class="space-y-3 font-body-sm text-body-sm mb-8">
+<div class="flex justify-between items-center py-1 border-b border-surface-container-high/30">
+<span class="text-on-surface-variant">Substructure &amp; Foundation</span>
+<span class="font-bold text-primary font-mono" id="breakdown-foundation">$27,300</span>
 </div>
-<div class="flex justify-between items-center">
-<span class="text-on-primary-container">Deck Surface &amp; Joinery</span>
-<span class="font-semibold text-on-primary" id="breakdown-surface">$44,200</span>
+<div class="flex justify-between items-center py-1 border-b border-surface-container-high/30">
+<span class="text-on-surface-variant">Deck Surface &amp; Joinery</span>
+<span class="font-bold text-primary font-mono" id="breakdown-surface">$44,200</span>
 </div>
-<div class="flex justify-between items-center">
-<span class="text-on-primary-container">Railings &amp; Architectural Features</span>
-<span class="font-semibold text-on-primary" id="breakdown-addons">$26,000</span>
+<div class="flex justify-between items-center py-1 border-b border-surface-container-high/30">
+<span class="text-on-surface-variant">Railings &amp; Architectural Features</span>
+<span class="font-bold text-primary font-mono" id="breakdown-addons">$26,000</span>
 </div>
-<div class="flex justify-between items-center">
-<span class="text-on-primary-container">Engineering, Permitting &amp; PM</span>
-<span class="font-semibold text-on-primary" id="breakdown-permits">$18,875</span>
+<div class="flex justify-between items-center py-1">
+<span class="text-on-surface-variant">Engineering, Permitting &amp; PM</span>
+<span class="font-bold text-primary font-mono" id="breakdown-permits">$18,875</span>
 </div>
 </div>
 <!-- Action Button -->
 <button id="btn-send-estimate" type="button" onclick="openEstimateModal()" class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-secondary !text-white hover:!bg-[#8F3E0B] dark:hover:!bg-[#B85D19] font-label-lg text-label-lg transition-all font-bold shadow-lg hover:shadow-xl active:scale-[0.99] cursor-pointer" aria-haspopup="dialog">
-  <span class="font-bold">Send This Estimate to Engineering</span>
-  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+<span class="font-bold">Send This Estimate to Engineering</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
 </button>
 </div>
 <!-- Forensic Guarantee Card -->
-<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container-high/60 flex items-start gap-4">
 <span class="material-symbols-outlined text-secondary text-[28px] shrink-0">verified_user</span>
 <div>
 <p class="font-label-lg text-label-lg text-primary font-bold">The Timber &amp; Terra Scope Lock</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                Once our structural engineer completes the on-site borehole core inspection, your contract enters our Fixed-Sum Binding Protocol. We absorb subterranean anomalies.
-              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+Once our structural engineer completes the on-site borehole core inspection, your contract enters our Fixed-Sum Binding Protocol. We absorb subterranean anomalies.
+</p>
 </div>
 </div>
 </div>
@@ -2755,7 +2772,7 @@ tailwind.config = {
       const matName = checkedMat ? checkedMat.closest('label').querySelector('.font-label-lg').textContent.trim() : 'FSC Brazilian Ipe';
 
       const checkedSlope = document.querySelector('input[name="topography"]:checked');
-      const slopeName = checkedSlope ? checkedSlope.closest('label').querySelector('.font-label-lg').textContent.trim() : 'Moderate Hillside (10°–25°)';
+      const slopeName = checkedSlope ? (checkedSlope.closest('label').querySelector('.font-label-sm, .font-label-lg')?.textContent.trim() || 'Level / Gentle') : 'Level / Gentle';
 
       const addons = [];
       document.querySelectorAll('#addon-glass, #addon-pergola, #addon-kitchen, #addon-fire, #addon-spa').forEach(cb => {
