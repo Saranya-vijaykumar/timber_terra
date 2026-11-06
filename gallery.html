@@ -526,20 +526,25 @@
     -webkit-text-fill-color: #FFFFFF !important;
   }
 
-  /* Master Portfolios Counter Panel in Hero */
-  html:not(.dark) #counter-current {
-    color: #000000 !important;
-  }
-  html:not(.dark) #counter-current + span {
-    color: #24150E !important;
-    font-weight: 750 !important;
-  }
+  /* Master Portfolios Counter Panel in Hero - 100% Crisp White & Amber Typography */
+  #counter-current,
+  html:not(.dark) #counter-current,
   html.dark #counter-current {
     color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
   }
+  #counter-current + span,
+  html:not(.dark) #counter-current + span,
   html.dark #counter-current + span {
     color: #FAF5EF !important;
+    -webkit-text-fill-color: #FAF5EF !important;
     font-weight: 750 !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7) !important;
+  }
+  .photographic-hero .counter-panel-label {
+    color: #F7BA7D !important;
+    -webkit-text-fill-color: #F7BA7D !important;
   }
 
   /* ==========================================================================
@@ -1818,16 +1823,16 @@ tailwind.config = {
         </p>
       </div>
       <!-- Metric Counter Panel -->
-      <div class="lg:col-span-4 flex flex-col bg-white dark:bg-black/60 backdrop-blur-md border border-surface-container-high/60 dark:border-white/20 p-6 rounded-2xl shadow-xl gap-2 text-[#24150E] dark:text-white">
+      <div class="lg:col-span-4 flex flex-col bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-xl gap-2 text-white">
         <div class="flex items-center justify-between">
-          <span class="font-label-md text-label-md uppercase tracking-wider text-[#24150E] dark:text-[#E8DCD0] font-bold">Master Portfolios</span>
-          <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+          <span class="counter-panel-label font-label-md text-label-md uppercase tracking-wider text-[#F7BA7D] font-bold" style="color: #F7BA7D !important; -webkit-text-fill-color: #F7BA7D !important; text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;">Master Portfolios</span>
+          <span class="w-2.5 h-2.5 rounded-full bg-[#B85D19] border border-[#F7BA7D] animate-pulse"></span>
         </div>
         <div class="flex items-baseline gap-2">
-          <span class="font-headline-lg text-headline-lg !text-[#000000] dark:!text-white font-bold" id="counter-current">9</span>
-          <span class="font-body-md text-body-md !text-[#24150E] dark:!text-[#FAF5EF] font-bold">/ 9 Curated Environments</span>
+          <span class="font-headline-lg text-headline-lg !text-white font-bold" id="counter-current" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0,0,0,0.9) !important;">9</span>
+          <span class="font-body-md text-body-md !text-[#FAF5EF] font-bold" style="color: #FAF5EF !important; -webkit-text-fill-color: #FAF5EF !important; text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;">/ 9 Curated Environments</span>
         </div>
-        <p class="font-body-sm text-body-sm text-[#5E4738] dark:text-[#E8DCD0]">Pacific Northwest coastal, mountain &amp; valley terrain installations.</p>
+        <p class="font-body-sm text-body-sm !text-[#E8DCD0]" style="color: #E8DCD0 !important; -webkit-text-fill-color: #E8DCD0 !important; text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;">Pacific Northwest coastal, mountain &amp; valley terrain installations.</p>
       </div>
     </div>
   </div>

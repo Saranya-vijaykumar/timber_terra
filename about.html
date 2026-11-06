@@ -525,20 +525,25 @@
     -webkit-text-fill-color: #FFFFFF !important;
   }
 
-  /* Master Portfolios Counter Panel in Hero */
-  html:not(.dark) #counter-current {
-    color: #000000 !important;
-  }
-  html:not(.dark) #counter-current + span {
-    color: #24150E !important;
-    font-weight: 750 !important;
-  }
+  /* Master Portfolios Counter Panel in Hero - 100% Crisp White & Amber Typography */
+  #counter-current,
+  html:not(.dark) #counter-current,
   html.dark #counter-current {
     color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
   }
+  #counter-current + span,
+  html:not(.dark) #counter-current + span,
   html.dark #counter-current + span {
     color: #FAF5EF !important;
+    -webkit-text-fill-color: #FAF5EF !important;
     font-weight: 750 !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7) !important;
+  }
+  .photographic-hero .counter-panel-label {
+    color: #F7BA7D !important;
+    -webkit-text-fill-color: #F7BA7D !important;
   }
 
   /* ==========================================================================
