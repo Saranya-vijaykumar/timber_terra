@@ -99,6 +99,22 @@
     {
       "source": "/blog-details",
       "destination": "/blog-details.html"
+    },
+    {
+      "source": "/project-pinegrove-terrace",
+      "destination": "/project-pinegrove-terrace.html"
+    },
+    {
+      "source": "/project-sentinel-ridge",
+      "destination": "/project-sentinel-ridge.html"
+    },
+    {
+      "source": "/project-cedar-peak",
+      "destination": "/project-cedar-peak.html"
+    },
+    {
+      "source": "/project-biophilic-courtyard",
+      "destination": "/project-biophilic-courtyard.html"
     }
   ]
 }
