@@ -1668,7 +1668,32 @@
     box-shadow: none !important;
   }
 
-  </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  
+  /* TCO & Comparison Table Scrollbars */
+  .tco-table-container, .table-scroll-container {
+    scrollbar-width: thin !important;
+    scrollbar-color: #8A2B03 rgba(30, 27, 24, 0.1) !important;
+    -ms-overflow-style: auto !important;
+  }
+  .tco-table-container::-webkit-scrollbar, .table-scroll-container::-webkit-scrollbar {
+    height: 6px !important;
+    background: rgba(30, 27, 24, 0.05) !important;
+  }
+  .tco-table-container::-webkit-scrollbar-thumb, .table-scroll-container::-webkit-scrollbar-thumb {
+    background: #8A2B03 !important;
+    border-radius: 9999px !important;
+  }
+  .dark .tco-table-container, .dark .table-scroll-container {
+    scrollbar-color: #F7BA7D rgba(255, 255, 255, 0.08) !important;
+  }
+  .dark .tco-table-container::-webkit-scrollbar, .dark .table-scroll-container::-webkit-scrollbar {
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+  .dark .tco-table-container::-webkit-scrollbar-thumb, .dark .table-scroll-container::-webkit-scrollbar-thumb {
+    background: #F7BA7D !important;
+  }
+
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
   theme: {
@@ -2338,7 +2363,15 @@ tailwind.config = {
         </p>
 </div>
 <!-- Comparison Matrix Table Card -->
-<div class="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm overflow-x-auto">
+<!-- Mobile/Tablet Horizontal Scroll Helper Indicator -->
+<div class="flex items-center justify-between text-xs font-medium text-secondary bg-secondary/10 px-4 py-2.5 rounded-xl mb-3 lg:hidden border border-secondary/20">
+  <span class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[16px] animate-pulse">swipe</span>
+    <span>Swipe table horizontally to compare all material parameters</span>
+  </span>
+  <span class="text-[11px] font-mono opacity-80 shrink-0 font-bold">5 Columns →</span>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm overflow-x-auto table-scroll-container">
 <table class="w-full text-left border-collapse min-w-[720px]">
 <thead>
 <tr class="bg-surface-container text-on-surface">

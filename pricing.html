@@ -1669,7 +1669,32 @@
     box-shadow: none !important;
   }
 
-  </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  
+  /* TCO & Comparison Table Scrollbars */
+  .tco-table-container, .table-scroll-container {
+    scrollbar-width: thin !important;
+    scrollbar-color: #8A2B03 rgba(30, 27, 24, 0.1) !important;
+    -ms-overflow-style: auto !important;
+  }
+  .tco-table-container::-webkit-scrollbar, .table-scroll-container::-webkit-scrollbar {
+    height: 6px !important;
+    background: rgba(30, 27, 24, 0.05) !important;
+  }
+  .tco-table-container::-webkit-scrollbar-thumb, .table-scroll-container::-webkit-scrollbar-thumb {
+    background: #8A2B03 !important;
+    border-radius: 9999px !important;
+  }
+  .dark .tco-table-container, .dark .table-scroll-container {
+    scrollbar-color: #F7BA7D rgba(255, 255, 255, 0.08) !important;
+  }
+  .dark .tco-table-container::-webkit-scrollbar, .dark .table-scroll-container::-webkit-scrollbar {
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+  .dark .tco-table-container::-webkit-scrollbar-thumb, .dark .table-scroll-container::-webkit-scrollbar-thumb {
+    background: #F7BA7D !important;
+  }
+
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
   theme: {
@@ -2455,78 +2480,176 @@ Once our structural engineer completes the on-site borehole core inspection, you
 Standard builder-grade softwoods create an endless cycle of stripping, re-staining, and complete structural rebuilds. Compare thirty years of material endurance side by side.
 </p>
 </div>
+<!-- Mobile/Tablet Horizontal Scroll Helper Indicator -->
+<div class="flex items-center justify-between text-xs font-medium text-secondary bg-secondary/10 px-4 py-2.5 rounded-xl mb-3 lg:hidden border border-secondary/20">
+  <span class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[16px] animate-pulse">swipe</span>
+    <span>Swipe table horizontally to view all 7 materials &amp; cost columns</span>
+  </span>
+  <span class="text-[11px] font-mono opacity-80 shrink-0 font-bold">7 Columns →</span>
+</div>
 <!-- Architectural Comparison Matrix Table -->
-<div class="overflow-x-auto rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container-high/60">
-<table class="w-full min-w-[1040px] text-left border-collapse">
+<div class="overflow-x-auto tco-table-container rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container-high/60">
+<table class="w-full text-left border-collapse min-w-[760px] lg:min-w-full">
 <thead>
 <tr class="bg-surface-container-low text-primary font-label-sm text-label-sm uppercase tracking-wider border-b border-surface-container-high/60">
-<th class="p-4 md:p-5 font-bold min-w-[240px]">Decking Substrate</th>
-<th class="p-4 md:p-5 font-bold min-w-[150px] whitespace-nowrap">Initial Installed Cost</th>
-<th class="p-4 md:p-5 font-bold min-w-[140px] whitespace-nowrap">Lifespan Expectancy</th>
-<th class="p-4 md:p-5 font-bold min-w-[190px] whitespace-nowrap">Annual Maintenance</th>
-<th class="p-4 md:p-5 font-bold min-w-[140px] whitespace-nowrap">15-Year True Cost</th>
-<th class="p-4 md:p-5 font-bold min-w-[180px] whitespace-nowrap">25-Yr Replacement Risk</th>
-<th class="p-4 md:p-5 font-bold min-w-[160px] whitespace-nowrap">Carbon &amp; Fire Rating</th>
+<th class="p-3.5 sm:p-4 lg:p-4 font-bold w-[22%] min-w-[170px]">Decking Substrate</th>
+<th class="p-3.5 sm:p-4 lg:p-4 font-bold w-[13%] min-w-[105px]">
+  <span>Initial Cost</span>
+  <span class="block text-[11px] font-normal normal-case opacity-70">Installed / sq.ft.</span>
+</th>
+<th class="p-3.5 sm:p-4 lg:p-4 font-bold w-[11%] min-w-[90px]">
+  <span>Lifespan</span>
+  <span class="block text-[11px] font-normal normal-case opacity-70">Expectancy</span>
+</th>
+<th class="p-3.5 sm:p-4 lg:p-4 font-bold w-[15%] min-w-[120px]">
+  <span>Annual Maint.</span>
+  <span class="block text-[11px] font-normal normal-case opacity-70">Upkeep / Yr</span>
+</th>
+<th class="p-3.5 sm:p-4 lg:p-4 font-bold w-[13%] min-w-[105px]">
+  <span>15-Yr True Cost</span>
+  <span class="block text-[11px] font-normal normal-case opacity-70">Cumulative / sq.ft.</span>
+</th>
+<th class="p-3.5 sm:p-4 lg:p-4 font-bold w-[13%] min-w-[115px]">
+  <span>25-Yr Risk</span>
+  <span class="block text-[11px] font-normal normal-case opacity-70">Replacement</span>
+</th>
+<th class="p-3.5 sm:p-4 lg:p-4 font-bold w-[13%] min-w-[115px]">
+  <span>Fire &amp; Eco</span>
+  <span class="block text-[11px] font-normal normal-case opacity-70">Rating &amp; Cert</span>
+</th>
 </tr>
 </thead>
 <tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
 <!-- Row 1: Pressure-Treated Pine (Benchmark) -->
 <tr class="hover:bg-surface-container-low/50 transition-colors">
-<td class="p-4 md:p-5 align-middle">
-<span class="font-bold text-primary block text-base">Treated Yellow Pine</span>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+<span class="font-bold text-primary block text-base leading-snug">Treated Yellow Pine</span>
 <span class="font-caption text-caption text-on-surface-variant block mt-0.5">Volume Builder Spec</span>
 </td>
-<td class="p-4 md:p-5 align-middle font-mono whitespace-nowrap text-on-surface-variant font-medium">$45 – $65 / sq.ft.</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap text-error font-semibold">8 – 12 Years</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap text-on-surface-variant">High ($900/yr seal &amp; strip)</td>
-<td class="p-4 md:p-5 align-middle font-mono whitespace-nowrap font-bold text-on-surface text-base">$145 / sq.ft.</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap text-error font-semibold">100% Full Replacement</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-caption text-caption text-on-surface-variant">Class C / High Chem Treat</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle font-mono font-medium text-on-surface-variant">
+  <span class="block font-semibold text-primary">$45 – $65</span>
+  <span class="block text-caption text-on-surface-variant">per sq.ft.</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block text-error font-semibold">8 – 12 Years</span>
+  <span class="block text-caption text-on-surface-variant">Degrades fast</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-semibold text-error">High</span>
+  <span class="block text-caption text-on-surface-variant">$900/yr seal &amp; strip</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle font-mono font-bold text-on-surface text-base">
+  <span>$145</span>
+  <span class="block text-caption font-sans font-normal text-on-surface-variant">per sq.ft.</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block text-error font-bold">100% Full</span>
+  <span class="block text-caption text-error font-medium">Complete Rebuild</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-semibold text-on-surface">Class C</span>
+  <span class="block text-caption text-on-surface-variant">High Chem Treat</span>
+</td>
 </tr>
 <!-- Row 2: Western Red Cedar -->
 <tr class="hover:bg-surface-container-low/50 transition-colors">
-<td class="p-4 md:p-5 align-middle">
-<span class="font-bold text-primary block text-base">Western Red Cedar</span>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+<span class="font-bold text-primary block text-base leading-snug">Western Red Cedar</span>
 <span class="font-caption text-caption text-on-surface-variant block mt-0.5">Architectural Softwood</span>
 </td>
-<td class="p-4 md:p-5 align-middle font-mono whitespace-nowrap font-medium text-primary">$75 – $105 / sq.ft.</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-medium">15 – 18 Years</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap text-on-surface-variant">Moderate ($650/yr oil)</td>
-<td class="p-4 md:p-5 align-middle font-mono whitespace-nowrap font-bold text-on-surface text-base">$168 / sq.ft.</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap text-secondary font-semibold">75% Structural Rot Risk</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-caption text-caption text-on-surface-variant">Class B / Moderate Rot Res.</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle font-mono font-medium text-primary">
+  <span class="block font-semibold text-primary">$75 – $105</span>
+  <span class="block text-caption text-on-surface-variant">per sq.ft.</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-medium text-primary">15 – 18 Years</span>
+  <span class="block text-caption text-on-surface-variant">Moderate rot res.</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-semibold text-secondary">Moderate</span>
+  <span class="block text-caption text-on-surface-variant">$650/yr oil</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle font-mono font-bold text-on-surface text-base">
+  <span>$168</span>
+  <span class="block text-caption font-sans font-normal text-on-surface-variant">per sq.ft.</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block text-secondary font-bold">75% Risk</span>
+  <span class="block text-caption text-secondary font-medium">Structural Rot</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-semibold text-on-surface">Class B</span>
+  <span class="block text-caption text-on-surface-variant">Moderate Rot Res.</span>
+</td>
 </tr>
 <!-- Row 3: Capped Polymer (TimberTech AZEK) -->
 <tr class="bg-surface-container-low/60 hover:bg-surface-container transition-colors">
-<td class="p-4 md:p-5 align-middle">
-<div class="flex items-center gap-2">
-<span class="font-bold text-primary text-base">TimberTech AZEK Polymer</span>
-<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-caption text-caption font-semibold">Zero Oil</span>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-primary text-base leading-snug">TimberTech AZEK</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-caption text-caption font-semibold shrink-0">Zero Oil</span>
 </div>
-<span class="font-caption text-caption text-on-surface-variant block mt-0.5">Cellular PVC Core</span>
+<span class="font-caption text-caption text-on-surface-variant block mt-0.5">Cellular PVC Polymer Core</span>
 </td>
-<td class="p-4 md:p-5 align-middle font-mono whitespace-nowrap font-bold text-primary">$130 – $170 / sq.ft.</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-bold text-primary">50+ Years</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-semibold text-primary">Near Zero ($50 wash)</td>
-<td class="p-4 md:p-5 align-middle font-mono whitespace-nowrap font-bold text-secondary text-base">$140 / sq.ft.</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-bold text-primary">0% Risk (50-Yr Warranty)</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-caption text-caption text-primary font-semibold">Class A Flame Spread</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle font-mono font-bold text-primary">
+  <span class="block font-bold text-primary">$130 – $170</span>
+  <span class="block text-caption font-normal text-on-surface-variant">per sq.ft.</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-bold text-primary">50+ Years</span>
+  <span class="block text-caption text-on-surface-variant">Zero rot guarantee</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-bold text-primary">Near Zero</span>
+  <span class="block text-caption text-on-surface-variant">$50/yr wash</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle font-mono font-bold text-secondary text-base">
+  <span>$140</span>
+  <span class="block text-caption font-sans font-normal text-on-surface-variant">per sq.ft.</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-bold text-primary">0% Risk</span>
+  <span class="block text-caption font-medium text-secondary">50-Yr Warranty</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-bold text-primary">Class A</span>
+  <span class="block text-caption text-on-surface-variant">Flame Spread</span>
+</td>
 </tr>
 <!-- Row 4: FSC Brazilian Ipe -->
 <tr class="bg-secondary/10 hover:bg-secondary/15 transition-colors">
-<td class="p-4 md:p-5 align-middle">
-<div class="flex items-center gap-2">
-<span class="font-bold text-primary text-base">FSC Brazilian Ipe Hardwood</span>
-<span class="px-2 py-0.5 rounded bg-secondary/20 text-secondary font-caption text-caption font-bold">Gold Standard</span>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-primary text-base leading-snug">FSC Brazilian Ipe</span>
+<span class="px-2 py-0.5 rounded bg-secondary/20 text-secondary font-caption text-caption font-bold shrink-0">Gold Standard</span>
 </div>
-<span class="font-caption text-caption text-on-surface-variant block mt-0.5">Sustainably Harvested Ironwood</span>
+<span class="font-caption text-caption text-on-surface-variant block mt-0.5">Harvested Ironwood Substrate</span>
 </td>
-<td class="p-4 md:p-5 align-middle font-mono whitespace-nowrap font-bold text-primary">$145 – $195 / sq.ft.</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-bold text-primary">50 – 75+ Years</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap text-on-surface-variant font-medium">Low (Optional UV penetrating oil)</td>
-<td class="p-4 md:p-5 align-middle font-mono whitespace-nowrap font-bold text-secondary text-base">$152 / sq.ft.</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-bold text-primary">0% Replacement (Dense as Concrete)</td>
-<td class="p-4 md:p-5 align-middle whitespace-nowrap font-caption text-caption text-primary font-semibold">Class A Fire / FSC Certified</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle font-mono font-bold text-primary">
+  <span class="block font-bold text-primary">$145 – $195</span>
+  <span class="block text-caption font-normal text-on-surface-variant">per sq.ft.</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-bold text-primary">50 – 75+ Yrs</span>
+  <span class="block text-caption text-on-surface-variant">Generational life</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-semibold text-primary">Low Upkeep</span>
+  <span class="block text-caption text-on-surface-variant">Optional UV oil</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle font-mono font-bold text-secondary text-base">
+  <span>$152</span>
+  <span class="block text-caption font-sans font-normal text-on-surface-variant">per sq.ft.</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-bold text-primary">0% Risk</span>
+  <span class="block text-caption font-medium text-primary">Dense as Concrete</span>
+</td>
+<td class="p-3.5 sm:p-4 lg:p-4 align-middle">
+  <span class="block font-bold text-primary">Class A Fire</span>
+  <span class="block text-caption text-on-surface-variant">FSC Certified</span>
+</td>
 </tr>
 </tbody>
 </table>
