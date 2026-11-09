@@ -1083,31 +1083,7 @@
   html:not(.dark) header nav button.nav-link-default,
   html:not(.dark) header nav a.nav-link-default *,
   html:not(.dark) header nav button.nav-link-default * {
-    color: #000000 !important;
-    font-weight: 700 !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    text-shadow: none !important;
-  }
-  html:not(.dark) header nav a.nav-link-default:hover,
-  html:not(.dark) header nav button.nav-link-default:hover,
-  html:not(.dark) header nav a.nav-link-default:hover *,
-  html:not(.dark) header nav button.nav-link-default:hover * {
-    color: #8A2B03 !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-
-  html.dark header nav a.nav-link-default,
-  html.dark header nav button.nav-link-default,
-  html.dark header nav a.nav-link-default *,
-  html.dark header nav button.nav-link-default * {
-    color: #FFFFFF !important;
+    color: #24150E !important;
     font-weight: 650 !important;
     background: transparent !important;
     background-color: transparent !important;
@@ -1115,30 +1091,52 @@
     box-shadow: none !important;
     outline: none !important;
     text-shadow: none !important;
+    transition: all 0.2s ease !important;
+  }
+  html:not(.dark) header nav a.nav-link-default:hover,
+  html:not(.dark) header nav button.nav-link-default:hover,
+  html:not(.dark) header nav a.nav-link-default:hover *,
+  html:not(.dark) header nav button.nav-link-default:hover * {
+    color: #8A2B03 !important;
+    background-color: rgba(138, 43, 3, 0.08) !important;
+    border-radius: 0.5rem !important;
+  }
+
+  html.dark header nav a.nav-link-default,
+  html.dark header nav button.nav-link-default,
+  html.dark header nav a.nav-link-default *,
+  html.dark header nav button.nav-link-default * {
+    color: #D6CCC2 !important;
+    font-weight: 600 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    text-shadow: none !important;
+    transition: all 0.2s ease !important;
   }
   html.dark header nav a.nav-link-default:hover,
   html.dark header nav button.nav-link-default:hover,
   html.dark header nav a.nav-link-default:hover *,
   html.dark header nav button.nav-link-default:hover * {
     color: #F7BA7D !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0.5rem !important;
   }
 
-  /* Active Nav Link: Clean Luxury Typography (100% ZERO BOX, ZERO BORDER) */
+  /* Active Nav Link: High-Contrast Illuminated Highlight (Amber Glow & Subtle Architectural Pill) */
   html:not(.dark) header nav a.nav-link-active,
   html:not(.dark) header nav button.nav-link-active,
   html:not(.dark) header nav a.nav-link-active *,
   html:not(.dark) header nav button.nav-link-active * {
-    background: transparent !important;
-    background-color: transparent !important;
+    background-color: rgba(138, 43, 3, 0.12) !important;
     color: #8A2B03 !important;
     border: none !important;
-    box-shadow: none !important;
+    box-shadow: inset 0 -2.5px 0 #8A2B03 !important;
     outline: none !important;
     font-weight: 850 !important;
+    border-radius: 0.5rem !important;
     text-shadow: none !important;
   }
 
@@ -1146,14 +1144,14 @@
   html.dark header nav button.nav-link-active,
   html.dark header nav a.nav-link-active *,
   html.dark header nav button.nav-link-active * {
-    background: transparent !important;
-    background-color: transparent !important;
+    background-color: rgba(247, 186, 125, 0.18) !important;
     color: #F7BA7D !important;
     border: none !important;
-    box-shadow: none !important;
+    box-shadow: inset 0 -2.5px 0 #F7BA7D, 0 0 16px rgba(247, 186, 125, 0.25) !important;
     outline: none !important;
     font-weight: 850 !important;
-    text-shadow: none !important;
+    border-radius: 0.5rem !important;
+    text-shadow: 0 0 12px rgba(247, 186, 125, 0.4) !important;
   }
 
   /* Mobile Active Link in Drawer */
@@ -1161,15 +1159,17 @@
   html:not(.dark) #mobile-menu a.nav-link-active * {
     color: #8A2B03 !important;
     font-weight: 850 !important;
-    background: transparent !important;
+    background-color: rgba(138, 43, 3, 0.1) !important;
+    border-radius: 0.5rem !important;
     text-shadow: none !important;
   }
   html.dark #mobile-menu a.nav-link-active,
   html.dark #mobile-menu a.nav-link-active * {
     color: #F7BA7D !important;
     font-weight: 800 !important;
-    background: transparent !important;
-    text-shadow: none !important;
+    background-color: rgba(247, 186, 125, 0.18) !important;
+    border-radius: 0.5rem !important;
+    text-shadow: 0 0 10px rgba(247, 186, 125, 0.3) !important;
   }
 
   /* Dropdown Menu Container (High Contrast Glass) */
@@ -1743,6 +1743,59 @@
       }
     })();
   </script>
+<script>
+    // Synchronize Active Navigation Highlighting on All Viewports
+    function syncActiveNav() {
+      try {
+        var file = (window.location.pathname || '').split('/').pop() || 'index.html';
+        if (!file || file === '/') file = 'index.html';
+        file = file.toLowerCase();
+
+        var navElements = document.querySelectorAll('header nav a, header nav button, #mobile-menu a');
+
+        var isHome = (file === 'index.html' || file === 'home-2.html' || file === '');
+        var isAbout = (file.indexOf('about') !== -1);
+        var isServices = (file.indexOf('service') !== -1 && file.indexOf('project') === -1);
+        var isProjects = (file.indexOf('project') !== -1 || file.indexOf('gallery') !== -1);
+        var isPricing = (file.indexOf('pricing') !== -1);
+        var isBlog = (file.indexOf('blog') !== -1);
+        var isContact = (file.indexOf('contact') !== -1);
+
+        navElements.forEach(function(el) {
+          if (el.classList.contains('nav-quote-btn') || el.classList.contains('mobile-home-btn')) return;
+          var href = (el.getAttribute('href') || '').toLowerCase();
+          var isHomeBtn = el.closest('.group\\/home');
+
+          var shouldBeActive = false;
+          if (isHome && isHomeBtn) shouldBeActive = true;
+          else if (isAbout && href.indexOf('about') !== -1) shouldBeActive = true;
+          else if (isServices && href.indexOf('services.html') !== -1) shouldBeActive = true;
+          else if (isProjects && (href.indexOf('gallery') !== -1 || href.indexOf('project') !== -1)) shouldBeActive = true;
+          else if (isPricing && href.indexOf('pricing') !== -1) shouldBeActive = true;
+          else if (isBlog && href.indexOf('blog') !== -1) shouldBeActive = true;
+          else if (isContact && href.indexOf('contact') !== -1) shouldBeActive = true;
+
+          if (shouldBeActive) {
+            el.classList.add('nav-link-active');
+            el.classList.remove('nav-link-default');
+            el.classList.remove('nav-link-drawer');
+          } else {
+            el.classList.remove('nav-link-active');
+            if (!el.classList.contains('nav-link-drawer') && el.tagName === 'A' && el.closest('#mobile-menu')) {
+              el.classList.add('nav-link-drawer');
+            } else if (!el.classList.contains('nav-link-default') && el.closest('header nav')) {
+              el.classList.add('nav-link-default');
+            }
+          }
+        });
+      } catch (err) {}
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', syncActiveNav);
+    } else {
+      syncActiveNav();
+    }
+</script>
 </head>
 <body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-fixed">
 
