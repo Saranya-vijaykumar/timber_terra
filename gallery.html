@@ -379,13 +379,118 @@
   html:not(.dark) section:not(.photographic-hero) [class*="text-[#FAF5EF]"]:not(a):not(button):not([class*="rounded-full"]):not([class*="rounded-lg"]),
   html:not(.dark) section:not(.photographic-hero) [class*="text-[#FFFFFF]"]:not([class*="bg-[#8A2B03]"]):not([class*="bg-[#B85D19]"]):not([class*="bg-[#8F3E0B]"]):not([class*="bg-[#7A3A16]"]):not([class*="bg-[#2E2721]"]):not([class*="bg-black"]):not([class*="rounded-full"]):not([class*="rounded-lg"]):not([class*="!text-white"]),
   html:not(.dark) section:not(.photographic-hero) .text-surface-bright:not(a):not(button):not([class*="rounded-full"]):not([class*="rounded-lg"]),
-  html:not(.dark) section:not(.photographic-hero) span:not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp):not([class*="bg-[#8A2B03]"]):not([class*="bg-[#B85D19]"]):not([class*="bg-[#8F3E0B]"]):not([class*="bg-[#7A3A16]"]):not([class*="bg-[#2E2721]"]):not([class*="bg-black"]):not([class*="rounded-full"]):not([class*="rounded-lg"]):not([class*="!text-white"]) {
+  html:not(.dark) section:not(.photographic-hero) span:not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp):not([class*="bg-[#8A2B03]"]):not([class*="bg-[#B85D19]"]):not([class*="bg-[#8F3E0B]"]):not([class*="bg-[#7A3A16]"]):not([class*="bg-[#2E2721]"]):not([class*="bg-black"]):not([class*="rounded-full"]):not([class*="rounded-lg"]):not([class*="!text-white"]):not([class*="bg-gradient-to-t"] *):not([class*="from-primary"] *):not([class*="from-black"] *) {
     color: #000000 !important;
     text-shadow: none !important;
   }
 
   
   /* Universal Photo Overlay Badges & Dark Chips in Light & Dark Mode: 100% Crisp White Typography */
+  /* ==========================================================================
+     LIGHT MODE CONTRAST & FLOATING CARD PROTECTION
+     Fixes white-on-white text in floating cards and black-on-dark in photo overlays
+     ========================================================================== */
+
+  /* 1. Floating light-colored offset cards in Light Mode ALWAYS have solid dark typography */
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h1,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h2,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h3,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h4,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] p,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] span,
+  html:not(.dark) [class*="bg-surface-container-lowest"] h1,
+  html:not(.dark) [class*="bg-surface-container-lowest"] h2,
+  html:not(.dark) [class*="bg-surface-container-lowest"] h3,
+  html:not(.dark) [class*="bg-surface-container-lowest"] h4,
+  html:not(.dark) [class*="bg-surface-container-lowest"] p,
+  html:not(.dark) [class*="bg-surface-container-lowest"] span,
+  html:not(.dark) .floating-story-badge *,
+  html:not(.dark) .floating-purity-card * {
+    text-shadow: none !important;
+  }
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h1,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h2,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h3,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h4,
+  html:not(.dark) .floating-story-badge p,
+  html:not(.dark) .floating-purity-card h3 {
+    color: #24150E !important;
+    -webkit-text-fill-color: #24150E !important;
+    font-weight: 800 !important;
+  }
+  html:not(.dark) [class*="bg-[#FAF7F2]"] p,
+  html:not(.dark) .floating-purity-card p {
+    color: #5E4738 !important;
+    -webkit-text-fill-color: #5E4738 !important;
+    font-weight: 600 !important;
+  }
+  html:not(.dark) [class*="bg-[#FAF7F2]"] [class*="text-[#8A2B03]"],
+  html:not(.dark) [class*="bg-[#FAF7F2]"] [class*="text-secondary"],
+  html:not(.dark) .floating-story-badge [class*="text-[#8A2B03]"],
+  html:not(.dark) .floating-story-badge [class*="text-secondary"],
+  html:not(.dark) .floating-purity-card [class*="text-[#8A2B03]"] {
+    color: #8A2B03 !important;
+    -webkit-text-fill-color: #8A2B03 !important;
+    font-weight: 800 !important;
+  }
+
+  /* 2. Translucent tinted icon containers in Light Mode (e.g. bg-[#8A2B03]/15, bg-secondary/15) */
+  html:not(.dark) [class*="bg-[#8A2B03]/"] .material-symbols-outlined,
+  html:not(.dark) [class*="bg-[#8A2B03]/"] span,
+  html:not(.dark) [class*="bg-secondary/"] .material-symbols-outlined,
+  html:not(.dark) [class*="bg-secondary/"] span {
+    color: #8A2B03 !important;
+    -webkit-text-fill-color: #8A2B03 !important;
+  }
+
+  /* 3. Dark Gradient Photo Overlays (e.g. Pricing Hillside Banner) - ALWAYS brilliant white & radiant amber */
+  [class*="bg-gradient-to-t"][class*="from-primary"] h1,
+  [class*="bg-gradient-to-t"][class*="from-primary"] h2,
+  [class*="bg-gradient-to-t"][class*="from-primary"] h3,
+  [class*="bg-gradient-to-t"][class*="from-primary"] h4,
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="text-white"],
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="!text-white"],
+  [class*="bg-gradient-to-t"][class*="from-black"] h1,
+  [class*="bg-gradient-to-t"][class*="from-black"] h2,
+  [class*="bg-gradient-to-t"][class*="from-black"] h3,
+  [class*="bg-gradient-to-t"][class*="from-black"] h4,
+  [class*="bg-gradient-to-t"][class*="from-black"] [class*="text-white"],
+  .photo-overlay-card h1,
+  .photo-overlay-card h2,
+  .photo-overlay-card h3,
+  .photo-overlay-card .font-headline-sm,
+  .photo-overlay-gradient h1,
+  .photo-overlay-gradient h2,
+  .photo-overlay-gradient h3,
+  .photo-overlay-gradient h4 {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+    font-weight: 850 !important;
+  }
+  [class*="bg-gradient-to-t"][class*="from-primary"] p,
+  [class*="bg-gradient-to-t"][class*="from-black"] p,
+  .photo-overlay-card p,
+  .photo-overlay-card div:not(.font-label-sm):not(.font-headline-sm),
+  .photo-overlay-gradient p {
+    color: #FAF5EF !important;
+    -webkit-text-fill-color: #FAF5EF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+  }
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="text-[#F7BA7D]"],
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="!text-[#F7BA7D]"],
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="text-secondary"],
+  [class*="bg-gradient-to-t"][class*="from-black"] [class*="text-[#F7BA7D]"],
+  .photo-overlay-card [class*="text-[#F7BA7D]"],
+  .photo-overlay-card [class*="text-secondary-fixed"],
+  .photo-overlay-card .material-symbols-outlined,
+  .photo-overlay-gradient [class*="text-[#F7BA7D]"],
+  .photo-overlay-gradient p.font-label-sm {
+    color: #F7BA7D !important;
+    -webkit-text-fill-color: #F7BA7D !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+  }
+
   /* ==========================================================================
      HERITAGE 25-YEAR WAX-SEAL MEDALLION (Protected Universal Typography)
      ========================================================================== */
@@ -433,15 +538,15 @@
      PHOTO OVERLAYS & IMAGE CARDS (Light & Dark Mode)
      Ensure all headings, paragraphs, and spans overlaid on images have 100% white typography
      ========================================================================== */
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"],
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] p,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] span:not(.material-symbols-outlined),
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h1,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h2,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h3,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h4,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] div:not([class*="bg-white"]):not([class*="bg-surface"]),
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] *:not(input):not(textarea):not(button):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-[#FAF7F2]"]):not([class*="bg-surface-container-lowest"]) {
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) p:not([class*="text-[#8A2B03]"]):not([class*="text-secondary"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) span:not(.material-symbols-outlined):not([class*="text-[#8A2B03]"]):not([class*="text-secondary"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) h1,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) h2,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) h3,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) h4,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) div:not([class*="bg-white"]):not([class*="bg-surface"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) *:not(input):not(textarea):not(button):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-[#FAF7F2]"]):not([class*="bg-surface-container-lowest"]) {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85) !important;
@@ -507,8 +612,8 @@
   html:not(.dark) section:not(.photographic-hero) div[class*="rounded-full"][class*="!text-white"]:not([class*="bg-white"]):not([class*="bg-surface"]) *,
   html:not(.dark) section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) *,
   html:not(.dark) section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) *,
-  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#8A2B03]"] *,
-  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#8A2B03]"] {
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#8A2B03]"]:not([class*="/"]):not(button):not(a) *,
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#8A2B03]"]:not([class*="/"]):not(button):not(a) {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
   }

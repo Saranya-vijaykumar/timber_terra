@@ -379,13 +379,118 @@
   html:not(.dark) section:not(.photographic-hero) [class*="text-[#FAF5EF]"]:not(a):not(button):not([class*="rounded-full"]):not([class*="rounded-lg"]),
   html:not(.dark) section:not(.photographic-hero) [class*="text-[#FFFFFF]"]:not([class*="bg-[#8A2B03]"]):not([class*="bg-[#B85D19]"]):not([class*="bg-[#8F3E0B]"]):not([class*="bg-[#7A3A16]"]):not([class*="bg-[#2E2721]"]):not([class*="bg-black"]):not([class*="rounded-full"]):not([class*="rounded-lg"]):not([class*="!text-white"]),
   html:not(.dark) section:not(.photographic-hero) .text-surface-bright:not(a):not(button):not([class*="rounded-full"]):not([class*="rounded-lg"]),
-  html:not(.dark) section:not(.photographic-hero) span:not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp):not([class*="bg-[#8A2B03]"]):not([class*="bg-[#B85D19]"]):not([class*="bg-[#8F3E0B]"]):not([class*="bg-[#7A3A16]"]):not([class*="bg-[#2E2721]"]):not([class*="bg-black"]):not([class*="rounded-full"]):not([class*="rounded-lg"]):not([class*="!text-white"]) {
+  html:not(.dark) section:not(.photographic-hero) span:not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp):not([class*="bg-[#8A2B03]"]):not([class*="bg-[#B85D19]"]):not([class*="bg-[#8F3E0B]"]):not([class*="bg-[#7A3A16]"]):not([class*="bg-[#2E2721]"]):not([class*="bg-black"]):not([class*="rounded-full"]):not([class*="rounded-lg"]):not([class*="!text-white"]):not([class*="bg-gradient-to-t"] *):not([class*="from-primary"] *):not([class*="from-black"] *) {
     color: #000000 !important;
     text-shadow: none !important;
   }
 
   
   /* Universal Photo Overlay Badges & Dark Chips in Light & Dark Mode: 100% Crisp White Typography */
+  /* ==========================================================================
+     LIGHT MODE CONTRAST & FLOATING CARD PROTECTION
+     Fixes white-on-white text in floating cards and black-on-dark in photo overlays
+     ========================================================================== */
+
+  /* 1. Floating light-colored offset cards in Light Mode ALWAYS have solid dark typography */
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h1,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h2,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h3,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h4,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] p,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] span,
+  html:not(.dark) [class*="bg-surface-container-lowest"] h1,
+  html:not(.dark) [class*="bg-surface-container-lowest"] h2,
+  html:not(.dark) [class*="bg-surface-container-lowest"] h3,
+  html:not(.dark) [class*="bg-surface-container-lowest"] h4,
+  html:not(.dark) [class*="bg-surface-container-lowest"] p,
+  html:not(.dark) [class*="bg-surface-container-lowest"] span,
+  html:not(.dark) .floating-story-badge *,
+  html:not(.dark) .floating-purity-card * {
+    text-shadow: none !important;
+  }
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h1,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h2,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h3,
+  html:not(.dark) [class*="bg-[#FAF7F2]"] h4,
+  html:not(.dark) .floating-story-badge p,
+  html:not(.dark) .floating-purity-card h3 {
+    color: #24150E !important;
+    -webkit-text-fill-color: #24150E !important;
+    font-weight: 800 !important;
+  }
+  html:not(.dark) [class*="bg-[#FAF7F2]"] p,
+  html:not(.dark) .floating-purity-card p {
+    color: #5E4738 !important;
+    -webkit-text-fill-color: #5E4738 !important;
+    font-weight: 600 !important;
+  }
+  html:not(.dark) [class*="bg-[#FAF7F2]"] [class*="text-[#8A2B03]"],
+  html:not(.dark) [class*="bg-[#FAF7F2]"] [class*="text-secondary"],
+  html:not(.dark) .floating-story-badge [class*="text-[#8A2B03]"],
+  html:not(.dark) .floating-story-badge [class*="text-secondary"],
+  html:not(.dark) .floating-purity-card [class*="text-[#8A2B03]"] {
+    color: #8A2B03 !important;
+    -webkit-text-fill-color: #8A2B03 !important;
+    font-weight: 800 !important;
+  }
+
+  /* 2. Translucent tinted icon containers in Light Mode (e.g. bg-[#8A2B03]/15, bg-secondary/15) */
+  html:not(.dark) [class*="bg-[#8A2B03]/"] .material-symbols-outlined,
+  html:not(.dark) [class*="bg-[#8A2B03]/"] span,
+  html:not(.dark) [class*="bg-secondary/"] .material-symbols-outlined,
+  html:not(.dark) [class*="bg-secondary/"] span {
+    color: #8A2B03 !important;
+    -webkit-text-fill-color: #8A2B03 !important;
+  }
+
+  /* 3. Dark Gradient Photo Overlays (e.g. Pricing Hillside Banner) - ALWAYS brilliant white & radiant amber */
+  [class*="bg-gradient-to-t"][class*="from-primary"] h1,
+  [class*="bg-gradient-to-t"][class*="from-primary"] h2,
+  [class*="bg-gradient-to-t"][class*="from-primary"] h3,
+  [class*="bg-gradient-to-t"][class*="from-primary"] h4,
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="text-white"],
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="!text-white"],
+  [class*="bg-gradient-to-t"][class*="from-black"] h1,
+  [class*="bg-gradient-to-t"][class*="from-black"] h2,
+  [class*="bg-gradient-to-t"][class*="from-black"] h3,
+  [class*="bg-gradient-to-t"][class*="from-black"] h4,
+  [class*="bg-gradient-to-t"][class*="from-black"] [class*="text-white"],
+  .photo-overlay-card h1,
+  .photo-overlay-card h2,
+  .photo-overlay-card h3,
+  .photo-overlay-card .font-headline-sm,
+  .photo-overlay-gradient h1,
+  .photo-overlay-gradient h2,
+  .photo-overlay-gradient h3,
+  .photo-overlay-gradient h4 {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+    font-weight: 850 !important;
+  }
+  [class*="bg-gradient-to-t"][class*="from-primary"] p,
+  [class*="bg-gradient-to-t"][class*="from-black"] p,
+  .photo-overlay-card p,
+  .photo-overlay-card div:not(.font-label-sm):not(.font-headline-sm),
+  .photo-overlay-gradient p {
+    color: #FAF5EF !important;
+    -webkit-text-fill-color: #FAF5EF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+  }
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="text-[#F7BA7D]"],
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="!text-[#F7BA7D]"],
+  [class*="bg-gradient-to-t"][class*="from-primary"] [class*="text-secondary"],
+  [class*="bg-gradient-to-t"][class*="from-black"] [class*="text-[#F7BA7D]"],
+  .photo-overlay-card [class*="text-[#F7BA7D]"],
+  .photo-overlay-card [class*="text-secondary-fixed"],
+  .photo-overlay-card .material-symbols-outlined,
+  .photo-overlay-gradient [class*="text-[#F7BA7D]"],
+  .photo-overlay-gradient p.font-label-sm {
+    color: #F7BA7D !important;
+    -webkit-text-fill-color: #F7BA7D !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+  }
+
   /* ==========================================================================
      HERITAGE 25-YEAR WAX-SEAL MEDALLION (Protected Universal Typography)
      ========================================================================== */
@@ -433,15 +538,15 @@
      PHOTO OVERLAYS & IMAGE CARDS (Light & Dark Mode)
      Ensure all headings, paragraphs, and spans overlaid on images have 100% white typography
      ========================================================================== */
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"],
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] p,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] span:not(.material-symbols-outlined),
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h1,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h2,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h3,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] h4,
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] div:not([class*="bg-white"]):not([class*="bg-surface"]),
-  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"] *:not(input):not(textarea):not(button):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-[#FAF7F2]"]):not([class*="bg-surface-container-lowest"]) {
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) p:not([class*="text-[#8A2B03]"]):not([class*="text-secondary"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) span:not(.material-symbols-outlined):not([class*="text-[#8A2B03]"]):not([class*="text-secondary"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) h1,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) h2,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) h3,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) h4,
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) div:not([class*="bg-white"]):not([class*="bg-surface"]),
+  html:not(.dark) section:not(.photographic-hero) [class*="absolute"][class*="bottom-"]:not([class*="bg-[#FAF7F2]"]):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-primary"]):not([class*="bg-primary-container"]):not([class*="bg-surface-container"]) *:not(input):not(textarea):not(button):not([class*="bg-white"]):not([class*="bg-surface"]):not([class*="bg-[#FAF7F2]"]):not([class*="bg-surface-container-lowest"]) {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85) !important;
@@ -507,8 +612,8 @@
   html:not(.dark) section:not(.photographic-hero) div[class*="rounded-full"][class*="!text-white"]:not([class*="bg-white"]):not([class*="bg-surface"]) *,
   html:not(.dark) section:not(.photographic-hero) div[class*="project-card"] span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) *,
   html:not(.dark) section:not(.photographic-hero) .project-card span[class*="rounded-full"]:not([class*="bg-surface-container-lowest"]):not([class*="bg-white"]):not([class*="bg-surface"]) *,
-  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#8A2B03]"] *,
-  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#8A2B03]"] {
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#8A2B03]"]:not([class*="/"]):not(button):not(a) *,
+  html:not(.dark) section:not(.photographic-hero) [class*="bg-[#8A2B03]"]:not([class*="/"]):not(button):not(a) {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
   }
@@ -2155,7 +2260,7 @@ tailwind.config = {
 <div class="lg:col-span-6 relative">
 <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-container-high">
 <img class="w-full h-[520px] object-cover" data-alt="Close-up architectural macro shot of premium Western Red Cedar timber joinery with invisible fastening, smooth satin oil finish, and flush step risers with warm recessed low-voltage LED channel lighting in an upscale Pacific Northwest modern garden." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcwUeIEesHp8tiBG5C3w1aylDA28SugsPwKK8QOHaEgBa2AZBAfLclTTxDwtmzapx78ljghgT1TDNdkniVJnHsfZPESsETPzmESNFqjPsBReZsxmi4o7HQOzx6NrQJYwxWfO_qxH_a0lIoaL0O0VvUkNidXriBQlw728IwaV11UfChyC5p3vaIT3_A5TbDyxjkLBBdF01WZk_5REC7PHXAHWpQDhphbBtHh3szfKpJPpx1HHTqqY-S9g"/>
-<div class="absolute bottom-6 left-6 right-6 bg-[#FAF7F2] dark:bg-[#26211C] text-[#24150E] dark:text-white p-6 rounded-2xl shadow-2xl border-2 border-[#D48B4E] z-20">
+<div class="floating-purity-card absolute bottom-6 left-6 right-6 bg-[#FAF7F2] dark:bg-[#26211C] p-6 rounded-2xl shadow-2xl border-2 border-[#D48B4E] z-20">
   <div class="flex items-center justify-between">
     <div>
       <span class="text-xs font-bold uppercase tracking-widest !text-[#8A2B03] dark:!text-[#D48B4E] block">Material Purity</span>
@@ -2171,7 +2276,7 @@ tailwind.config = {
 </div>
 </div>
 <!-- Decorative Offset Card with 100% Solid Contrast -->
-<div class="block sm:absolute -top-6 -right-6 z-30 bg-[#FAF7F2] dark:bg-[#26211C] text-[#24150E] dark:text-white p-5 rounded-2xl shadow-2xl border-2 border-[#D48B4E] max-w-xs mb-4 sm:mb-0">
+<div class="floating-purity-card block sm:absolute -top-6 -right-6 z-30 bg-[#FAF7F2] dark:bg-[#26211C] p-5 rounded-2xl shadow-2xl border-2 border-[#D48B4E] max-w-xs mb-4 sm:mb-0">
   <div class="flex items-center gap-2.5 mb-2">
     <div class="w-8 h-8 rounded-lg bg-[#D48B4E]/20 dark:bg-[#D48B4E]/30 flex items-center justify-center text-[#8A2B03] dark:text-[#F7BA7D]">
       <span class="material-symbols-outlined text-[20px]">verified_user</span>
@@ -2531,7 +2636,7 @@ tailwind.config = {
 <!-- After Image -->
 <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 z-10" id="view-after">
 <img alt="Transformed modern timber deck with illuminated pergola, fire table, modern gray seating, and lush landscaping at twilight" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDkUa4ilzyyEgY9gY_AWCO9_aIgeRQr0DW2jAufAZsXK5fDBbHOVif_DMiUekWhDlsGF-LT1RRnab9l_tiO-jEpUZO_-xH9Rb1tW6AThzSzlgyhTNWU2X9-LfZ0-pSY1iooJUEG7Ux1e8e4aOAWapJtLc5JmEgK5r9dSumq4RpafZFJYnYnpQGW96O55RU2UfOu49f1F1K1rtNLlGVbzi9gfuN9iO7pzixDhU_WDRKcOWf5QSfTPp2DA"/>
-<div class="absolute bottom-6 left-6 right-6 bg-primary/85 backdrop-blur-md text-on-primary p-6 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="photo-overlay-card absolute bottom-6 left-6 right-6 bg-[#180F0A]/90 dark:bg-[#241E19]/95 backdrop-blur-md p-6 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4 border border-white/20 shadow-2xl">
 <div>
 <div class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Complete Overhaul: 1,120 Sq Ft</div>
 <div class="font-headline-sm text-headline-sm text-surface-bright">Pacific Western Red Cedar with 2700K Low-Voltage Grazing</div>
